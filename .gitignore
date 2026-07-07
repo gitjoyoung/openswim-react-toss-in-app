@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+
+# 빌드 산출물 / 캐시 / 툴링
+openswim.ait
+*.ait
+.granite/
+.agents/
+skills-lock.json
