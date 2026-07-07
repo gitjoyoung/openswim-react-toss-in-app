@@ -1,0 +1,37 @@
+-- 죽은/잘못된 수영장 홈페이지 링크 일괄 수정 (전수 점검 후 각 시설 현재 공식 페이지로 교체)
+-- 살아있으나 curl 오탐(WAF/IDN)이던 7곳은 미변경, 폐업 1곳(평리스포츠센터)은 비움.
+update public.pools set homepage_url = 'https://www.hsdagym.or.kr/sports/ujeong/PgGuide.do' where id = '1dbb547a-9db2-483e-8e96-7696046af5aa';
+update public.pools set homepage_url = 'https://yc.ycyc.or.kr/' where id = '4f2e90bf-6308-42f6-a4d3-52b0f122fbd0';
+update public.pools set homepage_url = 'https://www.hsdagym.or.kr/sports/bongdam/1' where id = '3155aa5b-c6cd-4855-9b93-61d5ab9e68d4';
+update public.pools set homepage_url = 'https://www.youthcenter.or.kr/' where id = '4c4cfdc8-3399-441b-8e1a-a68b0deed334';
+update public.pools set homepage_url = 'https://booking.gwangjin.or.kr/fmcs/49' where id = '4770ca8a-5d30-4684-ac28-875f5733781b';
+update public.pools set homepage_url = 'https://www.yongin-sporex.com/m01/1/' where id = 'e7e65958-d25a-4db8-b19a-a50f8b381820';
+update public.pools set homepage_url = 'https://llsports.yongin.go.kr/' where id = '60737985-346b-4dfb-a75d-39f28bc2ae78';
+update public.pools set homepage_url = 'https://www.hsdagym.or.kr/sports/dongtan/52' where id = '764ec657-0919-4b7b-8973-2200f00a8012';
+update public.pools set homepage_url = 'https://www.yjuc.or.kr/sub/content.asp?cIdx=123' where id = '4712ba1d-fc63-4d00-9eb1-dc496543c6ac';
+update public.pools set homepage_url = 'https://www.pyeongtaek.go.kr/sports/fmcs/1' where id = '82e161e9-549f-44f8-97d8-7f835e82b9a0';
+update public.pools set homepage_url = 'https://www.goseong.go.kr/index.goseong?menuCd=DOM_000000105010000000' where id = '6a692053-1b61-4f86-a139-bfe34b500db2';
+update public.pools set homepage_url = 'https://booking.gwangjin.or.kr/fmcs/48' where id = 'aa52c817-3351-46c8-9e02-e49f5e1885d7';
+update public.pools set homepage_url = 'https://www.esongpa.or.kr/information/swimingInfo/10000001' where id = '9aa4b96b-397a-4b18-8a25-26882f526365';
+update public.pools set homepage_url = 'https://www.pyeongtaek.go.kr/sports/fmcs/1' where id = '36600d74-79da-4394-b3ac-9f7d7aee6362';
+update public.pools set homepage_url = 'https://www.yjuc.or.kr/sub/content.asp?cIdx=20' where id = '7af0cd46-8ce8-4531-9408-8f8ad584a794';
+update public.pools set homepage_url = 'https://www.uiuc.or.kr/facilityInfo/sportsPage/sports/content.do' where id = '8b21cbf7-bec8-4803-bd37-ddf8a7217487';
+update public.pools set homepage_url = 'https://library.daegu.go.kr/center/html.do?menu_idx=6' where id = '5896a450-d9fe-485f-b1c5-8fabe78e01c2';
+update public.pools set homepage_url = 'https://jsecc.jne.go.kr/menu.es?mid=c20102010101' where id = '32062f99-111a-40db-b415-2b654b638f5c';
+update public.pools set homepage_url = 'https://www.yp21.go.kr/pool/fmcs/1' where id = '007228a4-f44e-4fbc-8f71-94a3ef4afbe6';
+update public.pools set homepage_url = 'https://booking.gwangjin.or.kr/fmcs/50' where id = '6723135c-ae42-426b-88f0-a9997c505c19';
+update public.pools set homepage_url = 'https://www.hsdagym.or.kr/sports/banwol/281' where id = '030c34af-86be-4991-a4f8-19061996b668';
+update public.pools set homepage_url = 'https://www.auc.or.kr/bakdal/contents/view?contentsNo=264&menuLevel=2&menuNo=326' where id = 'daaa165b-b684-45ed-b7c1-6d5dc295daaa';
+update public.pools set homepage_url = 'https://lib.jge.go.kr/gecs/contents.do?idx=2295' where id = '2bd81f86-0754-4cc7-9814-a68b0deed334';
+update public.pools set homepage_url = 'https://cms.wfmc.kr/web/lay1/S1T156C169/contents.do' where id = 'dc865b74-9e16-475e-909c-bd874b1d188f';
+update public.pools set homepage_url = 'https://hyangnamswctr.com/sub/view/freeswim' where id = '0325092f-2146-4d00-aa9d-3ace36f03bfc';
+update public.pools set homepage_url = 'https://www.bsdgsportsart.or.kr/subpage/index/13' where id = '855113be-5b0f-4a58-bfe0-9ae724a9be53';
+update public.pools set homepage_url = 'https://www.auc.or.kr/hogye/contents/view?contentsNo=292&menuLevel=2&menuNo=237' where id = '71793159-14ed-427f-b98e-7c4058c22618';
+update public.pools set homepage_url = 'https://www.gfmc.kr/page/business/sub05_030101.php' where id = 'b31887fb-e2f9-475d-94fa-8243760e56e7';
+update public.pools set homepage_url = 'https://www.pyeongtaek.go.kr/sports/fmcs/1' where id = 'e24f43c5-fcf4-4fd6-beff-76bf086be2da';
+update public.pools set homepage_url = 'https://cms.wfmc.kr/web/lay1/S1T155C156/sublink.do' where id = '3488fba3-68cc-4400-88c1-17bdead64f5c';
+update public.pools set homepage_url = 'http://www.communitycenter.or.kr/' where id = '626f320a-306f-4879-b0e5-ee00c89e20af';
+update public.pools set homepage_url = 'http://www.swomansports.co.kr/' where id = 'dbdb91bd-4be6-4090-b881-77599e33a2a9';
+update public.pools set homepage_url = 'https://jmpsports.jmpss.or.kr/www/21' where id = '29332824-e39b-40b5-b875-a21b82154fec';
+update public.pools set homepage_url = 'http://www.singil.org/' where id = '872bd668-7fce-4693-ae32-cb2db66c3473';
+update public.pools set homepage_url = null where id = 'f9415078-4e2f-467a-8395-17aa1fb4f780';
