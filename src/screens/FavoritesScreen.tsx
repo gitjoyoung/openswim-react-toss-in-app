@@ -1,5 +1,5 @@
 import { Top } from "@toss/tds-mobile";
-import type { Pool } from "../supabase";
+import type { Pool } from "../pool";
 import PoolList from "../components/PoolList";
 import { EmptyState } from "../design/primitives";
 import { todayRowStatus } from "../lib/pools";

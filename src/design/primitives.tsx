@@ -18,7 +18,7 @@ export function Screen({ children }: { children: ReactNode }) {
         minHeight: "100dvh",
         background: color.bg,
         // 탭바 공간 + 하단 세이프에어리어(홈 인디케이터)만큼 비워 콘텐츠가 안 가리게
-        paddingBottom: `calc(${TAB_BAR_RESERVE}px + env(safe-area-inset-bottom))`,
+        paddingBottom: TAB_BAR_RESERVE,
         position: "relative",
         boxSizing: "border-box",
       }}
@@ -61,19 +61,6 @@ export function Caption({ children }: { children: ReactNode }) {
 }
 
 // 라벨 ─ 값 한 줄 (상세 화면).
-export function KeyValue({ label, value }: { label: string; value: string }) {
-  return (
-    <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "6px 0" }}>
-      <Text typography="t6" color={color.textSub}>
-        {label}
-      </Text>
-      <Text typography="t6" fontWeight="semibold" color={color.textStrong} style={{ textAlign: "right" }}>
-        {value}
-      </Text>
-    </div>
-  );
-}
-
 export function Pill({ children, tone = "neutral" }: { children: ReactNode; tone?: "neutral" | "brand" }) {
   const isBrand = tone === "brand";
   return (

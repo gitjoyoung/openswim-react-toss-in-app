@@ -1,0 +1,2086 @@
+[
+  {
+    "poolId": "af778176-36fd-4577-a042-fa0250c04f54",
+    "poolName": "가남체육센터수영장",
+    "matchedName": "가남체육센터",
+    "distanceMeters": 1615,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-E16D34184EA4BB1BA56C91CBBA3E9263",
+    "primarySource": "https://yeojuuc.or.kr/reservation/gnsc/sportsCenter/"
+  },
+  {
+    "poolId": "a4ae456a-0e04-46ed-ad1d-f0c99bca42aa",
+    "poolName": "강경실내수영장",
+    "matchedName": "강경실내수영장",
+    "distanceMeters": 13,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-7464F4BD568250DDC31178435741FC71",
+    "primarySource": "https://www.nonsan.go.kr/public/html/sub03/030202.html"
+  },
+  {
+    "poolId": "35c3bd59-f60b-4988-a381-ecdc1d29cc7f",
+    "poolName": "경산수영장",
+    "matchedName": "경산수영장",
+    "distanceMeters": 15,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-070098F480829EACE72EB566E3D13B73",
+    "primarySource": "http://gbgs.go.kr/swimmingpool/sub/main.do"
+  },
+  {
+    "poolId": "55e1f4a4-bc01-41d7-8e0e-8f47df4a6d6e",
+    "poolName": "고성국민체육센터",
+    "matchedName": "국민체육센터(수영장)",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-1509D63D89906D5A3547277739FABA99",
+    "primarySource": "https://www.gwgoseong.go.kr/"
+  },
+  {
+    "poolId": "f524eb96-b688-4a01-a0d0-7e39408c3182",
+    "poolName": "늘푸른전당",
+    "matchedName": "늘푸른전당수영장",
+    "distanceMeters": 49,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-6A1116BE62BED6180AAA66827A01829F",
+    "primarySource": "https://www.cwsisul.or.kr/_greenhall/_sub01/sub01_04.html"
+  },
+  {
+    "poolId": "0c22c1ef-04cf-4432-9ddc-4b50c50f7666",
+    "poolName": "달성테크노스포츠센터",
+    "matchedName": "달성테크노스포츠센터",
+    "distanceMeters": 91,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "price_free_swim",
+      "prices"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-01-01",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-0A9567CC19ADC46E52A0353FBB50E335",
+    "primarySource": "https://www.dssiseol.or.kr",
+    "sources": [
+      "https://oneul-swim.vercel.app/pool/kspo-0A9567CC19ADC46E52A0353FBB50E335",
+      "https://onyourtop.tistory.com/617"
+    ]
+  },
+  {
+    "poolId": "4968c43e-4bb7-4d61-a656-7c2a015bb5bb",
+    "poolName": "덕풍스포츠문화센터",
+    "matchedName": "덕풍스포츠문화센터",
+    "distanceMeters": 1,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-06-01",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/hanam-deokpung",
+    "primarySource": "https://hanamsport.or.kr/wwwroot/ds/program/"
+  },
+  {
+    "poolId": "129c21e2-35c4-4c40-8453-e7ec6e7240bb",
+    "poolName": "동래구국민체육센터",
+    "matchedName": "동래구국민체육센터실내수영장",
+    "distanceMeters": 103,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-36F0700497232F7AC3812360994BA38E",
+    "primarySource": "https://sports.dongnae.go.kr/subpage/index/23"
+  },
+  {
+    "poolId": "a8b2a5a3-5187-4a48-87b0-774ee0a8fc4d",
+    "poolName": "문경시국민체육센터",
+    "matchedName": "문경시국민체육센터",
+    "distanceMeters": 9,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-6114906F6DC6382579A69CA2A3D8428A",
+    "primarySource": "http://www.mgtpcr.or.kr/web/page.do?menuIdx=384"
+  },
+  {
+    "poolId": "78df7943-a738-4f43-bc05-dbf79c10372c",
+    "poolName": "복대국민체육센터",
+    "matchedName": "복대국민체육센터",
+    "distanceMeters": 26,
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-0BB3B8D52C4E6AB874BFA5DD87A2BC08",
+    "primarySource": "https://www.cjsisul.or.kr"
+  },
+  {
+    "poolId": "6afc3e47-eecc-44f4-a2bf-a6feea8bbf31",
+    "poolName": "상주국민체육센터",
+    "matchedName": "상주국민체육센터수영장",
+    "distanceMeters": 10512,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-6EF8F608687BB7AB80B87D8C0E642445",
+    "primarySource": "https://www.sangju.go.kr/sportspark/program/program01"
+  },
+  {
+    "poolId": "8bea36ed-d5d7-4bc7-bec0-b7c76bfff4e3",
+    "poolName": "서구국민체육센터",
+    "matchedName": "서구국민체육센터",
+    "distanceMeters": 145,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-71D54C76BB52E341FFBCEA9B7DECF233",
+    "primarySource": "http://www.sgsport.co.kr/page/swim001"
+  },
+  {
+    "poolId": "e067987d-c190-4a45-bd47-1d65bb51b659",
+    "poolName": "서산국민체육센터",
+    "matchedName": "서산국민체육센터수영장",
+    "distanceMeters": 55,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-B0073E3AC143699C5440C210845FC2A1",
+    "primarySource": "https://www.seosan.go.kr/www/contents.do?key=3408"
+  },
+  {
+    "poolId": "957fc047-14f5-45ea-ad4a-081e99a8fdfc",
+    "poolName": "송악문화스포츠센터",
+    "matchedName": "송악문화스포츠센터 수영장",
+    "distanceMeters": 30,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-3856184733B01BAB3D6028E6FD32E892",
+    "primarySource": "http://www.dangjin.go.kr/fmres/regular/info/?centerId=DJ0009&facilityId=F0090"
+  },
+  {
+    "poolId": "7050da08-fae2-4974-8380-11ad482bff4c",
+    "poolName": "쇠부리체육센터",
+    "matchedName": "쇠부리체육센터수영장",
+    "distanceMeters": 15,
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-0A89189A0C0816586D27CBEA299912A1",
+    "primarySource": "https://www.bukgu.ulsan.kr/facility/index.do"
+  },
+  {
+    "poolId": "3fe1db77-0fb9-4146-ad7a-6fec85d519d1",
+    "poolName": "시민생활체육관",
+    "matchedName": "시민생활체육관수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-4667B0D5EF74910C49C397191BCCBDF4",
+    "primarySource": "https://www.cwsisul.or.kr/_chctgym/_sub02/sub02_02.html"
+  },
+  {
+    "poolId": "cbef464d-e686-4800-89b6-4d643dfa0e3b",
+    "poolName": "쌍벽루국민체육센터",
+    "matchedName": "(수영장-06)쌍벽루국민체육센터",
+    "distanceMeters": 8,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-F5224DD51620804B3F56FE7DFEAFDAFC",
+    "primarySource": "https://www.yssisul.or.kr/stms/sb/freeswim"
+  },
+  {
+    "poolId": "08e1a95c-ca97-4e41-819d-1704436e439b",
+    "poolName": "안성국민체육센터 수영장",
+    "matchedName": "안성국민체육센터수영장",
+    "distanceMeters": 101,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-3E6C62008B5E65755CFDB8B90F75070C",
+    "primarySource": "http://www.anseongswim.or.kr/"
+  },
+  {
+    "poolId": "33d1d7b8-8051-466b-ab07-09b20aa670a7",
+    "poolName": "안성수영국민체육센터(안성시국민체육센터)",
+    "matchedName": "안성국민체육센터수영장",
+    "distanceMeters": 5362,
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-3E6C62008B5E65755CFDB8B90F75070C",
+    "primarySource": "http://www.anseongswim.or.kr/"
+  },
+  {
+    "poolId": "d01a4a03-2901-459b-84ca-2c1594e55ae6",
+    "poolName": "양산주민편익시설",
+    "matchedName": "(수영장-02) 양산주민편익시설",
+    "distanceMeters": 24,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-E575463A1F0AA76FE87BAE911C1DA509",
+    "primarySource": "https://www.yssisul.or.kr/stms/jm/freeswim"
+  },
+  {
+    "poolId": "a2ba4543-5b80-4ed0-af04-53e7b220d1a0",
+    "poolName": "여주국민체육센터",
+    "matchedName": "국민체육센터 수영장",
+    "distanceMeters": 47,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-2DE560E17F1D7C487B278DEB120FC525",
+    "primarySource": "https://yeojuuc.or.kr/reservation/yjsc/sportsCenter/"
+  },
+  {
+    "poolId": "3598965c-8c81-4f94-8ec3-1a2810fc32d4",
+    "poolName": "열우물경기장",
+    "matchedName": "열우물경기장",
+    "distanceMeters": 51,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-FACEC960E93498269DC320E9D9F43A00",
+    "primarySource": "https://www.icsports.or.kr/fmcs/57"
+  },
+  {
+    "poolId": "fb3fd870-d5a0-47bc-a991-0f28bdd67cc9",
+    "poolName": "예천청소년수련관",
+    "matchedName": "예천청소년수련관수영장",
+    "distanceMeters": 45,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-4F5DCCE8ED3A130C9BB7846CF15089F6",
+    "primarySource": "https://onestop.ycg.kr/resve/facilList.do?alsfcCd=COM014-01"
+  },
+  {
+    "poolId": "cbccf78a-0d90-430e-8db7-f29713dceaa3",
+    "poolName": "웅상문화체육센터",
+    "matchedName": "(수영장-03) 웅상문화체육센터",
+    "distanceMeters": 12,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-0EB12FD1EFB6F2BAB5E5B907F8998EA2",
+    "primarySource": "https://www.yssisul.or.kr/stms/us/freeswim"
+  },
+  {
+    "poolId": "027dfe05-d821-4036-89fa-deb09746d217",
+    "poolName": "유앤아이센터",
+    "matchedName": "유앤아이센터내실내수영장",
+    "distanceMeters": 48,
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-83D69F1BC082C0B8EF6FE0A52EB1A2DB",
+    "primarySource": "https://yeyak.hsuco.or.kr"
+  },
+  {
+    "poolId": "4e95ee8d-7589-4195-bc01-2dbecf305b0a",
+    "poolName": "의창스포츠센터",
+    "matchedName": "의창스포츠센터수영장",
+    "distanceMeters": 11,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-5CA19E6A6B41C18C8B68E3FF2E1CB677",
+    "primarySource": "https://www.cwsisul.or.kr/_chucsports/_sub02/sub02_02.html"
+  },
+  {
+    "poolId": "715b6afa-478c-4a92-8110-479eb6083944",
+    "poolName": "장성실내수영장",
+    "matchedName": "장성실내수영장",
+    "distanceMeters": 15,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-A079E3B8E03A3018CFF12044C576F76A",
+    "primarySource": "https://www.jangseong.go.kr/home/culture/pool/pool_use"
+  },
+  {
+    "poolId": "5c5cba29-e65b-4dfe-ad1b-7ceffd0dc35c",
+    "poolName": "진해용원국민체육센터",
+    "matchedName": "용원국민체육센터 수영장",
+    "distanceMeters": 48,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-02A0F8C7F06BA7A73E10B810329FF0DC",
+    "primarySource": "https://www.cwsisul.or.kr/_jhywgymc/_sub02/sub02_01.html"
+  },
+  {
+    "poolId": "7acb4620-cccd-406a-b27e-d71fe2781e70",
+    "poolName": "창녕군립수영장",
+    "matchedName": "창녕군립수영장",
+    "distanceMeters": 20,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-0580E5569C19C4C3D767F3B92E759D67",
+    "primarySource": "https://cfmc.kr/swimming/sub.html?code=02_01"
+  },
+  {
+    "poolId": "a911166b-6f7b-49e7-8574-5be6f1105e68",
+    "poolName": "창원실내수영장",
+    "matchedName": "창원실내수영장",
+    "distanceMeters": 184,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-FBF18C026155722A6D88B620C95F5F9C",
+    "primarySource": "https://www.cwsisul.or.kr/_chinswimr/_sub02/sub02_01.html"
+  },
+  {
+    "poolId": "e64beb23-07aa-4455-8137-259985c26d92",
+    "poolName": "춘천반다비국민체육센터",
+    "matchedName": "반다비 국민체육센터(수영장)",
+    "distanceMeters": 31,
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-7C69ED247E79DCDC23E6A312E39E6C0D",
+    "primarySource": "https://rev.cuc.or.kr/www/"
+  },
+  {
+    "poolId": "f62c12c7-8235-4202-a2d4-4912bf964efc",
+    "poolName": "포일스포츠센터",
+    "matchedName": "포일 스포츠센터 수영장",
+    "distanceMeters": 35,
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-A17A9F2FAF4F58502711CE4A881A7759",
+    "primarySource": "https://www.uuc.or.kr/"
+  },
+  {
+    "poolId": "77d39313-b2db-468d-b208-cd41eb9702b6",
+    "poolName": "풍산멀티스포츠센터",
+    "matchedName": "풍산멀티스포츠센터",
+    "distanceMeters": 353,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-06-01",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/hanam-pungsan",
+    "primarySource": "https://hanamsport.or.kr/wwwroot/ps/program/"
+  },
+  {
+    "poolId": "23ae2e8a-fbc6-4942-bc75-a819f439d598",
+    "poolName": "함양국민체육센터",
+    "matchedName": "함양국민체육센터",
+    "distanceMeters": 74,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-0C9AC7C87FAF4DA1725E174E8EA08BAF",
+    "primarySource": "https://www.hygn.go.kr/04488/04489.web"
+  },
+  {
+    "poolId": "7eda1f96-5171-42fa-a0c7-e24bfda54f5d",
+    "poolName": "합천실내수영장",
+    "matchedName": "합천실내수영장",
+    "distanceMeters": 131,
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-D2507F0FCAC45E848F70761E88D8CDA7",
+    "primarySource": "https://www.hfmc.or.kr/content/185"
+  },
+  {
+    "poolId": "f8cb8a7d-6376-4a5a-8886-28225c557bb8",
+    "poolName": "흥해복합커뮤니티센터",
+    "matchedName": "흥해복합커뮤니티센터 수영장",
+    "distanceMeters": 20,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-11",
+    "sourcePage": "https://oneul-swim.vercel.app/pool/kspo-9173F609C65BF24E9242F79072409C66",
+    "primarySource": "https://www.phsisul.org/sisul_32/sub/info_3.do"
+  },
+  {
+    "poolId": "3b967e53-1254-470d-ac2b-1098592b75c4",
+    "poolName": "ATB압구정점",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-02-12",
+    "sources": [
+      "https://seoulswimmer.tistory.com/39"
+    ]
+  },
+  {
+    "poolId": "41621d35-b3b9-4064-b1dc-20ab0cb29aa0",
+    "poolName": "HD아트센터 수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-02-01",
+    "sources": [
+      "https://hd-artscenter.co.kr/lecture/detail.do?SVC_ID=detail&lectureDetailSeq=0000023176&lectureMasterSeq=0000000061&mid=0302"
+    ]
+  },
+  {
+    "poolId": "71fa281c-9c97-4926-a04b-a7f56ad108cf",
+    "poolName": "JG전곡스포츠센터",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2024-05-07",
+    "sources": [
+      "https://swimmingis.com/detail/162"
+    ]
+  },
+  {
+    "poolId": "3edd2d58-893f-4682-bb18-0ec98725340c",
+    "poolName": "고흥종합문화회관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-03-12",
+    "sources": [
+      "https://swimmingis.com/detail/486"
+    ]
+  },
+  {
+    "poolId": "fdeb6902-2adf-4db0-bb2d-ccd285777280",
+    "poolName": "덕진수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-08-02",
+    "sources": [
+      "https://hello109.com/jeonju-deokjin-swimming-pool-class-schedule-operating-guide/"
+    ]
+  },
+  {
+    "poolId": "4cdbddb5-b7bb-4b3a-a513-01a7d54c54d9",
+    "poolName": "고양어울림누리수영장",
+    "matchedName": "고양어울림누리체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "5d2257d5-f2cd-4c25-b668-d860df84ef78",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "1b476bee-47f5-4ca1-983d-886d1e7a92f0",
+    "poolName": "구리청소년수련관 수영장",
+    "matchedName": "구리시청소년수련관",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "8597b9bd-b302-4048-adea-a3adb190b523",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "7af1bf4e-fb65-4915-9fcb-28d562795e85",
+    "poolName": "도봉실내수영장",
+    "matchedName": "도봉동실내스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "64bf0a3f-e0e1-43e0-b1f1-2b365db35ad2",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "c919166c-03dc-4a67-b5c9-9fceecc06682",
+    "poolName": "동탄복합문화센터",
+    "matchedName": "동탄복합문화센터내 실내수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "359e7e4a-71ba-44ae-b19e-381a1ccd46c1",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "9f473761-bf20-4f8a-bdac-c2f1d3322eec",
+    "poolName": "백석체육센터",
+    "matchedName": "고양백석체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "3f5348a2-086e-4801-86e2-a6fa6edb60fc",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "1040b376-686c-4090-9ad1-b682baa23d7b",
+    "poolName": "선부다목적체육관",
+    "matchedName": "안산 선부다목적체육관수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "358264e1-5586-42f5-822f-4307c7a1022b",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "f5da7f87-ec6b-44a9-a135-799942b4ec66",
+    "poolName": "수원체육문화체육센터",
+    "matchedName": "수원체육문화센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "96ff8aa7-188e-4566-9c3d-a6dd308a2de4",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "63ee892f-9349-44c4-baa7-e46b6f9ea3f4",
+    "poolName": "시흥국민체육센터",
+    "matchedName": "시흥시국민체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "a275b264-6d50-40a7-9088-9adc872e9856",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "9d6ae918-5557-4167-9660-117556a01774",
+    "poolName": "시흥능곡어울림센터",
+    "matchedName": "능곡 어울림센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "d62b98c4-65c9-4ea6-bcb7-114c5896cddc",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "04d338e8-5289-498f-a9ea-6634ef1b98f9",
+    "poolName": "안양종합운동장실내수영장",
+    "matchedName": "안양실내체육관 수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "76364a2f-cc09-4c23-807c-95b2df802499",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "75fb36d8-5ae0-49ad-a00d-41105d8bd001",
+    "poolName": "여주시노인복지관",
+    "matchedName": "여주노인복지회관수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "f60862a1-c5de-4a97-865b-6e7dfb253f9b",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "98d68834-b24e-4825-9e16-eaa1232153ec",
+    "poolName": "용산구문화체육센터",
+    "matchedName": "용산문화체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "c72ff817-f9d4-400e-bff6-11cda27e4fc4",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "711089c6-663c-4ff7-912f-60fa68bc926b",
+    "poolName": "용산청소년수련관수영장",
+    "matchedName": "용산청소년센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "b40323cc-6d8d-4eb9-805b-ca544152f859",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "6a9a33f8-42fa-4af2-802b-0d0671532bba",
+    "poolName": "의정부시청소년수련관수영장",
+    "matchedName": "의정부시청소년회관 실내수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "c48a01b9-79f8-40bd-84b4-b395e64523c2",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "1e976aa9-8e7c-495f-a32f-cd4e3fd91ca5",
+    "poolName": "장안구민회관수영장",
+    "matchedName": "장안구민회관 푸르내 수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "064c9051-13f1-4ca0-822a-377af1df9ab8",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "1a99c81f-aff7-4bc2-a7b8-5c94b3cc16e2",
+    "poolName": "중구회현체육센터",
+    "matchedName": "회현체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "fff64dc7-c398-42d8-a6a1-4adba61728a5",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "cbbba6aa-d5a3-448e-bf37-17b80b381d27",
+    "poolName": "호수공원실내수영장",
+    "matchedName": "안산 호수공원실내수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "f15c4198-404f-4d40-908c-b8476b34ceb7",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "6b92b3c8-5b34-4414-bb48-1eadabfc507a",
+    "poolName": "화도문화체육센터",
+    "matchedName": "화도체육문화센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "87def618-06ef-4df0-ad54-7e07fdb0bf95",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "811e01f1-82a5-4016-a19f-cf5f26c62513",
+    "poolName": "화성그린환경센터주민편익시설",
+    "matchedName": "화성시 그린환경센터 주민편익시설",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "f0319d76-c172-4184-9f39-546ab90871ef",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "829184bb-00f6-46e1-b9df-8892471797ad",
+    "poolName": "화순군민종합문화센터",
+    "matchedName": "화순국민체육센터 수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "8c46c379-14e0-4ad7-b68c-0f57407428fb",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "18bd91f4-c2d3-4073-bfe9-a4f68248b494",
+    "poolName": "버드내스포츠센터",
+    "matchedName": "버드내노인복지회관",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "170ff9c5-7c4e-4f78-9a5b-61119dc7614d",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "059f95dc-b796-4391-b256-de96b5fe25df",
+    "poolName": "동탄어울림체육센터",
+    "matchedName": "동탄중앙어울림센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "f999c601-d7d6-4ddb-8240-6700553879c4",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "eea6ba02-4433-4d78-96d4-5f777d06821c",
+    "poolName": "여성문화회관(여성전용)",
+    "matchedName": "인천광역시 여성가족재단 (여성문화회관)",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "58679074-0038-4792-9340-3f830511584b",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "d91e5f87-a245-4067-bb7e-2139861fd1e3",
+    "poolName": "야탑유스센터",
+    "matchedName": "분당야탑청소년수련관",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "e055bedf-6687-4820-ab8d-5548f1d191a8",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "4df55ecd-5d5b-466a-bedc-0af4ed905894",
+    "poolName": "태백장성수영장",
+    "matchedName": "태백장성국민체육센터",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "8b70444b-c8e6-40fc-99e9-a0bf693c27e7",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "7706fa40-db6c-4b58-a6e5-0b83ae85af21",
+    "poolName": "목포실내체육관",
+    "matchedName": "목포실내체육관 실내수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "3781b191-60d4-4fd9-b4af-ea095aef9295",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "c23dab03-cb28-40cd-8595-a418cffcd8d4",
+    "poolName": "신길수영장",
+    "matchedName": "안산 신길수영장/목욕탕",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "220917f2-261a-435f-82d2-70d72db43e35",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "d3bbd22f-65f0-4cc5-9e61-113d6a799ac6",
+    "poolName": "부산사직종합운동장실내수영장",
+    "matchedName": "사직실내수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "f4aad639-fa56-4a80-ad8a-54ed42643653",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "00fb99ad-2f1d-4045-9775-93f46b493666",
+    "poolName": "시립구로청소년수련관(Guro Youth Center)",
+    "matchedName": "시립구로청소년센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "adee362b-6c89-4cf0-83b5-cfc189b2d83c",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "9c4cfc48-893d-474c-81d5-bef11e839fd7",
+    "poolName": "잠실 제1수영장(Jamsil Swimming Pool)",
+    "matchedName": "잠실종합운동장 제1수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "1c4ca946-1180-46b7-9b60-3cde268da388",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "2c6edb5b-6197-4046-96b9-0c3a60813fed",
+    "poolName": "장애인종합복지관 수중재활센터(Comprehensive Welfare Center)",
+    "matchedName": "서울장애인종합복지관 수중재활센터",
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "7e2c5f50-5e08-4923-962c-ff0cc8e01bd5",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "5774861c-5fe0-49ad-8959-a4453b1165ac",
+    "poolName": "언북스포츠센터(Eonbuk Sports Center)",
+    "matchedName": "언북문화체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "4ff490ec-61c2-428a-bc39-92d30a6a0b3c",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "c5c5f13f-5fff-4d96-95a6-dcff27a51630",
+    "poolName": "남원실내수영장(남원종합스포츠타운)",
+    "matchedName": "남원종합스포츠타운",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": null,
+    "sourcePage": null,
+    "primarySource": null,
+    "derivedFromPoolId": "335e9c84-0d76-4c20-a5bd-0cbf761d5a6c",
+    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+  },
+  {
+    "poolId": "26419d50-17a4-4dae-94fc-911802df73c4",
+    "poolName": "갈매멀티스포츠센터",
+    "matchedName": "갈매멀티스포츠센터",
+    "distanceMeters": 4,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-15T04:21:48.686+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1332",
+    "primarySource": "https://gurisp.kr"
+  },
+  {
+    "poolId": "1c8285a5-d68a-4060-95e2-4f5b00962f0b",
+    "poolName": "강릉국민체육센터",
+    "matchedName": "강릉국민체육센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T06:32:06.860748+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/297",
+    "primarySource": "https://www.gtdc.or.kr"
+  },
+  {
+    "poolId": "862dc2d4-2464-4ff1-a4dc-911786a1397b",
+    "poolName": "공항동문화체육센터",
+    "matchedName": "공항동문화체육센터",
+    "distanceMeters": 17,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-02-01T23:16:06.625+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/789",
+    "primarySource": "https://sport.gssi.or.kr/page/sisul/07/"
+  },
+  {
+    "poolId": "cd1f503c-c11f-47e3-9497-2874680bc95a",
+    "poolName": "과천시청소년수련관",
+    "matchedName": "과천시 청소년수련관실내수영장",
+    "distanceMeters": 29,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T06:32:26.574464+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1278",
+    "primarySource": "https://gcuc.or.kr"
+  },
+  {
+    "poolId": "81d36a88-439f-46fd-8ccb-d953c4f65f4c",
+    "poolName": "광명시여성비전센터",
+    "matchedName": "광명시 여성비전센터",
+    "distanceMeters": 7,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:40:47.239081+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1280",
+    "primarySource": "https://gmuc.co.kr"
+  },
+  {
+    "poolId": "bffcb0d2-7b1a-4969-9bb5-022298852384",
+    "poolName": "구즉국민체육센터",
+    "matchedName": "구즉국민체육센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T06:32:06.860748+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/835",
+    "primarySource": "http://www.gujeok.or.kr"
+  },
+  {
+    "poolId": "e25ba6e3-be18-4b3c-a2f7-728518524957",
+    "poolName": "금곡공원국민체육센터",
+    "matchedName": "금곡공원 국민체육센터",
+    "distanceMeters": 18,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T11:33:07.628353+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1303",
+    "primarySource": "https://www.isdc.co.kr"
+  },
+  {
+    "poolId": "ae1a66c4-493b-4d35-8334-9e9797992c7c",
+    "poolName": "금촌다목적실내체육관",
+    "matchedName": "금촌다목적실내체육관",
+    "distanceMeters": 3,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T06:32:26.574464+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1279",
+    "primarySource": "https://www.paju.go.kr"
+  },
+  {
+    "poolId": "490910b1-53ce-4c3d-b48f-0500be3ac59d",
+    "poolName": "김포한강스포츠센터",
+    "matchedName": "김포한강스포츠센터",
+    "distanceMeters": 87,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T06:32:15.523729+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1331",
+    "primarySource": "https://hgsports.or.kr"
+  },
+  {
+    "poolId": "38f43245-a4cf-428f-b2b9-c0879ef393ef",
+    "poolName": "김해스포츠센터",
+    "matchedName": "김해스포츠센터",
+    "distanceMeters": 10,
+    "fields": [
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-15T04:21:43.126+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/946",
+    "primarySource": "https://www.gimhaesports.co.kr/sub/progapp.php?pn=0301"
+  },
+  {
+    "poolId": "05053397-fa42-4e71-b9dc-847f3bc945be",
+    "poolName": "남부대학교시립국제수영장",
+    "matchedName": "남부대학교 시립국제수영장",
+    "distanceMeters": 875,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T15:10:44.523935+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/748",
+    "primarySource": "https://worldswimming.nambu.ac.kr/"
+  },
+  {
+    "poolId": "0b082bf6-18bb-48d1-9925-8b7554ae725d",
+    "poolName": "남해군국민체육센터",
+    "matchedName": "남해군 국민체육센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-15T04:21:50.306+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/4837",
+    "primarySource": "http://www.namhae.go.kr"
+  },
+  {
+    "poolId": "f2f78cd8-ce8a-46a6-a1c7-a064a6615ef9",
+    "poolName": "논산국민체육센터",
+    "matchedName": "논산국민체육센터",
+    "distanceMeters": 108,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-01-30T05:46:36.174+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1",
+    "primarySource": "https://nonsancntf.or.kr"
+  },
+  {
+    "poolId": "819e2840-bc95-46d5-98ae-52a3cb8924c3",
+    "poolName": "단양군청소년수련관",
+    "matchedName": "단양군청소년수련관",
+    "distanceMeters": 44,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-01-27T07:56:05.753+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/765",
+    "primarySource": "https://www.danyang.go.kr/olle0924/1387"
+  },
+  {
+    "poolId": "f44f6f1a-14f5-443e-a016-e16afb28d519",
+    "poolName": "대덕구청소년어울림센터",
+    "matchedName": "대덕구청소년어울림센터 수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-15T04:21:49.765+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/4827",
+    "primarySource": "https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=2539"
+  },
+  {
+    "poolId": "b8102fb4-3673-4706-92e5-5abf91f96067",
+    "poolName": "대덕국민체육센터",
+    "matchedName": "대덕국민체육센터수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T06:32:06.860748+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/4",
+    "primarySource": "http://www.ddnsc.or.kr"
+  },
+  {
+    "poolId": "67d8e126-7840-4681-a661-702f1c0b95b5",
+    "poolName": "대전광역시립체육재활원",
+    "matchedName": "대전광역시립체육재활원",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T15:53:11.074527+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/6",
+    "primarySource": null
+  },
+  {
+    "poolId": "5d338260-efec-4a38-b468-f1bbc7d7c6c1",
+    "poolName": "대전올림픽기념국민생활관",
+    "matchedName": "올림픽기념국민생활관",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T16:15:36.722765+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/521",
+    "primarySource": "https://www.djsiseol.or.kr/res/www/265"
+  },
+  {
+    "poolId": "33a91136-e772-4a47-b0cd-ddc08cc0ca4a",
+    "poolName": "더스포츠센터",
+    "matchedName": "더스포츠센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T16:09:38.336559+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/531",
+    "primarySource": "http://www.xn--the-7d5nh0d9x6a36e68f.com/sub/take.php"
+  },
+  {
+    "poolId": "66409a49-55ec-4931-a405-34330fc68ba6",
+    "poolName": "도마실국민체육센터",
+    "matchedName": "도마실국민체육센터",
+    "distanceMeters": 18,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:37:42.60657+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/517",
+    "primarySource": "https://www.seogu.go.kr/gym/www/17"
+  },
+  {
+    "poolId": "b6497d87-24ca-4bad-ae44-a28fc0d28b99",
+    "poolName": "마홀수영장",
+    "matchedName": "마홀수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T15:40:07.770842+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/99",
+    "primarySource": "https://www.pcuc.kr/open_content/pool/program/lotScheduleList.do"
+  },
+  {
+    "poolId": "23d24e97-afb5-4c2b-ab88-9b439173bf75",
+    "poolName": "발렌스스포츠센터",
+    "matchedName": "발렌스 스포츠센터",
+    "distanceMeters": 0,
+    "fields": [
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T13:54:09.103587+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/895",
+    "primarySource": "https://www.valens.co.kr/program/program01.asp"
+  },
+  {
+    "poolId": "273e09ec-cc10-4301-9c67-91b5c90a0758",
+    "poolName": "백운커뮤니티센터",
+    "matchedName": "백운커뮤니티센터",
+    "distanceMeters": 8,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:40:47.239081+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1260",
+    "primarySource": "https://uuc.or.kr"
+  },
+  {
+    "poolId": "685fd7cc-267e-43ef-8194-d8ffff84fc24",
+    "poolName": "북부스포츠센터",
+    "matchedName": "천안시북부스포츠센터",
+    "distanceMeters": 14,
+    "fields": [
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-27T07:35:24.89725+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/283",
+    "primarySource": "https://new.cauc.or.kr/_buksports/main.asp?no=5"
+  },
+  {
+    "poolId": "96dfb010-a440-46e8-94d4-7f37ceaaacea",
+    "poolName": "빅스마일수영장",
+    "matchedName": "빅스마일",
+    "distanceMeters": 20,
+    "fields": [
+      "free_swim",
+      "prices",
+      "price_free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-08T03:01:05.749+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/119",
+    "primarySource": "https://www.placeview.co.kr/id/MTI3NDk5MzQz"
+  },
+  {
+    "poolId": "3021309c-282a-4a60-826a-f39009b45e87",
+    "poolName": "빛고을국민체육센터",
+    "matchedName": "빛고을국민체육센터",
+    "distanceMeters": 21,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T12:27:00+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/4828",
+    "primarySource": "https://www.gsfmc.or.kr/html/04050100"
+  },
+  {
+    "poolId": "b8d9cd02-b1e8-4011-8c41-9e128c66ea5a",
+    "poolName": "삼정스포츠 수영장",
+    "matchedName": "삼정스포츠수영장",
+    "distanceMeters": 55,
+    "fields": [
+      "free_swim",
+      "prices",
+      "price_free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-06-20T02:01:41.962+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/390",
+    "primarySource": "https://babygo.kr/place/b620b91d-3c65-4f75-ad0b-0822b67a0073"
+  },
+  {
+    "poolId": "936662dd-da28-4488-a03a-7f9d8c0fb32b",
+    "poolName": "새본리수영장",
+    "matchedName": "새본리수영장",
+    "distanceMeters": 140,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-25T12:21:32.895+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/936",
+    "primarySource": "https://www.instagram.com/saebolli.swim"
+  },
+  {
+    "poolId": "560cc4eb-c2ed-4b10-92b6-39257c17d34f",
+    "poolName": "서안성체육센터 수영장",
+    "matchedName": "서안성체육센터",
+    "distanceMeters": 26,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:23:34.864515+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1266",
+    "primarySource": "https://asmcs.or.kr"
+  },
+  {
+    "poolId": "775e3798-1f23-4823-b28e-2252d0a8a805",
+    "poolName": "서울YWCA스포츠센터",
+    "matchedName": "서울YWCA(실내)",
+    "distanceMeters": 0,
+    "fields": [
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-17T03:56:56.605775+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/544",
+    "primarySource": "https://www.google.com/maps/search/%EC%84%9C%EC%9A%B8YWCA%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%BC%ED%84%B0+%EC%84%9C%EC%9A%B8+%EC%A2%85%EB%A1%9C%EA%B5%AC+%EB%82%99%EC%9B%90%EB%8F%99+%EC%88%98%EC%98%81%EC%9E%A5"
+  },
+  {
+    "poolId": "c6363d8d-0c73-4cef-b15e-714c6196b9ea",
+    "poolName": "서평택국민체육센터 실내수영장",
+    "matchedName": "서평택국민체육센터 실내수영장",
+    "distanceMeters": 32,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-28T23:22:07.121+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1234",
+    "primarySource": "https://goept.kr"
+  },
+  {
+    "poolId": "724f607a-4147-47c8-98ae-a198c392dc31",
+    "poolName": "속초국민체육센터",
+    "matchedName": "속초국민체육센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T06:32:06.860748+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/141",
+    "primarySource": "http://sports.sokcho.go.kr"
+  },
+  {
+    "poolId": "a27a6c90-9a7b-498c-9382-155cc12b8683",
+    "poolName": "신사스포츠센터(Sinsa Sports Center)",
+    "matchedName": "신사스포츠센터",
+    "distanceMeters": 5,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-03-04T05:22:43.28+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/543",
+    "primarySource": "http://www.sinsasports.co.kr/index.php"
+  },
+  {
+    "poolId": "08c20c46-894e-476c-9e4d-ba968b76c134",
+    "poolName": "안동국민체육센터",
+    "matchedName": "안동국민체육센터",
+    "distanceMeters": 103,
+    "fields": [
+      "free_swim",
+      "prices",
+      "price_free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T11:50:26.685314+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/4832",
+    "primarySource": "https://sports.asc.ac.kr/"
+  },
+  {
+    "poolId": "1b8f3659-f58e-4bb4-aaa0-740b5f9fe09a",
+    "poolName": "양곡문화체육센터",
+    "matchedName": "양곡문화체육센터",
+    "distanceMeters": 137,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T11:33:07.628353+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1304",
+    "primarySource": "https://www.guc.or.kr"
+  },
+  {
+    "poolId": "8635cb41-4a52-4441-b8ea-826e32785cf9",
+    "poolName": "양주시에코스포츠센터",
+    "matchedName": "에코스포츠센터",
+    "distanceMeters": 115,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T11:00:10.676301+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1262",
+    "primarySource": "https://www.yjuc.or.kr"
+  },
+  {
+    "poolId": "a9822700-a86c-4c12-af04-0548b5f5c5b1",
+    "poolName": "언남문화체육센터(Eonnam Culture and Sports Center)",
+    "matchedName": "언남문화체육센터",
+    "distanceMeters": 66,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-02-10T07:04:20.392+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/548",
+    "primarySource": "https://eonnam.seocho.go.kr"
+  },
+  {
+    "poolId": "cf7f7ac2-d08d-4a98-a4cd-b662527c59ad",
+    "poolName": "영덕문화체육센터",
+    "matchedName": "영덕문화체육센터수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T09:30:45.327051+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/440",
+    "primarySource": "https://www.yd.go.kr"
+  },
+  {
+    "poolId": "7bd66e73-797c-4586-86fd-9a5a2fbdacf8",
+    "poolName": "우성스포츠센터(Woosung Sports Center)",
+    "matchedName": "우성스포츠센터",
+    "distanceMeters": 61,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-27T08:48:35.718455+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/933",
+    "primarySource": "https://blog.naver.com/woosungspo"
+  },
+  {
+    "poolId": "e17bcc19-65b5-4cad-ae72-ca9d2cbbfbce",
+    "poolName": "울산동구국민체육센터",
+    "matchedName": "동구국민체육센터",
+    "distanceMeters": 10,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-03-07T16:33:39.702+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/760",
+    "primarySource": "https://crs.donggu.ulsan.kr/etc/facility_info01.jsp"
+  },
+  {
+    "poolId": "c5cc3839-e3ae-4d7e-aef7-230eaed19015",
+    "poolName": "월드스포츠센터",
+    "matchedName": "월드 스포츠센터",
+    "distanceMeters": 0,
+    "fields": [
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T12:54:24.494237+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/420",
+    "primarySource": "https://kbssw.co.kr/"
+  },
+  {
+    "poolId": "9de07c7c-4ef9-41d6-82b5-e1748ced8a8d",
+    "poolName": "월성스포츠센터",
+    "matchedName": "월성스포츠센터",
+    "distanceMeters": 2,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T15:36:13.527838+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/62",
+    "primarySource": "https://www.khnp.co.kr/wolsong/selectBbsNttView.do?key=1730&bbsNo=143&nttNo=37392"
+  },
+  {
+    "poolId": "cbd070a6-e1e9-4a6a-bd30-292687d9b32b",
+    "poolName": "유한실내수영장",
+    "matchedName": "유한실내수영장",
+    "distanceMeters": 12,
+    "fields": [
+      "free_swim",
+      "prices",
+      "price_free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-06-30T00:44:11.487+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/410",
+    "primarySource": "https://www.bubblekids.kr/intro/intro.php"
+  },
+  {
+    "poolId": "628d193d-856a-4c86-acf4-c7d34fdf0113",
+    "poolName": "은계1어울림센터",
+    "matchedName": "은계1어울림센터",
+    "distanceMeters": 16,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:23:34.864515+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1313",
+    "primarySource": "https://shsi.or.kr"
+  },
+  {
+    "poolId": "12f70e3a-dc26-4d10-b150-14a05caa0325",
+    "poolName": "이천스포츠센터",
+    "matchedName": "이천스포츠센터",
+    "distanceMeters": 33,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:14:28.449365+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1302",
+    "primarySource": "https://www.sporex.com/sub_branch/list_v.php?number=11"
+  },
+  {
+    "poolId": "fcca3316-fae1-4fc3-b2d2-4dd5ca56df28",
+    "poolName": "임실국민체육센터",
+    "matchedName": "임실국민체육센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T09:30:45.327051+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/740",
+    "primarySource": "https://www.imsil.go.kr"
+  },
+  {
+    "poolId": "da69aab7-0618-4012-a859-eb7024a21f19",
+    "poolName": "진남수영장",
+    "matchedName": "진남수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:12:23.735412+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/171",
+    "primarySource": "https://yumcorp.or.kr"
+  },
+  {
+    "poolId": "fe9ddcb3-8fc0-4d4f-bee9-f30ef9e3b23f",
+    "poolName": "진도국민체육센터",
+    "matchedName": "진도국민체육센터 실내수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T11:00:10.676301+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/259",
+    "primarySource": "https://www.jindo.go.kr/home/sub.cs?m=766"
+  },
+  {
+    "poolId": "8074c5ac-c9b4-4696-bf8a-d22630dbf277",
+    "poolName": "진주학생수영장",
+    "matchedName": "진주학생수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T15:19:52.99661+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/75",
+    "primarySource": "http://jssp.gne.go.kr/jssp/main.do"
+  },
+  {
+    "poolId": "a3ce6686-254b-4c71-8c65-599c6b4ece6b",
+    "poolName": "천마하이파이브(회원제)",
+    "matchedName": "천마 하이파이브 수영장",
+    "distanceMeters": 3,
+    "fields": [
+      "prices",
+      "price_free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T12:54:24.494237+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/935",
+    "primarySource": "https://www.google.com/maps/search/%EC%B2%9C%EB%A7%88%ED%95%98%EC%9D%B4%ED%8C%8C%EC%9D%B4%EB%B8%8C%EC%88%98%EC%98%81%EC%9E%A5+%EB%8C%80%EC%A0%84+%EC%84%9C%EA%B5%AC+%EC%9A%A9%EB%AC%B8%EB%8F%99+%EC%88%98%EC%98%81%EC%9E%A5"
+  },
+  {
+    "poolId": "790976de-0d4a-48ca-9f0e-eb94c6ac6df7",
+    "poolName": "충북체육회관",
+    "matchedName": "충북체육회관 (힐링스포츠)",
+    "distanceMeters": 20,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-01-11T08:02:15.412+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/795",
+    "primarySource": "https://www.instagram.com/cbsc.swimmingpool/#"
+  },
+  {
+    "poolId": "b5fa6eed-8f07-49a6-83bf-a4e0736a976e",
+    "poolName": "충청북도곰두리체육관",
+    "matchedName": "충청북도곰두리체육관",
+    "distanceMeters": 44,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-01-11T08:20:22.736+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/796",
+    "primarySource": "http://cbgomduri.or.kr/"
+  },
+  {
+    "poolId": "d17aecc5-732a-4827-8ddc-4aa56b6d63d5",
+    "poolName": "태안군가족공감센터",
+    "matchedName": "태안군가족공감센터",
+    "distanceMeters": 382,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-01-28T14:18:02.035+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/435",
+    "primarySource": "https://www.taeanfamily.kr:449/reservation/pool.html"
+  },
+  {
+    "poolId": "34523f2d-c604-4ce6-8fcb-95580f24d3a6",
+    "poolName": "통영수영장",
+    "matchedName": "통영수영장",
+    "distanceMeters": 233,
+    "fields": [
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T12:54:24.494237+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/637",
+    "primarySource": "http://sportspark.ttdc.kr/Board/board.aspx?tbl=sports_voc&mode=view&seq=3124"
+  },
+  {
+    "poolId": "69e47942-6c1a-4710-ab0a-b1b1b5456ae3",
+    "poolName": "판교유스센터",
+    "matchedName": "판교유스센터",
+    "distanceMeters": 62,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:23:24.200162+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1216",
+    "primarySource": "https://snyouth.or.kr"
+  },
+  {
+    "poolId": "653f969b-9b92-4bb8-91e2-ca7048c3041c",
+    "poolName": "평송청소년문화센터",
+    "matchedName": "평송청소년문화센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-15T04:21:29.771+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/520",
+    "primarySource": "https://pyoungsong.com"
+  },
+  {
+    "poolId": "af7b8a6d-7962-4415-b0ff-03fe3cb7c02d",
+    "poolName": "푸르뫼스포츠센터",
+    "matchedName": "푸르뫼스포츠센터",
+    "distanceMeters": 0,
+    "fields": [
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T12:54:24.494237+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/61",
+    "primarySource": "https://pf.kakao.com/_xmzsDxb/98215924"
+  },
+  {
+    "poolId": "376a183c-8a54-4821-98fd-52d6c9182165",
+    "poolName": "하남국민체육센터",
+    "matchedName": "하남국민체육센터",
+    "distanceMeters": 124,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-01-08T00:39:10.014+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1219",
+    "primarySource": "https://hanamsport.or.kr"
+  },
+  {
+    "poolId": "edf05a26-8273-4e56-b801-958dcdc33f02",
+    "poolName": "한밭수영장",
+    "matchedName": "한밭수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-14T10:02:51.887336+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/662",
+    "primarySource": "https://www.djsiseol.or.kr/res/www/62"
+  },
+  {
+    "poolId": "e3a16588-9889-4a2c-8f10-9a9f07eb4b22",
+    "poolName": "한빛스포츠센터",
+    "matchedName": "한빛스포츠센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T15:36:21.298029+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/632",
+    "primarySource": "http://www.hanbitsports.co.kr/48"
+  },
+  {
+    "poolId": "8586e467-1112-4612-9563-a57cc7708c29",
+    "poolName": "해돋이힐링센터(Sunrise Healing Center)",
+    "matchedName": "해돋이힐링센터",
+    "distanceMeters": 280,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-06-30T14:55:03.021+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/966",
+    "primarySource": "https://blog.naver.com/goehedl9689"
+  },
+  {
+    "poolId": "f80730ab-9822-4526-b0d0-44e8d3fcfd49",
+    "poolName": "해오름스포츠센터",
+    "matchedName": "해오름스포츠센터 수영장",
+    "distanceMeters": 685,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T16:32:02.917011+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/154",
+    "primarySource": "https://www.dhsisul.org/~dhsisul/facility/25.htm"
+  },
+  {
+    "poolId": "ca5cedf5-b038-4f6d-9359-d388ec944695",
+    "poolName": "향남복합문화센터",
+    "matchedName": "향남복합문화센터",
+    "distanceMeters": 335,
+    "fields": [
+      "free_swim",
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-07-26T15:34:40.093573+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/965",
+    "primarySource": "https://www.hyangnamswcenter.com/swim"
+  },
+  {
+    "poolId": "cd850305-f0c4-4a51-86d0-837aef045d91",
+    "poolName": "현대프라임스포츠센터",
+    "matchedName": "현대프라임스포츠센터",
+    "distanceMeters": 0,
+    "fields": [
+      "homepage_url",
+      "phone"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2025-12-18T05:47:47.461679+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/783",
+    "primarySource": "https://www.instagram.com/hdp_sportscenter"
+  }
+]

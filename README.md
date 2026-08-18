@@ -21,8 +21,7 @@
 - 📍 **지역·내 위치 기반 검색** — 구 단위 지역 검색(엔터 시 지역 우선 매칭), 위치 권한이 있으면 가까운 순, 없으면 금천구 기본 정렬
 - 🗓️ **오늘/토/일 · 공휴일 운영 판별** — 요일별 자유수영 시간표 + 공휴일 처리(운영 / 휴무 / 정보 없음)
 - 🗺️ **지도** — 카카오맵에 전체 수영장 마커, 검색하면 해당 지역으로 이동, 카카오맵·네이버 길찾기
-- 💬 **제보·후기** — 빠진 시간표·요금 정보나 방문 후기를 로그인 없이 익명 등록
-- ⭐ **즐겨찾기**, 상세 요금 참고표(접이식) 등
+- ⭐ **즐겨찾기**, 상세 실제 요금표 등
 
 ## 기술 스택
 
@@ -30,7 +29,7 @@
 |------|------|
 | 프론트 | React 18 · TypeScript · Vite |
 | 플랫폼 | AppsInToss `@apps-in-toss/web-framework` (Granite/AIT) · TDS `@toss/tds-mobile` |
-| 데이터 | Supabase (PostgREST) — `pools` / `pool_reviews` |
+| 데이터 | 정적 JSON |
 | 지도 | Kakao Maps JS SDK |
 
 ## 시작하기
@@ -56,8 +55,8 @@ npm run build
 ```
 src/
   screens/     홈 · 내 주변(지도) · 즐겨찾기 · 상세
-  components/  SearchBox · PoolList · PoolMap · PoolReviews · FavStar …
-  lib/         pools(운영·공휴일 상태) · search(지역 검색) · geo · holidays · reviews …
+  components/  SearchBox · PoolList · PoolMap · FavStar …
+  lib/         pools(운영·공휴일 상태) · search(지역 검색) · geo · holidays …
   design/      tokens · primitives (토스풍 디자인 시스템)
 supabase/      마이그레이션 · 시드
 docs/          앱인토스·TDS 참고 문서, preview 이미지

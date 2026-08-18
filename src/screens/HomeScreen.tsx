@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Top, Loader } from "@toss/tds-mobile";
-import type { Pool } from "../supabase";
+import type { Pool } from "../pool";
 import PoolList from "../components/PoolList";
 import SearchBox, { type Suggestion } from "../components/SearchBox";
 import CrosshairIcon from "../components/CrosshairIcon";
@@ -118,6 +118,9 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
     }
   };
 
+  // 전국 800여 곳이라 매 렌더마다 거르고 정렬하면 타이핑 한 글자에도 목록 전체를 다시 계산한다.
+  // 결과가 달라지는 입력(목록·지역·검색어·필터·내 위치)이 바뀔 때만 계산한다.
+  const filtered = useMemo(() => {
   const distKm = (p: Pool) =>
     myLoc && p.lat != null && p.lng != null ? haversineKm(myLoc, { lat: p.lat, lng: p.lng }) : Infinity;
 
@@ -126,7 +129,7 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
     .filter((p) => (region ? inRegion(p, region) : matchPool(p, appliedText)))
     .filter((p) => passFilter(p, filter));
   // 정렬: 위치 있으면 거리순, 없으면 '금천구 우선' → 그다음 커버리지/요일.
-  const filtered = [...base].sort((a, b) => {
+  return [...base].sort((a, b) => {
     // 위치·검색 없을 땐 기본 지역(금천구)을 맨 위로. (위치 있으면 거리순이 우선이라 스킵)
     if (!myLoc && !region) {
       const g = (p: Pool) => (p.gu === DEFAULT_GU ? 0 : 1);
@@ -146,11 +149,14 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
     if (myLoc) return distKm(a) - distKm(b);
     return 0;
   });
+  }, [pools, region, appliedText, filter, myLoc]);
 
-  const distanceText = myLoc
-    ? (p: Pool) =>
-        p.lat != null && p.lng != null ? formatKm(haversineKm(myLoc, { lat: p.lat, lng: p.lng })) : null
-    : undefined;
+  const distanceText = useMemo(() => {
+    const loc = myLoc;
+    if (!loc) return undefined;
+    return (p: Pool) =>
+      p.lat != null && p.lng != null ? formatKm(haversineKm(loc, { lat: p.lat, lng: p.lng })) : null;
+  }, [myLoc]);
 
   // 추천: 지역("부산 서구"로 시도까지 표기해 중복 구 구분) → 이름 매치 수영장.
   const suggestions = useMemo<Suggestion[]>(() => {
@@ -177,9 +183,20 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
     const named = pools
       .filter((p) => p.name.includes(s))
       .slice(0, 6)
-      .map((p) => ({ id: p.id, icon: "🏊", label: p.name, hint: p.gu, onPick: () => onSelect(p) }));
+      .map((p) => ({
+        id: p.id,
+        icon: "🏊",
+        label: p.name,
+        hint: p.gu,
+        onPick: () => {
+          setMyLoc(null);
+          setRegion(null);
+          setAppliedText(p.name);
+          setQ(p.name);
+        },
+      }));
     return [...regions, ...named];
-  }, [pools, q, onSelect]);
+  }, [pools, q]);
 
   async function toggleLocate() {
     if (myLoc) {

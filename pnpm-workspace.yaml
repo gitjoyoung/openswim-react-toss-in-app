@@ -1,0 +1,5 @@
+allowBuilds:
+  '@sentry/cli': false
+  '@swc/core': true
+  esbuild: true
+  protobufjs: false

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { Pool } from "../supabase";
+import type { Pool } from "../pool";
 import { EmptyState } from "../design/primitives";
 import SearchBox, { type Suggestion } from "../components/SearchBox";
 import { loadKakao, type Kakao } from "../lib/kakaoMap";
@@ -311,8 +311,6 @@ export default function NearbyScreen({ pools, onSelect }: Props) {
     return () => {
       live = false;
     };
-    // showMeAt은 ref/setState라 안정적 — ready 전환 시 1회만.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ready]);
 
   // 추천: 지역("부산 서구"로 시도까지) → 이름 매치 수영장. 선택 시 검색어로 넣어 마커 필터.
@@ -337,7 +335,7 @@ export default function NearbyScreen({ pools, onSelect }: Props) {
           },
         };
       });
-    // 특정 수영장은 지역필터가 아니라 바로 상세로 이동 (검색은 지역기반이라 이름은 필터 안 함).
+    // 수영장 추천도 바로 상세로 이동하지 않고 이름으로 마커만 필터링한다.
     const named = pools
       .filter((p) => p.name.includes(s))
       .slice(0, 6)
@@ -347,11 +345,14 @@ export default function NearbyScreen({ pools, onSelect }: Props) {
         label: p.name,
         hint: p.gu,
         onPick: () => {
-          onSelect(p);
+          cameraRef.current = "fit";
+          setRegion(null);
+          setAppliedText(p.name);
+          setQuery(p.name);
         },
       }));
     return [...regions, ...named];
-  }, [pools, query, onSelect]);
+  }, [pools, query]);
 
   if (err && !ready) {
     return <EmptyState emoji="🗺️" text={`지도를 불러오지 못했어요. (${err})`} />;
@@ -362,10 +363,11 @@ export default function NearbyScreen({ pools, onSelect }: Props) {
       style={{
         position: "relative",
         height: "100dvh", // 지도는 풀블리드 — 플로팅 탭바가 그 위에 뜬다
-        marginBottom: `calc(-1 * (${TAB_BAR_RESERVE}px + env(safe-area-inset-bottom)))`, // Screen 하단 패딩 상쇄
+        marginBottom: `calc(-1 * (${TAB_BAR_RESERVE}))`, // Screen 하단 패딩 상쇄
       }}
     >
-      <div ref={boxRef} style={{ width: "100%", height: "100%" }} />
+      {/* data-allow-zoom: 지도는 확대·축소가 필요한 예외 영역 (앱인토스 체크리스트) */}
+      <div ref={boxRef} data-allow-zoom style={{ width: "100%", height: "100%" }} />
 
       {/* 지도 위 오버레이: 검색바 + 표적 버튼 (홈과 동일 구성). 버튼 → 지도를 현재 위치로 이동 */}
       <div
@@ -413,7 +415,7 @@ export default function NearbyScreen({ pools, onSelect }: Props) {
       <div
         style={{
           position: "absolute",
-          bottom: `calc(env(safe-area-inset-bottom) + 84px)`,
+          bottom: TAB_BAR_RESERVE, // 플로팅 탭바 바로 위 (탭바 높이+세이프에어리어와 같은 토큰)
           right: space.md,
           display: "flex",
           gap: space.md,
@@ -442,7 +444,7 @@ export default function NearbyScreen({ pools, onSelect }: Props) {
         <div
           style={{
             position: "absolute",
-            bottom: `calc(env(safe-area-inset-bottom) + 84px)`,
+            bottom: TAB_BAR_RESERVE, // 플로팅 탭바 바로 위 (탭바 높이+세이프에어리어와 같은 토큰)
             left: space.md,
             right: space.md,
             padding: "10px 14px",

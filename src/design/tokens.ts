@@ -33,6 +33,14 @@ export const radius = { sm: 8, md: 14, lg: 20, pill: 999 } as const;
 
 // 레이아웃
 export const APP_MAX_WIDTH = 480;
-// 플로팅 탭바가 차지하는 세로 공간(바 높이 + 하단 띄움 여백, 세이프에어리어 제외).
-// Screen 하단 여백을 이만큼 줘서 리스트 콘텐츠가 플로팅 바에 안 가리게.
-export const TAB_BAR_RESERVE = 88;
+
+// 하단 고정 요소의 바닥 여백. TDS BottomCTA가 쓰는 공식과 동일하게 맞춘다.
+// 토스 웹뷰는 세이프에어리어를 --toss-safe-area-bottom 으로 내려주고(env()가 0인 기기 대비),
+// 둘 다 없어도 최소 20px은 띄운다. (홈 인디케이터·제스처 영역과 겹치지 않게)
+export const SAFE_BOTTOM = "max(var(--toss-safe-area-bottom, 0px), env(safe-area-inset-bottom), 20px)";
+
+// 플로팅 탭바(캡슐) 자체 높이. 아이콘 28 + 라벨 + 상하 패딩 + 테두리.
+export const TAB_BAR_HEIGHT = 68;
+// Screen 하단에 비워둘 공간 = 탭바 높이 + 바닥 여백 + 콘텐츠와의 간격.
+// 리스트 마지막 항목이 플로팅 바에 가리지 않게.
+export const TAB_BAR_RESERVE = `calc(${TAB_BAR_HEIGHT}px + ${SAFE_BOTTOM} + 12px)`;

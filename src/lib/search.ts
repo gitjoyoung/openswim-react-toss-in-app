@@ -1,16 +1,15 @@
-import type { Pool } from "../supabase";
+import type { Pool } from "../pool";
 
 // 기본 우선 지역 — 검색·위치 없을 때 홈 목록/지도가 먼저 보여줄 곳.
 export const DEFAULT_GU = "금천구";
 export const DEFAULT_GU_CENTER = { lat: 37.4569, lng: 126.8955 }; // 금천구청 근처
 
-// 지역(위치) 기반 검색: 토큰이 (구·시도)에 다 있어야 매치. 이름·주소는 일부러 제외.
-// → "용산"이 엉뚱한 지역 수영장 이름/주소에 걸리는 문제 방지. "부산 서구"처럼 시도+구도 OK.
-// 특정 수영장은 이름 검색이 아니라 추천 목록(🏊)에서 바로 이동해 찾는다.
+// 확정된 자유 검색: 지역 또는 수영장 이름에서 모든 토큰이 일치하면 매치.
+// 지역 검색은 onSearchSubmit에서 먼저 Region으로 확정하므로 이름에 같은 지명이 있어도 섞이지 않는다.
 export function matchPool(p: Pool, query: string): boolean {
   const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   if (!tokens.length) return true;
-  const hay = `${p.gu} ${p.sido ?? ""}`.toLowerCase();
+  const hay = `${p.name} ${p.gu} ${p.sido ?? ""}`.toLowerCase();
   return tokens.every((t) => hay.includes(t));
 }
 

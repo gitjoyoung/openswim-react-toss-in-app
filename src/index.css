@@ -53,6 +53,8 @@ a:focus {
 
 body {
   margin: 0;
+  /* 더블탭 확대 차단 (앱인토스 비게임 출시 체크리스트: 제스처 확대·축소 비활성화) */
+  touch-action: manipulation;
   min-width: 320px;
   min-height: 100dvh; /* 100vh는 주소창 포함 큰 뷰포트라 하단에 여백이 생김 → dvh로 실제 높이에 맞춤 */
 }

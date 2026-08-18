@@ -1,10 +1,10 @@
 import { List, ListRow, Text } from "@toss/tds-mobile";
-import type { Pool } from "../supabase";
+import type { Pool } from "../pool";
 import { images, type RowStatus } from "../lib/pools";
 import { shortSido } from "../lib/search";
 import { color, status, dayColor } from "../design/tokens";
 import FavStar from "./FavStar";
-import freeImg from "../assets/free.webp"; // 사진 없는 곳 기본 이미지
+import freeThumb from "../assets/free-thumb.webp"; // 사진 없는 곳 기본 이미지 (목록용 축소본)
 
 // 운영요일 문구에서 평일=검정, 토요일=파랑, 일요일=빨강 (달력 컬러, dayColor 규칙). 나머지는 상위 색 상속.
 function renderDays(text: string) {
@@ -28,12 +28,22 @@ function renderDays(text: string) {
 }
 
 // 썸네일: 모든 행이 동일한 정사각 영역. 이미지는 cover로 꽉 채우고, 없으면 기본 이미지(free).
+// 52px 자리라 기본 이미지는 원본(1139px) 대신 축소본을 쓴다. 목록은 수백 행이라 디코딩 비용이 그만큼 곱해진다.
+// 화면 밖 행의 이미지는 lazy로 미루고, 디코딩도 메인 스레드 밖(async)에서 — 스크롤이 끊기지 않게.
 const THUMB = 52;
 function Thumb({ pool }: { pool: Pool }) {
-  const src = images(pool)[0] ?? freeImg;
+  const src = images(pool)[0] ?? freeThumb;
   return (
     <div style={{ width: THUMB, height: THUMB, flexShrink: 0, borderRadius: 16, overflow: "hidden", background: color.fill }}>
-      <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+      <img
+        src={src}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        width={THUMB}
+        height={THUMB}
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+      />
     </div>
   );
 }

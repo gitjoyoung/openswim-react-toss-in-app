@@ -1,10 +1,9 @@
 import { useRef, useState } from "react";
 import { Top, Button, Text } from "@toss/tds-mobile";
-import type { Pool } from "../supabase";
+import type { Pool } from "../pool";
 import {
   facilities,
   depthText,
-  formatPrice,
   images,
   prices,
   wonText,
@@ -13,8 +12,7 @@ import {
 } from "../lib/pools";
 import { openKakaoMap, openNaverMap } from "../lib/mapLinks";
 import PoolMap from "../components/PoolMap";
-import PoolReviews from "../components/PoolReviews";
-import { Section, Divider, KeyValue, Pill, Caption } from "../design/primitives";
+import { Section, Divider, Pill, Caption } from "../design/primitives";
 import FavStar from "../components/FavStar";
 import freeImg from "../assets/free.webp"; // 사진 없는 곳 기본 이미지
 import { brand, color, radius, space, status } from "../design/tokens";
@@ -39,10 +37,13 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onBack }: Props) 
     depth ? `수심 ${depth}` : null,
   ].filter(Boolean) as string[];
 
-  const [showCalc, setShowCalc] = useState(false); // '기타 요금 계산법' 표 펼침
-
   return (
-    <div>
+    <div
+      style={{
+        // 마지막 섹션이 모바일 화면 끝과 홈 인디케이터에 붙지 않도록 여유를 둔다.
+        paddingBottom: "calc(32px + env(safe-area-inset-bottom))",
+      }}
+    >
       <Hero images={pics.length ? pics : [freeImg]} name={pool.name} isFav={isFav} onBack={onBack} onToggleFav={onToggleFav} />
 
       <Top
@@ -178,6 +179,27 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onBack }: Props) 
 
       <Divider />
 
+      <Section title="요금">
+        <PriceTable
+          rows={
+            priceTiers.length
+              ? priceTiers
+              : [{ label: "자유수영", amount: pool.price_free_swim }]
+          }
+        />
+        {pool.price_note && <Caption>{pool.price_note}</Caption>}
+
+        {/* 정규권·강습 등은 우리가 안 다루므로, 홈페이지 없을 때만 문의 안내. (홈페이지 링크는 최하단으로) */}
+        {!pool.homepage_url && (
+          <div style={{ marginTop: space.md }}>
+            <Caption>정규권·강습 요금은 수영장에 직접 문의해 주세요.</Caption>
+          </div>
+        )}
+
+      </Section>
+
+      <Divider />
+
       <Section title="시설">
         {facPills.length ? (
           <div style={{ display: "flex", flexWrap: "wrap", gap: space.sm }}>
@@ -189,139 +211,62 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onBack }: Props) 
           <Caption>시설 정보 없음</Caption>
         )}
       </Section>
-
-      <Divider />
-
-      <Section title="요금">
-        {priceTiers.length ? (
-          priceTiers.map((t) => <KeyValue key={t.label} label={t.label} value={wonText(t.amount)} />)
-        ) : (
-          <KeyValue label="자유수영" value={formatPrice(pool)} />
-        )}
-        {pool.price_note && <Caption>{pool.price_note}</Caption>}
-
-        {/* 정규권·강습 등은 우리가 안 다루므로, 홈페이지 없을 때만 문의 안내. (홈페이지 링크는 최하단으로) */}
-        {!pool.homepage_url && (
-          <div style={{ marginTop: space.md }}>
-            <Caption>정규권·강습 요금은 수영장에 직접 문의해 주세요.</Caption>
-          </div>
-        )}
-
-        <div style={{ marginTop: space.md }}>
-          <button
-            type="button"
-            onClick={() => setShowCalc((v) => !v)}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              border: "none",
-              background: "none",
-              padding: 0,
-              cursor: "pointer",
-              color: color.textSub,
-              fontSize: 14,
-              fontWeight: 600,
-            }}
-          >
-            기타 요금 계산법
-            <span
-              style={{
-                width: 16,
-                height: 16,
-                borderRadius: "50%",
-                background: color.fill,
-                color: color.textMuted,
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 11,
-                fontWeight: 700,
-              }}
-            >
-              ?
-            </span>
-          </button>
-          {showCalc && (
-            <>
-          <div
-            style={{
-              marginTop: space.sm,
-              border: `1px solid ${color.divider}`,
-              borderRadius: radius.sm,
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1.2fr 1fr 1.2fr",
-                gap: space.sm,
-                padding: "8px 12px",
-                background: color.fill,
-                fontSize: 12,
-                fontWeight: 700,
-                color: color.textSub,
-              }}
-            >
-              <span>구분</span>
-              <span style={{ textAlign: "right" }}>성인 대비</span>
-              <span style={{ textAlign: "right" }}>예상 금액</span>
-            </div>
-            {PRICE_RULES.map((r) => (
-              <div
-                key={r.label}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1.2fr 1fr 1.2fr",
-                  gap: space.sm,
-                  padding: "9px 12px",
-                  fontSize: 13,
-                  borderTop: `1px solid ${color.divider}`,
-                }}
-              >
-                <span style={{ color: color.textSub }}>{r.label}</span>
-                <span style={{ textAlign: "right", color: color.textMuted, fontVariantNumeric: "tabular-nums" }}>
-                  {r.ratio}
-                </span>
-                <span
-                  style={{
-                    textAlign: "right",
-                    color: color.textStrong,
-                    fontWeight: 600,
-                    fontVariantNumeric: "tabular-nums",
-                  }}
-                >
-                  {r.example}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div style={{ marginTop: space.sm }}>
-            <Caption>
-              청소년·어린이·경로는 감면, 주말·공휴일은 할증될 수 있어요. 정확한 금액은 시설·홈페이지에서 확인해 주세요.
-            </Caption>
-          </div>
-            </>
-          )}
-        </div>
-      </Section>
-
-      <Divider />
-
-      <PoolReviews poolId={pool.id} />
     </div>
   );
 }
 
-// 자유수영 요금은 시설이 조례로 정해 제각각(실측 청소년 50~100%)이라 파생 저장 대신 '대략 기준'만 안내.
-// 성인 10,000원 예시로 감을 잡게 한다 (비율 계산이 바로 읽힘).
-const PRICE_RULES = [
-  { label: "성인 (평일)", ratio: "기준", example: "10,000원" },
-  { label: "청소년", ratio: "약 70~75%", example: "약 7,500원" },
-  { label: "어린이", ratio: "약 50%", example: "약 5,000원" },
-  { label: "주말·공휴일", ratio: "최대 +30%", example: "약 13,000원" },
-];
+function PriceTable({ rows }: { rows: { label: string; amount: number | null }[] }) {
+  return (
+    <div
+      style={{
+        border: `1px solid ${color.divider}`,
+        borderRadius: radius.sm,
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: space.sm,
+          padding: "9px 12px",
+          background: color.fill,
+          fontSize: 12,
+          fontWeight: 700,
+          color: color.textSub,
+        }}
+      >
+        <span>구분</span>
+        <span style={{ textAlign: "right" }}>요금</span>
+      </div>
+      {rows.map((row, index) => (
+        <div
+          key={`${row.label}-${index}`}
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: space.sm,
+            padding: "10px 12px",
+            fontSize: 14,
+            borderTop: `1px solid ${color.divider}`,
+          }}
+        >
+          <span style={{ color: color.textSub }}>{row.label}</span>
+          <span
+            style={{
+              textAlign: "right",
+              color: color.textStrong,
+              fontWeight: 600,
+              fontVariantNumeric: "tabular-nums",
+            }}
+          >
+            {row.amount != null ? wonText(row.amount) : "-"}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 // 길찾기 버튼용 아이콘 (공식 로고 아님 — 브랜드색은 버튼 배경으로). currentColor 상속.
 function PinIcon() {

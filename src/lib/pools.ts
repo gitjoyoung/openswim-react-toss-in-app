@@ -1,4 +1,4 @@
-import type { Pool } from "../supabase";
+import type { Pool } from "../pool";
 import { isHoliday } from "./holidays";
 
 export type Session = { start: string; end: string };
@@ -32,16 +32,52 @@ export function todayDayIndex(): number {
   return isHoliday() ? HOLIDAY_DAY : new Date().getDay();
 }
 
+// freeSwim 결과 캐시. 목록 한 화면(수백 행)에서 행마다 여러 번 불리는데 매번 파싱하면 낭비다.
+// pools는 fetch 후 객체가 그대로 유지되므로 객체 자체를 키로 쓴다. (데이터 갱신 시 새 객체 → 자동 무효화)
+const freeSwimCache = new WeakMap<Pool, DaySchedule[]>();
+
 // free_swim/facilities 는 DB에서 jsonb(Json) 라 좁혀서 꺼낸다.
 // 실데이터가 뒤죽박죽이라 여기서 요일 오름차순 + 세션 시작시각순으로 정렬해 항상 정돈된 값을 준다.
 export function freeSwim(p: Pool): DaySchedule[] {
-  const raw = Array.isArray(p.free_swim) ? (p.free_swim as unknown as DaySchedule[]) : [];
-  return raw
-    .map((d) => ({
-      day: d.day,
-      sessions: [...(d.sessions ?? [])].sort((a, b) => a.start.localeCompare(b.start)),
+  const cached = freeSwimCache.get(p);
+  if (cached) return cached;
+  const parsed = parseFreeSwim(p);
+  freeSwimCache.set(p, parsed);
+  return parsed;
+}
+
+function parseFreeSwim(p: Pool): DaySchedule[] {
+  const raw = Array.isArray(p.free_swim)
+    ? (p.free_swim as unknown as { day: number | string; sessions?: Session[] }[])
+    : [];
+  const byDay = new Map<number, Map<string, Session>>();
+
+  for (const entry of raw) {
+    for (const day of normalizeDays(entry.day)) {
+      const sessions = byDay.get(day) ?? new Map<string, Session>();
+      for (const session of entry.sessions ?? []) {
+        sessions.set(`${session.start}-${session.end}`, session);
+      }
+      byDay.set(day, sessions);
+    }
+  }
+
+  return [...byDay.entries()]
+    .map(([day, sessions]) => ({
+      day,
+      sessions: [...sessions.values()].sort((a, b) => a.start.localeCompare(b.start)),
     }))
     .sort((a, b) => a.day - b.day);
+}
+
+function normalizeDays(day: number | string): number[] {
+  if (Number.isInteger(day) && Number(day) >= 0 && Number(day) <= HOLIDAY_DAY) return [Number(day)];
+  if (day === "평일") return [1, 2, 3, 4, 5];
+  if (day === "토요일") return [6];
+  if (day === "일요일") return [0];
+  if (day === "주말") return [0, 6];
+  if (day === "공휴일") return [HOLIDAY_DAY];
+  return [];
 }
 
 export function facilities(p: Pool): Facilities {
@@ -95,12 +131,6 @@ export function operatingDaysLabel(p: Pool): string {
 
 export function images(p: Pool): string[] {
   return p.images ?? [];
-}
-
-export function summarizeFreeSwim(p: Pool): string {
-  const fs = freeSwim(p).filter((d) => d.sessions.length > 0);
-  if (!fs.length) return "시설 문의";
-  return fs.map((d) => dayShort(d.day)).join("·") + " 운영";
 }
 
 // 요금 티어: "일반"(비할인) + 할인(회원/지역주민 등). label 자유 텍스트.
