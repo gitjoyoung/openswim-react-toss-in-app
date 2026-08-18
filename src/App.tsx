@@ -1,12 +1,13 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { Text } from "@toss/tds-mobile";
+import { graniteEvent, closeView } from "@apps-in-toss/web-framework";
 import { fetchPools, type Pool } from "./pool";
 import homeIcon from "./assets/icons/home.webp";
 import nearbyIcon from "./assets/icons/nearby.webp";
 import favIcon from "./assets/icons/fav.webp";
 import { loadFavs, saveFavs } from "./lib/favorites";
 import { Screen, APP_MAX_WIDTH, EmptyState, Loading } from "./design/primitives";
-import { brand, color, radius, SAFE_BOTTOM, TAB_BAR_HEIGHT } from "./design/tokens";
+import { brand, color, radius, SAFE_BOTTOM, TAB_BAR_HEIGHT, TAB_BAR_SIDE_MARGIN } from "./design/tokens";
 import HomeScreen from "./screens/HomeScreen"; // 첫 화면이라 즉시 로드
 import SplashVideo from "./components/SplashVideo";
 
@@ -28,6 +29,8 @@ function App() {
   const [selected, setSelected] = useState<Pool | null>(null);
   const [favs, setFavs] = useState<string[]>(loadFavs);
   const detailOpenLockedRef = useRef(false);
+  // backEvent 리스너는 한 번만 등록하므로, 콜백 안에서 최신 상세 상태를 ref로 읽는다.
+  const selectedRef = useRef<Pool | null>(null);
   // 인트로 영상은 최초 1회만 (매번 6초 대기 방지). localStorage 지우면 다시 재생.
   // WebView 스토리지 차단 시 localStorage 접근이 throw할 수 있어 try/catch (미보호면 흰 화면).
   const [showSplash, setShowSplash] = useState(() => {
@@ -66,10 +69,29 @@ function App() {
     return () => events.forEach((n) => document.removeEventListener(n, block));
   }, []);
 
+  // 토스 내비게이션 바의 뒤로가기(시스템 back)를 앱 상태에 연결한다.
+  // 상세가 열려 있으면 상세만 닫고, 첫 화면이면 미니앱을 종료한다.
+  // (출시 체크리스트: "최초 화면에서 뒤로가기를 누르면 미니앱이 종료돼요")
+  useEffect(() => {
+    return graniteEvent.addEventListener("backEvent", {
+      onEvent: () => {
+        if (selectedRef.current) {
+          setSelected(null);
+          return;
+        }
+        closeView();
+      },
+    });
+  }, []);
+
   // 탭 이동 시 항상 상단부터. (상세는 모달이라 밑 화면 스크롤은 그대로 유지)
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [tab]);
+
+  useEffect(() => {
+    selectedRef.current = selected;
+  }, [selected]);
 
   // 상세 모달 열린 동안 배경(탭 화면) 스크롤 잠금 + 위치 정확히 보존.
   // position:fixed + top:-y 로 현재 스크롤을 고정하고, 닫을 때 그 위치로 복원.
@@ -209,7 +231,7 @@ function App() {
                 pool={selected}
                 isFav={favs.includes(selected.id)}
                 onToggleFav={() => toggleFav(selected.id)}
-                onBack={() => setSelected(null)}
+                onClose={() => setSelected(null)}
               />
             </Suspense>
           </div>
@@ -219,7 +241,33 @@ function App() {
   );
 }
 
+// 아래로 스크롤하면 탭바를 내려 숨기고, 위로 올리면 다시 보여준다.
+// TDS BottomCTA의 hideOnScroll과 같은 동작이고, 임계값도 같은 의미(이만큼 움직여야 반응).
+const HIDE_ON_SCROLL_THRESHOLD = 8;
+
+function useHideOnScroll(): boolean {
+  const [hidden, setHidden] = useState(false);
+  const lastYRef = useRef(0);
+
+  useEffect(() => {
+    lastYRef.current = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const delta = y - lastYRef.current;
+      if (Math.abs(delta) < HIDE_ON_SCROLL_THRESHOLD) return; // 미세한 흔들림은 무시
+      lastYRef.current = y;
+      // 최상단 근처에서는 항상 보여준다 (바운스로 숨은 채 남는 것 방지)
+      setHidden(delta > 0 && y > TAB_BAR_HEIGHT);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return hidden;
+}
+
 function TabBar({ tab, onChange }: { tab: Tab; onChange: (t: Tab) => void }) {
+  const hidden = useHideOnScroll();
   const tabImg = (src: string) => (
     <img src={src} alt="" style={{ width: 26, height: 26, objectFit: "contain", display: "block" }} />
   );
@@ -228,17 +276,23 @@ function TabBar({ tab, onChange }: { tab: Tab; onChange: (t: Tab) => void }) {
     { key: "nearby", label: "내 주변", icon: tabImg(nearbyIcon) },
     { key: "fav", label: "즐겨찾기", icon: tabImg(favIcon) },
   ];
-  // 앱인토스 브랜딩 가이드: 탭바는 토스 앱 하단 탭과 형태가 겹치지 않도록 플로팅(캡슐)로 둔다.
-  // 그래서 화면 폭을 채우는 바가 아니라, 탭 개수만큼만 폭을 차지하는 알약 모양으로 띄운다.
+  // 앱인토스 브랜딩 가이드: 탭바는 토스 앱 하단 탭과 형태가 겹치지 않도록 플로팅으로 둔다.
+  // 폭은 넓게 쓰되 좌우 여백(TAB_BAR_SIDE_MARGIN)과 완전 라운드를 유지해
+  // '화면에 붙은 바'가 아니라 '떠 있는 알약'으로 읽히게 한다. (겹치면 현재 위치를 헷갈린다는 게 가이드 취지)
   return (
     <nav
       style={{
         position: "fixed",
         bottom: SAFE_BOTTOM, // TDS BottomCTA와 동일한 세이프에어리어 공식 (토스 웹뷰 UA 값 우선)
         left: "50%",
-        transform: "translateX(-50%)",
-        display: "inline-flex", // 폭은 내용만큼만 — 꽉 찬 바로 보이면 토스 기본 탭과 겹친다
-        maxWidth: "calc(100% - 40px)",
+        // 숨길 땐 아래로 밀어낸다. 세이프에어리어까지 포함해 완전히 화면 밖으로.
+        transform: `translateX(-50%) translateY(${hidden ? `calc(${TAB_BAR_HEIGHT}px + ${SAFE_BOTTOM})` : "0px"})`,
+        opacity: hidden ? 0 : 1,
+        transition: "transform 0.25s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.2s ease",
+        pointerEvents: hidden ? "none" : "auto",
+        display: "flex",
+        width: `calc(100% - ${TAB_BAR_SIDE_MARGIN * 2}px)`, // 좌우 여백은 남긴다 (꽉 채우면 토스 기본 탭과 형태가 겹침)
+        maxWidth: APP_MAX_WIDTH - TAB_BAR_SIDE_MARGIN * 2,
         height: TAB_BAR_HEIGHT,
         boxSizing: "border-box",
         borderRadius: radius.pill,
@@ -257,8 +311,8 @@ function TabBar({ tab, onChange }: { tab: Tab; onChange: (t: Tab) => void }) {
             key={it.key}
             onClick={() => onChange(it.key)}
             style={{
-              flex: "0 0 auto", // 폭을 나눠 갖지 않고 각자 고정 — 캡슐이 내용만큼만 넓어진다
-              width: 72, // 탭 3개 기준 약 236px. 탭 타겟(44) 여유 있게 확보
+              flex: "1 1 0", // 넓어진 폭을 탭들이 고르게 나눠 갖는다
+              minWidth: 0, // 라벨이 길어져도 줄어들 수 있게
               border: "none",
               outline: "none", // 포커스 시 웹뷰 기본 테두리 방지 (전역 CSS + 인라인 이중 보장)
               background: "none",

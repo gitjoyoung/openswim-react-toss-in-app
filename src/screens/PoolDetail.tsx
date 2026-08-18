@@ -21,10 +21,10 @@ type Props = {
   pool: Pool;
   isFav: boolean;
   onToggleFav: () => void;
-  onBack: () => void;
+  onClose: () => void;
 };
 
-export default function PoolDetail({ pool, isFav, onToggleFav, onBack }: Props) {
+export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props) {
   const groups = groupSchedule(pool);
   const fac = facilities(pool);
   const pics = images(pool);
@@ -44,7 +44,7 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onBack }: Props) 
         paddingBottom: "calc(32px + env(safe-area-inset-bottom))",
       }}
     >
-      <Hero images={pics.length ? pics : [freeImg]} name={pool.name} isFav={isFav} onBack={onBack} onToggleFav={onToggleFav} />
+      <Hero images={pics.length ? pics : [freeImg]} name={pool.name} isFav={isFav} onToggleFav={onToggleFav} onClose={onClose} />
 
       <Top
         lowerGap={0} // 주소 밑 하단 패딩 제거 (다음 섹션이 자체 상단 여백을 가짐)
@@ -291,14 +291,14 @@ function Hero({
   images,
   name,
   isFav,
-  onBack,
   onToggleFav,
+  onClose,
 }: {
   images: string[];
   name: string;
   isFav: boolean;
-  onBack: () => void;
   onToggleFav: () => void;
+  onClose: () => void;
 }) {
   const [idx, setIdx] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -354,8 +354,10 @@ function Hero({
         </div>
       )}
 
-      <button onClick={onBack} aria-label="뒤로" style={overlayBtn("left")}>
-        ←
+      {/* 목록으로 돌아가는 버튼. 시스템 뒤로가기(App의 backEvent)로도 닫히지만,
+          화면 안에 나가는 길이 보이는 편이 자연스러워 좌측 상단에 둔다. */}
+      <button onClick={onClose} aria-label="뒤로" style={backBtnStyle}>
+        <BackIcon />
       </button>
 
       {/* 즐겨찾기 — 이미지 하단 오른쪽(엄지 닿기 쉬운 곳), 넉넉한 탭 타겟 */}
@@ -414,26 +416,6 @@ function Hero({
   );
 }
 
-function overlayBtn(side: "left" | "right"): React.CSSProperties {
-  return {
-    position: "absolute",
-    top: "calc(8px + env(safe-area-inset-top))",
-    [side]: 8,
-    width: 44, // 최소 탭 타겟 44
-    height: 44,
-    borderRadius: 999,
-    border: "none",
-    cursor: "pointer",
-    background: "rgba(0,0,0,0.35)",
-    color: "#fff",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: 20,
-    lineHeight: 1,
-    backdropFilter: "blur(2px)",
-  };
-}
 
 // 요일 뱃지 — 고정폭으로 통일. 색: 평일 검정 / 토요일 파랑 / 일요일 빨강(달력 관례).
 function DayBadge({ days }: { days: number[] }) {
@@ -465,3 +447,37 @@ const linkStyle: React.CSSProperties = {
   padding: "8px 0",
   textDecoration: "none",
 };
+
+// 뒤로가기 버튼 — 이미지 위에 얹히므로 반투명 배경으로 대비 확보. 탭 타겟 44.
+const backBtnStyle: React.CSSProperties = {
+  position: "absolute",
+  top: "calc(8px + env(safe-area-inset-top))",
+  left: 8,
+  width: 44,
+  height: 44,
+  borderRadius: 999,
+  border: "none",
+  cursor: "pointer",
+  background: "rgba(0,0,0,0.35)",
+  color: "#fff",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: 18,
+  lineHeight: 1,
+};
+
+// 뒤로가기 화살표. currentColor를 따라가므로 버튼 색만 바꾸면 된다.
+function BackIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M15 19L8 12L15 5"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

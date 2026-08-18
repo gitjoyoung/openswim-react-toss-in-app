@@ -39,6 +39,10 @@ export const APP_MAX_WIDTH = 480;
 // 둘 다 없어도 최소 20px은 띄운다. (홈 인디케이터·제스처 영역과 겹치지 않게)
 export const SAFE_BOTTOM = "max(var(--toss-safe-area-bottom, 0px), env(safe-area-inset-bottom), 20px)";
 
+// 플로팅 탭바 좌우 여백. 0으로 두면 화면에 붙은 바처럼 보여 토스 기본 하단 탭과 형태가 겹친다.
+// (앱인토스 심사에서 반려됐던 지점 — 여백과 완전 라운드로 '떠 있음'을 유지한다)
+export const TAB_BAR_SIDE_MARGIN = 40;
+
 // 플로팅 탭바(캡슐) 자체 높이. 아이콘 28 + 라벨 + 상하 패딩 + 테두리.
 export const TAB_BAR_HEIGHT = 68;
 // Screen 하단에 비워둘 공간 = 탭바 높이 + 바닥 여백 + 콘텐츠와의 간격.
