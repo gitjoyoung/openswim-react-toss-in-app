@@ -1,11 +1,12 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { Text } from "@toss/tds-mobile";
-import { graniteEvent, closeView } from "@apps-in-toss/web-framework";
+import { graniteEvent, Screen as AitScreen } from "@apps-in-toss/web-framework";
 import { fetchPools, type Pool } from "./pool";
 import homeIcon from "./assets/icons/home.webp";
 import nearbyIcon from "./assets/icons/nearby.webp";
 import favIcon from "./assets/icons/fav.webp";
 import { loadFavs, saveFavs } from "./lib/favorites";
+import { migrateFromPreviousOrigin } from "./lib/storageMigration";
 import { Screen, APP_MAX_WIDTH, EmptyState, Loading } from "./design/primitives";
 import { brand, color, radius, SAFE_BOTTOM, TAB_BAR_HEIGHT, TAB_BAR_SIDE_MARGIN } from "./design/tokens";
 import HomeScreen from "./screens/HomeScreen"; // 첫 화면이라 즉시 로드
@@ -55,6 +56,13 @@ function App() {
     load();
   }, [load]);
 
+  // Origin 변경(2026-08-25) 대응: 이전 Origin의 즐겨찾기를 한 번 합친다.
+  useEffect(() => {
+    migrateFromPreviousOrigin().then((merged) => {
+      if (merged) setFavs(merged);
+    });
+  }, []);
+
   // iOS 웹뷰는 viewport의 user-scalable=no를 무시해서 핀치 확대가 그대로 된다.
   // 토스 웹뷰에도 핀치 줌을 막는 설정이 없어(개발자센터 문서) 웹에서 직접 막는다.
   // 지도처럼 확대가 꼭 필요한 영역은 data-allow-zoom 으로 예외 처리한다.
@@ -79,7 +87,7 @@ function App() {
           setSelected(null);
           return;
         }
-        closeView();
+        AitScreen.close();
       },
     });
   }, []);
