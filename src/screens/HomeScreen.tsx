@@ -9,6 +9,8 @@ import { space, color, radius, brand } from "../design/tokens";
 import { matchPool, distinctRegions, matchRegion, regionLabel, inRegion, DEFAULT_GU, type Region } from "../lib/search";
 import {
   isOpenToday,
+  isOpenNow,
+  nowRowStatus,
   openOnDay,
   openWeekday,
   openWeekend,
@@ -29,12 +31,13 @@ type Props = {
 };
 
 // 가용성 필터 — 앱이 '오늘 자유수영'이라 기본은 '오늘'. 토/일은 주말 미리 계획, 전체는 브라우징.
-type FilterKey = "today" | "sat" | "sun" | "all";
+type FilterKey = "today" | "now" | "sat" | "sun" | "all";
 const DAY_FILTERS: { key: FilterKey; label: string; accent?: string }[] = [
   { key: "all", label: "전체" },
   { key: "sat", label: "토요일", accent: "#3182f6" },
   { key: "sun", label: "일요일", accent: "#f04452" },
   { key: "today", label: "오늘", accent: brand.main },
+  { key: "now", label: "지금", accent: "#f5a623" },
 ];
 
 // 요일 탭은 '해당일 운영 + 정보없음(혹시 몰라 포함)'만 노출. 정보 있으나 그날 안 여는 곳은 제외.
@@ -43,6 +46,9 @@ function passFilter(p: Pool, key: FilterKey): boolean {
     case "today":
       // 공휴일이면 공휴일 스케줄 기준. 휴무만 빼고 운영·정보없음은 노출.
       return markerState(p) !== "closed";
+    case "now":
+      // 90분 안에 시작하는 세션이 있는 곳만. 이미 시작한 세션, 정보 없음은 제외.
+      return isOpenNow(p);
     case "sat":
       return openOnDay(p, 6) || !hasSchedule(p);
     case "sun":
@@ -143,7 +149,13 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
     }
     // 토/일/오늘: 해당일 운영 우선, 정보없음은 맨 뒤 (그 안에서 위치 있으면 거리순)
     const hit = (p: Pool) =>
-      filter === "today" ? isOpenToday(p) : filter === "sat" ? openOnDay(p, 6) : openOnDay(p, 0);
+      filter === "today"
+        ? isOpenToday(p)
+        : filter === "now"
+          ? isOpenNow(p)
+          : filter === "sat"
+            ? openOnDay(p, 6)
+            : openOnDay(p, 0);
     const rank = (p: Pool) => (hit(p) ? 0 : 1);
     if (rank(a) !== rank(b)) return rank(a) - rank(b);
     if (myLoc) return distKm(a) - distKm(b);
@@ -261,7 +273,7 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
         }
       />
 
-      <div style={{ display: "flex", gap: space.sm, padding: `0 ${space.lg}px ${space.md}px` }}>
+      <div style={{ display: "flex", gap: space.sm, padding: `0 ${space.xl}px ${space.md}px` }}>
         <div style={{ flex: 1, minWidth: 0 }}>
           <SearchBox value={q} onChange={onQueryChange} onSubmit={onSearchSubmit} suggestions={suggestions} />
         </div>
@@ -295,7 +307,7 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
           display: "flex",
           gap: space.sm,
           overflowX: "auto",
-          padding: `${space.xs}px ${space.lg}px`,
+          padding: `${space.xs}px ${space.xl}px`,
           marginBottom: space.xs,
         }}
       >
@@ -316,9 +328,11 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
             onToggleFav={onToggleFav}
             onSelect={onSelect}
             statusOf={(p) => {
-              if (!hasSchedule(p)) return { text: "자유수영 정보 없음", tone: "unknown" as const };
-              // '오늘' 뷰에선 오늘 운영 시간까지, 그 외엔 운영 요일 요약.
+              // 시간표 없는 곳은 경고 문구 대신 비워 둔다 (지역·거리만 보이게).
+              if (!hasSchedule(p)) return { text: "", tone: "muted" as const };
+              // '오늘'/'지금' 뷰에선 시간 정보, 그 외엔 운영 요일 요약.
               if (filter === "today") return todayRowStatus(p);
+              if (filter === "now") return nowRowStatus(p);
               return { text: operatingDaysLabel(p), tone: "muted" as const };
             }}
             distanceText={distanceText}

@@ -111,7 +111,7 @@ export function daysLabel(days: number[]): string {
   if (key === "7") return "공휴일";
   const consecutive = s.every((d, i) => i === 0 || d === s[i - 1] + 1);
   if (s.length >= 3 && consecutive) return `${dayShort(s[0])}~${dayShort(s[s.length - 1])}`;
-  return s.map(dayShort).join("·");
+  return s.map(dayShort).join(", ");
 }
 
 // 홈 리스트용 운영요일 요약(필터 무관, 항상 동일). 평일(특수요일)·토요일·일요일 버킷.
@@ -126,7 +126,7 @@ export function operatingDaysLabel(p: Pool): string {
   if (days.includes(6)) parts.push("토요일");
   if (days.includes(0)) parts.push("일요일");
   if (days.includes(HOLIDAY_DAY)) parts.push("공휴일");
-  return parts.join(" · ") + " 운영";
+  return parts.join(", ") + " 운영";
 }
 
 export function images(p: Pool): string[] {
@@ -159,7 +159,7 @@ export function dayScheduleText(p: Pool, day: number): string {
   const sessions = freeSwim(p).find((x) => x.day === day)?.sessions ?? [];
   if (!sessions.length) return "";
   const first = `${sessions[0].start}~${sessions[0].end}`;
-  return sessions.length > 1 ? `${first} 외 ${sessions.length - 1}회` : first;
+  return sessions.length > 1 ? `${first} +${sessions.length - 1}` : first;
 }
 
 // 리스트 행 상태 문구 + 색조. text 는 필터 맥락에 맞춘 문구(오늘 운영/오늘 휴무/토요일 …).
@@ -191,7 +191,35 @@ export function todayRowStatus(p: Pool): RowStatus {
     return { text: hol ? "공휴일 운영 정보 없음" : "자유수영 정보 없음", tone: "unknown" };
   if (st === "closed") return { text: hol ? "오늘 휴무 (공휴일)" : "오늘 휴무", tone: "closed" };
   const t = dayScheduleText(p, todayDayIndex());
-  return { text: t ? `오늘 운영 · ${t}` : "오늘 운영", tone: "open" };
+  // 리스트 한 줄에 지역과 거리까지 들어가야 하니 "운영" 같은 군더더기는 뺀다.
+  return { text: t ? `오늘 ${t}` : "오늘 운영", tone: "open" };
+}
+
+// '지금' 필터의 여유 시간(분). 이미 시작한 세션은 가봐야 늦으니 제외하고, 이 시간 안에 시작하는 세션만 본다.
+export const NOW_WINDOW_MIN = 90;
+
+function toHHMM(d: Date): string {
+  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+}
+
+// 지금부터 NOW_WINDOW_MIN 분 안에 시작하는 오늘(공휴일이면 7) 세션 중 가장 빠른 것. 없으면 null.
+export function upcomingSession(p: Pool, now = new Date()): Session | null {
+  const from = toHHMM(now);
+  const to = toHHMM(new Date(now.getTime() + NOW_WINDOW_MIN * 60_000));
+  if (to < from) return null; // 자정 넘김은 다루지 않음
+  const sessions = freeSwim(p).find((d) => d.day === todayDayIndex())?.sessions ?? [];
+  return sessions.find((s) => from <= s.start && s.start <= to) ?? null;
+}
+
+export function isOpenNow(p: Pool): boolean {
+  return upcomingSession(p) !== null;
+}
+
+// '지금' 필터용 상태. 곧 시작하는 세션이 있으면 그 시간을, 아니면 오늘 규칙과 동일.
+export function nowRowStatus(p: Pool): RowStatus {
+  const next = upcomingSession(p);
+  if (next) return { text: `${next.start}~${next.end}`, tone: "open" };
+  return todayRowStatus(p);
 }
 
 // 특정 요일(0=일 … 6=토)에 세션이 있으면 true.

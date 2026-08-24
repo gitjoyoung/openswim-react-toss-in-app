@@ -10,7 +10,7 @@ import {
   groupSchedule,
   daysLabel,
 } from "../lib/pools";
-import { openKakaoMap, openNaverMap } from "../lib/mapLinks";
+import { openKakaoMap, openNaverMap, openExternal } from "../lib/mapLinks";
 import PoolMap from "../components/PoolMap";
 import { Section, Divider, Pill, Caption } from "../design/primitives";
 import FavStar from "../components/FavStar";
@@ -52,7 +52,7 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
         subtitleBottom={
           <Top.SubtitleParagraph size={15}>
             {pool.gu}
-            {pool.address ? ` · ${pool.address}` : ""}
+            {pool.address ? `  ${pool.address}` : ""}
           </Top.SubtitleParagraph>
         }
       />
@@ -112,6 +112,10 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
                 href={pool.homepage_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openExternal(pool.homepage_url!);
+                }}
                 style={{ ...linkStyle, display: "flex", alignItems: "center", gap: 8 }}
               >
                 <span style={{ flexShrink: 0 }}>🔗</span>
@@ -192,7 +196,7 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
         {/* 정규권·강습 등은 우리가 안 다루므로, 홈페이지 없을 때만 문의 안내. (홈페이지 링크는 최하단으로) */}
         {!pool.homepage_url && (
           <div style={{ marginTop: space.md }}>
-            <Caption>정규권·강습 요금은 수영장에 직접 문의해 주세요.</Caption>
+            <Caption>정규권과 강습 요금은 수영장에 직접 문의해 주세요.</Caption>
           </div>
         )}
 

@@ -93,18 +93,30 @@ export function Chip({
   return (
     <button
       onClick={onClick}
+      aria-pressed={active}
       style={{
+        // TDS Text는 인라인 span이라 버튼 안에서 기준선 정렬이 살짝 어긋난다. 고정 높이 + flex 중앙정렬 + lineHeight 1 로 잡는다.
         flexShrink: 0,
-        padding: "8px 16px",
+        height: 36,
+        padding: "0 14px",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
         borderRadius: radius.pill,
         border: "none",
         cursor: "pointer",
         background: active ? (accent ?? brand.main) : color.fill,
+        color: active ? "#fff" : (accent ?? color.textSub),
+        fontSize: 14,
+        lineHeight: 1,
+        fontWeight: active ? 700 : 500,
+        letterSpacing: -0.2,
+        whiteSpace: "nowrap",
+        transition: "background .15s, color .15s, transform .1s",
+        WebkitTapHighlightColor: "transparent",
       }}
     >
-      <Text typography="t7" fontWeight={active ? "bold" : "medium"} color={active ? "#fff" : (accent ?? color.textSub)}>
-        {children}
-      </Text>
+      {children}
     </button>
   );
 }

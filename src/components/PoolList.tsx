@@ -65,13 +65,16 @@ export default function PoolList({ pools, favs, onToggleFav, onSelect, statusOf,
         const st = statusOf(p);
         // 전국이라 구만 쓰면 모호("서구"). 시도 축약 붙여 "부산 서구"로.
         const region = p.sido ? `${shortSido(p.sido)} ${p.gu}` : p.gu;
+        // 둘째 줄은 상태 + 거리만. 위치 정렬이 꺼져 거리가 없을 때만 지역으로 대신한다.
+        const meta = dist ?? region;
         return (
         <ListRow
           key={p.id}
+          horizontalPadding="small"
           onClick={() => onSelect(p)}
           left={<Thumb pool={p} />}
           contents={
-            <div style={{ display: "flex", flexDirection: "column", gap: 3, minWidth: 0 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 3, minWidth: 0, width: "100%" }}>
               <Text typography="t5" fontWeight="bold" ellipsisAfterLines={1}>
                 {p.name}
               </Text>
@@ -94,8 +97,7 @@ export default function PoolList({ pools, favs, onToggleFav, onSelect, statusOf,
                   </span>
                 )}
                 <span style={{ color: color.textMuted }}>
-                  {st.text ? ` · ${region}` : region}
-                  {dist ? ` · ${dist}` : ""}
+                  {st.text ? `  ${meta}` : meta}
                 </span>
               </Text>
             </div>
@@ -111,6 +113,7 @@ export default function PoolList({ pools, favs, onToggleFav, onSelect, statusOf,
                 border: "none",
                 background: "none",
                 padding: 10, // 탭 타겟 ~44 (별 24 + 여백)
+                margin: "-10px -10px -10px -4px", // 여백은 터치용. 레이아웃에선 빼서 텍스트 영역이 별 바로 앞까지 오게
                 cursor: "pointer",
                 display: "flex",
                 alignItems: "center",

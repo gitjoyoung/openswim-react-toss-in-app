@@ -231,7 +231,7 @@ export default function NearbyScreen({ pools, onSelect }: Props) {
     const now = new Date();
     const WD = ["일", "월", "화", "수", "목", "금", "토"];
     const hName = holidayName(now);
-    const todayText = `${now.getMonth() + 1}월 ${now.getDate()}일 (${WD[now.getDay()]})${hName ? ` · ${hName}` : ""}`;
+    const todayText = `${now.getMonth() + 1}월 ${now.getDate()}일 (${WD[now.getDay()]})${hName ? `  ${hName}` : ""}`;
     const el = document.createElement("div");
     el.innerHTML = `
       <div style="min-width:200px;max-width:280px;padding:12px 14px;border-radius:14px;background:${color.bg};box-shadow:0 6px 22px rgba(0,0,0,.20)">
