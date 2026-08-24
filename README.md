@@ -99,4 +99,8 @@ node scripts/sync-pools-to-neon.mjs
 
 ## 링크
 
-- [앱인토스 콘솔](https://apps-in-toss.toss.im/) · [개발자센터](https://developers-apps-in-toss.toss.im/) · [개발자 커뮤니티](https://techchat-apps-in-toss.toss.im/)
+- [앱인토스 콘솔](https://apps-in-toss.toss.im/), [개발자센터](https://developers-apps-in-toss.toss.im/), [개발자 커뮤니티](https://techchat-apps-in-toss.toss.im/)
+
+## 만든 사람
+
+- [0rigin.space](https://0rigin.space)
