@@ -4,6 +4,7 @@ import type { Pool } from "../pool";
 import PoolList from "../components/PoolList";
 import SearchBox, { type Suggestion } from "../components/SearchBox";
 import CrosshairIcon from "../components/CrosshairIcon";
+import BannerAd from "../components/BannerAd";
 import { Chip, EmptyState, Loading } from "../design/primitives";
 import { space, color, radius, brand } from "../design/tokens";
 import { matchPool, distinctRegions, matchRegion, regionLabel, inRegion, DEFAULT_GU, type Region } from "../lib/search";
@@ -317,6 +318,8 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
           </Chip>
         ))}
       </div>
+
+      <BannerAd />
 
       {loading ? (
         <Loading />
