@@ -1,0 +1,277 @@
+{
+  "generated_at": "2026-08-21T07:50:20.106Z",
+  "total_pools": 831,
+  "with_schedule": 798,
+  "without_schedule": 33,
+  "note": "아래 시설은 자유수영 시간표가 비어 있다. no_free_swim = 조사 결과 자유수영을 운영하지 않음(강습·회원 전용, 휴장, 선수 전용 등)이라 채울 값이 없는 경우. schedule_not_found = 자유수영은 하는 것으로 보이나 신뢰할 수 있는 시간표를 찾지 못한 경우로, 전화 확인이 필요하다.",
+  "by_category": {
+    "no_free_swim": 29,
+    "schedule_not_found": 4
+  },
+  "pools": [
+    {
+      "id": "4c65d5e8-87d8-4bc8-9918-53f9a9ba976b",
+      "name": "공도우미린더퍼스트아파트커뮤니티센터",
+      "sido": "경기도",
+      "gu": "안성시",
+      "reason": "아파트 커뮤니티, 일일권 없음",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "a5edf71c-1838-49b3-a2f0-f519aea80248",
+      "name": "관악청소년회관 수영장(Gwanak Youth Center)",
+      "sido": "서울특별시",
+      "gu": "관악구",
+      "reason": "강습만 운영, 일일 자유수영 없음",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "bda2ed67-265e-4915-b79d-6654fca70d1c",
+      "name": "광주체고수영장",
+      "sido": "광주광역시",
+      "gu": "북구",
+      "reason": "등록반 회원 전용",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "2218a337-13ba-4381-bdf1-4d5ada10af06",
+      "name": "금곡청소년수련관",
+      "sido": "부산광역시",
+      "gu": "북구",
+      "reason": "자료 부족(2023년 블로그 1건)",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "b005263f-dcdc-4483-875d-d352c40907e4",
+      "name": "뉴그린수영장",
+      "sido": "대전광역시",
+      "gu": "서구",
+      "reason": "강습 중심, 자유수영 미확인",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "94e2f504-61dc-4bda-a9cf-11b5ce6f429a",
+      "name": "뉴스포츠센터",
+      "sido": "경기도",
+      "gu": "평택시",
+      "reason": "월 통합권 위주, 시간표 미확인",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "f921bea9-84da-4171-984a-4baabe88de3b",
+      "name": "대전광역시서구건강체련관(27년 재개관예정)",
+      "sido": "대전광역시",
+      "gu": "서구",
+      "reason": "2027년 재개관 예정(현재 휴관)",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "2295eaa9-bf58-4cfa-9782-76ee753c37e9",
+      "name": "대전학생교육문화원",
+      "sido": "대전광역시",
+      "gu": "중구",
+      "reason": "학생 전용 훈련시설",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "1f054da2-a479-473d-a576-ae474c6ddb64",
+      "name": "동서대학교글로벌스포츠센터",
+      "sido": "부산광역시",
+      "gu": "사상구",
+      "reason": "등록제(월권)만, 일일권 없음",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "4494f272-0852-4214-a9e7-7628b89b6e5c",
+      "name": "동의과학대학교스포츠센터",
+      "sido": "부산광역시",
+      "gu": "부산진구",
+      "reason": "강습회원 전용",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "130fb658-d197-4609-a953-6b88368f34e3",
+      "name": "두류수영장",
+      "sido": "대구광역시",
+      "gu": "달서구",
+      "reason": "자유수영 시간표 미확인",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "58a14649-4c03-4f95-b53a-c3b517afe9a4",
+      "name": "부산북항마리나 다이빙풀&수영장",
+      "sido": "부산광역시",
+      "gu": "중구",
+      "reason": "운영사 계약종료로 임시휴장",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "fc1c6999-be34-4c9a-8a02-3ae77f125710",
+      "name": "스윔핏노원태릉입구역점",
+      "sido": "서울특별시",
+      "gu": "노원구",
+      "reason": "프라이빗 예약제 풀",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "1c5daa2e-01e0-415b-a5be-ced510897f2e",
+      "name": "스윔핏성수점",
+      "sido": "서울특별시",
+      "gu": "성동구",
+      "reason": "프라이빗 예약제 풀",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "858fed69-a0f3-4d85-ab5b-10e6cad924f3",
+      "name": "스포타임(SPORTIME)",
+      "sido": "서울특별시",
+      "gu": "서초구",
+      "reason": "회원제 클럽",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "03034656-d969-448f-9ea6-f50b53d2d036",
+      "name": "시립문래청소년센터",
+      "sido": "서울특별시",
+      "gu": "영등포구",
+      "reason": "공식 FAQ상 자유수영 미운영",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "bf48a9ec-a3c8-4a90-ae78-4c7f085eb891",
+      "name": "시립은평청소년센터",
+      "sido": "서울특별시",
+      "gu": "은평구",
+      "reason": "자유수영 여부 불명확",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "8b237b8b-538a-4f31-8f70-92b4a625dfa4",
+      "name": "신영지웰스포츠센터",
+      "sido": "인천광역시",
+      "gu": "남동구",
+      "reason": "입주민 전용",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "0ddbc2c9-923d-495f-a81c-158ef0e75766",
+      "name": "영등포제3스포츠센터",
+      "sido": "서울특별시",
+      "gu": "영등포구",
+      "reason": "2026-07 신설, 프로그램 미공개",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "9b5dae43-c4ca-49bb-9ea7-b47049816016",
+      "name": "외도실내수영장",
+      "sido": "제주특별자치도",
+      "gu": "제주시",
+      "reason": "수영선수 전용, 일반 자유수영 미운영",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "b0482c0d-86b5-4ccf-b724-211aaf52a54f",
+      "name": "용곡C&C수영장",
+      "sido": "충청남도",
+      "gu": "천안시",
+      "reason": "회원 전용",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "ed366801-d917-4a70-8541-cd22e647bb9f",
+      "name": "울산대학교아산스포츠센터",
+      "sido": "울산광역시",
+      "gu": "남구",
+      "reason": "강습 등록제, 지정 수업시간 외 입장 불가",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "7510d04c-f349-44e3-99cf-32d65f2e2fa5",
+      "name": "월드스포츠센터",
+      "sido": "경기도",
+      "gu": "안산시",
+      "reason": "자유수영 시간표 미확인",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "e802b708-2158-4095-aafc-07b719aa435c",
+      "name": "전남학생교육문화회관",
+      "sido": "전라남도",
+      "gu": "여수시",
+      "reason": "강습 회원 전용",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "a3ce6686-254b-4c71-8c65-599c6b4ece6b",
+      "name": "천마하이파이브(회원제)",
+      "sido": "대전광역시",
+      "gu": "서구",
+      "reason": "회원제",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "c4d5dc6b-cc55-45ab-a112-28c94f316fc1",
+      "name": "코리아스포츠",
+      "sido": "울산광역시",
+      "gu": "북구",
+      "reason": "시간표 확인 불가",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "ba270a07-e53b-4d65-af92-e69079c9d4bc",
+      "name": "클린에너지파크환경체육센터",
+      "sido": "충청북도",
+      "gu": "충주시",
+      "reason": "자유수영 프로그램 미개설(추후 공지 예정)",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "ce31e236-5b3a-4c9a-bd33-bae852fe65e7",
+      "name": "태화기독교사회복지관(Taiwha Christian Social Welfare Institution)",
+      "sido": "서울특별시",
+      "gu": "강남구",
+      "reason": "월정기 회원만, 일일권 없음",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "cc7468fe-c256-4cda-bac3-c82fae93ceec",
+      "name": "패밀리스포츠센터",
+      "sido": "경기도",
+      "gu": "성남시",
+      "reason": "회원제, 일일권 없음",
+      "category": "no_free_swim"
+    },
+    {
+      "id": "63ab6d6f-42f9-4f22-acb8-bec8860527f1",
+      "name": "공주학생수영장",
+      "sido": "충청남도",
+      "gu": "공주시",
+      "reason": "2026-08 보수 후 재개장했으나 재개장 이후 시간표 미공개",
+      "category": "schedule_not_found"
+    },
+    {
+      "id": "1f2b97f3-da00-4a33-96d7-8830857a4f81",
+      "name": "군위국민체육센터",
+      "sido": "경상북도",
+      "gu": "군위군",
+      "reason": "2023 대구 편입 후 개별 시설 안내 페이지 없음",
+      "category": "schedule_not_found"
+    },
+    {
+      "id": "1cd8f45b-09ec-4250-a0b6-3feb5775d4b1",
+      "name": "서귀포홍리실내수영장",
+      "sido": "제주특별자치도",
+      "gu": "서귀포시",
+      "reason": "사설 강습원, 자유수영 정책이 수시 변경되어 현행 시간표 불명",
+      "category": "schedule_not_found"
+    },
+    {
+      "id": "eb52eed7-a9db-4a86-96b2-24b7ecf53577",
+      "name": "여수우리스포츠센터",
+      "sido": "전라남도",
+      "gu": "여수시",
+      "reason": "일일권 7,000원은 확인되나 운영시간 출처가 서로 모순",
+      "category": "schedule_not_found"
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 # 오늘 자유수영 — 기획서 (MVP)
 
-> 서울 전역 수영장의 **자유수영 시간·정보**를 찾는 앱인토스 미니앱.
+> 전국 수영장의 **자유수영 시간·정보**를 찾는 앱인토스 미니앱.
 > 로그인 없이 시작, 위치 기반 정렬, 즐겨찾기(로컬 저장).
+
+> **현재 구현 상태 (갱신):** 아래 4장은 MVP 최초 기획 당시 Supabase 기준으로 작성됐다. 실제로는 **Neon**(Postgres + Neon Data API/Auth)으로 이전했고, 프론트는 `VITE_NEON_DATA_API_URL` / `VITE_NEON_AUTH_URL`로 익명 토큰을 발급받아 `GET /pools`를 조회한다 (`src/pool.ts`). 원격 조회 실패 시 `src/data/pools.json` 번들 데이터로 폴백한다. 범위도 서울 한정에서 **전국 831개 시설**로 확장됐다. 아래 스키마 설명(테이블 구조, RLS 개념)은 Neon에도 그대로 적용되며, 실제 테이블 생성/동기화는 `.manus/neon-migration/migrate_pools_to_neon.mjs`가 수행한다. `supabase/migrations/`는 과거 이력이며 더 이상 런타임에서 사용하지 않는다.
 
 ---
 
@@ -59,9 +61,9 @@
 
 ---
 
-## 4. 데이터 모델 (Supabase)
+## 4. 데이터 모델 (Neon)
 
-> 배포 없이 데이터 수정 가능해야 하므로 Supabase 채택. 앱은 `supabase-js`로 조회.
+> 배포 없이 데이터 수정 가능해야 하므로 관리형 Postgres(Neon)를 채택. 앱은 Neon Data API(REST)를 `fetch`로 조회한다(`src/pool.ts`).
 
 ### `pools`
 | 컬럼 | 타입 | 비고 |
@@ -106,12 +108,12 @@
 | UI | TDS Mobile (`@toss/tds-mobile`) | 미니앱 심사 필수 |
 | 위치 | `useGeolocation` 훅 + `geolocation` 권한 | 앱인토스 제공 |
 | 지도 | 카카오맵 JS SDK 임베드 | WebView 표준 Web API 허용 |
-| 백엔드 | Supabase (`@supabase/supabase-js`) | 무배포 데이터 수정 |
+| 백엔드 | Neon (Postgres + Neon Data API/Auth, REST `fetch`) | 무배포 데이터 수정 |
 | 라우팅 | 하단 탭 상태 (탭 3개뿐 → 라우터 대신 `useState` 탭 스위칭) | ponytail: 라우터 불필요 |
 
 **설정 변경 필요**
-- `granite.config.ts` → `permissions: ["geolocation"]` 추가, `brand.icon` 지정
-- Supabase URL/anon key → 환경변수(`import.meta.env.VITE_SUPABASE_*`)
+- `apps-in-toss.config.ts` → `permissions: [{ name: "geolocation", access: "access" }]` 반영 완료, `brand.icon` 지정
+- Neon Data API/Auth URL → 환경변수(`import.meta.env.VITE_NEON_*`), 익명 토큰은 `VITE_NEON_AUTH_URL`에서 발급
 
 ---
 
@@ -119,17 +121,17 @@
 
 - MVP: 서울 자치구별 대표 수영장 **20~30개** 수동 수집(공공 체육시설 + 사설).
 - 소스: 각 구민체육센터/수영장 홈페이지의 자유수영 시간표·요금.
-- 입력: Supabase 대시보드 or seed 스크립트(csv → insert).
+- 입력: `src/data/pools.json` 직접 편집 또는 `scripts/enrich-free-swim-from-*.mjs` 자동 수집 → `.manus/neon-migration/migrate_pools_to_neon.mjs`로 Neon에 upsert.
 - 시간표는 시즌마다 바뀌므로 `updated_at`으로 갱신일 표기.
 
 ---
 
 ## 7. 구현 마일스톤
 
-**M1 — 데이터·기반 (백엔드 먼저)**
-1. Supabase 프로젝트 + `pools` 테이블 + RLS(읽기전용)
-2. 샘플 수영장 5~10개 입력
-3. 앱에서 `supabase-js` 조회 확인
+**M1 — 데이터·기반 (백엔드 먼저)** ✅ 완료 (Neon으로 전환)
+1. Neon 프로젝트 + `pools` 테이블 + RLS(anon 읽기전용)
+2. 전국 831개 시설 입력
+3. 앱에서 Neon Data API 조회 확인, 실패 시 번들 JSON 폴백
 
 **M2 — 홈 + 상세**
 4. 하단 탭 셸(3탭, useState)
@@ -143,8 +145,18 @@
 10. 지도 이동 후 재검색, 거리 정렬
 
 **M4 — 마감**
-11. 나머지 서울 수영장 데이터 채우기
+11. 전국 수영장 데이터 채우기 — 진행 중
 12. 아이콘·브랜딩, 심사 점검(TDS 준수), 배포(`ait build && ait deploy`)
+
+### 자유수영 시간표 확보 현황
+
+전국 831곳 기준. 자동 수집(helloswim·오늘수영·swimmingis) + AI 조사원 웹 조사를 병행해 채우고 있다.
+
+확보 못한 곳은 두 종류로 나눈다.
+- **자유수영 미운영 확정**: 강습 전용·회원 전용·휴장·선수 전용 시설. 더 찾을 필요가 없다.
+- **시간표 확보 실패**: 공식 안내가 이미지/PDF이거나 온라인 자료 자체가 없는 경우. 전화 확인이 필요하다.
+
+앞으로 시간표를 추가할 때는 `scripts/apply-researched-free-swim.mjs` 로 검증·병합하고, 정규화·감사를 거친 뒤 Neon 에 반영한다 (README “데이터 관리” 참고).
 
 ---
 

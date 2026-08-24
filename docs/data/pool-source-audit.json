@@ -928,18 +928,15 @@
   {
     "poolId": "18bd91f4-c2d3-4073-bfe9-a4f68248b494",
     "poolName": "버드내스포츠센터",
-    "matchedName": "버드내노인복지회관",
+    "matchedName": "버드내 스포츠센터 수영장",
+    "distanceMeters": 0,
     "fields": [
-      "free_swim",
-      "homepage_url",
-      "phone"
+      "price_free_swim"
     ],
-    "checkedAt": "2026-08-03",
-    "sourceUpdatedAt": null,
-    "sourcePage": null,
-    "primarySource": null,
-    "derivedFromPoolId": "170ff9c5-7c4e-4f78-9a5b-61119dc7614d",
-    "note": "동일 시설 중복 레코드의 확인된 정보를 동기화"
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-07-22T23:13:16.000Z",
+    "sourcePage": "https://swimmingis.com/detail/50",
+    "primarySource": "https://swimmingis.com/detail/50"
   },
   {
     "poolId": "059f95dc-b796-4391-b256-de96b5fe25df",
@@ -1271,12 +1268,15 @@
     "distanceMeters": 10,
     "fields": [
       "homepage_url",
-      "phone"
+      "phone",
+      "free_swim"
     ],
-    "checkedAt": "2026-08-03",
+    "checkedAt": "2026-08-21",
     "sourceUpdatedAt": "2025-12-15T04:21:43.126+00:00",
-    "sourcePage": "https://www.helloswim.kr/pool/946",
-    "primarySource": "https://www.gimhaesports.co.kr/sub/progapp.php?pn=0301"
+    "sourcePage": "https://blog.naver.com/piaominzhen/224358712722",
+    "primarySource": "https://blog.naver.com/piaominzhen/224358712722",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
   },
   {
     "poolId": "05053397-fa42-4e71-b9dc-847f3bc945be",
@@ -1449,12 +1449,15 @@
     "distanceMeters": 0,
     "fields": [
       "homepage_url",
-      "phone"
+      "phone",
+      "free_swim"
     ],
-    "checkedAt": "2026-08-03",
+    "checkedAt": "2026-08-21",
     "sourceUpdatedAt": "2026-07-26T13:54:09.103587+00:00",
-    "sourcePage": "https://www.helloswim.kr/pool/895",
-    "primarySource": "https://www.valens.co.kr/program/program01.asp"
+    "sourcePage": "https://www.valens.co.kr/program/program01.asp",
+    "primarySource": "https://www.valens.co.kr/program/program01.asp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
   },
   {
     "poolId": "273e09ec-cc10-4301-9c67-91b5c90a0758",
@@ -1478,12 +1481,15 @@
     "distanceMeters": 14,
     "fields": [
       "homepage_url",
-      "phone"
+      "phone",
+      "free_swim"
     ],
-    "checkedAt": "2026-08-03",
+    "checkedAt": "2026-08-21",
     "sourceUpdatedAt": "2026-07-27T07:35:24.89725+00:00",
-    "sourcePage": "https://www.helloswim.kr/pool/283",
-    "primarySource": "https://new.cauc.or.kr/_buksports/main.asp?no=5"
+    "sourcePage": "https://www.cauc.or.kr/_buksports/main.asp?no=5",
+    "primarySource": "https://www.cauc.or.kr/_buksports/main.asp?no=5",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
   },
   {
     "poolId": "96dfb010-a440-46e8-94d4-7f37ceaaacea",
@@ -1733,12 +1739,15 @@
     "distanceMeters": 0,
     "fields": [
       "homepage_url",
-      "phone"
+      "phone",
+      "free_swim"
     ],
-    "checkedAt": "2026-08-03",
+    "checkedAt": "2026-08-21",
     "sourceUpdatedAt": "2025-12-14T12:54:24.494237+00:00",
-    "sourcePage": "https://www.helloswim.kr/pool/420",
-    "primarySource": "https://kbssw.co.kr/"
+    "sourcePage": "https://blog.naver.com/jinjoo0426/223452059060",
+    "primarySource": "https://blog.naver.com/jinjoo0426/223452059060",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
   },
   {
     "poolId": "9de07c7c-4ef9-41d6-82b5-e1748ced8a8d",
@@ -1928,12 +1937,15 @@
     "distanceMeters": 233,
     "fields": [
       "homepage_url",
-      "phone"
+      "phone",
+      "free_swim"
     ],
-    "checkedAt": "2026-08-03",
+    "checkedAt": "2026-08-21",
     "sourceUpdatedAt": "2025-12-14T12:54:24.494237+00:00",
     "sourcePage": "https://www.helloswim.kr/pool/637",
-    "primarySource": "http://sportspark.ttdc.kr/Board/board.aspx?tbl=sports_voc&mode=view&seq=3124"
+    "primarySource": "http://sportspark.ttdc.kr/Board/board.aspx?tbl=sports_voc&mode=view&seq=3124",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
   },
   {
     "poolId": "69e47942-6c1a-4710-ab0a-b1b1b5456ae3",
@@ -1972,12 +1984,15 @@
     "distanceMeters": 0,
     "fields": [
       "homepage_url",
-      "phone"
+      "phone",
+      "free_swim"
     ],
-    "checkedAt": "2026-08-03",
+    "checkedAt": "2026-08-21",
     "sourceUpdatedAt": "2025-12-14T12:54:24.494237+00:00",
-    "sourcePage": "https://www.helloswim.kr/pool/61",
-    "primarySource": "https://pf.kakao.com/_xmzsDxb/98215924"
+    "sourcePage": "https://www.khnp.co.kr/wolsong/contents.do?key=1718",
+    "primarySource": "https://www.khnp.co.kr/wolsong/contents.do?key=1718",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
   },
   {
     "poolId": "376a183c-8a54-4821-98fd-52d6c9182165",
@@ -2076,11 +2091,5963 @@
     "distanceMeters": 0,
     "fields": [
       "homepage_url",
+      "phone",
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2025-12-18T05:47:47.461679+00:00",
+    "sourcePage": "https://www.instagram.com/p/DGovbQoy1d7/",
+    "primarySource": "https://www.instagram.com/p/DGovbQoy1d7/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5e808d9c-5435-4bf1-919e-33fa8749e193",
+    "poolName": "광명건강체육센터(Gwangmyeong Sports Center)",
+    "matchedName": "광명건강체육센터",
+    "distanceMeters": 13,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-03",
+    "sourceUpdatedAt": "2026-08-06T12:09:09.055371+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/1223",
+    "primarySource": "https://www.gmuc.co.kr/user/conn/healthCenIntro.do"
+  },
+  {
+    "poolId": "6f5aa89a-8bae-49af-b9b6-c67b981dd285",
+    "poolName": "동해시근로자종합복지회관",
+    "matchedName": "동해시근로자종합복지회관수영장",
+    "distanceMeters": 19,
+    "fields": [
+      "free_swim",
+      "homepage_url",
       "phone"
     ],
     "checkedAt": "2026-08-03",
-    "sourceUpdatedAt": "2025-12-18T05:47:47.461679+00:00",
-    "sourcePage": "https://www.helloswim.kr/pool/783",
-    "primarySource": "https://www.instagram.com/hdp_sportscenter"
+    "sourceUpdatedAt": "2026-08-06T07:04:23.935+00:00",
+    "sourcePage": "https://www.helloswim.kr/pool/150",
+    "primarySource": "https://v.daum.net/v/20250826151203388"
+  },
+  {
+    "poolId": "7304a711-b130-43d5-8393-6acf983f4535",
+    "poolName": "IYC스포츠센터",
+    "matchedName": "IYC스포츠센터",
+    "distanceMeters": 20,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-10-17T22:26:11.000Z",
+    "sourcePage": "https://swimmingis.com/detail/114",
+    "primarySource": "https://swimmingis.com/detail/114"
+  },
+  {
+    "poolId": "b20a9d34-867a-4f42-937f-e7d2db7eb1b1",
+    "poolName": "금천구민문화체육센터",
+    "matchedName": "금천구민문화체육센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-06-30T16:30:01.000Z",
+    "sourcePage": "https://swimmingis.com/detail/25",
+    "primarySource": "https://swimmingis.com/detail/25"
+  },
+  {
+    "poolId": "70e23677-e1dd-453c-8c95-3caeed65071c",
+    "poolName": "김제실내수영장",
+    "matchedName": "김제실내수영장",
+    "distanceMeters": 38,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-08-11T14:53:15.000Z",
+    "sourcePage": "https://swimmingis.com/detail/501",
+    "primarySource": "https://swimmingis.com/detail/501"
+  },
+  {
+    "poolId": "7dbc6aaf-c58b-4580-b901-d62a18b5cb93",
+    "poolName": "남구국민체육센터",
+    "matchedName": "남구국민체육센터",
+    "distanceMeters": 51035,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-08-11T15:32:56.000Z",
+    "sourcePage": "https://swimmingis.com/detail/512",
+    "primarySource": "https://swimmingis.com/detail/512"
+  },
+  {
+    "poolId": "29f15a8f-050f-4893-aa3b-b2a73f10024c",
+    "poolName": "남구국민체육센터",
+    "matchedName": "남구국민체육센터",
+    "distanceMeters": 26,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-08-11T15:32:56.000Z",
+    "sourcePage": "https://swimmingis.com/detail/512",
+    "primarySource": "https://swimmingis.com/detail/512"
+  },
+  {
+    "poolId": "7b9f09d2-c69c-4f6f-92e9-226198c99802",
+    "poolName": "도내기샘국민체육센터",
+    "matchedName": "도내기샘 국민체육센터",
+    "distanceMeters": 8,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-04-17T23:39:53.000Z",
+    "sourcePage": "https://swimmingis.com/detail/682",
+    "primarySource": "https://swimmingis.com/detail/682"
+  },
+  {
+    "poolId": "341c4acc-7e00-4ad5-a76b-c25f08d3ceab",
+    "poolName": "라온체육센터",
+    "matchedName": "라온체육센터",
+    "distanceMeters": 31,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-04-17T23:46:21.000Z",
+    "sourcePage": "https://swimmingis.com/detail/683",
+    "primarySource": "https://swimmingis.com/detail/683"
+  },
+  {
+    "poolId": "4d99fdd2-4fba-4caf-b714-1634476718f5",
+    "poolName": "라이프스포츠",
+    "matchedName": "라이프스포츠 수영장",
+    "distanceMeters": 22,
+    "fields": [
+      "free_swim",
+      "price_free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-07-22T23:31:35.000Z",
+    "sourcePage": "https://swimmingis.com/detail/51",
+    "primarySource": "https://swimmingis.com/detail/51"
+  },
+  {
+    "poolId": "2ce4d80f-e782-4ca8-ac57-c841c85596a5",
+    "poolName": "메트로스포츠센터",
+    "matchedName": "메트로스포츠센터",
+    "distanceMeters": 8,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-05-02T21:48:44.000Z",
+    "sourcePage": "https://swimmingis.com/detail/685",
+    "primarySource": "https://swimmingis.com/detail/685"
+  },
+  {
+    "poolId": "461e5c6c-76a6-4633-9388-d53d3944f109",
+    "poolName": "문정교육문화관(Munjeong Education and Culture Center)",
+    "matchedName": "문정교육문화관 수영장",
+    "distanceMeters": 66,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-07-01T16:18:56.000Z",
+    "sourcePage": "https://swimmingis.com/detail/13",
+    "primarySource": "https://swimmingis.com/detail/13"
+  },
+  {
+    "poolId": "63f69346-f9ee-43d2-a474-89b5db30455f",
+    "poolName": "봉래체육문화센터",
+    "matchedName": "봉래체육문화센터",
+    "distanceMeters": 79,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-05-07T23:02:07.000Z",
+    "sourcePage": "https://swimmingis.com/detail/135",
+    "primarySource": "https://swimmingis.com/detail/135"
+  },
+  {
+    "poolId": "6191b18d-c2da-434a-bcfa-a4fa9768ab71",
+    "poolName": "북경주체육문화센터",
+    "matchedName": "북경주체육문화센터",
+    "distanceMeters": 64,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-05-02T22:08:18.000Z",
+    "sourcePage": "https://swimmingis.com/detail/687",
+    "primarySource": "https://swimmingis.com/detail/687"
+  },
+  {
+    "poolId": "442b78f3-052f-430b-b5d9-2c956ebf2514",
+    "poolName": "삼성노블카운티스포츠센터",
+    "matchedName": "삼성 노블카운티스포츠센터 수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-07-23T20:52:27.000Z",
+    "sourcePage": "https://swimmingis.com/detail/54",
+    "primarySource": "https://swimmingis.com/detail/54"
+  },
+  {
+    "poolId": "b021d1a0-207c-44e2-88d0-6217d7cf5836",
+    "poolName": "상무국민체육센터",
+    "matchedName": "상무국민체육센터",
+    "distanceMeters": 27,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-04-14T19:38:38.000Z",
+    "sourcePage": "https://swimmingis.com/detail/679",
+    "primarySource": "https://swimmingis.com/detail/679"
+  },
+  {
+    "poolId": "8995f5d2-a9aa-4e68-abcc-95461df6d203",
+    "poolName": "새천년수영장",
+    "matchedName": "새천년수영장",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-07-22T23:55:49.000Z",
+    "sourcePage": "https://swimmingis.com/detail/53",
+    "primarySource": "https://swimmingis.com/detail/53"
+  },
+  {
+    "poolId": "fb9b033c-3f61-43d8-bcd2-57cf6122302c",
+    "poolName": "서울숲복합문화체육센터",
+    "matchedName": "서울숲복합문화체육센터",
+    "distanceMeters": 153,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-07-01T19:21:31.000Z",
+    "sourcePage": "https://swimmingis.com/detail/37",
+    "primarySource": "https://swimmingis.com/detail/37"
+  },
+  {
+    "poolId": "108e6b6d-ffe0-4844-8d83-86393255ba17",
+    "poolName": "소의체육문화센터",
+    "matchedName": "소의체육문화센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-06-30T17:01:20.000Z",
+    "sourcePage": "https://swimmingis.com/detail/28",
+    "primarySource": "https://swimmingis.com/detail/28"
+  },
+  {
+    "poolId": "789394e4-70ee-404e-9fb8-747147310c30",
+    "poolName": "시립강북청소년센터",
+    "matchedName": "시립강북청소년센터 수영장",
+    "distanceMeters": 11,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-06-19T00:09:20.000Z",
+    "sourcePage": "https://swimmingis.com/detail/23",
+    "primarySource": "https://swimmingis.com/detail/23"
+  },
+  {
+    "poolId": "5254f5e0-0f65-4bd6-9ff1-51d119e18aad",
+    "poolName": "신정스포츠센터",
+    "matchedName": "신정스포츠센터",
+    "distanceMeters": 0,
+    "fields": [
+      "free_swim",
+      "price_free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-08-09T19:03:04.000Z",
+    "sourcePage": "https://swimmingis.com/detail/63",
+    "primarySource": "https://swimmingis.com/detail/63"
+  },
+  {
+    "poolId": "468d52a9-f82f-4604-b4f2-f6de749a111c",
+    "poolName": "아르피아스포츠센터",
+    "matchedName": "아르피아 스포츠센터 수영장",
+    "distanceMeters": 209,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-07-23T21:05:56.000Z",
+    "sourcePage": "https://swimmingis.com/detail/55",
+    "primarySource": "https://swimmingis.com/detail/55"
+  },
+  {
+    "poolId": "fcac08c1-c23d-4afb-8b9b-17cf89ef28e4",
+    "poolName": "염주실내수영장",
+    "matchedName": "염주실내수영장",
+    "distanceMeters": 51,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-12-31T15:31:35.000Z",
+    "sourcePage": "https://swimmingis.com/detail/219",
+    "primarySource": "https://swimmingis.com/detail/219"
+  },
+  {
+    "poolId": "16fdc93b-2c75-4ac1-b55b-a6ed1e219467",
+    "poolName": "영통종합사회복지관",
+    "matchedName": "영통 종합사회복지관 수영장",
+    "distanceMeters": 3,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-07-22T21:01:51.000Z",
+    "sourcePage": "https://swimmingis.com/detail/48",
+    "primarySource": "https://swimmingis.com/detail/48"
+  },
+  {
+    "poolId": "6f1b561b-1d97-4671-b28f-c407797dad75",
+    "poolName": "영희스포츠센터",
+    "matchedName": "영희스포츠센터",
+    "distanceMeters": 41,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-01-05T15:58:36.000Z",
+    "sourcePage": "https://swimmingis.com/detail/104",
+    "primarySource": "https://swimmingis.com/detail/104"
+  },
+  {
+    "poolId": "1e9dccd6-0b5c-46c5-a786-c80463d72c99",
+    "poolName": "원주남부복합체육센터",
+    "matchedName": "원주남부 복합체육센터",
+    "distanceMeters": 25,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-12-16T23:57:09.000Z",
+    "sourcePage": "https://swimmingis.com/detail/677",
+    "primarySource": "https://swimmingis.com/detail/677"
+  },
+  {
+    "poolId": "607235cd-6a25-4270-94b8-6955fd93e1e1",
+    "poolName": "원주동부복합체육센터",
+    "matchedName": "원주동부복합체육센터",
+    "distanceMeters": 14,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-12-16T23:51:08.000Z",
+    "sourcePage": "https://swimmingis.com/detail/676",
+    "primarySource": "https://swimmingis.com/detail/676"
+  },
+  {
+    "poolId": "3657e77c-0705-4990-9bd9-02f36788c760",
+    "poolName": "을지스포츠센터",
+    "matchedName": "을지스포츠센터",
+    "distanceMeters": 138,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-11-12T12:28:34.000Z",
+    "sourcePage": "https://swimmingis.com/detail/649",
+    "primarySource": "https://swimmingis.com/detail/649"
+  },
+  {
+    "poolId": "7195c3a6-3c2b-44d7-b660-ebf78023e95f",
+    "poolName": "일가정양립지원본부 실내수영장",
+    "matchedName": "일가정양립지원본부 실내수영장",
+    "distanceMeters": 6,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-04-14T19:12:27.000Z",
+    "sourcePage": "https://swimmingis.com/detail/678",
+    "primarySource": "https://swimmingis.com/detail/678"
+  },
+  {
+    "poolId": "1ae062e9-0a4b-494d-a912-f80fdcb350dc",
+    "poolName": "증산스포츠센터",
+    "matchedName": "증산스포츠센터",
+    "distanceMeters": 52,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-05-07T22:48:52.000Z",
+    "sourcePage": "https://swimmingis.com/detail/121",
+    "primarySource": "https://swimmingis.com/detail/121"
+  },
+  {
+    "poolId": "557e77c8-2546-4d10-a540-706ec5ff0a5b",
+    "poolName": "초당스포츠센터",
+    "matchedName": "초당스포츠센터",
+    "distanceMeters": 54,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-01-05T12:28:02.000Z",
+    "sourcePage": "https://swimmingis.com/detail/74",
+    "primarySource": "https://swimmingis.com/detail/74"
+  },
+  {
+    "poolId": "8d0ddf90-cfe9-4b78-be55-f1b9fe3f4c04",
+    "poolName": "평리스포츠센터 산들수영장 대구점",
+    "matchedName": "평리스포츠센터 산들수영장 대구점",
+    "distanceMeters": 33,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-05-02T21:54:47.000Z",
+    "sourcePage": "https://swimmingis.com/detail/686",
+    "primarySource": "https://swimmingis.com/detail/686"
+  },
+  {
+    "poolId": "48afbbb5-1973-4aa0-9279-8141b66e1de4",
+    "poolName": "한양스포츠센터",
+    "matchedName": "한양스포츠센터",
+    "distanceMeters": 87,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2024-05-07T23:17:25.000Z",
+    "sourcePage": "https://swimmingis.com/detail/340",
+    "primarySource": "https://swimmingis.com/detail/340"
+  },
+  {
+    "poolId": "85e9d1ef-f93b-4f60-8a74-a625e064ec16",
+    "poolName": "현대제철문화센터",
+    "matchedName": "현대제철문화센터",
+    "distanceMeters": 9,
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": "2023-11-11T18:26:44.000Z",
+    "sourcePage": "https://swimmingis.com/detail/671",
+    "primarySource": "https://swimmingis.com/detail/671"
+  },
+  {
+    "poolId": "98c475f1-c3c0-45a3-a667-0faedb2617b5",
+    "poolName": "강남주민편익시설(Gangnam Resident Convenience Facility)",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://ykasports.com/program/2",
+    "primarySource": "https://ykasports.com/program/2",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "fd2855d0-a8f9-4ae7-8231-8d2de195585e",
+    "poolName": "강북종합체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.sports-island-gb.co.kr/Gangbuk/program",
+    "primarySource": "https://www.sports-island-gb.co.kr/Gangbuk/program",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ace3af46-87f0-41a8-b9c0-66c8f47ff156",
+    "poolName": "강일구민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.igangdong.or.kr/page/ch/ch_150201.asp",
+    "primarySource": "https://www.igangdong.or.kr/page/ch/ch_150201.asp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "170b7ecd-a4b8-4761-955b-356685dd0a46",
+    "poolName": "경서중학교수영장(경서스포츠센터, Kyeongseo Sports Center)",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://poi-kyeongseo.com/bbs/board.php?bo_table=yp_program02",
+    "primarySource": "https://poi-kyeongseo.com/bbs/board.php?bo_table=yp_program02",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6834a53c-d026-4f1d-b349-efce64056ed1",
+    "poolName": "공릉구민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.nowonsc.kr/fmcs/499",
+    "primarySource": "https://www.nowonsc.kr/fmcs/499",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "22dbf334-d499-4d2e-bd62-272758ad1b88",
+    "poolName": "궁동종합사회복지관(Gung Dong Social Welfare Center)",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/gungdongjonghabsahoebogjigwan",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/gungdongjonghabsahoebogjigwan",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4229c1a7-d464-450b-9070-788c0e310987",
+    "poolName": "금나래문화체육센터(Geumnarae Culture and Sports Center)",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/geumnaraemunhwaceyugsenteo",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/geumnaraemunhwaceyugsenteo",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d3afbeab-1e2f-46dc-8ac0-e24f6283a230",
+    "poolName": "금천청소년수련관(Geumcheon Youth Center)",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cyc.or.kr/sub/exercise/exercise01.asp?scrID=0000000223&pageNum=5&subNum=1&ssubNum=1",
+    "primarySource": "https://www.cyc.or.kr/sub/exercise/exercise01.asp?scrID=0000000223&pageNum=5&subNum=1&ssubNum=1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2f2bbcc1-6786-41dc-aae6-5757b7c28539",
+    "poolName": "금호스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/geumhoseupoceusenteo",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/geumhoseupoceusenteo",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9cae12ce-a5bd-4362-ba87-c080783010ed",
+    "poolName": "난향초등학교수영장",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/honeyobadger/223572136915",
+    "primarySource": "https://blog.naver.com/honeyobadger/223572136915",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "703036b3-3fa2-47cf-b279-ccecb37f706e",
+    "poolName": "노원청소년센터",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://youthcenter.or.kr/79",
+    "primarySource": "https://youthcenter.or.kr/79",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "458d67bb-73fe-461f-aaa2-d4a2b4fd1cfa",
+    "poolName": "대우스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/daeuseupoceusenteo",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/daeuseupoceusenteo",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e84e31df-c198-49ce-9c62-6bea782a3e6b",
+    "poolName": "더논현스포츠센터(The Nonhyeon Sports Center)",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/sbj533/224206966735",
+    "primarySource": "https://m.blog.naver.com/sbj533/224206966735",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d91fb258-9a59-4856-a221-4c712246a870",
+    "poolName": "돈암문화스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.korspo.co.kr/donam.php",
+    "primarySource": "http://www.korspo.co.kr/donam.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "02727281-4288-4899-893b-3230664eeb31",
+    "poolName": "동대문종합사회복지관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.communitycenter.or.kr/bbs/content.php?co_id=health_business02_2",
+    "primarySource": "http://www.communitycenter.or.kr/bbs/content.php?co_id=health_business02_2",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a57605a2-0528-4491-ac82-3edadbd6025d",
+    "poolName": "로얄스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.royalsports.co.kr/theme/royal/html/business/swim.php",
+    "primarySource": "http://www.royalsports.co.kr/theme/royal/html/business/swim.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b72201e7-56ce-4e6e-b279-c1faf74035de",
+    "poolName": "마린스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/marin-seupoceusenteo",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/marin-seupoceusenteo",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e41867fa-ea6c-464d-a85b-81f7c87b8971",
+    "poolName": "마포푸르메스포츠센터",
+    "fields": [
+      "free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.purmesports.or.kr/theme/basic/html/2-8.php",
+    "primarySource": "http://www.purmesports.or.kr/theme/basic/html/2-8.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ba28aa83-8df7-4baf-a5eb-aa48cdf10d00",
+    "poolName": "면일체육문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/adboard/223227636024",
+    "primarySource": "https://blog.naver.com/adboard/223227636024",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0bedfef7-db24-4d2b-b83d-93c7281a918d",
+    "poolName": "삼육스포츠센터(SRC Sports Center)",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.srcsportscenter.com/seoul/pool04.php",
+    "primarySource": "http://www.srcsportscenter.com/seoul/pool04.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "16eb4769-c905-470f-a9e5-169a5d03b4e1",
+    "poolName": "상경스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/swimmingace/222988016692",
+    "primarySource": "https://blog.naver.com/swimmingace/222988016692",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ad39b39c-34a4-44a8-8815-35eb3bbbc5ba",
+    "poolName": "상계구민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.nowonsc.kr/fmcs/379",
+    "primarySource": "https://www.nowonsc.kr/fmcs/379",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2de1461d-3d63-48f5-8cea-8b078c1db9b9",
+    "poolName": "서부재활체육센터",
+    "fields": [
+      "free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5602",
+    "primarySource": "https://www.helloswim.kr/pool/5602",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a164c0a4-82f2-450f-8605-5da21be83c48",
+    "poolName": "서울시립수서청소년센터(Suseo Youth Center)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://water.publicplay.co.kr/p-seoul-76",
+    "primarySource": "https://water.publicplay.co.kr/p-seoul-76",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b7843026-b058-4a43-84ac-24d6e30b0fff",
+    "poolName": "서울시어울림플라자",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://pf.kakao.com/_yxbcQn",
+    "primarySource": "https://pf.kakao.com/_yxbcQn",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "500bfb20-1f00-4dbc-b1a5-094534e492c6",
+    "poolName": "서일체육문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://sports.seoul.go.kr/main/facilities/facilities_view.do?&ft_idx=1474",
+    "primarySource": "https://sports.seoul.go.kr/main/facilities/facilities_view.do?&ft_idx=1474",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "47d470f1-fe83-4c00-9cbe-6282133232ef",
+    "poolName": "성동교육문화관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/seongdonggyoyugmunhwagwan",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/seongdonggyoyugmunhwagwan",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2c0e93b3-b766-4e4a-966b-dc07fa023658",
+    "poolName": "성동청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://sdyc.or.kr/main/ko/sub03_01.html",
+    "primarySource": "http://sdyc.or.kr/main/ko/sub03_01.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "27b1cf1d-da6d-4114-9443-9f7106270360",
+    "poolName": "숭인스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/laurier_blog/223569541502",
+    "primarySource": "https://blog.naver.com/laurier_blog/223569541502",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "94eacd02-0275-47a1-82be-b8b3e6173730",
+    "poolName": "시립노원청소년센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/siribnoweonceongsonyeonsenteo",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/siribnoweonceongsonyeonsenteo",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7021cdd0-fbc6-4179-a463-51f093a33b8b",
+    "poolName": "시립동대문청소년센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.ddmy.or.kr/bbs/content.php?co_id=class_01",
+    "primarySource": "https://www.ddmy.or.kr/bbs/content.php?co_id=class_01",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ae7820ef-b2e5-4390-8c52-b8cba63b66f2",
+    "poolName": "시립마포청소년센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.youthnaroo.or.kr/sub01/sub07-3.php",
+    "primarySource": "https://www.youthnaroo.or.kr/sub01/sub07-3.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "900c3f35-f224-43eb-812e-bc5377dbc678",
+    "poolName": "신길책마루문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/blogbynana/224202599355",
+    "primarySource": "https://blog.naver.com/blogbynana/224202599355",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f21f6fdd-ed7e-4df2-b856-7780b02574b3",
+    "poolName": "신동교육문화회관(Shindong Education and Culture Center)",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/seoul-seocho-CJZIq0",
+    "primarySource": "https://25m.kr/swim/pool/seoul-seocho-CJZIq0",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d6d81740-210b-4917-9b6c-0908048f75c5",
+    "poolName": "신월문화체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.ycs.or.kr/fmcs/23",
+    "primarySource": "https://www.ycs.or.kr/fmcs/23",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "86995daa-2641-47bc-91d9-63da69c07710",
+    "poolName": "쌍문종합체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/penguin_eom/223482976509",
+    "primarySource": "https://m.blog.naver.com/penguin_eom/223482976509",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "83493791-e1d9-489e-8f2d-c805c1df9f2e",
+    "poolName": "역삼청소년수련관(Yeoksam Youth Center)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/yeogsamceongsonyeonsuryeongwan",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/yeogsamceongsonyeonsuryeongwan",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c3367691-8a96-4b02-ba0e-f700e7fbbcee",
+    "poolName": "연스포츠",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.korspo.co.kr/jangwi.php",
+    "primarySource": "http://www.korspo.co.kr/jangwi.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "90984f95-a58b-45f1-8258-c811e02bc111",
+    "poolName": "연촌스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/infoposting/223638388407",
+    "primarySource": "https://blog.naver.com/infoposting/223638388407",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "69d1b22e-b8a5-45d3-a782-cbea71240e98",
+    "poolName": "옥정교육문화관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://sports.happysd.or.kr/fmcs/772",
+    "primarySource": "https://sports.happysd.or.kr/fmcs/772",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "bf2d2834-a1cf-4c49-a6a5-21c98f51e911",
+    "poolName": "유성스포츠센터 (Yoosung Sports Center)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://yousungsports.com/bbs/board.php?bo_table=0201",
+    "primarySource": "https://yousungsports.com/bbs/board.php?bo_table=0201",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4b9d3ce3-1881-43f6-97d2-5ceac539028e",
+    "poolName": "자곡문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://life.gangnam.go.kr/fmcs/421",
+    "primarySource": "https://life.gangnam.go.kr/fmcs/421",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "59eca57f-d44d-4cb6-9026-6f0e2931d634",
+    "poolName": "창천교육문화관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.instagram.com/p/DW3sW2PE_gb/",
+    "primarySource": "https://www.instagram.com/p/DW3sW2PE_gb/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c487ba5d-40bb-456f-b14e-6abb06265a4f",
+    "poolName": "천호어울림수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://igangdong.or.kr/page/ch/ch_140201.asp",
+    "primarySource": "https://igangdong.or.kr/page/ch/ch_140201.asp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e1f63354-39ba-43db-8c37-930b703b372f",
+    "poolName": "청구문화스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/misi8930/223584445822",
+    "primarySource": "https://m.blog.naver.com/misi8930/223584445822",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "eb6c2921-76cf-4833-a17f-aaf6e7f6ce8a",
+    "poolName": "포이스포츠센터(Poi Sports Center)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://poi-kyeongseo.com/bbs/board.php?bo_table=yp_program01",
+    "primarySource": "https://poi-kyeongseo.com/bbs/board.php?bo_table=yp_program01",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2df2c13c-6346-49ab-99cf-7b7921057f4a",
+    "poolName": "혜화여고수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/idideat/223498884398",
+    "primarySource": "https://m.blog.naver.com/idideat/223498884398",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "18cad4ef-cf35-4cc9-8f20-aea35507f128",
+    "poolName": "휘경이문누리종합사회복지관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/eung_raphic/224128125857",
+    "primarySource": "https://blog.naver.com/eung_raphic/224128125857",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f74d3546-c5ef-4056-8e86-5ac8f0f5d2f4",
+    "poolName": "검배체육문화센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-guri-GHEzab",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-guri-GHEzab",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "50587fac-8b34-4572-9ad5-2d9e8fb757d9",
+    "poolName": "고강BK스포츠센터",
+    "fields": [
+      "free_swim",
+      "prices"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://swimmingis.com/detail/330",
+    "primarySource": "https://swimmingis.com/detail/330",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e9db83fa-19a5-42f1-b5ca-1d2a54d8ccb1",
+    "poolName": "구리멀티스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-guri-xwb5Oq",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-guri-xwb5Oq",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "587979db-cd4c-4c4a-b80e-f023b46b5f23",
+    "poolName": "기아스포츠센터화성점",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/hwaseong-giaseupoceusenta",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/hwaseong-giaseupoceusenta",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6ab35312-4253-427b-bcc9-8940d59db662",
+    "poolName": "대신스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wbc4u.com/center/detail?SSB_CD=SBAT13110330",
+    "primarySource": "https://www.wbc4u.com/center/detail?SSB_CD=SBAT13110330",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7595ecba-af32-4956-aee5-db950df9a1cf",
+    "poolName": "동두천어울림센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.ddc.go.kr/ddc/contents.do?key=2180",
+    "primarySource": "https://www.ddc.go.kr/ddc/contents.do?key=2180",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c9b35422-f529-4d94-9b2a-0ff19698db72",
+    "poolName": "동백미르휴먼센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yongin-sporex.com/m03/4/",
+    "primarySource": "https://www.yongin-sporex.com/m03/4/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b1f7ed64-e37a-4f69-b911-693b17a5280c",
+    "poolName": "망포복합체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://mpsports.or.kr/base/contents/view?contentsNo=6&menuLevel=2&menuNo=7",
+    "primarySource": "https://mpsports.or.kr/base/contents/view?contentsNo=6&menuLevel=2&menuNo=7",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4719f30e-2b8b-4861-a987-7a0775a8a2b4",
+    "poolName": "물사랑수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-uijeongbu-5WiAAZ",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-uijeongbu-5WiAAZ",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c99ed99c-326d-4982-ad6a-f317685d1977",
+    "poolName": "민락국민체육센터(Minlak Sports Center)",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/myeesactiva/223910474106",
+    "primarySource": "https://m.blog.naver.com/myeesactiva/223910474106",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "cd8625fc-f3c7-4faa-89d8-2ffa7a254a34",
+    "poolName": "산들수영장일산점",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-goyang-pBDiJe",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-goyang-pBDiJe",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "65f48099-ee9e-4d42-9e80-3d885b15b504",
+    "poolName": "서부권스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yjuc.or.kr/sub/content.asp?cIdx=9",
+    "primarySource": "https://www.yjuc.or.kr/sub/content.asp?cIdx=9",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f441f491-c4dd-4734-a408-2ca9fd9147c7",
+    "poolName": "서울YMCA고양국제청소년문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.letsymca.or.kr/wellness/programs/view/00436",
+    "primarySource": "https://www.letsymca.or.kr/wellness/programs/view/00436",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2a6e063b-2071-4693-a167-39a6dc3b3bf0",
+    "poolName": "성남시평생학습관스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://spo.isdc.co.kr/spo_dailyFreeGuide.do",
+    "primarySource": "https://spo.isdc.co.kr/spo_dailyFreeGuide.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d0b07d36-9755-497f-92e1-3bff890b4386",
+    "poolName": "성남종합운동장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-seongnam-kMhRqZ",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-seongnam-kMhRqZ",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b8fbd4e1-9a22-4ff6-a1ac-203daf5904d6",
+    "poolName": "송내국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.best.or.kr/fmcs/1633",
+    "primarySource": "https://www.best.or.kr/fmcs/1633",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b3b924ea-f7b4-4b35-b80b-fa2aef953afd",
+    "poolName": "수원권선배움마루수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://yeyak.syf.or.kr/www/48",
+    "primarySource": "https://yeyak.syf.or.kr/www/48",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "583d41cd-930f-4066-a5c2-0619444048b3",
+    "poolName": "수원시녹색교통회관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-suwon-Dy5W94",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-suwon-Dy5W94",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8921f80c-9150-4778-9bfc-3e44981612cf",
+    "poolName": "수정스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.sujungsports.kr/sub/guide/swimming_pool.aspx",
+    "primarySource": "http://www.sujungsports.kr/sub/guide/swimming_pool.aspx",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1c4fe4f8-802c-4165-8451-2cca228fa980",
+    "poolName": "신안웰리스스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/akghdrn777/223880215532",
+    "primarySource": "https://blog.naver.com/akghdrn777/223880215532",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "690cd86c-0ae3-4af9-bad7-cd87c4da8a3c",
+    "poolName": "신일스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-goyang-iT6VOv",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-goyang-iT6VOv",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "3136dbe7-6460-41c2-9126-5a1a28e3ae9a",
+    "poolName": "양평군실내수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yp21.go.kr/pool/fmcs/3",
+    "primarySource": "https://www.yp21.go.kr/pool/fmcs/3",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "fbfc764d-1625-4935-884a-8dc404a93e0a",
+    "poolName": "양평군체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://ypsc04.co.kr/use_info/3",
+    "primarySource": "http://ypsc04.co.kr/use_info/3",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "16c64805-e642-40ad-84c1-9ac7739e0435",
+    "poolName": "에덴수영장",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/the-answer-/223313534883",
+    "primarySource": "https://blog.naver.com/the-answer-/223313534883",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "af0e9d6e-3e76-4b8e-a640-7fe988723038",
+    "poolName": "올림픽스포츠센터수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.ksponco.or.kr/sports/menu.es?mid=a50204000000",
+    "primarySource": "https://www.ksponco.or.kr/sports/menu.es?mid=a50204000000",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "41ce4013-6278-4ae6-a839-cf99064ac589",
+    "poolName": "용인YMCA스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://llsports.yongin.go.kr/m03/4/",
+    "primarySource": "https://llsports.yongin.go.kr/m03/4/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "dd3e77d4-48ef-46bc-ae99-6b319196ccd4",
+    "poolName": "용인시시민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-yongin-5eaBZx",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-yongin-5eaBZx",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4c58365a-94dc-40e6-92c4-08b114d3e407",
+    "poolName": "월피체육문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/yamujinju999/224039010371",
+    "primarySource": "https://m.blog.naver.com/yamujinju999/224039010371",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0be71993-40f0-423b-aa81-f6272b9188d6",
+    "poolName": "위례어울림종합복지관",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/ldh128/224259593089",
+    "primarySource": "https://m.blog.naver.com/ldh128/224259593089",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ece60488-5e1d-47ba-bc09-fcc21a85a9f1",
+    "poolName": "파주시청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.pcy.or.kr/pyc/bbs/content.php?co_id=pyc_03_2",
+    "primarySource": "https://www.pcy.or.kr/pyc/bbs/content.php?co_id=pyc_03_2",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "34e94311-6795-4937-adfe-a7e333b0056e",
+    "poolName": "하이츠스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.hsports.co.kr/?act=board&bbs_code=faq",
+    "primarySource": "http://www.hsports.co.kr/?act=board&bbs_code=faq",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9b83d692-949f-40c5-8848-979eb41f2024",
+    "poolName": "광명사회체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/itisbooboo/223044087604",
+    "primarySource": "https://m.blog.naver.com/itisbooboo/223044087604",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1f4da81b-3c02-4175-ba84-077d69193c75",
+    "poolName": "기아스포츠문화센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/tomyshi0/223536380000",
+    "primarySource": "https://blog.naver.com/tomyshi0/223536380000",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6d3f4087-3ffb-451f-8c71-045d1fe3bdf7",
+    "poolName": "김포반다비체육센터(코오롱스포렉스 김포운양점)",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/gimpotoday/224260192975",
+    "primarySource": "https://m.blog.naver.com/gimpotoday/224260192975",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1dabe9d7-d9f3-41d2-8caa-4df04de7cfd0",
+    "poolName": "도농애시앙스포츠센터",
+    "fields": [
+      "free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/akghdrn777/223877257796",
+    "primarySource": "https://blog.naver.com/akghdrn777/223877257796",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c2aa80db-f4fb-4cb8-ac2e-0b55f463ce66",
+    "poolName": "정왕평생학습관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-siheung-MRmkvS",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-siheung-MRmkvS",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "706070b4-8937-4f7f-b2d4-9dbedac8a068",
+    "poolName": "용인청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/videomare/222989871972",
+    "primarySource": "https://blog.naver.com/videomare/222989871972",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f8d7d85b-3ee7-4acc-ad4c-427c23287613",
+    "poolName": "금호수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gwangju-gwangsan-IceWSD",
+    "primarySource": "https://25m.kr/swim/pool/gwangju-gwangsan-IceWSD",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7f8e27b9-9e9a-4574-8b70-950253b1418b",
+    "poolName": "시립광주평동체육관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gwangju-gwangsan-O3ce2D",
+    "primarySource": "https://25m.kr/swim/pool/gwangju-gwangsan-O3ce2D",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c6e2f4e3-5f93-457b-ae44-4252740a30ba",
+    "poolName": "하남다누리체육센터",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gwangju-gwangsan-2VaxsX",
+    "primarySource": "https://25m.kr/swim/pool/gwangju-gwangsan-2VaxsX",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8b7130d8-26fa-4c90-a140-5aa15929fd55",
+    "poolName": "남구반다비체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gjnamgubandabigym.kr/swimmingpool",
+    "primarySource": "https://www.gjnamgubandabigym.kr/swimmingpool",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "93c5f20c-7bfc-4f6a-90e4-7a4752e96ba7",
+    "poolName": "동구국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://donggusc.co.kr/doc/sub3_2.php",
+    "primarySource": "http://donggusc.co.kr/doc/sub3_2.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4bb66a6c-f17a-4b00-9ed7-8eb2c79c86c4",
+    "poolName": "동구문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.donggucc.kr/www/cmd.do?opencode=pg_0202",
+    "primarySource": "https://www.donggucc.kr/www/cmd.do?opencode=pg_0202",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c414d588-b1bd-461d-a49b-2c53f8e26486",
+    "poolName": "광주북구건강복지타운",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gwangju-buk-Tksrd7",
+    "primarySource": "https://25m.kr/swim/pool/gwangju-buk-Tksrd7",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2d1c4c03-9811-4cff-97d8-f65192cb7707",
+    "poolName": "광주북구반다비체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gwangju-buk-d6gPHK",
+    "primarySource": "https://25m.kr/swim/pool/gwangju-buk-d6gPHK",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b25d312f-2db7-4a35-845f-c794257a5b52",
+    "poolName": "시립광주무등체육관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gwangju-buk-2e0MgP",
+    "primarySource": "https://25m.kr/swim/pool/gwangju-buk-2e0MgP",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b0ffe817-1628-4ff4-b56e-c891666056cf",
+    "poolName": "광주학생교육문화회관",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gwangju-seo-TmzUWv",
+    "primarySource": "https://25m.kr/swim/pool/gwangju-seo-TmzUWv",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "661376fc-61a5-4503-8c83-de66431ba8f5",
+    "poolName": "기아수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gwangju-seo-q4ltme",
+    "primarySource": "https://25m.kr/swim/pool/gwangju-seo-q4ltme",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6f28ecb2-f9a2-4560-ba32-82c65f434e0c",
+    "poolName": "달서아트센터(대구성서스포츠크럽)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.dsac.or.kr/main/contents.do?idx=6011",
+    "primarySource": "https://www.dsac.or.kr/main/contents.do?idx=6011",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "65130eef-f9e5-4cf0-91b6-5a45069b28f0",
+    "poolName": "대구학생문화센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/kkamangj/223505690235",
+    "primarySource": "https://blog.naver.com/kkamangj/223505690235",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1f6ec211-c325-453e-bd56-f4a98ab6b9db",
+    "poolName": "대구혁신도시복합문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://library.daegu.go.kr/center/html.do?menu_idx=100",
+    "primarySource": "https://library.daegu.go.kr/center/html.do?menu_idx=100",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "552cbff3-d832-4e3f-a92c-2eeb11a4d366",
+    "poolName": "달성국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.dssiseol.or.kr/pages/sisul/page.html?mc=1396",
+    "primarySource": "https://www.dssiseol.or.kr/pages/sisul/page.html?mc=1396",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a09bfab7-a858-4403-b329-4c66354585d3",
+    "poolName": "달성군여성문화복지센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.dssiseol.or.kr/pages/sisul/page.html?mc=1028",
+    "primarySource": "https://www.dssiseol.or.kr/pages/sisul/page.html?mc=1028",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "42bf74e3-6e69-44cd-bedb-6b8f00422bd2",
+    "poolName": "서재문화체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/haeri3201/223507325800",
+    "primarySource": "https://blog.naver.com/haeri3201/223507325800",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d59d00c5-edfb-4088-a08b-d41f2f1af8b5",
+    "poolName": "달성문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.dssiseol.or.kr/pages/sisul/page.html?mc=1016",
+    "primarySource": "https://www.dssiseol.or.kr/pages/sisul/page.html?mc=1016",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "271328f3-c689-459b-a143-0c98029b009f",
+    "poolName": "동아스포츠센터수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://dongasports.co.kr/sub3_1.php",
+    "primarySource": "https://dongasports.co.kr/sub3_1.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ef5839f2-6f73-4de5-8152-e645525e61c3",
+    "poolName": "성서국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.spsc.or.kr/public/front/index.php?menu=010207",
+    "primarySource": "https://www.spsc.or.kr/public/front/index.php?menu=010207",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f07df036-58f8-40dd-91e5-36ef2aaacec4",
+    "poolName": "동부여성문화회관",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/29purin/223166459008",
+    "primarySource": "https://blog.naver.com/29purin/223166459008",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "45d0b004-cfbd-426a-91ff-5562c91d5f78",
+    "poolName": "대구광역시달서구청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://dsyc.or.kr",
+    "primarySource": "https://dsyc.or.kr",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4503fe23-3807-4ab9-b566-785ecf12a993",
+    "poolName": "대구 수성아쿠아",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/mysoulhyuky/223221655458",
+    "primarySource": "https://blog.naver.com/mysoulhyuky/223221655458",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6789a64a-3448-4d1a-b9ca-c1cd8fa2b5a8",
+    "poolName": "그린스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/daegu-buk-qKbH4f",
+    "primarySource": "https://25m.kr/swim/pool/daegu-buk-qKbH4f",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f2d700e4-20cc-4a4a-83d2-ddec860d8e0a",
+    "poolName": "세븐스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://sevensports.co.kr/22",
+    "primarySource": "http://sevensports.co.kr/22",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "180c42c1-6f65-4b08-8ca5-32cb04643ac3",
+    "poolName": "대구농업마이스터고수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/daegu-suseong-lSOm1f",
+    "primarySource": "https://25m.kr/swim/pool/daegu-suseong-lSOm1f",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "93500699-c2b9-409b-baeb-7a08c39e0ff7",
+    "poolName": "용운국제수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.djsiseol.or.kr/portal/sub020504.asp",
+    "primarySource": "https://www.djsiseol.or.kr/portal/sub020504.asp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7dd2d2c7-bb79-41c6-95cf-6d513b879f05",
+    "poolName": "관저다목적체육관",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://sgwsc.co.kr/sub2_1/197",
+    "primarySource": "http://sgwsc.co.kr/sub2_1/197",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1efc34cc-a313-4ef0-b709-8dd0ff57f75c",
+    "poolName": "기성종합복지관",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.djsiseol.or.kr/portal/sub040303.asp",
+    "primarySource": "https://www.djsiseol.or.kr/portal/sub040303.asp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1ac44531-1f43-41e3-a37e-e92782b43031",
+    "poolName": "남선공원종합체육관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.namsunpark.com/swimming",
+    "primarySource": "https://www.namsunpark.com/swimming",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b7140338-fc0a-42d0-8d0b-fd7d1e3098ba",
+    "poolName": "대전월드컵스포츠센터수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/daejeon-yuseong-rx7nk5",
+    "primarySource": "https://25m.kr/swim/pool/daejeon-yuseong-rx7nk5",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "78a7636e-7d33-48bb-b501-ad6b42a2edac",
+    "poolName": "사이언스도룡스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.diwc.or.kr/sub040204",
+    "primarySource": "https://www.diwc.or.kr/sub040204",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c9327e9d-8505-40d4-9bb5-9d2a17ffc203",
+    "poolName": "사이언스전민스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.diwc.or.kr/jm-swim-1",
+    "primarySource": "https://www.diwc.or.kr/jm-swim-1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "3501caf1-0569-456f-badf-d8cf2c1b566f",
+    "poolName": "유성구장애인종합복지관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.withway.or.kr/xe/?mid=menu61",
+    "primarySource": "https://www.withway.or.kr/xe/?mid=menu61",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "021e7c44-17cf-4183-9c25-ef7c99401fb8",
+    "poolName": "유성구종합사회복지관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/wlvkddlwkd/224004476591",
+    "primarySource": "https://m.blog.naver.com/wlvkddlwkd/224004476591",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "616b2482-e3a2-4bea-9f38-cca1b9c4741d",
+    "poolName": "유성반다비체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/daejeon-yuseong-butBde",
+    "primarySource": "https://25m.kr/swim/pool/daejeon-yuseong-butBde",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0655b731-9d02-4ad7-9c57-8018a0313686",
+    "poolName": "진잠다목적체육관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/yangbe23/223966078683",
+    "primarySource": "https://blog.naver.com/yangbe23/223966078683",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8f3a1155-19fa-412a-a142-4a072e5f312b",
+    "poolName": "추목수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/daejeon-yuseong-tgsSUM",
+    "primarySource": "https://25m.kr/swim/pool/daejeon-yuseong-tgsSUM",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a510bd63-8001-4466-997c-2d72ad695d46",
+    "poolName": "대전 중구국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://jgnsc.co.kr/sub3_1/190",
+    "primarySource": "http://jgnsc.co.kr/sub3_1/190",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8aea11d3-2c07-473f-98fa-81f2c67a4de4",
+    "poolName": "대전산성종합복지관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.djsswel.or.kr/main/sub.html?pageCode=18",
+    "primarySource": "https://www.djsswel.or.kr/main/sub.html?pageCode=18",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "322ec5aa-cda0-42b4-8d63-aa9ff0bbed47",
+    "poolName": "한밭복합문화체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/daejeon-jung-aHyqtz",
+    "primarySource": "https://25m.kr/swim/pool/daejeon-jung-aHyqtz",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0058e30b-f384-42d9-9a5a-0afc919520bb",
+    "poolName": "강서구국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-gangseo-XpZ4VG",
+    "primarySource": "https://25m.kr/swim/pool/busan-gangseo-XpZ4VG",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2457e3f1-e225-40bb-9630-6d6ade8f380c",
+    "poolName": "대방디엠시티수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-gangseo-dYwzYz",
+    "primarySource": "https://25m.kr/swim/pool/busan-gangseo-dYwzYz",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "720fd3f0-32f6-41e8-be51-f3d0bf81c44b",
+    "poolName": "부산강서체육공원 실내수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-gangseo-1X1eIg",
+    "primarySource": "https://25m.kr/swim/pool/busan-gangseo-1X1eIg",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e97d8acd-f25e-4187-8cc8-3e18e15c4399",
+    "poolName": "부산학생안전체험관수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-gangseo-ihWPW1",
+    "primarySource": "https://25m.kr/swim/pool/busan-gangseo-ihWPW1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "70d6cd76-f93a-4dad-9bdf-98f9d3b62c23",
+    "poolName": "금정국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-geumjeong-kzIQRc",
+    "primarySource": "https://25m.kr/swim/pool/busan-geumjeong-kzIQRc",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "694f8acb-9b8c-4f2b-8837-d9c9dcfbd2ec",
+    "poolName": "스포원파크",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-geumjeong-L8aGzi",
+    "primarySource": "https://25m.kr/swim/pool/busan-geumjeong-L8aGzi",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6374f5af-ea47-4299-8c02-90dedf69797f",
+    "poolName": "고리스포츠문화센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://gorisport.co.kr/program/fee.html",
+    "primarySource": "https://gorisport.co.kr/program/fee.html",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "29b60fa1-8b2e-433b-b579-3264ec0c33e0",
+    "poolName": "기장군국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gijangcmc.or.kr/gmspo/02_guide/02_guide2.asp",
+    "primarySource": "https://www.gijangcmc.or.kr/gmspo/02_guide/02_guide2.asp",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "efc3f41d-0360-4a3b-823e-bce4c66e3b3c",
+    "poolName": "정관아쿠아드림파크",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gijangcmc.or.kr/dreampark/main/main.asp",
+    "primarySource": "https://www.gijangcmc.or.kr/dreampark/main/main.asp",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "702c4b58-4f01-40f5-8793-64e76b4d4387",
+    "poolName": "동구국민체육문예센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-dong-sTPgPR",
+    "primarySource": "https://25m.kr/swim/pool/busan-dong-sTPgPR",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a6272795-215b-4fb6-a2c8-9e37fc06dd20",
+    "poolName": "동구국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-dong-sTPgPR",
+    "primarySource": "https://25m.kr/swim/pool/busan-dong-sTPgPR",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "469bd38c-28e5-4db4-b904-d0f56d7ceeef",
+    "poolName": "부산진구국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-busanjin-ffvzZG",
+    "primarySource": "https://25m.kr/swim/pool/busan-busanjin-ffvzZG",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a9d80f87-828d-4d45-89f7-89a7017c9c45",
+    "poolName": "북구국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-buk-2tkkt0",
+    "primarySource": "https://25m.kr/swim/pool/busan-buk-2tkkt0",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a5ef2208-9b55-47d9-82ba-a391802e5ee8",
+    "poolName": "부산시민스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/okbow/223419987505",
+    "primarySource": "https://blog.naver.com/okbow/223419987505",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d76d956c-42e4-4856-802f-c22c3ae44c01",
+    "poolName": "사하구국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.sahaksports.or.kr/saha/192",
+    "primarySource": "https://www.sahaksports.or.kr/saha/192",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "cd179211-0de4-485f-89d3-a28a08d12449",
+    "poolName": "부산시민스포츠센터 초읍지점",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/theyehee/222892766892",
+    "primarySource": "https://m.blog.naver.com/theyehee/222892766892",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "af615cb1-9615-46b3-9e5a-8538208c0096",
+    "poolName": "서부산권장애인스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.sbsd.kr/Home/301",
+    "primarySource": "https://www.sbsd.kr/Home/301",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c5081e6f-d572-4a69-8ee0-b331535bfe17",
+    "poolName": "신평장림체육관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.xn--vk1b23hp5ehjek7f.kr/bbs/content.php?co_id=02_04",
+    "primarySource": "https://www.xn--vk1b23hp5ehjek7f.kr/bbs/content.php?co_id=02_04",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "26e10389-00cc-42dd-b7bc-3bfd4914410f",
+    "poolName": "부산국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-seo-H8OXok",
+    "primarySource": "https://25m.kr/swim/pool/busan-seo-H8OXok",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "14495ccd-099e-4bcf-80f5-068a00cfc59e",
+    "poolName": "송도스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.sdsports.or.kr/bbs/content.php?co_id=03_04",
+    "primarySource": "https://www.sdsports.or.kr/bbs/content.php?co_id=03_04",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "48def419-7ce6-429e-b584-436d4cd9a7f5",
+    "poolName": "수영구국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://sysports.or.kr/emSolution/document/m2s3",
+    "primarySource": "https://sysports.or.kr/emSolution/document/m2s3",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "eb375623-9b91-4ab2-b71f-63ed004c5408",
+    "poolName": "부산곰두리스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.gomduri.org",
+    "primarySource": "http://www.gomduri.org",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "cd922546-6c47-4067-8c19-60f403b1b7f9",
+    "poolName": "연제구국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://sports.yeonje.go.kr/subpage/index/84",
+    "primarySource": "https://sports.yeonje.go.kr/subpage/index/84",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "06631fff-adec-4e58-aecb-1b6b8c54633c",
+    "poolName": "해운대구건강증진센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-haeundae-Vwibod",
+    "primarySource": "https://25m.kr/swim/pool/busan-haeundae-Vwibod",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e2d381ae-8017-476f-911d-6cca363a1e5b",
+    "poolName": "해운대생활체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.haeundaeswim.com/bbs/board.php?bo_table=notice&wr_id=5",
+    "primarySource": "http://www.haeundaeswim.com/bbs/board.php?bo_table=notice&wr_id=5",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7b432832-c337-4f5a-84d4-c572e2b08d62",
+    "poolName": "해운대청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/busan-haeundae-f821Nf",
+    "primarySource": "https://25m.kr/swim/pool/busan-haeundae-f821Nf",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "96b5217d-9755-4eb3-a7c5-40729cdce056",
+    "poolName": "정립회관수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/seoul-gwangjin-eDd47k",
+    "primarySource": "https://25m.kr/swim/pool/seoul-gwangjin-eDd47k",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "23edf739-8bf4-4b1d-bd56-697959a1ae53",
+    "poolName": "문수실내수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/dduddudidi/223668910729",
+    "primarySource": "https://blog.naver.com/dduddudidi/223668910729",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d9c1c200-d7eb-421b-a1c1-51eb69e9df56",
+    "poolName": "울산광역시노동자종합복지회관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.uic.or.kr/welfare/notify/notify02.do",
+    "primarySource": "https://www.uic.or.kr/welfare/notify/notify02.do",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e1e6e51d-6adf-4a50-8f17-76cada263d11",
+    "poolName": "울산동부체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.donggu.ulsan.kr/donggu/contents/contents.do?mId=7040210",
+    "primarySource": "https://www.donggu.ulsan.kr/donggu/contents/contents.do?mId=7040210",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f79e0d71-3047-4824-b455-bce6da6b52a2",
+    "poolName": "오토밸리복지센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.ubimc.or.kr/pageCont.do?menuNo=4030000",
+    "primarySource": "https://www.ubimc.or.kr/pageCont.do?menuNo=4030000",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e1b0f300-21b2-4910-98ce-fcb7d239c362",
+    "poolName": "울산북구국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/ulsan-buk-y5lurw",
+    "primarySource": "https://25m.kr/swim/pool/ulsan-buk-y5lurw",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2eb13c67-8699-4fa9-a2ac-c3661885bc32",
+    "poolName": "호계문화체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/baegurumi/223462603292",
+    "primarySource": "https://blog.naver.com/baegurumi/223462603292",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "430cd709-adff-49e0-9f87-4cd002783b2d",
+    "poolName": "온산문화체육센터(Onsan Culture and Sports Center)",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.uljusiseol.or.kr/onsan/course/course1_1",
+    "primarySource": "https://www.uljusiseol.or.kr/onsan/course/course1_1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0b6f8202-634c-48a4-852a-4a9a6c59a326",
+    "poolName": "울주 남부청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.uljusiseol.or.kr/nambu/lifesports/swimming2.jsp",
+    "primarySource": "https://www.uljusiseol.or.kr/nambu/lifesports/swimming2.jsp",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8093bf9c-fc09-4e9b-b1cc-c991deea1d2d",
+    "poolName": "울주군국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.uljusiseol.or.kr/uljusports/guide/guide1_1",
+    "primarySource": "https://www.uljusiseol.or.kr/uljusports/guide/guide1_1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7d666200-a65d-4cdf-a35b-fd3fe635e613",
+    "poolName": "울주서부청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.uljusiseol.or.kr/ujyouth/lifesports/swimming.jsp",
+    "primarySource": "https://www.uljusiseol.or.kr/ujyouth/lifesports/swimming.jsp",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8ad77ca7-bf08-4507-8ff5-b926667f6e15",
+    "poolName": "울주종합체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.uljusiseol.or.kr/uljusc/guide/guide2_1",
+    "primarySource": "https://www.uljusiseol.or.kr/uljusc/guide/guide2_1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "84abb7e1-469b-4db3-a52b-27eaa7ad1c76",
+    "poolName": "유니스트스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://unistsports.co.kr:8081/menu/02_1/swim",
+    "primarySource": "https://unistsports.co.kr:8081/menu/02_1/swim",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f007deed-1f14-4014-a0a5-f56593d19609",
+    "poolName": "동천국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.uic.or.kr/dcsc/notify/noti02/selectDcscBoardArticle.do",
+    "primarySource": "https://www.uic.or.kr/dcsc/notify/noti02/selectDcscBoardArticle.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8029123e-0b92-41c1-9adb-8986eaeb7d23",
+    "poolName": "울산중구수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://crs.ujcmc.or.kr/etc/facility_info01.jsp",
+    "primarySource": "https://crs.ujcmc.or.kr/etc/facility_info01.jsp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5012f2e9-c03e-4b4a-9599-32881cbdf5aa",
+    "poolName": "계양구효성수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.hsswimming.or.kr/content.html?md=1176",
+    "primarySource": "https://www.hsswimming.or.kr/content.html?md=1176",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b057e253-9306-4888-9496-4a3ddb243682",
+    "poolName": "서창어울마당",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://biz.namdong.go.kr/seochang/program/sports.jsp",
+    "primarySource": "https://biz.namdong.go.kr/seochang/program/sports.jsp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "20e525c5-ff5f-407b-b871-72198ea4c8a2",
+    "poolName": "일신스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://sportscenter.itrocks.kr/?doc=sub_02",
+    "primarySource": "http://sportscenter.itrocks.kr/?doc=sub_02",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7cb9687b-b7a9-4cbd-b1b1-941758214d38",
+    "poolName": "에이스스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cbswim.webflow.io/suyeongjang/eiseuseupoceusenteo",
+    "primarySource": "https://cbswim.webflow.io/suyeongjang/eiseuseupoceusenteo",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ce2bffc6-c7ee-4bfa-b163-ac935111a9f7",
+    "poolName": "드림파크스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.dreampark-sporex.com/m03/4",
+    "primarySource": "https://www.dreampark-sporex.com/m03/4",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9a6114f2-b146-4b94-9c83-83bd3e69f9db",
+    "poolName": "서부여성회관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.incheon.go.kr/wiw/WIW010201",
+    "primarySource": "https://www.incheon.go.kr/wiw/WIW010201",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2832d738-a200-477f-a007-fad982dafbe6",
+    "poolName": "인천서구국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/incheon-seo-4y7Xyx",
+    "primarySource": "https://25m.kr/swim/pool/incheon-seo-4y7Xyx",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "3b7fba7e-3607-49e0-ab40-8b03ef28a020",
+    "poolName": "청라복합문화센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/incheon-seo-2oRYdS",
+    "primarySource": "https://25m.kr/swim/pool/incheon-seo-2oRYdS",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "206ac30c-ffbd-4329-8981-dce3455cbed3",
+    "poolName": "박태환수영장",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://pf.kakao.com/_xfxmGnb",
+    "primarySource": "https://pf.kakao.com/_xfxmGnb",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f419c382-5a00-430f-af27-a3d74ee1cb25",
+    "poolName": "옹암체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://ongam.ysfsmc.or.kr/fmcs/18",
+    "primarySource": "https://ongam.ysfsmc.or.kr/fmcs/18",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5fcbeb45-0f74-4cbc-bdaf-3bcffa3b8c67",
+    "poolName": "인천환경공단 송도스포츠파크",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/incheon-yeonsu-99gfH0",
+    "primarySource": "https://25m.kr/swim/pool/incheon-yeonsu-99gfH0",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "82d63ea5-e789-4daa-be64-c39b0a80c9d3",
+    "poolName": "영종국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/misi8930/224324257098",
+    "primarySource": "https://blog.naver.com/misi8930/224324257098",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5e9d106f-f530-41aa-abbe-01f12a5649f2",
+    "poolName": "인천중구 국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://jgnsc.co.kr/sub3_1/190",
+    "primarySource": "http://jgnsc.co.kr/sub3_1/190",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "3ea3f623-9936-49bd-be5e-be11f3c4c270",
+    "poolName": "부산한마음스포츠센터(장애인전용)",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.bisco.or.kr/hmsports/sub/sub02/sub02_1/",
+    "primarySource": "https://www.bisco.or.kr/hmsports/sub/sub02/sub02_1/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "56cb423f-a204-472a-bb89-b61879cc8d34",
+    "poolName": "삼양반다비체육센터",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://igangdong.or.kr/page/ch/ch_140201.asp",
+    "primarySource": "https://igangdong.or.kr/page/ch/ch_140201.asp",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c0cf8f56-bce9-4d8d-b2c2-18297ea37438",
+    "poolName": "서초구민체육센터(Seocho Community Sports Center, Seocho YMCA)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://seochoymca.com/",
+    "primarySource": "https://seochoymca.com/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "396e3236-cd1e-4897-b8c8-73d2317c7acc",
+    "poolName": "강릉아이스아레나수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://arena.gtdc.or.kr/",
+    "primarySource": "https://arena.gtdc.or.kr/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "67a08ce4-abca-4bce-9b03-35b55fa96d74",
+    "poolName": "북부수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://north.gtdc.or.kr/pub/guidepaytime.do",
+    "primarySource": "https://north.gtdc.or.kr/pub/guidepaytime.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1d2e75ea-15d5-4101-82be-9819219330d9",
+    "poolName": "고성군복합국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://soraknews.co.kr/detail.php?number=30266",
+    "primarySource": "https://soraknews.co.kr/detail.php?number=30266",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "fc272b3a-cd83-4a68-b888-c01dbcf6c120",
+    "poolName": "광산근로자복지센터수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/219",
+    "primarySource": "https://www.helloswim.kr/pool/219",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a3c980a8-3ee2-477f-9481-e3b1d1fc7bbf",
+    "poolName": "삼척종합사회복지관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5337",
+    "primarySource": "https://www.helloswim.kr/pool/5337",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "3ce28184-e2eb-4cbc-a96e-7c3a4c55be4e",
+    "poolName": "양구청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/yanggutour/222261993303",
+    "primarySource": "https://blog.naver.com/yanggutour/222261993303",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b2ed8d20-cbce-4997-973e-1453ede7d655",
+    "poolName": "양양문화복지회관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/222",
+    "primarySource": "https://www.helloswim.kr/pool/222",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f36075af-96b3-4092-9597-69f87ac57427",
+    "poolName": "영월군국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yw.go.kr/www/contents.do?key=379",
+    "primarySource": "https://www.yw.go.kr/www/contents.do?key=379",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "820568ed-0ca0-49bd-b797-9f7e3ddfd9bd",
+    "poolName": "원주국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wonju.go.kr/sports/contents.do?key=5167",
+    "primarySource": "https://www.wonju.go.kr/sports/contents.do?key=5167",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "65fceaaa-00b4-4a65-824d-222b055ace88",
+    "poolName": "원주드림체육관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wonju.go.kr/facility/contents.do?key=6385",
+    "primarySource": "https://www.wonju.go.kr/facility/contents.do?key=6385",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "52661cfe-37e2-401a-bf3b-7a80c9b8d4aa",
+    "poolName": "원주시근로자종합복지관",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wonju.go.kr/www/contents.do?key=5696",
+    "primarySource": "https://www.wonju.go.kr/www/contents.do?key=5696",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e33726f7-b92a-4f3f-9bf4-dcd504409f46",
+    "poolName": "원주시농민문화체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wonju.go.kr/facility/contents.do?key=6377",
+    "primarySource": "https://www.wonju.go.kr/facility/contents.do?key=6377",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "66639ddc-ae54-4bab-aa1b-ab04c7e7d71b",
+    "poolName": "기린국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://injesports.co.kr/Home/H60000/H60200/H60203/html",
+    "primarySource": "https://injesports.co.kr/Home/H60000/H60200/H60203/html",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d8da0cf0-8c79-4f34-8df7-6505c73fd8a9",
+    "poolName": "원통체육문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://injesports.co.kr/Home/H60000/H60200/H60202/html",
+    "primarySource": "https://injesports.co.kr/Home/H60000/H60200/H60202/html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "bcbcd360-606c-436c-8a11-f4e7755b6812",
+    "poolName": "인제하늘내린센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://injesports.co.kr/Home/H60000/H60200/H60201/html",
+    "primarySource": "https://injesports.co.kr/Home/H60000/H60200/H60201/html",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "dd9f18ca-9e5f-4dcf-89a0-7442d4d774b5",
+    "poolName": "정선국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.jsimc.or.kr/layout/basic/page/page2/page04.html",
+    "primarySource": "https://www.jsimc.or.kr/layout/basic/page/page2/page04.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "06fda938-6e63-4664-977c-46f541511d00",
+    "poolName": "철원국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwg.go.kr/sports/contents.do?key=1369",
+    "primarySource": "https://www.cwg.go.kr/sports/contents.do?key=1369",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9b044ce3-19d9-4080-b28d-04dfb8e1f045",
+    "poolName": "근로자종합복지관실내수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cuc.or.kr/totalWelfare.do",
+    "primarySource": "https://www.cuc.or.kr/totalWelfare.do",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1db13d76-cd45-4c31-a5fc-7f32bb6d8083",
+    "poolName": "백령스포츠센터수영장(강원대춘천캠퍼스)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://sports.kangwon.ac.kr/bbs/board.php?bo_table=sub3_1&wr_id=1",
+    "primarySource": "https://sports.kangwon.ac.kr/bbs/board.php?bo_table=sub3_1&wr_id=1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d5a5cd44-85a4-49fb-afed-9d7003f8f5fd",
+    "poolName": "춘천국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cuc.or.kr/gukminCenter.do",
+    "primarySource": "https://www.cuc.or.kr/gukminCenter.do",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "30c29960-4fed-4aff-99ab-04a9e295995f",
+    "poolName": "춘천올림픽기념국민생활관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cuc.or.kr/gukminLife.do",
+    "primarySource": "https://www.cuc.or.kr/gukminLife.do",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ef4973d3-7533-4e91-a3b8-e5a6b61b430e",
+    "poolName": "한림레크리에이션센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://lifelong.hallym.ac.kr",
+    "primarySource": "https://lifelong.hallym.ac.kr",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "962cbf6c-0b7d-4eca-8868-2ed84b6e8de0",
+    "poolName": "태백국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.tfmc.or.kr/www/contents/WWW030504.do",
+    "primarySource": "https://www.tfmc.or.kr/www/contents/WWW030504.do",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "bcd52c20-b363-4e6c-914f-dd0a12e18ab5",
+    "poolName": "홍천국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://sports.gangwon.kr/content/swim_free",
+    "primarySource": "http://sports.gangwon.kr/content/swim_free",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "08a801f5-2b25-402e-a4c8-5308a83477d8",
+    "poolName": "홍천군국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://sports.gangwon.kr/content/swim_free",
+    "primarySource": "http://sports.gangwon.kr/content/swim_free",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "810ad9c5-07bb-4747-af2e-044eed71cb03",
+    "poolName": "토마토수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/coolguysmin/223470296484",
+    "primarySource": "https://blog.naver.com/coolguysmin/223470296484",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "79cd3605-06d5-4282-81d7-955ab8dabd36",
+    "poolName": "화천국민문화체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/rornfl0313/223525443428",
+    "primarySource": "https://blog.naver.com/rornfl0313/223525443428",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6932b6ad-a440-4dad-96b0-18b01640396f",
+    "poolName": "횡성실내수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/www_kki/223533460100",
+    "primarySource": "https://blog.naver.com/www_kki/223533460100",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "13926b2a-920e-43fc-8a42-6eea31f8bc9b",
+    "poolName": "그린힐스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.greenhillsc.co.kr/sub/price_guide.php",
+    "primarySource": "http://www.greenhillsc.co.kr/sub/price_guide.php",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ab60878d-4346-4186-80d8-8322984787db",
+    "poolName": "트윈스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-siheung-uGpAPT",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-siheung-uGpAPT",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "30cfc61c-0ec8-4102-805d-bb22f683ee4e",
+    "poolName": "해랑수영장(구.마리나수영장)",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/gyeonggi-icheon-Ylti4k",
+    "primarySource": "https://25m.kr/swim/pool/gyeonggi-icheon-Ylti4k",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b0695f95-b2a8-4ba5-a7cb-1a72f8bf8500",
+    "poolName": "오션사이드수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://geojeoceanside.or.kr/guide",
+    "primarySource": "https://geojeoceanside.or.kr/guide",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5de0e0ce-a476-4f61-85a8-55aea198a4b8",
+    "poolName": "거창국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.geochang.go.kr/02149/02170.web",
+    "primarySource": "https://www.geochang.go.kr/02149/02170.web",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "fbcab47e-0e3e-48f3-a7a5-18f6a51bb40f",
+    "poolName": "고성국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/kosamart/223422647621",
+    "primarySource": "https://blog.naver.com/kosamart/223422647621",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "89730947-8552-48ff-b7ae-9946146ab087",
+    "poolName": "김해문화의전당시민스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://sports.ghct.or.kr/content/board08_01",
+    "primarySource": "https://sports.ghct.or.kr/content/board08_01",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c086e2f3-5501-4d94-b7f8-d416d76d1d61",
+    "poolName": "김해서부문화센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/thal2621/223960283958",
+    "primarySource": "https://blog.naver.com/thal2621/223960283958",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d962ef06-5f74-4c46-9fb6-b7b806555363",
+    "poolName": "동부스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/cyh6436/224177740983",
+    "primarySource": "https://blog.naver.com/cyh6436/224177740983",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "47a003f3-26cf-4698-999c-cad4276f1043",
+    "poolName": "장유스포츠센타",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/ppoppip93/223434999873",
+    "primarySource": "https://blog.naver.com/ppoppip93/223434999873",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "03907a07-1ed3-4e48-80e8-5df9fade60e5",
+    "poolName": "해동이국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/akghdrn777/224084739421",
+    "primarySource": "https://blog.naver.com/akghdrn777/224084739421",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "155e19f7-d637-4762-9e6a-47260af0aaf2",
+    "poolName": "밀양스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.myfmc.or.kr/nmprogram/myfmc/201070000.php",
+    "primarySource": "https://www.myfmc.or.kr/nmprogram/myfmc/201070000.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e4dbcb2f-b72a-4250-a3ea-ab60dd1b63a6",
+    "poolName": "하남스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.myfmc.or.kr/sub/02_22_01.php",
+    "primarySource": "https://www.myfmc.or.kr/sub/02_22_01.php",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2cbe3323-5b35-4fd2-9bbd-156f5575e730",
+    "poolName": "사천시실내수영장",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.scfmc.or.kr/sub2_5?page=1",
+    "primarySource": "https://www.scfmc.or.kr/sub2_5?page=1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5359e87a-9be5-4aa7-b504-10cfba61398e",
+    "poolName": "우주항공국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.scfmc.or.kr/sub2_6?page=1",
+    "primarySource": "https://www.scfmc.or.kr/sub2_6?page=1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2b584549-9caa-4fdd-a4ba-8c4735866e2f",
+    "poolName": "남부문화체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/mgjb52/223286445195",
+    "primarySource": "https://blog.naver.com/mgjb52/223286445195",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ed1947fc-8817-4b77-87b3-0bdf86a556c4",
+    "poolName": "산청군실내수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.myguest.co.kr/index?d=place&action=view&eshare_item_id=BA10A0004042",
+    "primarySource": "https://www.myguest.co.kr/index?d=place&action=view&eshare_item_id=BA10A0004042",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "55addb36-301d-4ca8-b305-04579b1a8ff1",
+    "poolName": "의령국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/akghdrn777/224085621145",
+    "primarySource": "https://blog.naver.com/akghdrn777/224085621145",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8de5c076-6110-4a6a-97df-68ca04156750",
+    "poolName": "삼전수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/76",
+    "primarySource": "https://www.helloswim.kr/pool/76",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f2269ffa-3195-4a78-a0d0-018b1ae9796e",
+    "poolName": "신세계실내수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/77",
+    "primarySource": "https://www.helloswim.kr/pool/77",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "cf350217-8fa0-41dd-b04f-adeba5cfeb63",
+    "poolName": "진주시장애인문화체육센(Jinju Parasports Culture Center)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.jjcsc.or.kr/program/program03.asp",
+    "primarySource": "https://www.jjcsc.or.kr/program/program03.asp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "98f27041-4b81-4bde-a76d-292cafe8411d",
+    "poolName": "남지국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://cfmc.kr/namji/sub.html?code=01_02&Radd=01_02",
+    "primarySource": "https://cfmc.kr/namji/sub.html?code=01_02&Radd=01_02",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6ea4d4c0-a219-4e44-b13b-44b79db0ff2e",
+    "poolName": "감계복지센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_ggswc/_sub02/sub02_02.html",
+    "primarySource": "https://www.cwsisul.or.kr/_ggswc/_sub02/sub02_02.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "cfb96216-c3f5-4462-992b-737c7b1f3fc4",
+    "poolName": "내서스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_msnssports/_sub03/sub03_01.html",
+    "primarySource": "https://www.cwsisul.or.kr/_msnssports/_sub03/sub03_01.html",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5a718f5e-93b6-4cb6-b5aa-9db10c247199",
+    "poolName": "마산실내체육관",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_msbaseball/_sub02/sub02_01.html",
+    "primarySource": "https://www.cwsisul.or.kr/_msbaseball/_sub02/sub02_01.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f57ec888-679a-47e1-8e66-680b82a14c18",
+    "poolName": "마산합포스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_mshpsports/_sub02/sub02_01.html",
+    "primarySource": "https://www.cwsisul.or.kr/_mshpsports/_sub02/sub02_01.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "395f3e6d-dd7d-4b46-9306-7aec4874d5ad",
+    "poolName": "성산스포츠센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_chsssports/_sub02/sub02_01.html",
+    "primarySource": "https://www.cwsisul.or.kr/_chsssports/_sub02/sub02_01.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9a5647fe-36d8-4843-af71-d0cd8d5026a7",
+    "poolName": "우리누리청소년문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_urinuriyouth/_sub03/sub03_01.html",
+    "primarySource": "https://www.cwsisul.or.kr/_urinuriyouth/_sub03/sub03_01.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "855f3ca3-1fc0-4aeb-8ffd-b98ebcc5d92a",
+    "poolName": "진동종합복지타운수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_jdswc/_sub02/sub02_02.html",
+    "primarySource": "https://www.cwsisul.or.kr/_jdswc/_sub02/sub02_02.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d1bc8eab-9086-482a-ab91-279e92060a6b",
+    "poolName": "진해국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_jhctgymc/_sub02/sub02_02.html",
+    "primarySource": "https://www.cwsisul.or.kr/_jhctgymc/_sub02/sub02_02.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "618d8b49-55de-4f8b-9d3b-1c759e76026f",
+    "poolName": "진해여좌국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_jinhaeyeojwa/_sub02/sub02_01.html",
+    "primarySource": "https://www.cwsisul.or.kr/_jinhaeyeojwa/_sub02/sub02_01.html",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "eca3d192-6683-4c5f-8895-17fac34a6096",
+    "poolName": "진해종합사회복지관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://jh1004.or.kr/sub03-1/",
+    "primarySource": "https://jh1004.or.kr/sub03-1/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "edaf5f16-3712-4840-98e7-84550cd99f60",
+    "poolName": "창원곰두리국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/ggabssyong/223790804335",
+    "primarySource": "https://blog.naver.com/ggabssyong/223790804335",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "249720db-b0de-4ab3-a499-4e1256e4489c",
+    "poolName": "창원올림픽기념관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cwsisul.or.kr/_msbaseball/_sub02/sub02_01.html",
+    "primarySource": "https://www.cwsisul.or.kr/_msbaseball/_sub02/sub02_01.html",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a58fd914-5669-4f34-9c55-f4e838d866bd",
+    "poolName": "산양스포츠파크",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://sportspark.ttdc.kr/sub02/sub02_04.aspx",
+    "primarySource": "https://sportspark.ttdc.kr/sub02/sub02_04.aspx",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "3dd3204e-150c-448c-b5d0-bbad3be40144",
+    "poolName": "통영체육청소년센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://tysports.kr/guide01.do",
+    "primarySource": "https://tysports.kr/guide01.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "21757948-57f5-461e-91f1-eeb5da59c853",
+    "poolName": "하동국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/myeesactiva/224231836619",
+    "primarySource": "https://blog.naver.com/myeesactiva/224231836619",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "bdadc92f-f5c6-4743-b078-30ea0845315a",
+    "poolName": "함안군국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.halc.co.kr/sub.html?code=01_02&Radd=01_02",
+    "primarySource": "https://www.halc.co.kr/sub.html?code=01_02&Radd=01_02",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2909f5f1-449c-4a1b-86e4-b7fcff36b5e8",
+    "poolName": "함안체육관실내수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.halc.co.kr/sub.html?code=01_01&Radd=01_01",
+    "primarySource": "https://www.halc.co.kr/sub.html?code=01_01&Radd=01_01",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b7fb654e-f084-43df-9e88-42b32645057c",
+    "poolName": "함안체육관실내수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.halc.co.kr/sub.html?code=01_01&Radd=01_01",
+    "primarySource": "https://www.halc.co.kr/sub.html?code=01_01&Radd=01_01",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7c77a434-eabd-4ab9-85b6-b6bdf3140406",
+    "poolName": "경북체육고등학교수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://swimmingis.com/detail/578",
+    "primarySource": "https://swimmingis.com/detail/578",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0604fa28-a7a6-44f2-824c-0b5963d78b1e",
+    "poolName": "경산국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gbgs.go.kr/open_content/sportslife/page.do?mnu_uid=5623&",
+    "primarySource": "https://www.gbgs.go.kr/open_content/sportslife/page.do?mnu_uid=5623&",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4a1fac37-0645-4ba7-aac1-1795b1ec6592",
+    "poolName": "경주국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://sports.gyeongju.go.kr/fmcs/23",
+    "primarySource": "https://sports.gyeongju.go.kr/fmcs/23",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c7461f2e-9b16-49b2-9f80-033ed7e20cd1",
+    "poolName": "고령군국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.goryeong.go.kr/art/contents.do?IDX=106",
+    "primarySource": "https://www.goryeong.go.kr/art/contents.do?IDX=106",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1a386063-d1b3-489d-ab57-66afdb9c823f",
+    "poolName": "구미시근로자문화센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gumigx.kr/faq/faq.asp?category_idx=5",
+    "primarySource": "https://www.gumigx.kr/faq/faq.asp?category_idx=5",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6c27afc8-65ed-4212-bca6-75df8142e4d2",
+    "poolName": "구미올림픽기념관수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gmuc.or.kr/olympic/page.do?mid=496",
+    "primarySource": "https://www.gmuc.or.kr/olympic/page.do?mid=496",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "532c6a72-609c-45f6-ad61-f8955cdce999",
+    "poolName": "근로자종합복지회관",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gmuc.or.kr/worker/page.do?mid=708",
+    "primarySource": "https://www.gmuc.or.kr/worker/page.do?mid=708",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d79bc754-d9eb-4e10-80de-ff4cd711d27b",
+    "poolName": "들성생활체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gmuc.or.kr/sisul/page.do?mid=921",
+    "primarySource": "https://www.gmuc.or.kr/sisul/page.do?mid=921",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "12fae31f-a1bc-407b-814b-8795492fc573",
+    "poolName": "김천시시설관리공단",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gc.go.kr/sports/contents.do?mId=0203000000",
+    "primarySource": "https://www.gc.go.kr/sports/contents.do?mId=0203000000",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c37fa9df-88bc-4d57-addb-05543bbe2400",
+    "poolName": "한국도로공사본사수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.alioplus.go.kr/facilities/facltDetail.do?typ=region&facltSeq=2653",
+    "primarySource": "https://www.alioplus.go.kr/facilities/facltDetail.do?typ=region&facltSeq=2653",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2741f7c4-f2b2-4d93-9c15-385fba862b89",
+    "poolName": "성주국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/akghdrn777/224080375120",
+    "primarySource": "https://blog.naver.com/akghdrn777/224080375120",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "46b07ed8-096f-46c3-b034-4414c7a5e6b6",
+    "poolName": "맑은누리파크",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://apuapu.kr/pool/detail.php?id=691",
+    "primarySource": "https://apuapu.kr/pool/detail.php?id=691",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f6e26357-e7d1-4552-9e67-0ef0c47176e9",
+    "poolName": "안동시청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.andongsisul.or.kr:452/reserve/sub1/sub1.asp",
+    "primarySource": "https://www.andongsisul.or.kr:452/reserve/sub1/sub1.asp",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5e43a546-9206-45e2-bf21-d734e22653e7",
+    "poolName": "영양군청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/hope_1998/223111161732",
+    "primarySource": "https://blog.naver.com/hope_1998/223111161732",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f81be103-1811-45d5-a078-38438f0a4a39",
+    "poolName": "영주실내수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yeongju.go.kr/swimmingpool/page.do?mnu_uid=11088",
+    "primarySource": "https://www.yeongju.go.kr/swimmingpool/page.do?mnu_uid=11088",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "19c293a1-6f58-4e07-95e1-2c743aaa2f1d",
+    "poolName": "영천국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yc.go.kr/depart/contents.do?mId=0303070200",
+    "primarySource": "https://www.yc.go.kr/depart/contents.do?mId=0303070200",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "260e041f-49f8-4077-a87d-a386784a6a1d",
+    "poolName": "영천시종합스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yc.go.kr/depart/contents.do?mId=0303030200",
+    "primarySource": "https://www.yc.go.kr/depart/contents.do?mId=0303030200",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6656b2d4-0d39-4b78-8f25-de8de1402f33",
+    "poolName": "남울진국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://m.kbnews.kr/view.php?idx=152720",
+    "primarySource": "http://m.kbnews.kr/view.php?idx=152720",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "488aec4d-cca5-4372-b829-69ddb27f4d6f",
+    "poolName": "울진국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.uljin.go.kr/index.uljin?menuCd=DOM_000000105009002007",
+    "primarySource": "https://www.uljin.go.kr/index.uljin?menuCd=DOM_000000105009002007",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f9d7693a-ad15-4409-a922-e783242f806b",
+    "poolName": "한울스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.khnp.co.kr/hanul/contents.do?key=1770",
+    "primarySource": "https://www.khnp.co.kr/hanul/contents.do?key=1770",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ed22a346-bba6-450e-80d1-56068a5aa86e",
+    "poolName": "의성군청소년센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/PostView.naver?blogId=lse0320&logNo=223577034412",
+    "primarySource": "https://m.blog.naver.com/PostView.naver?blogId=lse0320&logNo=223577034412",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "159f0cc3-a9be-4f1e-8904-d1fa04d8ca9c",
+    "poolName": "청도군수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/PostView.naver?blogId=tranvel2&logNo=223944725162",
+    "primarySource": "https://m.blog.naver.com/PostView.naver?blogId=tranvel2&logNo=223944725162",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "641bfa45-4b78-4157-909e-c0f1a803f6da",
+    "poolName": "청송군종합문화복지타운",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cs.go.kr/facility/00007326/00007342.web",
+    "primarySource": "https://www.cs.go.kr/facility/00007326/00007342.web",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "47b23ec4-cebe-4f82-b3c9-efff9161a1d3",
+    "poolName": "석적국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5637",
+    "primarySource": "https://www.helloswim.kr/pool/5637",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c07acfe8-119a-434a-9308-095248950986",
+    "poolName": "칠곡북삼국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/sjk5000/223240021372",
+    "primarySource": "https://m.blog.naver.com/sjk5000/223240021372",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f091399b-2f9b-4e51-8cfd-9e9c7e5d7e70",
+    "poolName": "다원복합센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.phsisul.org/sisul_38/sub/info_4.do",
+    "primarySource": "https://www.phsisul.org/sisul_38/sub/info_4.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a9c276ee-af87-4a9d-bd1b-2d5e4acc22fc",
+    "poolName": "모건우방스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/bookmark_i/223385346279",
+    "primarySource": "https://blog.naver.com/bookmark_i/223385346279",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "41e76285-3ff5-45ff-817f-3b44b9cb59b1",
+    "poolName": "장량국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.phsisul.org/sisul_11/sub/info_3.do",
+    "primarySource": "https://www.phsisul.org/sisul_11/sub/info_3.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "62a38f35-0a77-4a62-91ea-8b4d573cea31",
+    "poolName": "포항수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.phsisul.org/sisul_15/sub/info_3.do",
+    "primarySource": "https://www.phsisul.org/sisul_15/sub/info_3.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9de957f1-8970-4164-8144-91264c9e8686",
+    "poolName": "포항여성문화회관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.phsisul.org/sisul_17/sub/info_3.do",
+    "primarySource": "https://www.phsisul.org/sisul_17/sub/info_3.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "00b365a3-2ede-45b5-9448-43bff9a016ba",
+    "poolName": "강진군실내수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/engalmon777/223548226778",
+    "primarySource": "https://blog.naver.com/engalmon777/223548226778",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b9c0d99e-1fff-4833-82f3-ec011aa77ba4",
+    "poolName": "고흥브이실내수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.pbsnews.kr/4970",
+    "primarySource": "http://www.pbsnews.kr/4970",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a104fafa-9a43-4936-8ebc-3a2e7b31622a",
+    "poolName": "곡성교육문화회관",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/safers04/223382665864",
+    "primarySource": "https://blog.naver.com/safers04/223382665864",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "fb469cc0-aee7-4fc0-9d26-04802effd749",
+    "poolName": "광양수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/with_sonvely/223754754780",
+    "primarySource": "https://m.blog.naver.com/with_sonvely/223754754780",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "27fa9bb6-c2ed-4a1f-80cb-4e4f71ae95bb",
+    "poolName": "성황스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/gwangyangsi/224362123602",
+    "primarySource": "https://m.blog.naver.com/gwangyangsi/224362123602",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8df829e6-fd8c-4c12-9600-0ce39cbb60b8",
+    "poolName": "구례군국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://swimmingis.com/detail/238",
+    "primarySource": "https://swimmingis.com/detail/238",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "6324dc50-b28b-41a2-8938-2a27dcf0dd2e",
+    "poolName": "나주빛가람복합문화체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.naju.go.kr/najucomplex/kr/106",
+    "primarySource": "https://www.naju.go.kr/najucomplex/kr/106",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4607eab0-80a9-4382-8ae2-a932bca2912e",
+    "poolName": "나주시국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.tjne.kr/news/articleView.html?idxno=53035",
+    "primarySource": "http://www.tjne.kr/news/articleView.html?idxno=53035",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "903b1a30-71e1-40e5-b920-c87202afe79f",
+    "poolName": "나주종합스포츠파크",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.tjne.kr/news/articleView.html?idxno=53035",
+    "primarySource": "http://www.tjne.kr/news/articleView.html?idxno=53035",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "694bd5d9-9ba4-4b4b-a56c-ca0a9d620024",
+    "poolName": "부주산국민체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://bujusansports.co.kr/swim",
+    "primarySource": "http://bujusansports.co.kr/swim",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "10165087-c437-4216-986a-94774c35771a",
+    "poolName": "무안스포츠파크수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/hw_records/223927780824",
+    "primarySource": "https://blog.naver.com/hw_records/223927780824",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0af9425b-d033-4675-84ad-b55955a1db28",
+    "poolName": "보성국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/he2219/223839542470",
+    "primarySource": "https://blog.naver.com/he2219/223839542470",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c0581601-4e4b-4755-a7d9-1168c395d3fa",
+    "poolName": "신대유청소년수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/with_sonvely/223500691776",
+    "primarySource": "https://blog.naver.com/with_sonvely/223500691776",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8e610806-e2f7-4d67-b189-da5597507270",
+    "poolName": "팔마실내수영장(올림픽기념국민생활관)",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/with_sonvely/223589484596",
+    "primarySource": "https://blog.naver.com/with_sonvely/223589484596",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "39ca8211-9244-4969-a68f-64e0bd23b248",
+    "poolName": "망마수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/jeo207/222977881959",
+    "primarySource": "https://blog.naver.com/jeo207/222977881959",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "eda3aa59-308c-4b55-9371-fb4699cb80b9",
+    "poolName": "웅천국민체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yumcorp.or.kr/ucsports/content.html?md=0014",
+    "primarySource": "https://www.yumcorp.or.kr/ucsports/content.html?md=0014",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d777e203-ac8b-4328-97ed-a1fc2d9e360a",
+    "poolName": "조이스포츠센터수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/safers04/223922301867",
+    "primarySource": "https://blog.naver.com/safers04/223922301867",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "892c234d-7120-46c5-98fc-73dc75d111c0",
+    "poolName": "영광스포티움",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/bl_nuring2/224035107116",
+    "primarySource": "https://blog.naver.com/bl_nuring2/224035107116",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4519e831-72b7-42b6-acaa-f563abfe47d1",
+    "poolName": "삼호실내수영장",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/0805song/223371610041",
+    "primarySource": "https://m.blog.naver.com/0805song/223371610041",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "e007d07e-3acc-4beb-81f6-8aedb8061472",
+    "poolName": "영암국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/akghdrn777/224120479371",
+    "primarySource": "https://m.blog.naver.com/akghdrn777/224120479371",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "50b8a6f9-3e70-47e5-91fa-e2f9b705b0b0",
+    "poolName": "완도수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.wando.go.kr/wando/sub.cs?m=1191&nttId=10005198&pBoardId=BBSMSTR_000000000361",
+    "primarySource": "http://www.wando.go.kr/wando/sub.cs?m=1191&nttId=10005198&pBoardId=BBSMSTR_000000000361",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d6107ceb-5e0d-449c-a41c-12b18938413c",
+    "poolName": "장흥군국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2025071",
+    "primarySource": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2025071",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1e436495-c677-4a0c-9bb1-8936f146d28c",
+    "poolName": "함평실내수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.welfarehello.com/community/hometownNews/%ED%95%A8%ED%8F%89%EC%8B%A4%EB%82%B4%EC%88%98%EC%98%81%EC%9E%A5-%EC%A0%95%EC%8B%9D-%EA%B0%9C%EC%9E%A5-%EB%B0%8F-%ED%9A%8C%EC%9B%90-%EB%AA%A8%EC%A7%91-%EC%95%88%EB%82%B4--3f61f145-e7a5-4137-907e-47775abab630",
+    "primarySource": "https://www.welfarehello.com/community/hometownNews/%ED%95%A8%ED%8F%89%EC%8B%A4%EB%82%B4%EC%88%98%EC%98%81%EC%9E%A5-%EC%A0%95%EC%8B%9D-%EA%B0%9C%EC%9E%A5-%EB%B0%8F-%ED%9A%8C%EC%9B%90-%EB%AA%A8%EC%A7%91-%EC%95%88%EB%82%B4--3f61f145-e7a5-4137-907e-47775abab630",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "51484a08-686c-4367-904f-f963fea3c0c7",
+    "poolName": "조오련수영장(우슬국민체육센터)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.haenam.go.kr/atc/planweb/board/view.9is?dataUid=18e3368f5d542987015d63ee65c202ff&nttId=51373&boardUid=18e3368f7937254b017959027c0f1f53&contentUid=&layoutUid=&pBoardId=BBSMSTR_000000000195&nowPageNum=474",
+    "primarySource": "https://www.haenam.go.kr/atc/planweb/board/view.9is?dataUid=18e3368f5d542987015d63ee65c202ff&nttId=51373&boardUid=18e3368f7937254b017959027c0f1f53&contentUid=&layoutUid=&pBoardId=BBSMSTR_000000000195&nowPageNum=474",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "af3a0945-71e7-449c-bd6e-6ddf1466422d",
+    "poolName": "고창군실내수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.gochangsports.or.kr/index.gochang?menuCd=DOM_000000103001000000",
+    "primarySource": "http://www.gochangsports.or.kr/index.gochang?menuCd=DOM_000000103001000000",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4f30d2e3-fa3b-42d8-8246-28b9213e5e50",
+    "poolName": "군산시국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gunsan.go.kr/main/m2569",
+    "primarySource": "https://www.gunsan.go.kr/main/m2569",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "171e9ff6-6353-4ac5-8a78-35fade44ded8",
+    "poolName": "군산월명체육관",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://xn--2s2b33eb3kgvpta.com/store/S131244_1621476311728",
+    "primarySource": "https://xn--2s2b33eb3kgvpta.com/store/S131244_1621476311728",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "84de2472-4b00-4696-ad0c-19930f9b9ff5",
+    "poolName": "서군산체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.gunsan.go.kr/main/m2363/view/1819060",
+    "primarySource": "https://www.gunsan.go.kr/main/m2363/view/1819060",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "095aa662-13ae-46aa-8121-35326c4c3d86",
+    "poolName": "남원교육문화회관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://lib.jbe.go.kr/necc/html.do?menu_idx=204",
+    "primarySource": "https://lib.jbe.go.kr/necc/html.do?menu_idx=204",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9d74ddd9-c533-42b2-9f66-d3aedd8fa455",
+    "poolName": "남원국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://lib.jbe.go.kr/necc/html.do?menu_idx=204",
+    "primarySource": "https://lib.jbe.go.kr/necc/html.do?menu_idx=204",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "fc439df3-46d3-463d-b524-d19a1665c7b1",
+    "poolName": "지리산권실내수영장(Jirisan Region Indoor Swimming Pool)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.nwjirisansportstown.kr/sh_page/page40.php?device=pc",
+    "primarySource": "http://www.nwjirisansportstown.kr/sh_page/page40.php?device=pc",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "deeb9ee9-1d32-4188-bccc-2869e3e9bee6",
+    "poolName": "수달수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://tour.muju.go.kr/tour/selectTourCntntsDetail.do?key=732&ctgryNo=91&tourNo=120&sortTy=&searchCnd=all&searchKrwd=&pageIndex=1",
+    "primarySource": "https://tour.muju.go.kr/tour/selectTourCntntsDetail.do?key=732&ctgryNo=91&tourNo=120&sortTy=&searchCnd=all&searchKrwd=&pageIndex=1",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7aafc8a7-f96e-4975-bfd3-f1641f89f613",
+    "poolName": "완주국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f678e2c4a",
+    "primarySource": "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f678e2c4a",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ac8dfb57-f60d-45ac-96fc-c46e693cba67",
+    "poolName": "완주군근로자종합복지관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/wanjugun/224252580317",
+    "primarySource": "https://blog.naver.com/wanjugun/224252580317",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "55dc307c-b742-49ba-b234-e4af881686da",
+    "poolName": "완주군청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f5c532bee",
+    "primarySource": "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f5c532bee",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9a96baa2-fdf2-421b-a7c7-ee98526e2724",
+    "poolName": "이서문화체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f67aa2c4b",
+    "primarySource": "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f67aa2c4b",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d4e108d1-b9b5-44fa-8752-f30795327f80",
+    "poolName": "수도산스포츠센터(Sudosan Sports Center)",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.iksancmc.or.kr/index.iksan?menuCd=DOM_000000102006002000",
+    "primarySource": "https://www.iksancmc.or.kr/index.iksan?menuCd=DOM_000000102006002000",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "de19f7d7-43a6-4a48-8245-1df91b52820d",
+    "poolName": "익산교육문화회관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://lib.jbe.go.kr/isec/html.do?menu_idx=204",
+    "primarySource": "https://lib.jbe.go.kr/isec/html.do?menu_idx=204",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f5d1fca6-b236-4597-aab8-1c5c0bc824fa",
+    "poolName": "익산올림픽기념국민생활관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.iksancmc.or.kr/index.iksan?menuCd=DOM_000000102001002000",
+    "primarySource": "https://www.iksancmc.or.kr/index.iksan?menuCd=DOM_000000102001002000",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a96b11d6-3ce7-41e8-b561-a77441b2144c",
+    "poolName": "함열올림픽스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.iksan.go.kr/hamyeol",
+    "primarySource": "https://www.iksan.go.kr/hamyeol",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "407ae402-b1a5-44a9-bb49-c04ecbd7517b",
+    "poolName": "한누리전당수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.jangsu.go.kr/index.jangsu?menuCd=DOM_000000106012004002",
+    "primarySource": "https://www.jangsu.go.kr/index.jangsu?menuCd=DOM_000000106012004002",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5e8123e3-528b-4c3f-b5e9-a0af8c800ccf",
+    "poolName": "전라북도국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.hopesports.or.kr/page/page157",
+    "primarySource": "http://www.hopesports.or.kr/page/page157",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1e95c645-e758-4632-aa95-ae2543b58513",
+    "poolName": "전주교육문화회관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://lib.jbe.go.kr/jec/html.do?menu_idx=204",
+    "primarySource": "https://lib.jbe.go.kr/jec/html.do?menu_idx=204",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d0cf165f-d525-4164-8550-6e224db5ce52",
+    "poolName": "전주완산수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/didqocn241/223584082796",
+    "primarySource": "https://blog.naver.com/didqocn241/223584082796",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "c6a4e4e8-ac7c-4a96-b07b-4b5c66467a4f",
+    "poolName": "정읍시청소년수련관",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://www.juymca.or.kr/swim/1870548",
+    "primarySource": "http://www.juymca.or.kr/swim/1870548",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0c0c1cea-38da-4661-9fd3-ec63b82b16e2",
+    "poolName": "정읍체육트레이닝센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://spt.jeongeup.go.kr/fmcs/3",
+    "primarySource": "https://spt.jeongeup.go.kr/fmcs/3",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d7ff6bd7-b2d4-4942-9d4d-d2800fa4e316",
+    "poolName": "진안국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/hxxxx_u/223806343416",
+    "primarySource": "https://blog.naver.com/hxxxx_u/223806343416",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "598e0e93-8d56-4cbc-95a8-656252189668",
+    "poolName": "남원읍문화체육복합센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/jeju-seogwipo-GOPnUR",
+    "primarySource": "https://25m.kr/swim/pool/jeju-seogwipo-GOPnUR",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "473cef4f-30fe-43a4-8c3f-ecca785687d5",
+    "poolName": "서귀포국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/jeju-seogwipo-ebiwR8",
+    "primarySource": "https://25m.kr/swim/pool/jeju-seogwipo-ebiwR8",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "efad3692-63e6-40b5-b615-3c0442ec652d",
+    "poolName": "서귀포시민문화체육복합센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/jeju-seogwipo-L720KH",
+    "primarySource": "https://25m.kr/swim/pool/jeju-seogwipo-L720KH",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4336b4d7-0a34-45a3-aafc-d1b4a83853f0",
+    "poolName": "서귀포혁신도시국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/jeju-seogwipo-GsCyEM",
+    "primarySource": "https://25m.kr/swim/pool/jeju-seogwipo-GsCyEM",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "434b6cdb-ea08-4b9d-ae01-d374cacafa8d",
+    "poolName": "표선면문화체육복합센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/jeju-seogwipo-5ssUZY",
+    "primarySource": "https://25m.kr/swim/pool/jeju-seogwipo-5ssUZY",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "bef2fd1a-bcba-4567-888c-30613c5b55e3",
+    "poolName": "애월국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/jeju-jeju-Q4jkwI",
+    "primarySource": "https://25m.kr/swim/pool/jeju-jeju-Q4jkwI",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d4db4248-e663-4802-abb1-a2ff6b2f76a0",
+    "poolName": "애월복합문화체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/586hot/224228952262",
+    "primarySource": "https://blog.naver.com/586hot/224228952262",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "f7bf73f7-b576-4635-b4b7-f0e0d9c9fb8a",
+    "poolName": "제주국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://25m.kr/swim/pool/jeju-jeju-ptCY5D",
+    "primarySource": "https://25m.kr/swim/pool/jeju-jeju-ptCY5D",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "367932bc-d6b2-4f8c-b476-da9c21de941e",
+    "poolName": "제주장애인스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://jejudsc.or.kr/progm/swimming/sw4.do",
+    "primarySource": "http://jejudsc.or.kr/progm/swimming/sw4.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ea8de3f3-ee96-48f5-b520-41fa09d7a555",
+    "poolName": "AJ스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5495",
+    "primarySource": "https://www.helloswim.kr/pool/5495",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7f9245de-4fca-44de-9c34-9b3c8d931107",
+    "poolName": "제주종합경기장수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.psf.kr/sports/bview/26",
+    "primarySource": "https://www.psf.kr/sports/bview/26",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ac468a83-6f07-4307-9972-cc0f2a33b7cd",
+    "poolName": "계룡스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5527",
+    "primarySource": "https://www.helloswim.kr/pool/5527",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "76ee3c72-dcbe-4acb-802b-037878a6e86d",
+    "poolName": "공주국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5524",
+    "primarySource": "https://www.helloswim.kr/pool/5524",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "3bbbe9c9-02da-46d4-84ff-573dfc54fc52",
+    "poolName": "반다비합덕수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.djtimes.co.kr/news/curationView.html?idxno=107099",
+    "primarySource": "https://www.djtimes.co.kr/news/curationView.html?idxno=107099",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5acd99b2-c5c9-46a0-a833-0eba0ad0e943",
+    "poolName": "당진교육문화스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.welfarehello.com/community/hometownNews/%EB%AC%B4%EB%8D%94%EC%9A%B4-%EC%97%AC%EB%A6%84-%EC%8B%9C%EC%9B%90%ED%95%9C-%EC%8B%A4%EB%82%B4%EC%97%90%EC%84%9C-%EC%9A%B4%EB%8F%99%ED%95%98%EA%B8%B0-%EB%8B%B9%EC%A7%84%EA%B5%90%EC%9C%A1%EB%AC%B8%ED%99%94%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%BC%ED%84%B0--167532b1-9c4f-43a0-b0a4-64cc7499a70e",
+    "primarySource": "https://www.welfarehello.com/community/hometownNews/%EB%AC%B4%EB%8D%94%EC%9A%B4-%EC%97%AC%EB%A6%84-%EC%8B%9C%EC%9B%90%ED%95%9C-%EC%8B%A4%EB%82%B4%EC%97%90%EC%84%9C-%EC%9A%B4%EB%8F%99%ED%95%98%EA%B8%B0-%EB%8B%B9%EC%A7%84%EA%B5%90%EC%9C%A1%EB%AC%B8%ED%99%94%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%BC%ED%84%B0--167532b1-9c4f-43a0-b0a4-64cc7499a70e",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "13fa0bad-a1ae-4be3-a07d-7dbd8554ce60",
+    "poolName": "보령국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.brcn.go.kr/sport/fmcs/6",
+    "primarySource": "https://www.brcn.go.kr/sport/fmcs/6",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "df0e4acd-6a06-4539-b748-4ae2a38f12e7",
+    "poolName": "부여학생수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://swim.cnbye.go.kr/main/editor/editor.action?q=31f1ad557cc86450b916f30a560b71c25a701f8103ca64f328eeab284b5c91c2",
+    "primarySource": "https://swim.cnbye.go.kr/main/editor/editor.action?q=31f1ad557cc86450b916f30a560b71c25a701f8103ca64f328eeab284b5c91c2",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "92c5704b-8b1b-4841-bc8e-77dedea57052",
+    "poolName": "서산학생수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://swim.cnssed.go.kr/main/editor/editor.action?q=31f1ad557cc86450b916f30a560b71c25a701f8103ca64f328eeab284b5c91c2",
+    "primarySource": "https://swim.cnssed.go.kr/main/editor/editor.action?q=31f1ad557cc86450b916f30a560b71c25a701f8103ca64f328eeab284b5c91c2",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "d2f76e24-50a8-438a-badb-54671f8b8ca3",
+    "poolName": "서천군생활체육관",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.instagram.com/2025istsc/",
+    "primarySource": "https://www.instagram.com/2025istsc/",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5f5c57b8-d21b-48f0-be10-8803dc443320",
+    "poolName": "서천학생수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/a1arch2700/223430711030",
+    "primarySource": "https://blog.naver.com/a1arch2700/223430711030",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "48972a83-d59a-4612-9e5a-6a584dcdfffe",
+    "poolName": "둔포국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5526",
+    "primarySource": "https://www.helloswim.kr/pool/5526",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "89485b86-52af-41f5-96b8-5ecd2d7485c5",
+    "poolName": "배방공수스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.asanfmc.or.kr/new/cms/?no=190",
+    "primarySource": "https://www.asanfmc.or.kr/new/cms/?no=190",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "308c543d-5929-46c8-9d99-26579f55ab05",
+    "poolName": "배방스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.asanfmc.or.kr/new/cms/?no=106",
+    "primarySource": "https://www.asanfmc.or.kr/new/cms/?no=106",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1856a81f-542d-4969-8a68-c93984ad3caf",
+    "poolName": "아산배미수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.asanfmc.or.kr/new/cms/?no=103",
+    "primarySource": "https://www.asanfmc.or.kr/new/cms/?no=103",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "93810f23-91a0-4240-9154-d08a6ef16d67",
+    "poolName": "예산1100년기념관",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.yesan.go.kr/yesan1100/fmcs/17?action=read&action-value=8198cb0c635477cfefa07d319732ce95",
+    "primarySource": "https://www.yesan.go.kr/yesan1100/fmcs/17?action=read&action-value=8198cb0c635477cfefa07d319732ce95",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "3fe539dc-3d3f-420a-a665-68cd1e95977b",
+    "poolName": "천안국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cauc.or.kr/_stadium/main.asp?no=43",
+    "primarySource": "https://www.cauc.or.kr/_stadium/main.asp?no=43",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1533ade6-ab86-4bcd-96bf-3358107da9f3",
+    "poolName": "천안시설관리공단(한들문화센터)",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cauc.or.kr/_swim/main.asp?no=3",
+    "primarySource": "https://www.cauc.or.kr/_swim/main.asp?no=3",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8fe19cbe-504d-411a-b68f-52977d3562bf",
+    "poolName": "청양국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cheongyang.go.kr/sports/sub02_06_01_02.do",
+    "primarySource": "https://www.cheongyang.go.kr/sports/sub02_06_01_02.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "767d44fe-a9ed-4619-9fd1-463f7028aaf4",
+    "poolName": "태안국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.taean.go.kr/tour/sub04_04_03.do",
+    "primarySource": "https://www.taean.go.kr/tour/sub04_04_03.do",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "96132972-8eb6-4c36-8f8a-d3fd1cdf3eed",
+    "poolName": "홍성반다비수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://hsbandabi.co.kr/_NBoard/content.php?co_id=cont0201",
+    "primarySource": "https://hsbandabi.co.kr/_NBoard/content.php?co_id=cont0201",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "589ccd1b-911f-4c89-b64b-6952ee930b4c",
+    "poolName": "괴산반다비국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.goesan-sporex.com/m03/4/",
+    "primarySource": "https://www.goesan-sporex.com/m03/4/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "a390db9f-e8e1-4f10-a80b-2c5c8cd854fe",
+    "poolName": "보은국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5361",
+    "primarySource": "https://www.helloswim.kr/pool/5361",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7aec1dae-ace8-411c-a04d-6e3ed63522a3",
+    "poolName": "영동국민건강체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://ydsc.kr/운영시간-안내/",
+    "primarySource": "https://ydsc.kr/운영시간-안내/",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2e62b761-2271-42d0-8034-54373e0a1565",
+    "poolName": "옥천국민체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/wldus1371/223597338495",
+    "primarySource": "https://blog.naver.com/wldus1371/223597338495",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "7a8f39e6-7621-46ef-8408-de333ca47e9c",
+    "poolName": "맹동혁신국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.eumseong.go.kr/www/contents.do?key=700",
+    "primarySource": "https://www.eumseong.go.kr/www/contents.do?key=700",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4571f173-d67f-4c30-a548-2070821a1f8d",
+    "poolName": "음성군산업단지복합문화센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/misi8930/224280516473",
+    "primarySource": "https://blog.naver.com/misi8930/224280516473",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8b0aa0b2-94af-4358-802b-acda884e3f87",
+    "poolName": "제천국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.jcsports.or.kr/guide/day.asp",
+    "primarySource": "https://www.jcsports.or.kr/guide/day.asp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "2677c89c-2d5f-4753-8a71-33749e18364a",
+    "poolName": "제천올림픽스포츠센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://opsports.jecheon.go.kr/info/day.asp",
+    "primarySource": "https://opsports.jecheon.go.kr/info/day.asp",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "151cee94-839f-49d1-a4a4-d2b8c1e268d7",
+    "poolName": "광혜원개방형다목적체육관 (스포츠아일랜드진천)",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.sports-island.co.kr/bbs/content.php?co_id=si0202",
+    "primarySource": "https://www.sports-island.co.kr/bbs/content.php?co_id=si0202",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "b7e58753-50b1-443b-8eec-8c56ac1ae0b7",
+    "poolName": "생거진천국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.jincheon.go.kr/sisul/sub.do?menukey=807",
+    "primarySource": "https://www.jincheon.go.kr/sisul/sub.do?menukey=807",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "4b59aeca-6a16-43f9-b535-fe9de76e8a94",
+    "poolName": "청주실내수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5518",
+    "primarySource": "https://www.helloswim.kr/pool/5518",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0d26177a-9d47-4472-862c-8e0d2b423642",
+    "poolName": "충북대체육진흥원수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cbnu.ac.kr/www/downloadBbsFile.do?atchmnflNo=304412",
+    "primarySource": "https://www.cbnu.ac.kr/www/downloadBbsFile.do?atchmnflNo=304412",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1401057c-de02-434c-b871-4c868d164ecd",
+    "poolName": "충청북도학생수영장",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cbstc.go.kr/pool/sub.php?menukey=70019",
+    "primarySource": "https://www.cbstc.go.kr/pool/sub.php?menukey=70019",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "45b43cc8-0c06-4733-b7b7-296e07628101",
+    "poolName": "푸르미스포츠센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.wbc4u.com/center/detail?SSB_CD=SBAT19010005",
+    "primarySource": "https://www.wbc4u.com/center/detail?SSB_CD=SBAT19010005",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1dad36d2-9708-4bdb-9d71-6e31a74f8663",
+    "poolName": "서충주국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cjfmc.or.kr/www/contents.do?key=606",
+    "primarySource": "https://www.cjfmc.or.kr/www/contents.do?key=606",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "25edc6f0-87b9-41ec-ae4b-7529fa91b579",
+    "poolName": "야현체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cjfmc.or.kr/www/contents.do?key=639",
+    "primarySource": "https://www.cjfmc.or.kr/www/contents.do?key=639",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "0c2ff59f-7b95-4fe5-88a9-c8ca564cd29d",
+    "poolName": "충주수영장",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/terrace3454/224322522227",
+    "primarySource": "https://blog.naver.com/terrace3454/224322522227",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "5f56a710-5916-4e36-a3d2-ed7f731a8109",
+    "poolName": "충주시설관리공단국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/goodchungju/224258469994",
+    "primarySource": "https://blog.naver.com/goodchungju/224258469994",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "1a763944-c8c5-45e0-8ea6-533183f9c6fb",
+    "poolName": "충주장애인형국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cjfmc.or.kr/www/contents.do?key=494",
+    "primarySource": "https://www.cjfmc.or.kr/www/contents.do?key=494",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "8569db57-f344-4e83-97d4-aabc9b467540",
+    "poolName": "금산학생수영장",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.cngse.go.kr/editor/editor.action?q=f34819894112d1a75e1c4a2967c5684083d591721eaae0d07a346174236c080f",
+    "primarySource": "https://www.cngse.go.kr/editor/editor.action?q=f34819894112d1a75e1c4a2967c5684083d591721eaae0d07a346174236c080f",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "df7be381-178e-4d67-adce-3d697a39c733",
+    "poolName": "금산스포츠센터",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.geumsan.go.kr/daragwon/html/sub02/0203.html",
+    "primarySource": "https://www.geumsan.go.kr/daragwon/html/sub02/0203.html",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "774decec-b3c7-4427-913f-920a460135ed",
+    "poolName": "봉화국민체육센터",
+    "fields": [
+      "free_swim",
+      "homepage_url"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.bonghwa.go.kr/facility/contents.do?mid=0301000000",
+    "primarySource": "https://www.bonghwa.go.kr/facility/contents.do?mid=0301000000",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "cd48c0ea-16ca-466d-bb12-8cd320150cb4",
+    "poolName": "부안국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://blog.naver.com/levilo130/223837408222",
+    "primarySource": "https://blog.naver.com/levilo130/223837408222",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "908ff9b4-b294-4f0a-9fa7-10cd4928167d",
+    "poolName": "순창국민체육센터",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/adela_ahyun/223583006121",
+    "primarySource": "https://m.blog.naver.com/adela_ahyun/223583006121",
+    "confidence": "high",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "ee2b2ffe-55b3-4d26-92d5-fe6ffd335348",
+    "poolName": "내수국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/akghdrn777/223954248752",
+    "primarySource": "https://m.blog.naver.com/akghdrn777/223954248752",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "cf9e5584-ffc8-41ec-94d6-7fc3e764b4cd",
+    "poolName": "안덕면문화체육복합센터(스포츠아일랜드)",
+    "fields": [
+      "free_swim"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://www.helloswim.kr/pool/5608",
+    "primarySource": "https://www.helloswim.kr/pool/5608",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "9d8e2c07-b418-49cd-9e5c-38a224f7e510",
+    "poolName": "영운국민체육센터",
+    "fields": [
+      "free_swim",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "https://m.blog.naver.com/tkrhk560/223082853169",
+    "primarySource": "https://m.blog.naver.com/tkrhk560/223082853169",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
+  },
+  {
+    "poolId": "db06257f-e230-4f02-86ad-dc8072386729",
+    "poolName": "담빛수영장",
+    "fields": [
+      "free_swim",
+      "price_free_swim",
+      "prices",
+      "phone"
+    ],
+    "checkedAt": "2026-08-21",
+    "sourceUpdatedAt": null,
+    "sourcePage": "http://m.dnnews.co.kr/news/articleView.html?idxno=3891",
+    "primarySource": "http://m.dnnews.co.kr/news/articleView.html?idxno=3891",
+    "confidence": "medium",
+    "note": "AI 조사원 웹 검색 기반 자유수영 시간표 보강"
   }
 ]

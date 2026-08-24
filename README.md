@@ -28,8 +28,8 @@
 | 구분 | 사용 |
 |------|------|
 | 프론트 | React 18 · TypeScript · Vite |
-| 플랫폼 | AppsInToss `@apps-in-toss/web-framework` (Granite/AIT) · TDS `@toss/tds-mobile` |
-| 데이터 | 정적 JSON |
+| 플랫폼 | AppsInToss `@apps-in-toss/web-framework` 3.x (Granite/AIT) · TDS `@toss/tds-mobile` |
+| 데이터 | Neon Data API(REST, 익명 토큰) 우선 조회 + 번들 JSON(`src/data/pools.json`) 장애 폴백 |
 | 지도 | Kakao Maps JS SDK |
 
 ## 시작하기
@@ -39,7 +39,9 @@
 npm install
 
 # 2) 환경 변수 — .env 생성 (.env.example 참고)
-#    VITE_SUPABASE_URL / VITE_SUPABASE_PUBLISHABLE_KEY / VITE_KAKAO_JS_KEY
+#    VITE_KAKAO_JS_KEY / VITE_NEON_DATA_API_URL / VITE_NEON_AUTH_URL
+#    (VITE_* 값은 클라이언트 번들에 포함되므로 공개 가능한 값만 넣는다.
+#     DB 연결 문자열·관리자 API 키는 여기 넣지 않는다.)
 
 # 3) 개발 서버
 npm run dev
@@ -47,6 +49,8 @@ npm run dev
 # 4) 빌드 (AIT 아티팩트 openswim.ait 생성)
 npm run build
 ```
+
+> 원격 조회가 실패하면(네트워크 문제, Neon 장애 등) 앱은 자동으로 번들된 `src/data/pools.json`을 사용합니다. 데이터 갱신 스크립트는 `scripts/`에 있고, 최신 데이터를 Neon에 반영하려면 `.manus/neon-migration/migrate_pools_to_neon.mjs`(환경변수 `NEON_DATABASE_URL` 필요)를 사용합니다.
 
 > 카카오맵은 사용 도메인을 카카오 콘솔 `[플랫폼 > Web]` 에 등록해야 표시됩니다. (`localhost:5173`, 배포 도메인 등)
 
@@ -58,9 +62,40 @@ src/
   components/  SearchBox · PoolList · PoolMap · FavStar …
   lib/         pools(운영·공휴일 상태) · search(지역 검색) · geo · holidays …
   design/      tokens · primitives (토스풍 디자인 시스템)
-supabase/      마이그레이션 · 시드
-docs/          앱인토스·TDS 참고 문서, preview 이미지
+  data/        pools.json (번들 폴백 데이터)
+scripts/       데이터 수집·정규화·감사·Neon 동기화
+supabase/      과거 스키마 이력 (런타임 미사용, Neon 이관 전 기록)
+docs/          앱인토스·TDS 참고 문서, 데이터 감사 리포트, preview 이미지
 ```
+
+## 데이터 관리
+
+수영장 데이터는 `src/data/pools.json` 이 원본이고, 이걸 Neon 으로 밀어서 서비스한다.
+
+```bash
+# 1) 자동 수집 (공개 수영장 정보 서비스에서 빈 칸 보강)
+node scripts/enrich-free-swim-from-helloswim.mjs --refresh --write
+node scripts/enrich-free-swim-from-oneul.mjs --refresh --write
+node scripts/enrich-free-swim-from-swimmingis.mjs --refresh --write
+
+# 2) 수동 조사 결과 반영 (조사한 JSON 배치 파일을 검증해서 병합)
+node scripts/apply-researched-free-swim.mjs <batch.json> [...] --write
+
+# 3) 정규화 (문자열 요일 → 숫자, 겹치는 세션 병합)
+node scripts/normalize-free-swim-days.mjs --write
+node scripts/merge-free-swim-sessions.mjs --write
+
+# 4) 감사 (docs/data/*.json 으로 리포트 생성)
+node scripts/audit-pools-data.mjs
+node scripts/audit-pools-quality.mjs
+node scripts/report-pool-data-coverage.mjs
+
+# 5) Neon 반영 (.env 의 NEON_DATABASE_URL 필요)
+set -a; source .env; set +a
+node scripts/sync-pools-to-neon.mjs
+```
+
+`free_swim` 스키마는 `day` 가 `0=일 … 6=토`, `7=공휴일` 이고, 각 요일은 `sessions: [{ start, end }]` 를 갖는다. 세션이 빈 배열이면 “그날 휴무” 를 뜻한다.
 
 ## 링크
 
