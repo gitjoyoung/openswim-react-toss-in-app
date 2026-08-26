@@ -12,6 +12,7 @@ import {
 } from "../lib/pools";
 import { openKakaoMap, openNaverMap, openExternal } from "../lib/mapLinks";
 import PoolMap from "../components/PoolMap";
+import BannerAd from "../components/BannerAd";
 import { Section, Divider, Pill, Caption } from "../design/primitives";
 import FavStar from "../components/FavStar";
 import freeImg from "../assets/free.webp"; // 사진 없는 곳 기본 이미지
@@ -180,6 +181,8 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
           <Caption>시설 문의</Caption>
         )}
       </Section>
+
+      <BannerAd slot="detail" />
 
       <Divider />
 
