@@ -58,6 +58,9 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
         }
       />
 
+      {/* 배너는 상단(콘텐츠 섹션들 위)에만 (앱인토스 인앱 광고 규칙). */}
+      <BannerAd slot="detail" />
+
       {pool.lat != null && pool.lng != null && (
         <>
           <Section title="위치">
@@ -216,9 +219,6 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
           <Caption>시설 정보 없음</Caption>
         )}
       </Section>
-
-      {/* 배너는 콘텐츠 중간이 아니라 화면 하단에만 (앱인토스 인앱 광고 규칙). */}
-      <BannerAd slot="detail" />
     </div>
   );
 }
