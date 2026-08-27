@@ -182,8 +182,6 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
         )}
       </Section>
 
-      <BannerAd slot="detail" />
-
       <Divider />
 
       <Section title="요금">
@@ -218,6 +216,9 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
           <Caption>시설 정보 없음</Caption>
         )}
       </Section>
+
+      {/* 배너는 콘텐츠 중간이 아니라 화면 하단에만 (앱인토스 인앱 광고 규칙). */}
+      <BannerAd slot="detail" />
     </div>
   );
 }

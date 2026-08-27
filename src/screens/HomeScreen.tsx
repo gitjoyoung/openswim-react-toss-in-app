@@ -319,7 +319,8 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
         ))}
       </div>
 
-      <BannerAd />
+      {/* 배너는 화면 상단(리스트 위)에만. 로딩 중에는 띄우지 않는다 (일시 화면 노출 금지 규칙). */}
+      {!loading && <BannerAd />}
 
       {loading ? (
         <Loading />
