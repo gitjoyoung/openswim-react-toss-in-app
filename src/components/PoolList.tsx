@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { List, ListRow, Text } from "@toss/tds-mobile";
 import type { Pool } from "../pool";
 import { images, type RowStatus } from "../lib/pools";
@@ -10,28 +11,19 @@ import freeThumb from "../assets/free-thumb.webp"; // 사진 없는 곳 기본 �
 function renderDays(text: string) {
   return text.split(/(평일|토요일|일요일)/).map((seg, i) =>
     seg === "평일" ? (
-      <span key={i} style={{ color: dayColor.weekday }}>
-        {seg}
-      </span>
+      <span key={i} style={{ color: dayColor.weekday }}>{seg}</span>
     ) : seg === "토요일" ? (
-      <span key={i} style={{ color: dayColor.sat }}>
-        {seg}
-      </span>
+      <span key={i} style={{ color: dayColor.sat }}>{seg}</span>
     ) : seg === "일요일" ? (
-      <span key={i} style={{ color: dayColor.sun }}>
-        {seg}
-      </span>
+      <span key={i} style={{ color: dayColor.sun }}>{seg}</span>
     ) : (
       <span key={i}>{seg}</span>
     ),
   );
 }
 
-// 썸네일: 모든 행이 동일한 정사각 영역. 이미지는 cover로 꽉 채우고, 없으면 기본 이미지(free).
-// 52px 자리라 기본 이미지는 원본(1139px) 대신 축소본을 쓴다. 목록은 수백 행이라 디코딩 비용이 그만큼 곱해진다.
-// 화면 밖 행의 이미지는 lazy로 미루고, 디코딩도 메인 스레드 밖(async)에서 — 스크롤이 끊기지 않게.
 const THUMB = 52;
-function Thumb({ pool }: { pool: Pool }) {
+const Thumb = memo(function Thumb({ pool }: { pool: Pool }) {
   const src = images(pool)[0] ?? freeThumb;
   return (
     <div style={{ width: THUMB, height: THUMB, flexShrink: 0, borderRadius: 16, overflow: "hidden", background: color.fill }}>
@@ -46,86 +38,99 @@ function Thumb({ pool }: { pool: Pool }) {
       />
     </div>
   );
-}
+});
+
+type RowProps = {
+  pool: Pool;
+  isFav: boolean;
+  st: RowStatus;
+  meta: string;
+  onToggleFav: (id: string) => void;
+  onSelect: (pool: Pool) => void;
+};
+
+// 개별 행을 memo — favs나 상태가 안 바뀐 행은 부모 리렌더 시에도 건너뜀.
+const PoolRow = memo(function PoolRow({ pool, isFav, st, meta, onToggleFav, onSelect }: RowProps) {
+  return (
+    <ListRow
+      horizontalPadding="small"
+      onClick={() => onSelect(pool)}
+      left={<Thumb pool={pool} />}
+      contents={
+        <div style={{ display: "flex", flexDirection: "column", gap: 3, minWidth: 0, width: "100%" }}>
+          <Text typography="t5" fontWeight="bold" ellipsisAfterLines={1}>
+            {pool.name}
+          </Text>
+          <Text typography="t7" ellipsisAfterLines={1}>
+            {st.text && (
+              <span
+                style={{
+                  color:
+                    st.tone === "open" ? status.open
+                    : st.tone === "closed" ? status.closed
+                    : st.tone === "unknown" ? status.unknown
+                    : color.textSub,
+                  fontWeight: 700,
+                }}
+              >
+                {renderDays(st.text)}
+              </span>
+            )}
+            <span style={{ color: color.textMuted }}>
+              {st.text ? `  ${meta}` : meta}
+            </span>
+          </Text>
+        </div>
+      }
+      right={
+        <button
+          aria-label="즐겨찾기"
+          onClick={(e) => { e.stopPropagation(); onToggleFav(pool.id); }}
+          style={{
+            border: "none", background: "none",
+            padding: 10, margin: "-10px -10px -10px -4px",
+            cursor: "pointer", display: "flex",
+            alignItems: "center", justifyContent: "center",
+          }}
+        >
+          <FavStar on={isFav} />
+        </button>
+      }
+    />
+  );
+});
 
 type Props = {
   pools: Pool[];
   favs: string[];
   onToggleFav: (id: string) => void;
   onSelect: (pool: Pool) => void;
-  statusOf: (pool: Pool) => RowStatus; // 필터 맥락에 맞춘 상태 문구(오늘/토요일 등)
-  distanceText?: (pool: Pool) => string | null; // 내 위치 정렬 시 거리 표시
+  statusOf: (pool: Pool) => RowStatus;
+  distanceText?: (pool: Pool) => string | null;
 };
 
-export default function PoolList({ pools, favs, onToggleFav, onSelect, statusOf, distanceText }: Props) {
+// favSet으로 includes O(n) → O(1) 변환.
+export default memo(function PoolList({ pools, favs, onToggleFav, onSelect, statusOf, distanceText }: Props) {
+  const favSet = new Set(favs);
   return (
     <List>
       {pools.map((p) => {
         const dist = distanceText?.(p);
-        const st = statusOf(p);
-        // 전국이라 구만 쓰면 모호("서구"). 시도 축약 붙여 "부산 서구"로.
         const region = p.sido ? `${shortSido(p.sido)} ${p.gu}` : p.gu;
-        // 둘째 줄은 상태 + 거리만. 위치 정렬이 꺼져 거리가 없을 때만 지역으로 대신한다.
         const meta = dist ?? region;
+        const st = statusOf(p);
         return (
-        <ListRow
-          key={p.id}
-          horizontalPadding="small"
-          onClick={() => onSelect(p)}
-          left={<Thumb pool={p} />}
-          contents={
-            <div style={{ display: "flex", flexDirection: "column", gap: 3, minWidth: 0, width: "100%" }}>
-              <Text typography="t5" fontWeight="bold" ellipsisAfterLines={1}>
-                {p.name}
-              </Text>
-              <Text typography="t7" ellipsisAfterLines={1}>
-                {st.text && (
-                  <span
-                    style={{
-                      color:
-                        st.tone === "open"
-                          ? status.open
-                          : st.tone === "closed"
-                            ? status.closed
-                            : st.tone === "unknown"
-                              ? status.unknown
-                              : color.textSub,
-                      fontWeight: 700,
-                    }}
-                  >
-                    {renderDays(st.text)}
-                  </span>
-                )}
-                <span style={{ color: color.textMuted }}>
-                  {st.text ? `  ${meta}` : meta}
-                </span>
-              </Text>
-            </div>
-          }
-          right={
-            <button
-              aria-label="즐겨찾기"
-              onClick={(e) => {
-                e.stopPropagation();
-                onToggleFav(p.id);
-              }}
-              style={{
-                border: "none",
-                background: "none",
-                padding: 10, // 탭 타겟 ~44 (별 24 + 여백)
-                margin: "-10px -10px -10px -4px", // 여백은 터치용. 레이아웃에선 빼서 텍스트 영역이 별 바로 앞까지 오게
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <FavStar on={favs.includes(p.id)} />
-            </button>
-          }
-        />
+          <PoolRow
+            key={p.id}
+            pool={p}
+            isFav={favSet.has(p.id)}
+            st={st}
+            meta={meta}
+            onToggleFav={onToggleFav}
+            onSelect={onSelect}
+          />
         );
       })}
     </List>
   );
-}
+});

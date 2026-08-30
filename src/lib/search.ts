@@ -6,10 +6,11 @@ export const DEFAULT_GU_CENTER = { lat: 37.4569, lng: 126.8955 }; // 금천구�
 
 // 확정된 자유 검색: 지역 또는 수영장 이름에서 모든 토큰이 일치하면 매치.
 // 지역 검색은 onSearchSubmit에서 먼저 Region으로 확정하므로 이름에 같은 지명이 있어도 섞이지 않는다.
+// address에 읍면동이 포함되므로 "역삼동" 검색도 매치된다.
 export function matchPool(p: Pool, query: string): boolean {
   const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   if (!tokens.length) return true;
-  const hay = `${p.name} ${p.gu} ${p.sido ?? ""}`.toLowerCase();
+  const hay = `${p.name} ${p.gu} ${p.sido ?? ""} ${p.address ?? ""}`.toLowerCase();
   return tokens.every((t) => hay.includes(t));
 }
 

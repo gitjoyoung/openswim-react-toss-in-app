@@ -10,7 +10,7 @@ import { migrateFromPreviousOrigin } from "./lib/storageMigration";
 import { Screen, APP_MAX_WIDTH, EmptyState, Loading } from "./design/primitives";
 import { brand, color, radius, SAFE_BOTTOM, TAB_BAR_HEIGHT, TAB_BAR_SIDE_MARGIN } from "./design/tokens";
 import HomeScreen from "./screens/HomeScreen"; // 첫 화면이라 즉시 로드
-import SplashVideo from "./components/SplashVideo";
+
 
 // 나머지 화면은 코드 스플릿(초기 번들 축소). 카카오맵 쓰는 내주변이 특히 무거움.
 const NearbyScreen = lazy(() => import("./screens/NearbyScreen"));
@@ -18,9 +18,6 @@ const FavoritesScreen = lazy(() => import("./screens/FavoritesScreen"));
 const PoolDetail = lazy(() => import("./screens/PoolDetail"));
 
 type Tab = "home" | "nearby" | "fav";
-
-// 앱 로드 시 보여줄 인트로 영상 (public/intro.mp4). 끄려면 "" 로.
-const INTRO_SRC = `${import.meta.env.BASE_URL}intro.mp4`;
 
 function App() {
   const [pools, setPools] = useState<Pool[]>([]);
@@ -32,16 +29,6 @@ function App() {
   const detailOpenLockedRef = useRef(false);
   // backEvent 리스너는 한 번만 등록하므로, 콜백 안에서 최신 상세 상태를 ref로 읽는다.
   const selectedRef = useRef<Pool | null>(null);
-  // 인트로 영상은 최초 1회만 (매번 6초 대기 방지). localStorage 지우면 다시 재생.
-  // WebView 스토리지 차단 시 localStorage 접근이 throw할 수 있어 try/catch (미보호면 흰 화면).
-  const [showSplash, setShowSplash] = useState(() => {
-    if (!INTRO_SRC) return false;
-    try {
-      return !localStorage.getItem("introSeen");
-    } catch {
-      return true;
-    }
-  });
 
   const load = useCallback(() => {
     setLoading(true);
@@ -141,19 +128,6 @@ function App() {
   // 상세도 탭 셸 안에서 렌더 → 하단 탭바 항상 노출. 탭을 누르면 상세를 닫고 이동.
   return (
     <>
-      {showSplash && (
-        <SplashVideo
-          src={INTRO_SRC}
-          onDone={() => {
-            setShowSplash(false);
-            try {
-              localStorage.setItem("introSeen", "1");
-            } catch {
-              /* 스토리지 차단 시 무시 (다음에 또 재생될 뿐) */
-            }
-          }}
-        />
-      )}
       <Screen>
       {/* lazy 화면 로딩 중 폴백. 탭바는 밖에 둬서 항상 노출. */}
       <Suspense fallback={<Loading />}>

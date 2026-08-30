@@ -32,9 +32,7 @@ export async function migrateFromPreviousOrigin(): Promise<string[] | null> {
   const merged = [...new Set([...loadFavs(), ...prevFavs])];
   saveFavs(merged);
 
-  // 인트로 시청 여부: 한쪽이라도 봤으면 다시 안 보여준다.
   try {
-    if (prev["introSeen"]) localStorage.setItem("introSeen", "1");
     localStorage.setItem(DONE_KEY, "1");
   } catch {
     /* 스토리지 차단 시 무시 */

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Top, Loader } from "@toss/tds-mobile";
 import type { Pool } from "../pool";
 import PoolList from "../components/PoolList";
@@ -8,6 +8,7 @@ import BannerAd from "../components/BannerAd";
 import { Chip, EmptyState, Loading } from "../design/primitives";
 import { space, color, radius, brand } from "../design/tokens";
 import { matchPool, distinctRegions, matchRegion, regionLabel, inRegion, DEFAULT_GU, type Region } from "../lib/search";
+
 import {
   isOpenToday,
   isOpenNow,
@@ -100,11 +101,8 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
     };
   }, []);
 
-  // 타이핑 중엔 추천만 갱신 (목록은 그대로). 실제 필터는 커밋(엔터/추천/지우기) 때만.
-  const onQueryChange = (v: string) => setQ(v);
-
   // 확정: 지역 우선 → 없으면 체육관(텍스트) 검색. 내 위치(거리순)와는 배타.
-  const onSearchSubmit = (text: string) => {
+  const onSearchSubmit = useCallback((text: string) => {
     const s = text.trim();
     setMyLoc(null);
     if (!s) {
@@ -113,17 +111,25 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
       setQ("");
       return;
     }
-    const r = distinctRegions(pools).find((rg) => matchRegion(rg, s)); // 지역 먼저
+    const r = cachedRegions.find((rg) => matchRegion(rg, s)); // 캐싱된 regions 재사용
     if (r) {
       setRegion(r);
       setAppliedText("");
       setQ(regionLabel(r));
     } else {
       setRegion(null);
-      setAppliedText(s); // 지역 없으면 체육관 이름 등 텍스트 검색
+      setAppliedText(s);
       setQ(s);
     }
-  };
+  }, [cachedRegions]);
+
+  // statusOf: filter가 바뀔 때만 새 함수 생성 → PoolList memo 무효화 방지.
+  const statusOf = useCallback((p: Pool) => {
+    if (!hasSchedule(p)) return { text: "", tone: "muted" as const };
+    if (filter === "today") return todayRowStatus(p);
+    if (filter === "now") return nowRowStatus(p);
+    return { text: operatingDaysLabel(p), tone: "muted" as const };
+  }, [filter]);
 
   // 전국 800여 곳이라 매 렌더마다 거르고 정렬하면 타이핑 한 글자에도 목록 전체를 다시 계산한다.
   // 결과가 달라지는 입력(목록·지역·검색어·필터·내 위치)이 바뀔 때만 계산한다.
@@ -171,45 +177,68 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
       p.lat != null && p.lng != null ? formatKm(haversineKm(loc, { lat: p.lat, lng: p.lng })) : null;
   }, [myLoc]);
 
-  // 추천: 지역("부산 서구"로 시도까지 표기해 중복 구 구분) → 이름 매치 수영장.
-  const suggestions = useMemo<Suggestion[]>(() => {
-    const s = q.trim();
-    if (!s) return []; // 전국이라 지역이 너무 많음 → 입력 시에만 추천
-    const regions = distinctRegions(pools)
-      .filter((r) => matchRegion(r, s))
-      .slice(0, 8)
-      .map((r) => {
-        const label = regionLabel(r);
-        return {
-          id: `r:${label}`,
-          icon: "📍",
-          label,
-          hint: "지역",
+  // pools가 바뀔 때만 지역 목록·수영장 소문자 인덱스 계산 (타이핑마다 800개 순회 방지).
+  const cachedRegions = useMemo(() => distinctRegions(pools), [pools]);
+  const poolIndex = useMemo(
+    () => pools.map((p) => ({ p, key: p.name.toLowerCase() })),
+    [pools],
+  );
+
+  // suggestions: 타이핑마다 즉시 계산하면 렉 → 150ms debounce 후 계산.
+  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const computeSuggestions = useCallback(
+    (raw: string) => {
+      const s = raw.trim();
+      if (!s) { setSuggestions([]); return; }
+
+      const regions = cachedRegions
+        .filter((r) => matchRegion(r, s))
+        .slice(0, 8)
+        .map((r) => {
+          const label = regionLabel(r);
+          return {
+            id: `r:${label}`,
+            icon: "📍",
+            label,
+            hint: "지역",
+            onPick: () => {
+              setMyLoc(null);
+              setRegion(r);
+              setAppliedText("");
+              setQ(label);
+            },
+          };
+        });
+
+      const sl = s.toLowerCase();
+      const named = poolIndex
+        .filter(({ key }) => key.includes(sl))
+        .slice(0, 6)
+        .map(({ p }) => ({
+          id: p.id,
+          icon: "🏊",
+          label: p.name,
+          hint: p.gu,
           onPick: () => {
-            setMyLoc(null); // 지역 선택도 검색 → 내 위치 해제
-            setRegion(r); // 정확 필터
-            setAppliedText(""); // 텍스트 검색 해제
-            setQ(label); // 입력창엔 라벨 표시
+            setMyLoc(null);
+            setRegion(null);
+            setAppliedText(p.name);
+            setQ(p.name);
           },
-        };
-      });
-    const named = pools
-      .filter((p) => p.name.includes(s))
-      .slice(0, 6)
-      .map((p) => ({
-        id: p.id,
-        icon: "🏊",
-        label: p.name,
-        hint: p.gu,
-        onPick: () => {
-          setMyLoc(null);
-          setRegion(null);
-          setAppliedText(p.name);
-          setQ(p.name);
-        },
-      }));
-    return [...regions, ...named];
-  }, [pools, q]);
+        }));
+
+      setSuggestions([...regions, ...named]);
+    },
+    [cachedRegions, poolIndex],
+  );
+
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => computeSuggestions(q), 150);
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
+  }, [q, computeSuggestions]);
 
   async function toggleLocate() {
     if (myLoc) {
@@ -325,20 +354,12 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
       {loading ? (
         <Loading />
       ) : filtered.length ? (
-        <>
           <PoolList
             pools={filtered}
             favs={favs}
             onToggleFav={onToggleFav}
             onSelect={onSelect}
-            statusOf={(p) => {
-              // 시간표 없는 곳은 경고 문구 대신 비워 둔다 (지역·거리만 보이게).
-              if (!hasSchedule(p)) return { text: "", tone: "muted" as const };
-              // '오늘'/'지금' 뷰에선 시간 정보, 그 외엔 운영 요일 요약.
-              if (filter === "today") return todayRowStatus(p);
-              if (filter === "now") return nowRowStatus(p);
-              return { text: operatingDaysLabel(p), tone: "muted" as const };
-            }}
+            statusOf={statusOf}
             distanceText={distanceText}
           />
         </>
