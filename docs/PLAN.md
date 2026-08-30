@@ -1,9 +1,9 @@
-# 오늘 자유수영 — 기획서 (MVP)
+# 오늘 자유수영 — 기획서 및 현재 아키텍처
 
 > 전국 수영장의 **자유수영 시간·정보**를 찾는 앱인토스 미니앱.
 > 로그인 없이 시작, 위치 기반 정렬, 즐겨찾기(로컬 저장).
 
-> **현재 구현 상태 (갱신):** 아래 4장은 MVP 최초 기획 당시 Supabase 기준으로 작성됐다. 실제로는 **Neon**(Postgres + Neon Data API/Auth)으로 이전했고, 프론트는 `VITE_NEON_DATA_API_URL` / `VITE_NEON_AUTH_URL`로 익명 토큰을 발급받아 `GET /pools`를 조회한다 (`src/pool.ts`). 원격 조회 실패 시 `src/data/pools.json` 번들 데이터로 폴백한다. 범위도 서울 한정에서 **전국 831개 시설**로 확장됐다. 아래 스키마 설명(테이블 구조, RLS 개념)은 Neon에도 그대로 적용되며, 실제 테이블 생성/동기화는 `.manus/neon-migration/migrate_pools_to_neon.mjs`가 수행한다. `supabase/migrations/`는 과거 이력이며 더 이상 런타임에서 사용하지 않는다.
+> **현재 기준 (2026-08):** 런타임 백엔드는 **Neon(Postgres + Neon Data API/Auth)** 단일 기준이다. 프론트는 `VITE_NEON_DATA_API_URL`과 `VITE_NEON_AUTH_URL`로 익명 토큰을 발급받아 `GET /pools`를 조회하고(`src/pool.ts`), 원격 조회 실패 시 `src/data/pools.json`으로 폴백한다. 데이터 원본은 전국 수영장 JSON이며 운영 동기화는 `scripts/sync-pools-to-neon.mjs`가 담당한다. `supabase/`는 Neon 이전 전의 보관용 이력이며 런타임·배포·데이터 운영에 사용하지 않는다.
 
 ---
 
@@ -26,7 +26,7 @@
 | 탭 | 목적 | 핵심 요소 |
 |----|------|-----------|
 | **홈** | 진입·검색 | 소개 멘트 + 지역구(자치구) 기반 검색·목록 |
-| **내 주변** | 근처 탐색 | 지도 SDK 임베드 + 현재위치(권한 없으면 강남 기준) |
+| **내 주변** | 근처 탐색 | 지도 SDK 임베드 + 현재위치(권한 없으면 기본 위치) |
 | **즐겨찾기** | 재방문 | 로컬 저장된 수영장 목록 |
 
 ---
@@ -35,7 +35,7 @@
 
 ### 3.1 홈
 - 상단: 짧은 소개 멘트 (TDS `Top`)
-- **지역구 선택**: 서울 25개 자치구 칩/셀렉트 → 선택 시 해당 구 수영장 목록
+- **지역 검색**: 시·도/구 검색 → 선택 시 해당 지역 수영장 목록
 - 목록 아이템: 수영장명 · 구 · (오늘 자유수영 시간 요약) · ⭐토글
 - 아이템 탭 → **수영장 상세**
 
@@ -43,7 +43,7 @@
 - 지도 임베드(카카오맵 JS SDK 권장), 수영장 마커 표시
 - 진입 시 위치 권한 요청
   - **허용** → 현재위치 중심, 반경 내 수영장
-  - **거부/미응답** → **강남역 좌표 기본값**으로 표시
+  - **거부/미응답** → 기본 위치로 표시
 - 지도 이동 후 "이 위치에서 다시 검색" → 지도 중심 기준 재조회
 - 마커/하단 카드 탭 → **수영장 상세**
 
@@ -91,7 +91,7 @@
 > ponytail: 시간표를 별도 테이블 대신 jsonb로. "지금 열린 곳만 필터" 같은 서버쿼리가 필요해지면 그때 `pool_schedules` 테이블로 정규화.
 
 - **RLS**: `pools`는 익명(anon) **읽기 전용** 정책만. 쓰기는 없음(운영자가 대시보드/CLI로 입력).
-- 인덱스: `gu` (홈 검색). 근처 검색은 MVP에선 앱에서 거리 계산(서울 한정, 데이터 소량이라 충분).
+- 인덱스: `sido, gu`, `name`. 근처 검색은 앱에서 위·경도 기반으로 계산한다.
 
 ### 즐겨찾기 (서버 아님)
 - `localStorage["fav_pool_ids"] = ["uuid", ...]`
@@ -104,7 +104,7 @@
 
 | 영역 | 선택 | 근거 |
 |------|------|------|
-| 프레임워크 | 앱인토스 web-framework v2.10 + React 18 + Vite | 기존 스캐폴딩 |
+| 프레임워크 | 앱인토스 web-framework 3.x + React 18 + Vite 6 | `package.json` 기준 |
 | UI | TDS Mobile (`@toss/tds-mobile`) | 미니앱 심사 필수 |
 | 위치 | `useGeolocation` 훅 + `geolocation` 권한 | 앱인토스 제공 |
 | 지도 | 카카오맵 JS SDK 임베드 | WebView 표준 Web API 허용 |
@@ -119,18 +119,18 @@
 
 ## 6. 데이터 수집·운영
 
-- MVP: 서울 자치구별 대표 수영장 **20~30개** 수동 수집(공공 체육시설 + 사설).
+- 전국 수영장 데이터는 `src/data/pools.json`을 기준으로 관리한다.
 - 소스: 각 구민체육센터/수영장 홈페이지의 자유수영 시간표·요금.
-- 입력: `src/data/pools.json` 직접 편집 또는 `scripts/enrich-free-swim-from-*.mjs` 자동 수집 → `.manus/neon-migration/migrate_pools_to_neon.mjs`로 Neon에 upsert.
+- 입력: `src/data/pools.json` 직접 편집 또는 `scripts/enrich-free-swim-from-*.mjs` 자동 수집 → `scripts/sync-pools-to-neon.mjs`로 Neon에 upsert.
 - 시간표는 시즌마다 바뀌므로 `updated_at`으로 갱신일 표기.
 
 ---
 
 ## 7. 구현 마일스톤
 
-**M1 — 데이터·기반 (백엔드 먼저)** ✅ 완료 (Neon으로 전환)
-1. Neon 프로젝트 + `pools` 테이블 + RLS(anon 읽기전용)
-2. 전국 831개 시설 입력
+**M1 — 데이터·기반** ✅ 완료 (Neon 기준)
+1. Neon 프로젝트 + `pools` 테이블 + anonymous 읽기 전용 정책
+2. 전국 시설 데이터 입력 및 중복 정리
 3. 앱에서 Neon Data API 조회 확인, 실패 시 번들 JSON 폴백
 
 **M2 — 홈 + 상세**
@@ -140,7 +140,7 @@
 7. 즐겨찾기 토글(localStorage) + 즐겨찾기 탭
 
 **M3 — 내 주변**
-8. `geolocation` 권한 + `useGeolocation`, 강남 기본값 폴백
+8. `geolocation` 권한 + 위치 폴백
 9. 카카오맵 임베드 + 마커
 10. 지도 이동 후 재검색, 거리 정렬
 
@@ -150,7 +150,7 @@
 
 ### 자유수영 시간표 확보 현황
 
-전국 831곳 기준. 자동 수집(helloswim·오늘수영·swimmingis) + AI 조사원 웹 조사를 병행해 채우고 있다.
+전국 시설 기준. 자동 수집(helloswim·오늘수영·swimmingis)과 수동 검증을 병행한다.
 
 확보 못한 곳은 두 종류로 나눈다.
 - **자유수영 미운영 확정**: 강습 전용·회원 전용·휴장·선수 전용 시설. 더 찾을 필요가 없다.

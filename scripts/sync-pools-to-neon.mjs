@@ -35,6 +35,20 @@ for (const [index, pool] of pools.entries()) {
   ids.add(pool.id);
 }
 
+// 같은 지역에 띄어쓰기만 다른 같은 이름이 다시 들어오는 것을 막는다.
+// (출처가 다른 시드가 on conflict 없이 각각 insert 되면서 중복이 쌓였던 이력이 있다)
+const nameKeys = new Map();
+for (const pool of pools) {
+  const key = `${pool.name.replace(/\s/g, "").toLowerCase()}|${pool.sido ?? ""}|${pool.gu}`;
+  if (nameKeys.has(key)) {
+    throw new Error(
+      `중복 의심: "${nameKeys.get(key)}" 와 "${pool.name}" 이 같은 지역(${pool.sido ?? ""} ${pool.gu})에 있습니다. ` +
+        "node scripts/find-duplicate-pools.mjs 로 확인하세요.",
+    );
+  }
+  nameKeys.set(key, pool.name);
+}
+
 const withSchedule = pools.filter((p) => Array.isArray(p.free_swim) && p.free_swim.length > 0).length;
 console.log(`로컬: ${pools.length}곳, 시간표 보유 ${withSchedule}곳`);
 

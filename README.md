@@ -23,20 +23,20 @@
 - 🗺️ **지도** — 카카오맵에 전체 수영장 마커, 검색하면 해당 지역으로 이동, 카카오맵·네이버 길찾기
 - ⭐ **즐겨찾기**, 상세 실제 요금표 등
 
-## 기술 스택
+## 기술 스택 (현재)
 
 | 구분 | 사용 |
 |------|------|
 | 프론트 | React 18 · TypeScript · Vite |
-| 플랫폼 | AppsInToss `@apps-in-toss/web-framework` 3.x (Granite/AIT) · TDS `@toss/tds-mobile` |
-| 데이터 | Neon Data API(REST, 익명 토큰) 우선 조회 + 번들 JSON(`src/data/pools.json`) 장애 폴백 |
+| 플랫폼 | AppsInToss `@apps-in-toss/web-framework` 3.x (AIT) · TDS `@toss/tds-mobile` |
+| 데이터 | Neon Postgres + Neon Data API/Auth(REST, 익명 토큰) 우선 조회 + 번들 JSON(`src/data/pools.json`) 장애 폴백 |
 | 지도 | Kakao Maps JS SDK |
 
 ## 시작하기
 
 ```bash
 # 1) 의존성 설치
-npm install
+pnpm install
 
 # 2) 환경 변수 — .env 생성 (.env.example 참고)
 #    VITE_KAKAO_JS_KEY / VITE_NEON_DATA_API_URL / VITE_NEON_AUTH_URL
@@ -44,13 +44,13 @@ npm install
 #     DB 연결 문자열·관리자 API 키는 여기 넣지 않는다.)
 
 # 3) 개발 서버
-npm run dev
+pnpm run dev
 
 # 4) 빌드 (AIT 아티팩트 openswim.ait 생성)
-npm run build
+pnpm run build
 ```
 
-> 원격 조회가 실패하면(네트워크 문제, Neon 장애 등) 앱은 자동으로 번들된 `src/data/pools.json`을 사용합니다. 데이터 갱신 스크립트는 `scripts/`에 있고, 최신 데이터를 Neon에 반영하려면 `.manus/neon-migration/migrate_pools_to_neon.mjs`(환경변수 `NEON_DATABASE_URL` 필요)를 사용합니다.
+> 원격 조회가 실패하면(네트워크 문제, Neon 장애 등) 앱은 자동으로 번들된 `src/data/pools.json`을 사용합니다. 데이터 갱신 스크립트는 `scripts/`에 있고, 최신 데이터를 Neon에 반영하려면 `scripts/sync-pools-to-neon.mjs`(환경변수 `NEON_DATABASE_URL` 필요)를 사용합니다. `.manus/neon-migration/`은 초기 이관용 보조 스크립트입니다.
 
 > 카카오맵은 사용 도메인을 카카오 콘솔 `[플랫폼 > Web]` 에 등록해야 표시됩니다. (`localhost:5173`, 배포 도메인 등)
 
@@ -64,7 +64,7 @@ src/
   design/      tokens · primitives (토스풍 디자인 시스템)
   data/        pools.json (번들 폴백 데이터)
 scripts/       데이터 수집·정규화·감사·Neon 동기화
-supabase/      과거 스키마 이력 (런타임 미사용, Neon 이관 전 기록)
+supabase/      과거 Supabase 스키마 이력 (런타임 미사용, Neon 이관 전 기록; 상세: supabase/README.md)
 docs/          앱인토스·TDS 참고 문서, 데이터 감사 리포트, preview 이미지
 ```
 

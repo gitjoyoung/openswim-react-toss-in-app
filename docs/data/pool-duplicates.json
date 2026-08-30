@@ -1,0 +1,27 @@
+[
+  {
+    "reasons": [
+      "이름 동일"
+    ],
+    "members": [
+      {
+        "id": "c5cc3839-e3ae-4d7e-aef7-230eaed19015",
+        "name": "월드스포츠센터",
+        "sido": "경기도",
+        "gu": "용인시",
+        "address": "경기 용인시 기흥구 구갈로 74",
+        "richness": 6,
+        "freeSwimDays": 4
+      },
+      {
+        "id": "7510d04c-f349-44e3-99cf-32d65f2e2fa5",
+        "name": "월드스포츠센터",
+        "sido": "경기도",
+        "gu": "안산시",
+        "address": "경기 안산시 상록구 감골1로 35",
+        "richness": 3,
+        "freeSwimDays": 0
+      }
+    ]
+  }
+]
