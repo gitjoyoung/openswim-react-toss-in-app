@@ -101,6 +101,18 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
     };
   }, []);
 
+
+  // pools가 바뀔 때만 지역 목록·수영장 소문자 인덱스 계산 (타이핑마다 800개 순회 방지).
+  const cachedRegions = useMemo(() => distinctRegions(pools), [pools]);
+  const poolIndex = useMemo(
+    () =>
+      pools.map((p) => ({
+        p,
+        key: `${p.name} ${p.gu} ${p.sido ?? ""} ${p.address ?? ""}`.toLowerCase(),
+      })),
+    [pools],
+  );
+
   // 확정: 지역 우선 → 없으면 체육관(텍스트) 검색. 내 위치(거리순)와는 배타.
   const onSearchSubmit = useCallback((text: string) => {
     const s = text.trim();
@@ -177,12 +189,6 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
       p.lat != null && p.lng != null ? formatKm(haversineKm(loc, { lat: p.lat, lng: p.lng })) : null;
   }, [myLoc]);
 
-  // pools가 바뀔 때만 지역 목록·수영장 소문자 인덱스 계산 (타이핑마다 800개 순회 방지).
-  const cachedRegions = useMemo(() => distinctRegions(pools), [pools]);
-  const poolIndex = useMemo(
-    () => pools.map((p) => ({ p, key: p.name.toLowerCase() })),
-    [pools],
-  );
 
   // suggestions: 타이핑마다 즉시 계산하면 렉 → 150ms debounce 후 계산.
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -305,7 +311,7 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
 
       <div style={{ display: "flex", gap: space.sm, padding: `0 ${space.xl}px ${space.md}px` }}>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <SearchBox value={q} onChange={onQueryChange} onSubmit={onSearchSubmit} suggestions={suggestions} />
+          <SearchBox value={q} onChange={setQ} onSubmit={onSearchSubmit} suggestions={suggestions} />
         </div>
         <button
           onClick={toggleLocate}
@@ -362,7 +368,6 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
             statusOf={statusOf}
             distanceText={distanceText}
           />
-        </>
       ) : (
         <EmptyState
           emoji="🔍"
