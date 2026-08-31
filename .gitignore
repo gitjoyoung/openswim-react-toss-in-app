@@ -48,3 +48,5 @@ skills-lock.json
 
 # ── 작업용 임시 스크립트 (마이그레이션 도구) ──
 .manus/
+.worktrees/
+.superpowers/
