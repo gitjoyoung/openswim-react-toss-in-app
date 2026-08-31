@@ -4,14 +4,36 @@ import type { Pool } from "../pool";
 export const DEFAULT_GU = "금천구";
 export const DEFAULT_GU_CENTER = { lat: 37.4569, lng: 126.8955 }; // 금천구청 근처
 
+function searchTokens(query: string): string[] {
+  return query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+}
+
+function poolSearchText(p: Pool): string {
+  return `${p.name} ${p.gu} ${p.sido ?? ""} ${p.address ?? ""}`.toLowerCase();
+}
+
 // 확정된 자유 검색: 지역 또는 수영장 이름에서 모든 토큰이 일치하면 매치.
 // 지역 검색은 onSearchSubmit에서 먼저 Region으로 확정하므로 이름에 같은 지명이 있어도 섞이지 않는다.
 // address에 읍면동이 포함되므로 "역삼동" 검색도 매치된다.
 export function matchPool(p: Pool, query: string): boolean {
-  const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const tokens = searchTokens(query);
   if (!tokens.length) return true;
-  const hay = `${p.name} ${p.gu} ${p.sido ?? ""} ${p.address ?? ""}`.toLowerCase();
+  const hay = poolSearchText(p);
   return tokens.every((t) => hay.includes(t));
+}
+
+export type PoolSearchEntry = { pool: Pool; key: string };
+
+// 검색 제안은 화면마다 동일한 정규화된 풀 텍스트를 재사용한다.
+export function buildPoolSearchIndex(pools: Pool[]): PoolSearchEntry[] {
+  return pools.map((pool) => ({ pool, key: poolSearchText(pool) }));
+}
+
+// 빈 입력은 제안을 표시하지 않고, 나머지는 원본 순서를 유지한다.
+export function findPoolSuggestions(index: PoolSearchEntry[], query: string, limit = 6): Pool[] {
+  const tokens = searchTokens(query);
+  if (!tokens.length) return [];
+  return index.filter((entry) => tokens.every((token) => entry.key.includes(token))).slice(0, limit).map((entry) => entry.pool);
 }
 
 // 시도 축약: "부산광역시"→"부산", "강원특별자치도"→"강원", "경기도"→"경기".

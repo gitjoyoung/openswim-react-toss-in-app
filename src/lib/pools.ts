@@ -1,5 +1,7 @@
 import type { Pool } from "../pool";
+import { haversineKm, type LatLng } from "./geo";
 import { isHoliday } from "./holidays";
+import { DEFAULT_GU, inRegion, matchPool, type Region } from "./search";
 
 export type Session = { start: string; end: string };
 export type DaySchedule = { day: number; sessions: Session[] };
@@ -203,16 +205,16 @@ function toHHMM(d: Date): string {
 }
 
 // 지금부터 NOW_WINDOW_MIN 분 안에 시작하는 오늘(공휴일이면 7) 세션 중 가장 빠른 것. 없으면 null.
-export function upcomingSession(p: Pool, now = new Date()): Session | null {
+export function upcomingSession(p: Pool, now = new Date(), day = todayDayIndex()): Session | null {
   const from = toHHMM(now);
   const to = toHHMM(new Date(now.getTime() + NOW_WINDOW_MIN * 60_000));
   if (to < from) return null; // 자정 넘김은 다루지 않음
-  const sessions = freeSwim(p).find((d) => d.day === todayDayIndex())?.sessions ?? [];
+  const sessions = freeSwim(p).find((d) => d.day === day)?.sessions ?? [];
   return sessions.find((s) => from <= s.start && s.start <= to) ?? null;
 }
 
-export function isOpenNow(p: Pool): boolean {
-  return upcomingSession(p) !== null;
+export function isOpenNow(p: Pool, now = new Date(), day = todayDayIndex()): boolean {
+  return upcomingSession(p, now, day) !== null;
 }
 
 // '지금' 필터용 상태. 곧 시작하는 세션이 있으면 그 시간을, 아니면 오늘 규칙과 동일.
@@ -235,4 +237,74 @@ export function openWeekday(p: Pool): boolean {
 // 주말(토·일) 중 하루라도 운영하면 true.
 export function openWeekend(p: Pool): boolean {
   return freeSwim(p).some((d) => d.day === 0 || d.day === 6);
+}
+
+export type PoolFilterKey = "today" | "now" | "sat" | "sun" | "all";
+
+export type PoolListQuery = {
+  pools: Pool[];
+  region: Region | null;
+  appliedText: string;
+  filter: PoolFilterKey;
+  location?: LatLng | null;
+  day: number;
+  now: Date;
+};
+
+function passesPoolFilter(pool: Pool, filter: PoolFilterKey, day: number, now: Date): boolean {
+  switch (filter) {
+    case "today": {
+      const daySchedule = freeSwim(pool).find((entry) => entry.day === day);
+      return day === HOLIDAY_DAY
+        ? !daySchedule || daySchedule.sessions.length > 0
+        : !hasSchedule(pool) || (daySchedule?.sessions.length ?? 0) > 0;
+    }
+    case "now":
+      return isOpenNow(pool, now, day);
+    case "sat":
+      return openOnDay(pool, 6) || !hasSchedule(pool);
+    case "sun":
+      return openOnDay(pool, 0) || !hasSchedule(pool);
+    default:
+      return true;
+  }
+}
+
+// 목록 계산에 필요한 시간·위치·검색 상태를 모두 입력으로 받아 화면과 독립적으로 유지한다.
+export function filterAndSortPools(input: PoolListQuery): Pool[] {
+  const { pools, region, appliedText, filter, location, day, now } = input;
+  const distanceKm = (pool: Pool) =>
+    location && pool.lat != null && pool.lng != null
+      ? haversineKm(location, { lat: pool.lat, lng: pool.lng })
+      : Infinity;
+  const base = pools
+    .filter((pool) => (region ? inRegion(pool, region) : matchPool(pool, appliedText)))
+    .filter((pool) => passesPoolFilter(pool, filter, day, now));
+
+  return [...base].sort((a, b) => {
+    if (!location && !region) {
+      const defaultRegionRank = (pool: Pool) => (pool.gu === DEFAULT_GU ? 0 : 1);
+      if (defaultRegionRank(a) !== defaultRegionRank(b)) return defaultRegionRank(a) - defaultRegionRank(b);
+    }
+    if (filter === "all") {
+      if (location) return distanceKm(a) - distanceKm(b);
+      const coverageRank = (pool: Pool) =>
+        !hasSchedule(pool) ? 2 : openWeekday(pool) && openWeekend(pool) ? 0 : 1;
+      return coverageRank(a) - coverageRank(b);
+    }
+
+    const matchingDayRank = (pool: Pool) => {
+      const matches =
+        filter === "now"
+          ? isOpenNow(pool, now, day)
+          : filter === "sat"
+            ? openOnDay(pool, 6)
+            : filter === "sun"
+              ? openOnDay(pool, 0)
+              : openOnDay(pool, day);
+      return matches ? 0 : 1;
+    };
+    if (matchingDayRank(a) !== matchingDayRank(b)) return matchingDayRank(a) - matchingDayRank(b);
+    return location ? distanceKm(a) - distanceKm(b) : 0;
+  });
 }

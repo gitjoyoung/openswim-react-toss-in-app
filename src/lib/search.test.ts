@@ -1,6 +1,15 @@
 import { describe, expect, it } from "vitest";
 import type { Pool } from "../pool";
-import { distinctRegions, inRegion, matchPool, matchRegion, regionLabel, shortSido } from "./search";
+import {
+  buildPoolSearchIndex,
+  distinctRegions,
+  findPoolSuggestions,
+  inRegion,
+  matchPool,
+  matchRegion,
+  regionLabel,
+  shortSido,
+} from "./search";
 
 function pool(overrides: Partial<Pool>): Pool {
   return {
@@ -54,5 +63,29 @@ describe("pool search", () => {
     ["경기도", "경기"],
   ])("shortens %s to %s", (input, expected) => {
     expect(shortSido(input)).toBe(expected);
+  });
+
+  it("finds address matches from the reusable search index", () => {
+    const index = buildPoolSearchIndex([
+      pool({ id: "yeoksam", address: "서울 강남구 논현로64길 7 역삼동" }),
+      pool({ id: "other", name: "한강 수영장", address: "서울 영등포구 여의대로 1" }),
+    ]);
+
+    expect(findPoolSuggestions(index, "역삼동").map((item) => item.id)).toEqual(["yeoksam"]);
+  });
+
+  it("requires every whitespace-separated suggestion token to match", () => {
+    const index = buildPoolSearchIndex([
+      pool({ id: "target", name: "역삼 청소년 수영장" }),
+      pool({ id: "partial", name: "역삼 체육관" }),
+    ]);
+
+    expect(findPoolSuggestions(index, "역삼 수영장").map((item) => item.id)).toEqual(["target"]);
+  });
+
+  it("keeps empty-query suggestions empty", () => {
+    const index = buildPoolSearchIndex([pool({ id: "first" }), pool({ id: "second" })]);
+
+    expect(findPoolSuggestions(index, "")).toEqual([]);
   });
 });

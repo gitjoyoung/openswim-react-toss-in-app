@@ -25,7 +25,7 @@ const neonAuthUrl = import.meta.env.VITE_NEON_AUTH_URL?.replace(/\/$/, "");
 
 let poolsPromise: Promise<Pool[]> | null = null;
 
-function isPoolArray(value: unknown): value is Pool[] {
+export function isPoolArray(value: unknown): value is Pool[] {
   return (
     Array.isArray(value) &&
     value.every(
