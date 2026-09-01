@@ -1,32 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import { loadKakao } from "../lib/kakaoMap";
+import { useRef } from "react";
+import { usePoolMap } from "../hooks/usePoolMap";
 import { radius, color } from "../design/tokens";
 
 // 상세 페이지용 실제 카카오 지도 미리보기 (마커 1개). 로드 실패 시 안내로 대체.
 export default function PoolMap({ lat, lng }: { lat: number; lng: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [failed, setFailed] = useState(false);
+  const { error } = usePoolMap({ containerRef: ref, preview: { center: { lat, lng }, level: 4 } });
 
-  useEffect(() => {
-    let cancelled = false;
-    loadKakao()
-      .then((kakao) => {
-        if (cancelled || !ref.current) return;
-        ref.current.innerHTML = "";
-        const pos = new kakao.maps.LatLng(lat, lng);
-        const map = new kakao.maps.Map(ref.current, { center: pos, level: 4 });
-        new kakao.maps.Marker({ position: pos, map }); // 위치는 마커로 표시
-        // 미리보기라 완전 고정 — 드래그·확대 막아 스크롤 시 지도가 잡혀 불편한 것 방지.
-        map.setDraggable(false);
-        map.setZoomable(false);
-      })
-      .catch(() => !cancelled && setFailed(true));
-    return () => {
-      cancelled = true;
-    };
-  }, [lat, lng]);
-
-  if (failed) {
+  if (error) {
     return (
       <div
         style={{
