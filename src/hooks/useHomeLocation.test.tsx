@@ -1,5 +1,5 @@
 import { act, renderHook } from "@testing-library/react";
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { useHomeLocation } from "./useHomeLocation";
 
 const geo = {
@@ -8,6 +8,15 @@ const geo = {
 };
 
 describe("useHomeLocation", () => {
+  beforeEach(() => {
+    geo.getMyLocation.mockReset();
+    geo.getMyLocationSilent.mockReset();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it("delays its loader, applies an explicit location, and toggles it off", async () => {
     vi.useFakeTimers();
     geo.getMyLocationSilent.mockResolvedValue(null);
@@ -30,6 +39,35 @@ describe("useHomeLocation", () => {
 
     act(() => { void result.current.toggleLocation(); });
     expect(result.current.location).toBeNull();
-    vi.useRealTimers();
+  });
+
+  it("ignores a superseded silent lookup while the hook remains mounted", async () => {
+    let resolveStale: (location: { lat: number; lng: number } | null) => void;
+    const staleGeo = {
+      getMyLocation: vi.fn(),
+      getMyLocationSilent: vi.fn().mockReturnValue(
+        new Promise((resolve) => {
+          resolveStale = resolve;
+        }),
+      ),
+    };
+    const currentGeo = {
+      getMyLocation: vi.fn(),
+      getMyLocationSilent: vi.fn().mockResolvedValue(null),
+    };
+    const { result, rerender } = renderHook(
+      ({ dependencies }) => useHomeLocation(dependencies),
+      { initialProps: { dependencies: staleGeo } },
+    );
+
+    expect(staleGeo.getMyLocationSilent).toHaveBeenCalledTimes(1);
+    rerender({ dependencies: currentGeo });
+
+    await act(async () => {
+      resolveStale!({ lat: 37.5, lng: 127 });
+    });
+
+    expect(result.current.location).toBeNull();
+    expect(currentGeo.getMyLocationSilent).toHaveBeenCalledTimes(1);
   });
 });
