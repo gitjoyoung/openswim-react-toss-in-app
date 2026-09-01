@@ -72,6 +72,7 @@ function createKakao() {
     listeners: Record<string, () => void> = {};
     setMap = vi.fn();
     setImage = vi.fn();
+    setPosition = vi.fn();
     constructor(public options: unknown) {
       maps.markers.push(this);
     }
@@ -173,5 +174,22 @@ describe("usePoolMap", () => {
     expect(maps.instances[0].setDraggable).toHaveBeenCalledWith(false);
     expect(maps.instances[0].setZoomable).toHaveBeenCalledWith(false);
     expect(geo.getMyLocationSilent).not.toHaveBeenCalled();
+  });
+
+  it("moves the detail-preview marker when preview coordinates change", async () => {
+    const { kakao, maps } = createKakao();
+    mapSdk.loadKakao.mockResolvedValue(kakao);
+    const ref = { current: document.createElement("div") };
+    const { rerender } = renderHook(
+      ({ lat, lng }) => usePoolMap({ containerRef: ref, preview: { center: { lat, lng }, level: 4 } }),
+      { initialProps: { lat: 37.51, lng: 127.01 } },
+    );
+
+    await waitFor(() => expect(maps.markers).toHaveLength(1));
+    rerender({ lat: 37.61, lng: 127.11 });
+
+    await waitFor(() =>
+      expect(maps.markers[0].setPosition).toHaveBeenCalledWith(expect.objectContaining({ lat: 37.61, lng: 127.11 })),
+    );
   });
 });

@@ -86,7 +86,9 @@ export function usePoolMap(options: UsePoolMapOptions) {
   const markersRef = useRef<MarkerRecord[]>([]);
   const overlayRef = useRef<Kakao>(null);
   const meRef = useRef<Kakao>(null);
-  const initialPreviewRef = useRef(preview);
+  const previewRef = useRef(preview);
+  const previewMarkerRef = useRef<Kakao>(null);
+  previewRef.current = preview;
   const [ready, setReady] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [locating, setLocating] = useState(false);
@@ -118,16 +120,17 @@ export function usePoolMap(options: UsePoolMapOptions) {
         if (cancelled || !containerRef.current || mapRef.current) return;
         containerRef.current.innerHTML = "";
         kakaoRef.current = kakao;
-        const center = initialPreviewRef.current ?? { center: DEFAULT_GU_CENTER, level: DEFAULT_LEVEL };
+        const center = previewRef.current ?? { center: DEFAULT_GU_CENTER, level: DEFAULT_LEVEL };
         const position = new kakao.maps.LatLng(center.center.lat, center.center.lng);
         const map = new kakao.maps.Map(containerRef.current, {
           center: position,
           level: center.level,
         });
         mapRef.current = map;
-        if (initialPreviewRef.current) {
+        if (previewRef.current) {
           const marker = new kakao.maps.Marker({ position, map });
           markersRef.current.push({ marker });
+          previewMarkerRef.current = marker;
           map.setDraggable(false);
           map.setZoomable(false);
         }
@@ -221,7 +224,8 @@ export function usePoolMap(options: UsePoolMapOptions) {
     const position = new kakao.maps.LatLng(previewLat, previewLng);
     map.setCenter(position);
     map.setLevel(previewLevel);
-  }, [previewLat, previewLng, previewLevel]);
+    previewMarkerRef.current?.setPosition(position);
+  }, [previewLat, previewLng, previewLevel, ready]);
 
   const locateMe = useCallback(async () => {
     setLocating(true);
