@@ -1,12 +1,14 @@
-import { lazy, Suspense, useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
 import { Text } from "@toss/tds-mobile";
-import { graniteEvent, Screen as AitScreen } from "@apps-in-toss/web-framework";
-import { fetchPools, type Pool } from "./pool";
 import homeIcon from "./assets/icons/home.webp";
 import nearbyIcon from "./assets/icons/nearby.webp";
 import favIcon from "./assets/icons/fav.webp";
 import { loadFavs, saveFavs } from "./lib/favorites";
 import { migrateFromPreviousOrigin } from "./lib/storageMigration";
+import { usePools } from "./hooks/usePools";
+import { useAppNavigation, type Tab } from "./hooks/useAppNavigation";
+import { useDetailScrollLock } from "./hooks/useDetailScrollLock";
+import { useHideOnScroll } from "./hooks/useHideOnScroll";
 import { Screen, APP_MAX_WIDTH, EmptyState, Loading } from "./design/primitives";
 import { brand, color, radius, SAFE_BOTTOM, TAB_BAR_HEIGHT, TAB_BAR_SIDE_MARGIN } from "./design/tokens";
 import HomeScreen from "./screens/HomeScreen"; // 첫 화면이라 즉시 로드
@@ -17,31 +19,12 @@ const NearbyScreen = lazy(() => import("./screens/NearbyScreen"));
 const FavoritesScreen = lazy(() => import("./screens/FavoritesScreen"));
 const PoolDetail = lazy(() => import("./screens/PoolDetail"));
 
-type Tab = "home" | "nearby" | "fav";
-
 function App() {
-  const [pools, setPools] = useState<Pool[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [loadError, setLoadError] = useState(false);
-  const [tab, setTab] = useState<Tab>("home");
-  const [selected, setSelected] = useState<Pool | null>(null);
+  const { pools, loading, loadError, retry } = usePools();
+  const { tab, selected, openPoolDetail, closeDetail, changeTab } = useAppNavigation();
   const [favs, setFavs] = useState<string[]>(loadFavs);
-  const detailOpenLockedRef = useRef(false);
-  // backEvent 리스너는 한 번만 등록하므로, 콜백 안에서 최신 상세 상태를 ref로 읽는다.
-  const selectedRef = useRef<Pool | null>(null);
 
-  const load = useCallback(() => {
-    setLoading(true);
-    setLoadError(false);
-    fetchPools()
-      .then(setPools)
-      .catch(() => setLoadError(true))
-      .finally(() => setLoading(false));
-  }, []);
-
-  useEffect(() => {
-    load();
-  }, [load]);
+  useDetailScrollLock(selected !== null);
 
   // Origin 변경(2026-08-25) 대응: 이전 Origin의 즐겨찾기를 한 번 합친다.
   useEffect(() => {
@@ -64,49 +47,6 @@ function App() {
     return () => events.forEach((n) => document.removeEventListener(n, block));
   }, []);
 
-  // 토스 내비게이션 바의 뒤로가기(시스템 back)를 앱 상태에 연결한다.
-  // 상세가 열려 있으면 상세만 닫고, 첫 화면이면 미니앱을 종료한다.
-  // (출시 체크리스트: "최초 화면에서 뒤로가기를 누르면 미니앱이 종료돼요")
-  useEffect(() => {
-    return graniteEvent.addEventListener("backEvent", {
-      onEvent: () => {
-        if (selectedRef.current) {
-          setSelected(null);
-          return;
-        }
-        AitScreen.close();
-      },
-    });
-  }, []);
-
-  // 탭 이동 시 항상 상단부터. (상세는 모달이라 밑 화면 스크롤은 그대로 유지)
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [tab]);
-
-  useEffect(() => {
-    selectedRef.current = selected;
-  }, [selected]);
-
-  // 상세 모달 열린 동안 배경(탭 화면) 스크롤 잠금 + 위치 정확히 보존.
-  // position:fixed + top:-y 로 현재 스크롤을 고정하고, 닫을 때 그 위치로 복원.
-  useEffect(() => {
-    if (!selected) return;
-    const y = window.scrollY;
-    const b = document.body.style;
-    b.position = "fixed";
-    b.top = `-${y}px`;
-    b.left = "0";
-    b.right = "0";
-    return () => {
-      b.position = "";
-      b.top = "";
-      b.left = "";
-      b.right = "";
-      window.scrollTo(0, y);
-    };
-  }, [selected]);
-
   function toggleFav(id: string) {
     setFavs((prev) => {
       const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
@@ -114,16 +54,6 @@ function App() {
       return next;
     });
   }
-
-  // 첫 탭은 즉시 열고, 더블클릭·연속 탭으로 들어오는 후속 이벤트만 잠시 무시한다.
-  const openPoolDetail = useCallback((pool: Pool) => {
-    if (detailOpenLockedRef.current) return;
-    detailOpenLockedRef.current = true;
-    setSelected(pool);
-    window.setTimeout(() => {
-      detailOpenLockedRef.current = false;
-    }, 400);
-  }, []);
 
   // 상세도 탭 셸 안에서 렌더 → 하단 탭바 항상 노출. 탭을 누르면 상세를 닫고 이동.
   return (
@@ -139,7 +69,7 @@ function App() {
               정보를 불러오지 못했어요.
               <br />
               <button
-                onClick={load}
+                onClick={retry}
                 style={{
                   marginTop: 14,
                   padding: "8px 18px",
@@ -174,13 +104,7 @@ function App() {
         </>
       )}
       </Suspense>
-      <TabBar
-        tab={tab}
-        onChange={(t) => {
-          setSelected(null);
-          setTab(t);
-        }}
-      />
+      <TabBar tab={tab} onChange={changeTab} />
       </Screen>
 
       {/* 상세는 페이지 교체가 아니라 위로 올라오는 모달 — 밑 화면(홈/지도)은 그대로 유지 */}
@@ -194,7 +118,7 @@ function App() {
             justifyContent: "center",
             background: "rgba(0,0,0,0.25)",
           }}
-          onClick={() => setSelected(null)} // 데스크톱 사이드 여백 클릭 시 닫기
+          onClick={closeDetail} // 데스크톱 사이드 여백 클릭 시 닫기
         >
           <div
             className="detail-sheet"
@@ -213,7 +137,7 @@ function App() {
                 pool={selected}
                 isFav={favs.includes(selected.id)}
                 onToggleFav={() => toggleFav(selected.id)}
-                onClose={() => setSelected(null)}
+                onClose={closeDetail}
               />
             </Suspense>
           </div>
@@ -221,31 +145,6 @@ function App() {
       )}
     </>
   );
-}
-
-// 아래로 스크롤하면 탭바를 내려 숨기고, 위로 올리면 다시 보여준다.
-// TDS BottomCTA의 hideOnScroll과 같은 동작이고, 임계값도 같은 의미(이만큼 움직여야 반응).
-const HIDE_ON_SCROLL_THRESHOLD = 8;
-
-function useHideOnScroll(): boolean {
-  const [hidden, setHidden] = useState(false);
-  const lastYRef = useRef(0);
-
-  useEffect(() => {
-    lastYRef.current = window.scrollY;
-    const onScroll = () => {
-      const y = window.scrollY;
-      const delta = y - lastYRef.current;
-      if (Math.abs(delta) < HIDE_ON_SCROLL_THRESHOLD) return; // 미세한 흔들림은 무시
-      lastYRef.current = y;
-      // 최상단 근처에서는 항상 보여준다 (바운스로 숨은 채 남는 것 방지)
-      setHidden(delta > 0 && y > TAB_BAR_HEIGHT);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  return hidden;
 }
 
 function TabBar({ tab, onChange }: { tab: Tab; onChange: (t: Tab) => void }) {
