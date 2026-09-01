@@ -1,16 +1,9 @@
 import { useRef, useState } from "react";
 import { Top, Button, Text } from "@toss/tds-mobile";
 import type { Pool } from "../pool";
-import {
-  facilities,
-  depthText,
-  images,
-  prices,
-  wonText,
-  groupSchedule,
-  daysLabel,
-} from "../lib/pools";
-import { openKakaoMap, openNaverMap, openExternal } from "../lib/mapLinks";
+import { wonText } from "../lib/pools";
+import { buildPoolDetailModel } from "../lib/poolDetail";
+import { usePoolDetailActions } from "../hooks/usePoolDetailActions";
 import PoolMap from "../components/PoolMap";
 import BannerAd from "../components/BannerAd";
 import { Section, Divider, Pill, Caption } from "../design/primitives";
@@ -25,18 +18,14 @@ type Props = {
   onClose: () => void;
 };
 
-export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props) {
-  const groups = groupSchedule(pool);
-  const fac = facilities(pool);
-  const pics = images(pool);
-  const priceTiers = prices(pool);
-
-  const depth = depthText(fac);
-  const facPills = [
-    fac.lanes != null ? `레인 ${fac.lanes}` : null,
-    fac.lane_length_m != null ? `${fac.lane_length_m}M` : null,
-    depth ? `수심 ${depth}` : null,
-  ].filter(Boolean) as string[];
+export default function PoolDetail({
+  pool,
+  isFav,
+  onToggleFav,
+  onClose,
+}: Props) {
+  const model = buildPoolDetailModel(pool);
+  const actions = usePoolDetailActions(pool);
 
   return (
     <div
@@ -45,7 +34,13 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
         paddingBottom: "calc(32px + env(safe-area-inset-bottom))",
       }}
     >
-      <Hero images={pics.length ? pics : [freeImg]} name={pool.name} isFav={isFav} onToggleFav={onToggleFav} onClose={onClose} />
+      <Hero
+        images={model.images.length ? model.images : [freeImg]}
+        name={pool.name}
+        isFav={isFav}
+        onToggleFav={onToggleFav}
+        onClose={onClose}
+      />
 
       <Top
         lowerGap={0} // 주소 밑 하단 패딩 제거 (다음 섹션이 자체 상단 여백을 가짐)
@@ -65,16 +60,29 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
         <>
           <Section title="위치">
             <PoolMap lat={pool.lat} lng={pool.lng} />
-            <div style={{ display: "flex", gap: space.sm, marginTop: space.md }}>
+            <div
+              style={{ display: "flex", gap: space.sm, marginTop: space.md }}
+            >
               <div style={{ flex: "1 1 0", minWidth: 0 }}>
                 <Button
                   size="medium"
                   display="full"
-                  onClick={() => openKakaoMap(pool.name, pool.lat!, pool.lng!)}
+                  onClick={actions.openKakaoRoute}
                   // 카카오 상징색(옐로우) + 검정 텍스트
-                  style={{ "--button-background-color": "#FEE500", "--button-color": "#191919" } as React.CSSProperties}
+                  style={
+                    {
+                      "--button-background-color": "#FEE500",
+                      "--button-color": "#191919",
+                    } as React.CSSProperties
+                  }
                 >
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 6,
+                    }}
+                  >
                     <PinIcon />
                     카카오맵 길찾기
                   </span>
@@ -84,11 +92,22 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
                 <Button
                   size="medium"
                   display="full"
-                  onClick={() => openNaverMap(pool.name, pool.lat!, pool.lng!)}
+                  onClick={actions.openNaverRoute}
                   // 네이버 상징색(그린) + 흰 텍스트
-                  style={{ "--button-background-color": "#03C75A", "--button-color": "#ffffff" } as React.CSSProperties}
+                  style={
+                    {
+                      "--button-background-color": "#03C75A",
+                      "--button-color": "#ffffff",
+                    } as React.CSSProperties
+                  }
                 >
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 6,
+                    }}
+                  >
                     <NavIcon />
                     네이버 지도
                   </span>
@@ -100,27 +119,37 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
         </>
       )}
 
-      {(pool.phone || pool.homepage_url) && (
+      {(model.contact.phone || model.contact.homepageUrl) && (
         <>
           <Section title="정보">
-            {pool.phone && (
-              <a href={`tel:${pool.phone}`} style={{ ...linkStyle, display: "flex", alignItems: "center", gap: 8 }}>
+            {model.contact.phone && (
+              <a
+                href={`tel:${model.contact.phone}`}
+                style={{
+                  ...linkStyle,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                }}
+              >
                 <span style={{ flexShrink: 0 }}>📞</span>
                 <Text typography="t6" fontWeight="semibold" color={brand.main}>
-                  {pool.phone}
+                  {model.contact.phone}
                 </Text>
               </a>
             )}
-            {pool.homepage_url && (
+            {model.contact.homepageUrl && (
               <a
-                href={pool.homepage_url}
+                href={model.contact.homepageUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  openExternal(pool.homepage_url!);
+                onClick={actions.openHomepage}
+                style={{
+                  ...linkStyle,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
                 }}
-                style={{ ...linkStyle, display: "flex", alignItems: "center", gap: 8 }}
               >
                 <span style={{ flexShrink: 0 }}>🔗</span>
                 <span
@@ -135,7 +164,7 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
                     color: brand.main,
                   }}
                 >
-                  {pool.homepage_url}
+                  {model.contact.homepageUrl}
                 </span>
               </a>
             )}
@@ -145,13 +174,28 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
       )}
 
       <Section title="시간표">
-        {groups.length ? (
+        {model.schedule.length ? (
           <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            {groups.map((g, gi) => (
-              <div key={gi} style={{ display: "flex", alignItems: "flex-start", gap: space.md }}>
-                <DayBadge days={g.days} />
+            {model.schedule.map((g, gi) => (
+              <div
+                key={gi}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: space.md,
+                }}
+              >
+                <DayBadge days={g.days} label={g.label} />
                 {/* 고정폭 + 숫자 등폭(tabular-nums)이라 흔들림 없이 정렬. Z플립 폭에서도 한 줄 2개. */}
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, flex: 1, minWidth: 0 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: 8,
+                    flex: 1,
+                    minWidth: 0,
+                  }}
+                >
                   {g.sessions.map((s, i) => (
                     <span
                       key={i}
@@ -188,30 +232,23 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
       <Divider />
 
       <Section title="요금">
-        <PriceTable
-          rows={
-            priceTiers.length
-              ? priceTiers
-              : [{ label: "자유수영", amount: pool.price_free_swim }]
-          }
-        />
+        <PriceTable rows={model.priceRows} />
         {pool.price_note && <Caption>{pool.price_note}</Caption>}
 
         {/* 정규권·강습 등은 우리가 안 다루므로, 홈페이지 없을 때만 문의 안내. (홈페이지 링크는 최하단으로) */}
-        {!pool.homepage_url && (
+        {!model.contact.homepageUrl && (
           <div style={{ marginTop: space.md }}>
             <Caption>정규권과 강습 요금은 수영장에 직접 문의해 주세요.</Caption>
           </div>
         )}
-
       </Section>
 
       <Divider />
 
       <Section title="시설">
-        {facPills.length ? (
+        {model.facilityPills.length ? (
           <div style={{ display: "flex", flexWrap: "wrap", gap: space.sm }}>
-            {facPills.map((t) => (
+            {model.facilityPills.map((t) => (
               <Pill key={t}>{t}</Pill>
             ))}
           </div>
@@ -223,7 +260,11 @@ export default function PoolDetail({ pool, isFav, onToggleFav, onClose }: Props)
   );
 }
 
-function PriceTable({ rows }: { rows: { label: string; amount: number | null }[] }) {
+function PriceTable({
+  rows,
+}: {
+  rows: { label: string; amount: number | null }[];
+}) {
   return (
     <div
       style={{
@@ -279,14 +320,26 @@ function PriceTable({ rows }: { rows: { label: string; amount: number | null }[]
 // 길찾기 버튼용 아이콘 (공식 로고 아님 — 브랜드색은 버튼 배경으로). currentColor 상속.
 function PinIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
       <path d="M12 2c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
     </svg>
   );
 }
 function NavIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
       <path d="M3 11 21 3l-8 18-2.4-7.2L3 11z" />
     </svg>
   );
@@ -313,7 +366,14 @@ function Hero({
   const multi = images.length > 1;
 
   return (
-    <div style={{ position: "relative", width: "100%", height: HERO_HEIGHT, background: color.fill }}>
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: HERO_HEIGHT,
+        background: color.fill,
+      }}
+    >
       {images.length ? (
         <div
           ref={trackRef}
@@ -424,9 +484,8 @@ function Hero({
   );
 }
 
-
 // 요일 뱃지 — 고정폭으로 통일. 색: 평일 검정 / 토요일 파랑 / 일요일 빨강(달력 관례).
-function DayBadge({ days }: { days: number[] }) {
+function DayBadge({ days, label }: { days: number[]; label: string }) {
   const only = days.length === 1 ? days[0] : null;
   const textColor =
     only === 0 ? status.closed : only === 6 ? status.open : color.textStrong;
@@ -443,8 +502,13 @@ function DayBadge({ days }: { days: number[] }) {
         justifyContent: "center",
       }}
     >
-      <Text typography="t7" fontWeight="bold" color={textColor} style={{ whiteSpace: "nowrap" }}>
-        {daysLabel(days)}
+      <Text
+        typography="t7"
+        fontWeight="bold"
+        color={textColor}
+        style={{ whiteSpace: "nowrap" }}
+      >
+        {label}
       </Text>
     </span>
   );
@@ -478,7 +542,13 @@ const backBtnStyle: React.CSSProperties = {
 // 뒤로가기 화살표. currentColor를 따라가므로 버튼 색만 바꾸면 된다.
 function BackIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
       <path
         d="M15 19L8 12L15 5"
         stroke="currentColor"
