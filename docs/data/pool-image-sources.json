@@ -1,31 +1,11 @@
 [
   {
-    "poolId": "00fb99ad-2f1d-4045-9775-93f46b493666",
-    "images": [
-      {
-        "imageUrl": "https://www.guro1318.org/adm/data/bbs/area/M2504171158135_1.jpg",
-        "sourceUrl": "https://www.guro1318.org/sub01/sub06.php?ptype=view&idx=7953&page=1&code=area",
-        "sourceNote": "공식 시설안내 B2층 수영장 내부 사진 | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
     "poolId": "07d7999e-b346-4d58-804c-9281391f2cd3",
     "images": [
       {
         "imageUrl": "https://www.icsports.or.kr/design/homepage/icsports/images/sub/bg-swim-1.jpg",
         "sourceUrl": "https://www.icsports.or.kr/fmcs/21",
         "sourceNote": "인천도원수영장 공식 홈페이지에서 추출한 이미지 (1280x880, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "08a801f5-2b25-402e-a4c8-5308a83477d8",
-    "images": [
-      {
-        "imageUrl": "http://sports.gangwon.kr/theme/companyBts2/assets/center.jpg",
-        "sourceUrl": "http://sports.gangwon.kr/",
-        "sourceNote": "홍천군국민체육센터 공식 홈페이지에서 추출한 이미지 (1000x562, og:image) | 2026-09-02 시각 검수 통과"
       }
     ]
   },
@@ -60,16 +40,6 @@
     ]
   },
   {
-    "poolId": "1ac44531-1f43-41e3-a37e-e92782b43031",
-    "images": [
-      {
-        "imageUrl": "https://cdn.imweb.me/upload/S20250701d07604fd98f2e/a100a4e241ba0.png",
-        "sourceUrl": "https://www.namsunpark.com/",
-        "sourceNote": "남선공원종합체육관 공식 홈페이지에서 추출한 이미지 (1200x628, og:image) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
     "poolId": "1dad36d2-9708-4bdb-9d71-6e31a74f8663",
     "images": [
       {
@@ -80,42 +50,12 @@
     ]
   },
   {
-    "poolId": "20e525c5-ff5f-407b-b871-72198ea4c8a2",
-    "images": [
-      {
-        "imageUrl": "http://sportscenter.itrocks.kr/images/sub/2.png",
-        "sourceUrl": "http://sportscenter.itrocks.kr/?doc=sub_03",
-        "sourceNote": "공식 시설 페이지 pool-interior 사진 (1000x563, 2026-09-02 시각 검수)"
-      }
-    ]
-  },
-  {
-    "poolId": "23d24e97-afb5-4c2b-ab88-9b439173bf75",
-    "images": [
-      {
-        "imageUrl": "https://www.valens.co.kr/images/gallery/gall_s01.jpg",
-        "sourceUrl": "https://www.valens.co.kr/program/program01.asp",
-        "sourceNote": "발렌스스포츠센터 공식 홈페이지에서 추출한 이미지 (1100x733, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
     "poolId": "2677c89c-2d5f-4753-8a71-33749e18364a",
     "images": [
       {
         "imageUrl": "https://opsports.jecheon.go.kr/Y/CENTERGALLERY/20171229160441_YKP_6710.JPG",
         "sourceUrl": "https://opsports.jecheon.go.kr",
         "sourceNote": "제천올림픽스포츠센터 공식 홈페이지에서 추출한 이미지 (2100x1379, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "2909f5f1-449c-4a1b-86e4-b7fcff36b5e8",
-    "images": [
-      {
-        "imageUrl": "https://www.halc.co.kr/img/sub/sports-center1.jpg",
-        "sourceUrl": "https://www.halc.co.kr/sub.html?code=01_01&Radd=01_01",
-        "sourceNote": "함안체육관실내수영장 공식 홈페이지에서 추출한 이미지 (960x640, img:src) | 2026-09-02 시각 검수 통과"
       }
     ]
   },
@@ -180,16 +120,6 @@
     ]
   },
   {
-    "poolId": "5d8966a9-34ea-47ab-aa73-b3455350af41",
-    "images": [
-      {
-        "imageUrl": "https://spo.isdc.co.kr/images/contents/swimming_1.jpg",
-        "sourceUrl": "https://spo.isdc.co.kr/centerFacGuide.do",
-        "sourceNote": "황새울국민체육센터 공식 홈페이지에서 추출한 이미지 (4032x3024, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
     "poolId": "5f56a710-5916-4e36-a3d2-ed7f731a8109",
     "images": [
       {
@@ -211,16 +141,6 @@
         "imageUrl": "https://www.shsi.or.kr/upload/edit/201806121832154f46a1ff-f740-4c8d-9a15-1ae5a5546dbb.jpg",
         "sourceUrl": "https://www.shsi.or.kr/PageLink.do?link=forward:/PageContent.do&tempParam1=&menuNo=030000&subMenuNo=030300&thirdMenuNo=030301",
         "sourceNote": "공식 시설 페이지 pool-interior 사진 (870x500, 2026-09-02 시각 검수)"
-      }
-    ]
-  },
-  {
-    "poolId": "694bd5d9-9ba4-4b4b-a56c-ca0a9d620024",
-    "images": [
-      {
-        "imageUrl": "https://cdn.imweb.me/upload/S20241003e9a7022efad5c/31141973b5426.png",
-        "sourceUrl": "http://bujusansports.co.kr",
-        "sourceNote": "부주산국민체육센터 공식 홈페이지에서 추출한 이미지 (1440x1080, og:image) | 2026-09-02 시각 검수 통과"
       }
     ]
   },
@@ -265,36 +185,6 @@
     ]
   },
   {
-    "poolId": "98c475f1-c3c0-45a3-a667-0faedb2617b5",
-    "images": [
-      {
-        "imageUrl": "https://ykasports.com/theme/wering/img/sub/program/swim1.jpg",
-        "sourceUrl": "https://ykasports.com/program/2",
-        "sourceNote": "공식 시설 페이지 pool-interior 사진 (800x600, 2026-09-02 시각 검수)"
-      },
-      {
-        "imageUrl": "https://ykasports.com/theme/wering/img/sub/program/swim2.jpg",
-        "sourceUrl": "https://ykasports.com/program/2",
-        "sourceNote": "공식 시설 페이지 pool-interior 사진 (800x600, 2026-09-02 시각 검수)"
-      }
-    ]
-  },
-  {
-    "poolId": "98f27041-4b81-4bde-a76d-292cafe8411d",
-    "images": [
-      {
-        "imageUrl": "https://cfmc.kr/namji/images/num_1.jpg",
-        "sourceUrl": "https://cfmc.kr/namji/",
-        "sourceNote": "공식 시설 페이지 exterior 사진 (1440x810, 2026-09-02 시각 검수)"
-      },
-      {
-        "imageUrl": "https://cfmc.kr/namji/images/num_2.jpg",
-        "sourceUrl": "https://cfmc.kr/namji/",
-        "sourceNote": "공식 시설 페이지 exterior 사진 (850x637, 2026-09-02 시각 검수)"
-      }
-    ]
-  },
-  {
     "poolId": "a275b264-6d50-40a7-9088-9adc872e9856",
     "images": [
       {
@@ -306,36 +196,6 @@
         "imageUrl": "https://www.shsi.or.kr/upload/edit/201806121832154f46a1ff-f740-4c8d-9a15-1ae5a5546dbb.jpg",
         "sourceUrl": "https://www.shsi.or.kr/PageLink.do?link=forward:/PageContent.do&tempParam1=&menuNo=030000&subMenuNo=030300&thirdMenuNo=030301",
         "sourceNote": "공식 시설 페이지 pool-interior 사진 (870x500, 2026-09-02 시각 검수)"
-      }
-    ]
-  },
-  {
-    "poolId": "a27a6c90-9a7b-498c-9382-155cc12b8683",
-    "images": [
-      {
-        "imageUrl": "http://www.sinsasports.co.kr/img/bg-swimming00.jpg",
-        "sourceUrl": "http://www.sinsasports.co.kr/index.php",
-        "sourceNote": "신사스포츠센터(Sinsa Sports Center) 공식 홈페이지에서 추출한 이미지 (1600x650, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "adee362b-6c89-4cf0-83b5-cfc189b2d83c",
-    "images": [
-      {
-        "imageUrl": "https://www.guro1318.org/adm/data/bbs/area/M2504171158135_1.jpg",
-        "sourceUrl": "https://www.guro1318.org/sub01/sub06.php?ptype=view&idx=7953&page=1&code=area",
-        "sourceNote": "공식 시설안내 B2층 수영장 내부 사진 | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "af615cb1-9615-46b3-9e5a-8538208c0096",
-    "images": [
-      {
-        "imageUrl": "https://www.sbsd.kr/File/Download/4ef97aab8b72ce789ad0a1b92fdd5a81?list",
-        "sourceUrl": "https://www.sbsd.kr",
-        "sourceNote": "서부산권장애인스포츠센터 공식 홈페이지에서 추출한 이미지 (4124x2046, img:src) | 2026-09-02 시각 검수 통과"
       }
     ]
   },
@@ -360,46 +220,6 @@
     ]
   },
   {
-    "poolId": "b7fb654e-f084-43df-9e88-42b32645057c",
-    "images": [
-      {
-        "imageUrl": "https://www.halc.co.kr/img/sub/sports-center1.jpg",
-        "sourceUrl": "https://www.halc.co.kr/sub.html?code=01_01&Radd=01_01",
-        "sourceNote": "함안체육관실내수영장 공식 홈페이지에서 추출한 이미지 (960x640, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "bcd52c20-b363-4e6c-914f-dd0a12e18ab5",
-    "images": [
-      {
-        "imageUrl": "http://sports.gangwon.kr/theme/companyBts2/assets/center.jpg",
-        "sourceUrl": "http://sports.gangwon.kr",
-        "sourceNote": "홍천국민체육센터 공식 홈페이지에서 추출한 이미지 (1000x562, og:image) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "bdadc92f-f5c6-4743-b078-30ea0845315a",
-    "images": [
-      {
-        "imageUrl": "https://www.halc.co.kr/img/sub/swim1.jpg",
-        "sourceUrl": "https://www.halc.co.kr/sub.html?code=01_02&Radd=01_02",
-        "sourceNote": "함안군국민체육센터 공식 홈페이지에서 추출한 이미지 (960x640, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "c3367691-8a96-4b02-ba0e-f700e7fbbcee",
-    "images": [
-      {
-        "imageUrl": "http://www.korspo.co.kr/resources/images/place/jangwi/03-01.jpg",
-        "sourceUrl": "http://www.korspo.co.kr/jangwi.php",
-        "sourceNote": "연스포츠 공식 홈페이지에서 추출한 이미지 (1472x1915, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
     "poolId": "c414d588-b1bd-461d-a49b-2c53f8e26486",
     "images": [
       {
@@ -420,57 +240,12 @@
     ]
   },
   {
-    "poolId": "d17aecc5-732a-4827-8ddc-4aa56b6d63d5",
-    "images": [
-      {
-        "imageUrl": "https://www.taeanfamily.kr:449/images/reservation_01_01.jpg",
-        "sourceUrl": "https://www.taeanfamily.kr:449/reservation/pool.html",
-        "sourceNote": "공식 시설 페이지 pool-interior 사진 (1280x450, 2026-09-02 시각 검수)"
-      },
-      {
-        "imageUrl": "https://www.taeanfamily.kr:449/images/reservation_01_02.jpg",
-        "sourceUrl": "https://www.taeanfamily.kr:449/reservation/pool.html",
-        "sourceNote": "공식 시설 페이지 pool-interior 사진 (1280x450, 2026-09-02 시각 검수)"
-      }
-    ]
-  },
-  {
-    "poolId": "e3a16588-9889-4a2c-8f10-9a9f07eb4b22",
-    "images": [
-      {
-        "imageUrl": "https://cdn.imweb.me/upload/S20230306f0930fe9606f1/e524079ddcbc7.png",
-        "sourceUrl": "http://www.hanbitsports.co.kr/48",
-        "sourceNote": "한빛스포츠센터 공식 홈페이지에서 추출한 이미지 (1200x630, og:image) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
     "poolId": "e4dbcb2f-b72a-4250-a3ea-ab60dd1b63a6",
     "images": [
       {
         "imageUrl": "https://www.myfmc.or.kr/img/sub_img/siseol_02_22-1.jpg",
         "sourceUrl": "https://www.myfmc.or.kr/sub/02_22_01.php",
         "sourceNote": "하남스포츠센터 공식 홈페이지에서 추출한 이미지 (1000x500, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "fb469cc0-aee7-4fc0-9d26-04802effd749",
-    "images": [
-      {
-        "imageUrl": "https://www.gysports.co.kr/sports/new_lib/images/main3.jpg",
-        "sourceUrl": "https://www.gysports.co.kr/sports",
-        "sourceNote": "광양수영장 공식 홈페이지에서 추출한 이미지 (5472x3648, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "fbfc764d-1625-4935-884a-8dc404a93e0a",
-    "images": [
-      {
-        "imageUrl": "http://ypsc04.co.kr/img/facility_b1.png",
-        "sourceUrl": "http://ypsc04.co.kr/intro/2",
-        "sourceNote": "공식 시설 페이지 pool-interior 사진 (2000x1333, 2026-09-02 시각 검수)"
       }
     ]
   },
