@@ -58,6 +58,12 @@ describe("buildPoolDetailModel", () => {
     expect(model.images).toEqual(["https://pool.example.com/1.jpg"]);
   });
 
+  it("includes verified facility usage notes in the facility pills", () => {
+    const model = buildPool({ facilities: { notes: ["청소년 전용 수영장"] } });
+
+    expect(model.facilityPills).toContain("청소년 전용 수영장");
+  });
+
   it("uses the established fallback labels when schedule, prices, facilities, and images are absent", () => {
     const model = buildPool({
       free_swim: [],
@@ -103,3 +109,40 @@ describe("buildPoolDetailModel", () => {
 function buildPool(overrides: Partial<Pool>) {
   return buildPoolDetailModel(pool(overrides));
 }
+
+describe("buildPoolDetailModel source notice", () => {
+  it("shows the official source label with the verified date", () => {
+    const model = buildPoolDetailModel(
+      pool({
+        free_swim_source: "https://example.go.kr/pool",
+        free_swim_source_type: "official_gov",
+        free_swim_verified_at: "2026-09-02",
+        free_swim_confidence: "high",
+      }),
+    );
+
+    expect(model.sourceNotice).toEqual({
+      label: "지자체 공식 페이지 · 2026-09-02 확인",
+      sourceUrl: "https://example.go.kr/pool",
+      needsCheck: false,
+    });
+  });
+
+  it("marks unverified data so the user is told to call the facility", () => {
+    const model = buildPoolDetailModel(
+      pool({
+        free_swim_source: "https://www.helloswim.kr/pool/1",
+        free_swim_source_type: "aggregator",
+        free_swim_verified_at: "2026-08-20",
+        free_swim_confidence: "needs_check",
+      }),
+    );
+
+    expect(model.sourceNotice?.needsCheck).toBe(true);
+    expect(model.sourceNotice?.label).toBe("수영장 정보 사이트 · 이용 전 시설 문의 필요");
+  });
+
+  it("returns null when the pool has no provenance at all", () => {
+    expect(buildPoolDetailModel(pool()).sourceNotice).toBeNull();
+  });
+});

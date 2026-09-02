@@ -227,6 +227,33 @@ export default function PoolDetail({
         ) : (
           <Caption>시설 문의</Caption>
         )}
+
+        {/* 시간 근거를 그대로 밝힌다. 공식 확인이 안 된 값은 단정하지 않고 문의를 안내한다. */}
+        {model.sourceNotice && (
+          <div style={{ marginTop: space.md }}>
+            <Caption>
+              {model.sourceNotice.needsCheck ? "⚠ " : ""}
+              {model.sourceNotice.label}
+            </Caption>
+            {model.sourceNotice.sourceUrl && (
+              <a
+                href={model.sourceNotice.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: "inline-block",
+                  marginTop: 4,
+                  fontSize: 12,
+                  color: color.textMuted,
+                  textDecoration: "underline",
+                  wordBreak: "break-all",
+                }}
+              >
+                근거 페이지 열기
+              </a>
+            )}
+          </div>
+        )}
       </Section>
 
       <Divider />
@@ -484,7 +511,7 @@ function Hero({
   );
 }
 
-// 요일 뱃지 — 고정폭으로 통일. 색: 평일 검정 / 토요일 파랑 / 일요일 빨강(달력 관례).
+// 요일 뱃지 — 넉넉한 최소폭으로 통일. 색은 달력 관례를 따른다.
 function DayBadge({ days, label }: { days: number[]; label: string }) {
   const only = days.length === 1 ? days[0] : null;
   const textColor =
@@ -493,7 +520,7 @@ function DayBadge({ days, label }: { days: number[]; label: string }) {
     <span
       style={{
         flexShrink: 0,
-        width: 66,
+        minWidth: 92,
         height: 32,
         borderRadius: radius.sm,
         background: color.fill,

@@ -17,6 +17,11 @@ export type Pool = {
   facilities: Json;
   free_swim: Json;
   images: string[];
+  // 자유수영 데이터의 출처. 공식 페이지 확인 여부를 화면에서 구분하기 위해 쓴다.
+  free_swim_source?: string | null;
+  free_swim_source_type?: string | null;
+  free_swim_verified_at?: string | null;
+  free_swim_confidence?: string | null;
 };
 
 // VITE_* 값은 앱 번들에 포함되므로 공개 URL만 넣는다. DB 연결 문자열·관리 API 키는 넣지 않는다.
