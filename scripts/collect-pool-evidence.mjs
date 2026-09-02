@@ -81,7 +81,7 @@ function links(html, base) {
 const pad = (n) => String(n).padStart(2, "0");
 function ranges(text) {
   const set = new Set();
-  for (const m of text.matchAll(/(\d{1,2})\s*[:시]\s*(\d{2})?\s*[~\-–—]\s*(\d{1,2})\s*[:시]\s*(\d{2})?/g)) {
+  for (const m of text.matchAll(/(\d{1,2})\s*[:시]\s*(\d{2})?\s*[~\-–—～∼〜－]\s*(\d{1,2})\s*[:시]\s*(\d{2})?/g)) {
     if (+m[1] > 23 || +m[3] > 23) continue;
     set.add(`${pad(+m[1])}:${m[2] ?? "00"}-${pad(+m[3])}:${m[4] ?? "00"}`);
   }

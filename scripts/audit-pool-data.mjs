@@ -17,7 +17,7 @@ const WINDOW = 500;
 
 function ranges(t) {
   const s = new Set();
-  for (const m of t.matchAll(/(\d{1,2})\s*[:시]\s*(\d{2})?\s*[~\-–—]\s*(\d{1,2})\s*[:시]\s*(\d{2})?/g)) {
+  for (const m of t.matchAll(/(\d{1,2})\s*[:시]\s*(\d{2})?\s*[~\-–—～∼〜－]\s*(\d{1,2})\s*[:시]\s*(\d{2})?/g)) {
     if (+m[1] > 23 || +m[3] > 23) continue;
     s.add(`${pad(+m[1])}:${m[2] ?? "00"}-${pad(+m[3])}:${m[4] ?? "00"}`);
   }

@@ -91,7 +91,7 @@ function linksOf(html, base, limit) {
 const pad = (n) => String(n).padStart(2, "0");
 function timeRanges(t) {
   const out = [];
-  for (const m of t.matchAll(/(\d{1,2})\s*[:시]\s*(\d{2})?\s*[~\-–—]\s*(\d{1,2})\s*[:시]\s*(\d{2})?/g)) {
+  for (const m of t.matchAll(/(\d{1,2})\s*[:시]\s*(\d{2})?\s*[~\-–—～∼〜－]\s*(\d{1,2})\s*[:시]\s*(\d{2})?/g)) {
     if (+m[1] > 23 || +m[3] > 23) continue;
     out.push({ range: `${pad(+m[1])}:${m[2] ?? "00"}-${pad(+m[3])}:${m[4] ?? "00"}`, idx: m.index });
   }

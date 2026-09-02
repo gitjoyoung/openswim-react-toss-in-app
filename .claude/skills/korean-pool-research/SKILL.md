@@ -173,3 +173,21 @@ Record the type shown on the page. No mark means no permission, not implied perm
 - When the source class is `private`, or a public-corporation page carries no license mark, do not publish. Request written permission, replace the image, or leave the facility without a photo.
 
 Leaving a facility with no photo is an acceptable outcome. Publishing an unlicensed photo is not.
+
+## 10. Text extraction traps that hide real schedules
+
+Two failures made verified schedules look missing or wrong. Check both before concluding a facility has no official schedule.
+
+### Fullwidth tilde
+
+Korean facility pages frequently write time ranges with `～` (U+FF5E), not ASCII `~`. A separator class of `[~\-–—]` silently finds nothing. Always use `[~\-–—～∼〜－]`. A page reading `06:00～11:00 / 13:00～21:00` will otherwise be classified as "no times on page".
+
+### JS-rendered timetables
+
+Plain `fetch` returns menu markup only for many municipal and operator sites; the timetable table is rendered client-side. When a page mentions 자유수영 but yields no times, re-collect with a real browser and read `document.body.innerText` before deciding the schedule is unpublished. Record the collection mode (`http-fetch-no-js` vs `browser-rendered`) in the evidence manifest so a later reader knows which limitation applied.
+
+### Evidence window width
+
+When extracting the times that belong to a 자유수영 heading, read well past the heading line. A window of 8 lines cut off the later day rows of a weekday/weekend table and produced false "mismatch" verdicts against data that was actually correct down to the day. Use at least 5 lines before and 20 after, and compare per day, not as a flat set of time strings.
+
+**A mismatch reported by an automated comparison is a signal to read the source, not permission to overwrite the data.** Overwriting on an unread mismatch turns correct records into wrong ones.
