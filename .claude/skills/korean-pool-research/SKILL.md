@@ -57,6 +57,8 @@ Distinguish at minimum:
 
 Only select images from an official facility-detail or facility-photo page, or an official municipal/operator facility record whose address matches. Prefer images whose page context or alt text identifies the pool, swimming pool, facility, or building.
 
+Filename, size, and aspect-ratio rules are a first-pass filter only. They do not detect a notice poster, timetable, calendar, floor plan, staff portrait, gym/studio room, or sports field saved as a normal-looking photo. Every image must be viewed before it reaches production; build a contact sheet of downscaled candidates and inspect it rather than trusting the heuristics.
+
 Accept both kinds when available:
 
 - `exterior`: the pool building or facility exterior
@@ -106,6 +108,8 @@ Use `high` for a current official page that states the fact directly, `medium` f
 - Every image is an actual exterior/interior facility photo, not a banner or notice.
 - Image source page belongs to the official facility/operator or verified municipal portal.
 - Multiple images retain their order and are converted to WebP only after source validation.
+- Every stored image was visually inspected, not only rule-checked.
+- After upload, re-fetch each public URL with a cache-busting query string and view the bytes actually served. A CDN can keep serving a previously uploaded object for an unchanged key, so an un-busted check can show a stale image and hide a failed replacement.
 - Duplicate facility records receive the same correction only after the primary evidence is recorded.
 - Missing or conflicting facts remain explicitly marked instead of being guessed.
 
@@ -137,3 +141,35 @@ Never use a fast-model guess as final evidence for a schedule or implementation 
 Cache by page hash/ETag/Last-Modified. On recheck, skip unchanged pages and send only the changed text block or changed image candidate to AI. Batch only independent compact records with explicit IDs; keep each batch small enough that one facility cannot be confused with another.
 
 The target economics are zero AI tokens for obvious mechanical cases, roughly 500–1,500 tokens for an ambiguous text case, and visual/strong review only for the small exception set. This is substantially cheaper and more reproducible than asking AI to reread every full page and screenshot on every run.
+
+## 9. Clear image rights before publishing
+
+Copyright is a release blocker, not a later cleanup. Classify every image source before it goes to production.
+
+### Source classes
+
+- `.go.kr` (national/local government): Copyright Act art. 24-2(1) allows use without permission for works the state or a local government created in the course of duty, or whose economic rights it fully holds, subject to the listed exceptions. Lowest risk.
+- `.or.kr` (public corporations, facility management corporations, foundations): NOT covered by art. 24-2(1). Free use depends on an explicit KOGL (공공누리) mark or written permission. Grey zone by default.
+- Private operators (`.co.kr`, `.com`, other private domains): fully reserved. Assume permission is required.
+
+### KOGL types
+
+| Type | Commercial use | Modification |
+|---|---|---|
+| 1 | allowed | allowed |
+| 2 | prohibited | allowed |
+| 3 | allowed | prohibited |
+| 4 | prohibited | prohibited |
+
+Record the type shown on the page. No mark means no permission, not implied permission.
+
+### Rules for this project
+
+- Openswim serves ads, so treat every use as commercial. KOGL types 2 and 4 are unusable.
+- Copying an image into R2 and converting it to WebP is reproduction, adaptation, and public transmission. It is a stronger act than linking, and any "no modification" condition already forbids the WebP conversion.
+- Do not publish photos where a face is identifiable, especially minors. Portrait rights are separate from copyright and are not cured by a public source.
+- Prefer empty pools and building exteriors over photos containing people.
+- Store `sourceClass` (`gov`, `public-corp`, `private`), `licenseMark` (KOGL type or `none`), and `collectedAt` next to every image record.
+- When the source class is `private`, or a public-corporation page carries no license mark, do not publish. Request written permission, replace the image, or leave the facility without a photo.
+
+Leaving a facility with no photo is an acceptable outcome. Publishing an unlicensed photo is not.
