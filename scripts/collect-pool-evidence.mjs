@@ -1,6 +1,7 @@
 // v2: '자유수영' 문맥 안의 시간만 비교하고, 근거 텍스트를 증거 폴더에 저장한다.
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 import { createWriteStream } from "node:fs";
 import { createRequire } from "node:module";
 
@@ -143,12 +144,37 @@ async function inspect(pool) {
     const text = pages.map((p) => `\n===== ${p.url} =====\n` + clean(p.html)).join("\n");
 
     const dir = path.join("evidence/pools", pool.id, TODAY);
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(path.join(dir, "html"), { recursive: true });
     const numbered = text.split("\n").map((l, i) => `${String(i + 1).padStart(5, " ")}| ${l}`).join("\n");
     fs.writeFileSync(path.join(dir, "page-text.txt"), numbered);
+
+    // 재검증을 위해 원본 HTML을 그대로 남긴다. 텍스트 정제 규칙이 바뀌어도 재방문 없이 다시 파싱할 수 있다.
+    const pageRecords = pages.map((p, i) => {
+      const file = `html/${String(i).padStart(2, "0")}.html`;
+      fs.writeFileSync(path.join(dir, file), p.html);
+      return {
+        url: p.url,
+        file,
+        bytes: Buffer.byteLength(p.html),
+        sha256: crypto.createHash("sha256").update(p.html).digest("hex"),
+      };
+    });
+
     fs.writeFileSync(
       path.join(dir, "manifest.json"),
-      JSON.stringify({ poolId: pool.id, name: pool.name, pages: pages.map((p) => p.url), collectedAt: TODAY }, null, 2),
+      JSON.stringify(
+        {
+          poolId: pool.id,
+          name: pool.name,
+          homepage: pool.homepage_url,
+          collectedAt: TODAY,
+          collectedAtIso: new Date().toISOString(),
+          fetchMode: "http-fetch-no-js",
+          pages: pageRecords,
+        },
+        null,
+        2,
+      ),
     );
 
     const ctxs = contexts(text);

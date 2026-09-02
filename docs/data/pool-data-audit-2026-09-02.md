@@ -91,3 +91,51 @@ DB 값은 `06:00-12:00`, `13:00-21:00`으로 6시간·8시간짜리 블록이다
 | `scripts/audit-pool-data.mjs` | 저장된 증거만으로 재분석 (재크롤링 없음) |
 
 증거는 `evidence/`에 저장되며 git에는 포함하지 않는다. 재분석 시 네트워크 재요청이 필요 없다.
+
+## 8. 후속 조치 (같은 날 적용)
+
+### 출처 컬럼 추가
+
+`pools` 테이블에 자유수영 데이터의 근거를 필드 단위로 저장한다.
+
+```text
+free_swim_source       근거 URL
+free_swim_source_type  official_gov | official_pub | operator_site | aggregator | blog | unknown
+free_swim_verified_at  확인 날짜
+free_swim_confidence   high | medium | low | needs_check
+free_swim_note         비고
+```
+
+기존 `docs/data/pool-source-audit.json`과 이번 검수 결과로 625곳을 백필했고, 출처 기록이 없던 174곳은 `unknown` + `needs_check`로 명시했다.
+
+자유수영 데이터 보유 시설의 신뢰도 분포:
+
+| 신뢰도 | 건수 |
+|---|---:|
+| high | 2 |
+| medium | 179 |
+| low | 310 |
+| needs_check | 307 |
+
+출처 유형으로 보면 공식(지자체·공공기관) 207곳, 애그리게이터·블로그 289곳이다.
+
+### 앱 노출
+
+수영장 상세의 시간표 아래에 근거를 표시한다.
+
+- 확인된 경우: `지자체 공식 페이지 · 2026-09-02 확인`
+- 미확인인 경우: `⚠ 수영장 정보 사이트 · 이용 전 시설 문의 필요`
+- 근거 페이지 링크 함께 제공
+
+### 증거 저장 보강
+
+`scripts/collect-pool-evidence.mjs`가 정제 텍스트뿐 아니라 원본 HTML과 SHA-256 해시, 수집 시각까지 저장한다.
+
+```text
+evidence/pools/{poolId}/{날짜}/
+  manifest.json    URL·해시·바이트수·수집시각·수집방식
+  page-text.txt    줄 번호가 붙은 정제 텍스트
+  html/00.html     원본 HTML
+```
+
+`fetchMode`는 현재 `http-fetch-no-js`다. JS로 시간표를 그리는 사이트는 이 방식으로 확인되지 않으므로 브라우저 렌더링 수집이 별도로 필요하다.
