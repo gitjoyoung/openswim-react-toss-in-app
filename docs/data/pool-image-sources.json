@@ -20,16 +20,6 @@
     ]
   },
   {
-    "poolId": "16a6e638-adba-4a95-a811-353fcf316a53",
-    "images": [
-      {
-        "imageUrl": "https://www.ksponco.or.kr/sports/files/view?id=e6c63ec6-8560-4f0f-b58a-7c0af4538a02&seq=1",
-        "sourceUrl": "https://www.ksponco.or.kr/sports/courses/158?mid=a50101000000",
-        "sourceNote": "공식 시설 페이지 pool-interior 사진 (880x539, 2026-09-02 시각 검수)"
-      }
-    ]
-  },
-  {
     "poolId": "1a763944-c8c5-45e0-8ea6-533183f9c6fb",
     "images": [
       {
@@ -46,16 +36,6 @@
         "imageUrl": "https://www.cjfmc.or.kr/site/www/images/contents/cts86_img01.jpg",
         "sourceUrl": "https://www.cjfmc.or.kr/www/contents.do?key=606",
         "sourceNote": "서충주국민체육센터 공식 홈페이지에서 추출한 이미지 (1200x630, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "2677c89c-2d5f-4753-8a71-33749e18364a",
-    "images": [
-      {
-        "imageUrl": "https://opsports.jecheon.go.kr/Y/CENTERGALLERY/20171229160441_YKP_6710.JPG",
-        "sourceUrl": "https://opsports.jecheon.go.kr",
-        "sourceNote": "제천올림픽스포츠센터 공식 홈페이지에서 추출한 이미지 (2100x1379, img:src) | 2026-09-02 시각 검수 통과"
       }
     ]
   },
@@ -226,16 +206,6 @@
         "imageUrl": "https://gbfmc.or.kr/kor/img/sub/sub04/040101-img01.jpg?v=2022110417",
         "sourceUrl": "https://gbfmc.or.kr/menu.es?mid=a10401010000",
         "sourceNote": "광주북구건강복지타운 공식 홈페이지에서 추출한 이미지 (1000x750, img:src) | 2026-09-02 시각 검수 통과"
-      }
-    ]
-  },
-  {
-    "poolId": "c99ed99c-326d-4982-ad6a-f317685d1977",
-    "images": [
-      {
-        "imageUrl": "https://minlak.eticket.or.kr/upfilePath/UUC_GEN/bn/BN_202501100508139180.png",
-        "sourceUrl": "https://minlak.eticket.or.kr",
-        "sourceNote": "민락국민체육센터(Minlak Sports Center) 공식 홈페이지에서 추출한 이미지 (1920x822, img:src) | 2026-09-02 시각 검수 통과"
       }
     ]
   },
