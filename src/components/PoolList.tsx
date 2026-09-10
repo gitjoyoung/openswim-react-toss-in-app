@@ -5,7 +5,6 @@ import { images, type RowStatus } from "../lib/pools";
 import { shortSido } from "../lib/search";
 import { color, status, dayColor } from "../design/tokens";
 import FavStar from "./FavStar";
-import AccessNotice from "./AccessNotice";
 import freeThumb from "../assets/free-thumb.webp"; // 사진 없는 곳 기본 이미지 (목록용 축소본)
 
 // 운영요일 문구에서 평일=검정, 토요일=파랑, 일요일=빨강 (달력 컬러, dayColor 규칙). 나머지는 상위 색 상속.
@@ -59,13 +58,9 @@ const PoolRow = memo(function PoolRow({ pool, isFav, st, meta, onToggleFav, onSe
       left={<Thumb pool={pool} />}
       contents={
         <div style={{ display: "flex", flexDirection: "column", gap: 3, minWidth: 0, width: "100%" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, minWidth: 0 }}>
-            <Text typography="t5" fontWeight="bold" ellipsisAfterLines={1}>
-              {pool.name}
-            </Text>
-            {/* 상세까지 들어갔다 되돌아 나오는 게 제일 나쁜 경험이라 목록에서도 알린다. */}
-            <AccessNotice pool={pool} compact />
-          </div>
+          <Text typography="t5" fontWeight="bold" ellipsisAfterLines={1}>
+            {pool.name}
+          </Text>
           <Text typography="t7" ellipsisAfterLines={1}>
             {st.text && (
               <span

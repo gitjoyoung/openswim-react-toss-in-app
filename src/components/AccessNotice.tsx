@@ -12,15 +12,10 @@ import { color, radius, space, status } from "../design/tokens";
 // 분류를 코드에 두지 않는 이유: 새로운 제한 유형이 나올 때마다 배포해야 하기 때문이다.
 // 대신 access_label 은 배지에 들어갈 만큼 짧게 쓰기로 하고, 긴 설명은 access_note 에 둔다.
 //
-// 위치는 화면 맨 위(수영장 이름 바로 아래)다. 시설 섹션은 화면 끝이라
+// 위치는 상세 화면 맨 위(수영장 이름 바로 아래)다. 시설 섹션은 화면 끝이라
 // 헛걸음을 막아야 하는 정보를 두기에 늦다.
-export default function AccessNotice({
-  pool,
-  compact = false,
-}: {
-  pool: Pool;
-  compact?: boolean;
-}) {
+// 목록 카드에는 넣지 않는다. 한 줄에 이름·요일·거리가 이미 들어가 있어 더 얹으면 시끄럽다.
+export default function AccessNotice({ pool }: { pool: Pool }) {
   const label = pool.access_label?.trim();
   if (!label) return null;
 
@@ -30,11 +25,11 @@ export default function AccessNotice({
         display: "inline-flex",
         alignItems: "center",
         flexShrink: 0,
-        padding: compact ? "1px 6px" : "3px 9px",
+        padding: "3px 9px",
         borderRadius: radius.sm,
         background: "rgba(245, 166, 35, 0.14)",
         color: "#b06f00", // 주황 배경 위에서 대비를 확보한 값
-        fontSize: compact ? 11 : 13,
+        fontSize: 13,
         fontWeight: 700,
         whiteSpace: "nowrap",
       }}
@@ -42,9 +37,6 @@ export default function AccessNotice({
       {label}
     </span>
   );
-
-  // 목록 카드에서는 배지만. 한 줄 안에 이름과 나란히 놓인다.
-  if (compact) return badge;
 
   const note = pool.access_note?.trim();
   return (

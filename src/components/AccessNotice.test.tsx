@@ -44,17 +44,4 @@ describe("AccessNotice", () => {
     render(<AccessNotice pool={pool({ access_label: "여성 전용" })} />);
     expect(screen.getByText("여성 전용")).toBeInTheDocument();
   });
-
-  // 목록 카드에서는 이름과 한 줄에 놓이므로 설명은 빼고 배지만 보여준다.
-  it("drops the note in compact mode", () => {
-    render(
-      <AccessNotice
-        pool={pool({ access_label: "여성 전용", access_note: "남성은 이용할 수 없습니다." })}
-        compact
-      />,
-    );
-
-    expect(screen.getByText("여성 전용")).toBeInTheDocument();
-    expect(screen.queryByText("남성은 이용할 수 없습니다.")).toBeNull();
-  });
 });
