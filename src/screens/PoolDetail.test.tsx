@@ -61,6 +61,7 @@ vi.mock("@toss/tds-mobile", () => {
     Text: ({ children, ...props }: React.HTMLAttributes<HTMLSpanElement>) => (
       <span {...props}>{children}</span>
     ),
+    Badge: ({ children }: { children: React.ReactNode }) => <span>{children}</span>,
   };
 });
 

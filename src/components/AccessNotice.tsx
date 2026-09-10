@@ -1,12 +1,13 @@
+import { Badge, Text } from "@toss/tds-mobile";
 import type { Pool } from "../pool";
-import { color, radius, space, status } from "../design/tokens";
+import { color, radius, space } from "../design/tokens";
 
 // 이용 대상 제한(여성 전용, 어린이 입장 불가 등)을 알린다.
 //
 // 무엇을 넣는가: 이 앱은 비회원이 오늘 가서 자유수영을 할 수 있는지를 본다.
 // 그래서 **신분 때문에 입장이 막히는 경우**만 배지로 쓴다.
 // 회원 전용 시간대(어차피 비회원 기준 데이터다), 특정 요일만 운영(시간표가 이미 보여준다),
-// 방역·수질정화 같은 시간대 운영은 넣지 않는다. 당연한 값을 배지로 쓰면 목록만 시끄러워진다.
+// 방역·수질정화 같은 시간대 운영은 넣지 않는다. 당연한 값을 배지로 쓰면 화면만 시끄러워진다.
 //
 // 값은 DB(pools.access_label / access_note)에서 오는 자유 텍스트다.
 // 분류를 코드에 두지 않는 이유: 새로운 제한 유형이 나올 때마다 배포해야 하기 때문이다.
@@ -19,42 +20,28 @@ export default function AccessNotice({ pool }: { pool: Pool }) {
   const label = pool.access_label?.trim();
   if (!label) return null;
 
-  const badge = (
-    <span
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        flexShrink: 0,
-        padding: "3px 9px",
-        borderRadius: radius.sm,
-        background: "rgba(245, 166, 35, 0.14)",
-        color: "#b06f00", // 주황 배경 위에서 대비를 확보한 값
-        fontSize: 13,
-        fontWeight: 700,
-        whiteSpace: "nowrap",
-      }}
-    >
-      {label}
-    </span>
-  );
-
   const note = pool.access_note?.trim();
+
   return (
     <div
       style={{
-        display: "flex",
-        alignItems: "flex-start",
-        gap: space.sm,
-        margin: `${space.md}px ${space.lg}px 0`,
-        padding: `${space.sm}px ${space.md}px`,
+        // 좌우 여백은 Section(space.xxl)과 맞춘다. 어긋나면 아래 섹션들과 줄이 안 맞는다.
+        margin: `${space.md}px ${space.xxl}px 0`,
+        padding: `${space.md}px ${space.lg}px`,
         borderRadius: radius.md,
         background: color.fill,
-        borderLeft: `3px solid ${status.unknown}`,
+        display: "flex",
+        alignItems: "center",
+        gap: space.sm,
       }}
     >
-      {badge}
+      <Badge size="small" variant="weak" color="yellow">
+        {label}
+      </Badge>
       {note && (
-        <span style={{ fontSize: 13, lineHeight: 1.45, color: color.textSub }}>{note}</span>
+        <Text typography="t7" color={color.textSub}>
+          {note}
+        </Text>
       )}
     </div>
   );
