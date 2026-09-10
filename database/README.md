@@ -1,0 +1,71 @@
+# database
+
+런타임 데이터베이스는 **Neon Postgres**다. 앱은 Neon Data API/Auth로 익명 토큰을 받아 조회하고
+(`src/pool.ts`), 원격 조회가 실패하면 번들 JSON으로 폴백한다.
+
+```
+database/
+  migrations/         현재 Neon 스키마 변경. 여기에 추가한다.
+  legacy-supabase/    Neon 이관 전 Supabase 시절 기록. 실행하지 않는다.
+```
+
+## migrations/
+
+Neon에 적용하는 SQL이다. 파일명은 `YYYYMMDDHHMMSS_설명.sql`.
+
+적용은 `psql` 또는 `NEON_DATABASE_URL`을 쓰는 스크립트로 직접 한다. 자동 실행기는 두지 않았다.
+프로덕션 DB라 적용 전에 내용을 눈으로 확인하고 승인받는 절차를 거친다.
+
+```bash
+set -a; source .env; set +a
+psql "$NEON_DATABASE_URL" -f database/migrations/<파일>.sql
+```
+
+새 테이블을 만들면 Neon Data API(PostgREST)의 스키마 캐시를 한 번 깨워야 한다.
+안 하면 `PGRST205 Could not find the table ... in the schema cache` 로 조회가 실패한다.
+
+```sql
+notify pgrst, 'reload schema';
+```
+
+권한 패턴은 `public.pools`를 따른다. RLS를 켜고 `anonymous` 역할에 `select`만 준다.
+쓰기는 `neondb_owner`(동기화 스크립트)만 한다. 역할 이름은 `anon`이 아니라 `anonymous`다.
+
+## legacy-supabase/
+
+Neon으로 옮기기 전 Supabase에서 쓰던 로컬 설정(`config.toml`)과 SQL 이력이다.
+
+- 런타임·배포·데이터 운영 어디에서도 참조하지 않는다.
+- 당시 프로젝트를 재현하거나 이력을 감사할 때만 본다.
+- **여기 있는 SQL을 Neon에 그대로 실행하지 않는다.** 역할 이름과 스키마가 다르다.
+- 새 변경은 `database/migrations/`에 쓴다.
+
+## 화면 문구 바꾸기 (`public.app_texts`)
+
+수영장 상세 시간표 아래 근거 문구는 번들이 아니라 이 테이블에 있다. **update 하면 재배포 없이 반영된다.**
+
+| key | 쓰이는 곳 |
+| --- | --- |
+| `pool_notice_verified` | 첫 줄. `{date}`는 `pools.free_swim_verified_at` 값으로 치환된다 |
+| `pool_notice_link_label` | 첫 줄 안에서 근거 페이지 링크가 걸리는 부분 |
+| `pool_notice_unverified` | 확인 날짜가 없는 수영장의 첫 줄 |
+| `pool_notice_caution` | 공식 페이지에서 확인하지 못한 수영장의 둘째 줄 |
+
+```sql
+update public.app_texts set value = '...', updated_at = now() where key = 'pool_notice_caution';
+```
+
+주의할 점:
+
+- `pool_notice_verified` 문장 안에 `pool_notice_link_label` 문자열이 그대로 있어야 링크가 걸린다. 없으면 링크 없이 문장만 나간다.
+- 어떤 문장을 쓸지(확인 날짜 유무)와 주의 문장을 붙일지는 `pools`의 `free_swim_*` 값이 정한다. 문구만 여기서 관리한다.
+- 행을 지우거나 비워도 앱은 번들에 박힌 기본 문구(`src/appText.ts`)로 폴백한다. 화면이 비지는 않는다.
+- 문구를 바꿔도 **이미 앱을 켜 둔 사용자는 다음 실행부터** 바뀜 문구를 본다. 조회를 앱 시작 시 한 번만 하고 캐시하기 때문이다.
+
+새 테이블을 만든 직후에는 `notify pgrst, 'reload schema'`를 해도 PostgREST 캐시 전파에 몇 분 걸릴 수 있다.
+실제로 2026-09-09 적용 직후 일부 요청이 `PGRST205`로 404를 낸 뒤 몇 분 뒤에 정상화됐다. 바로 404가 나와도 재시도해 본다.
+
+## 데이터 동기화 스크립트
+
+- `scripts/sync-pools-to-neon.mjs` — `src/data/pools.json` → `public.pools` upsert
+- `scripts/sync-gear.mjs` — `public.gear_items`의 쉐어링크 URL을 따라가 상품명·이미지를 채우고 폴백 JSON을 갱신

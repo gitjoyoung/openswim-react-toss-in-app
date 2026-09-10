@@ -3,9 +3,12 @@ import { Top, Button, Text } from "@toss/tds-mobile";
 import type { Pool } from "../pool";
 import { wonText } from "../lib/pools";
 import { buildPoolDetailModel } from "../lib/poolDetail";
+import { usePoolNoticeTexts } from "../hooks/usePoolNoticeTexts";
 import { usePoolDetailActions } from "../hooks/usePoolDetailActions";
 import PoolMap from "../components/PoolMap";
 import BannerAd from "../components/BannerAd";
+import CopyAddressButton from "../components/CopyAddressButton";
+import GearSection from "../components/GearSection";
 import { Section, Divider, Pill, Caption } from "../design/primitives";
 import FavStar from "../components/FavStar";
 import freeImg from "../assets/free.webp"; // 사진 없는 곳 기본 이미지
@@ -15,17 +18,19 @@ type Props = {
   pool: Pool;
   isFav: boolean;
   onToggleFav: () => void;
-  onClose: () => void;
 };
 
 export default function PoolDetail({
   pool,
   isFav,
   onToggleFav,
-  onClose,
 }: Props) {
-  const model = buildPoolDetailModel(pool);
+  // 시간표 아래 문구는 DB(app_texts)에서 온다. 받아오기 전에는 번들 기본 문구를 쓴다.
+  const noticeTexts = usePoolNoticeTexts();
+  const model = buildPoolDetailModel(pool, noticeTexts);
   const actions = usePoolDetailActions(pool);
+  // 복사용 주소. 주소가 없으면 복사할 게 없으니 버튼 자체를 숨긴다.
+  const addressToCopy = pool.address?.trim() || null;
 
   return (
     <div
@@ -39,7 +44,6 @@ export default function PoolDetail({
         name={pool.name}
         isFav={isFav}
         onToggleFav={onToggleFav}
-        onClose={onClose}
       />
 
       <Top
@@ -49,12 +53,10 @@ export default function PoolDetail({
           <Top.SubtitleParagraph size={15}>
             {pool.gu}
             {pool.address ? `  ${pool.address}` : ""}
+            {addressToCopy && <CopyAddressButton text={addressToCopy} />}
           </Top.SubtitleParagraph>
         }
       />
-
-      {/* 배너는 상단(콘텐츠 섹션들 위)에만 (앱인토스 인앱 광고 규칙). */}
-      <BannerAd slot="detail" />
 
       {pool.lat != null && pool.lng != null && (
         <>
@@ -228,39 +230,49 @@ export default function PoolDetail({
           <Caption>시설 문의</Caption>
         )}
 
-        {/* 시간 근거를 그대로 밝힌다. 공식 확인이 안 된 값은 단정하지 않고 문의를 안내한다. */}
+        {/* 언제 확인했는지 한 문장으로 밝히고, 확실하지 않은 값에만 방문 전 확인을 덧붙인다. */}
         {model.sourceNotice && (
           <div style={{ marginTop: space.md }}>
             <Caption>
-              {model.sourceNotice.needsCheck ? "⚠ " : ""}
-              {model.sourceNotice.label}
+              {model.sourceNotice.lead}
+              {model.sourceNotice.linkLabel &&
+                (model.sourceNotice.sourceUrl ? (
+                  <a
+                    href={model.sourceNotice.sourceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ color: brand.main, fontWeight: 600, textDecoration: "underline" }}
+                  >
+                    {model.sourceNotice.linkLabel}
+                  </a>
+                ) : (
+                  model.sourceNotice.linkLabel
+                ))}
+              {model.sourceNotice.trailing}
             </Caption>
-            {model.sourceNotice.sourceUrl && (
-              <a
-                href={model.sourceNotice.sourceUrl}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  display: "inline-block",
-                  marginTop: 4,
-                  fontSize: 12,
-                  color: color.textMuted,
-                  textDecoration: "underline",
-                  wordBreak: "break-all",
-                }}
-              >
-                근거 페이지 열기
-              </a>
+            {model.sourceNotice.caution && (
+              <div style={{ marginTop: 2 }}>
+                <Caption>{model.sourceNotice.caution}</Caption>
+              </div>
             )}
           </div>
         )}
       </Section>
 
-      <Divider />
+      {/* 배너는 화면당 하나만(토스 애즈 SSP: 동일 화면 동일 포맷 2개 이상 금지).
+          주소 복사 버튼·길찾기 버튼 바로 아래에 두면 오클릭이 날 수 있어
+          누를 것이 없는 시간표 아래(요금 위)에 둔다.
+          separated 로 위아래 구분선을 둘러 자기 영역을 갖게 한다 —
+          안 그러면 바로 아래 요금 카드 안에 든 것처럼 보인다. */}
+      <BannerAd slot="detail" separated />
 
       <Section title="요금">
         <PriceTable rows={model.priceRows} />
-        {pool.price_note && <Caption>{pool.price_note}</Caption>}
+        {pool.price_note && (
+          <div style={{ marginTop: space.md }}>
+            <Caption>{pool.price_note}</Caption>
+          </div>
+        )}
 
         {/* 정규권·강습 등은 우리가 안 다루므로, 홈페이지 없을 때만 문의 안내. (홈페이지 링크는 최하단으로) */}
         {!model.contact.homepageUrl && (
@@ -283,6 +295,10 @@ export default function PoolDetail({
           <Caption>시설 정보 없음</Caption>
         )}
       </Section>
+
+      <Divider />
+
+      <GearSection />
     </div>
   );
 }
@@ -380,13 +396,11 @@ function Hero({
   name,
   isFav,
   onToggleFav,
-  onClose,
 }: {
   images: string[];
   name: string;
   isFav: boolean;
   onToggleFav: () => void;
-  onClose: () => void;
 }) {
   const [idx, setIdx] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -448,12 +462,6 @@ function Hero({
           🏊
         </div>
       )}
-
-      {/* 목록으로 돌아가는 버튼. 시스템 뒤로가기(App의 backEvent)로도 닫히지만,
-          화면 안에 나가는 길이 보이는 편이 자연스러워 좌측 상단에 둔다. */}
-      <button onClick={onClose} aria-label="뒤로" style={backBtnStyle}>
-        <BackIcon />
-      </button>
 
       {/* 즐겨찾기 — 이미지 하단 오른쪽(엄지 닿기 쉬운 곳), 넉넉한 탭 타겟 */}
       <button
@@ -547,42 +555,4 @@ const linkStyle: React.CSSProperties = {
   textDecoration: "none",
 };
 
-// 뒤로가기 버튼 — 이미지 위에 얹히므로 반투명 배경으로 대비 확보. 탭 타겟 44.
-const backBtnStyle: React.CSSProperties = {
-  position: "absolute",
-  top: "calc(8px + env(safe-area-inset-top))",
-  left: 8,
-  width: 44,
-  height: 44,
-  borderRadius: 999,
-  border: "none",
-  cursor: "pointer",
-  background: "rgba(0,0,0,0.35)",
-  color: "#fff",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  fontSize: 18,
-  lineHeight: 1,
-};
 
-// 뒤로가기 화살표. currentColor를 따라가므로 버튼 색만 바꾸면 된다.
-function BackIcon() {
-  return (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M15 19L8 12L15 5"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}

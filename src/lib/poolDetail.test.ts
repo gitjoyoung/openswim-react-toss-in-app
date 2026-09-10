@@ -111,7 +111,91 @@ function buildPool(overrides: Partial<Pool>) {
 }
 
 describe("buildPoolDetailModel source notice", () => {
-  it("shows the official source label with the verified date", () => {
+  it("states only when we checked, in the app's own voice", () => {
+    const model = buildPoolDetailModel(
+      pool({
+        free_swim_source: "https://example.go.kr/pool",
+        free_swim_source_type: "official_gov",
+        free_swim_verified_at: "2026-09-02",
+        free_swim_confidence: "medium",
+      }),
+    );
+
+    expect(model.sourceNotice).toEqual({
+      lead: "",
+      linkLabel: "해당 수영장 정보",
+      trailing: "를 2026-09-02 확인하였습니다.",
+      caution: null,
+      sourceUrl: "https://example.go.kr/pool",
+    });
+  });
+
+  it("adds one visit-check sentence when the source is not an official page", () => {
+    const model = buildPoolDetailModel(
+      pool({
+        free_swim_source: "https://blog.naver.com/example/1",
+        free_swim_source_type: "blog",
+        free_swim_verified_at: "2026-08-21",
+        free_swim_confidence: "low",
+      }),
+    );
+
+    // 확인 사실과 주의 안내는 별도 줄로 나가야 한다.
+    expect(model.sourceNotice?.trailing).toBe("를 2026-08-21 확인하였습니다.");
+    expect(model.sourceNotice?.caution).toBe("방문 전 확인이 필요합니다.");
+  });
+
+  it("uses the same sentence for an official page we could not fully trust", () => {
+    const notChecked = buildPoolDetailModel(
+      pool({
+        free_swim_source: "https://example.or.kr/pool",
+        free_swim_source_type: "official_pub",
+        free_swim_verified_at: "2026-08-21",
+        free_swim_confidence: "needs_check",
+      }),
+    );
+    const lowConfidence = buildPoolDetailModel(
+      pool({
+        free_swim_source: "https://example.or.kr/pool",
+        free_swim_source_type: "operator_site",
+        free_swim_verified_at: "2026-08-21",
+        free_swim_confidence: "low",
+      }),
+    );
+
+    for (const model of [notChecked, lowConfidence]) {
+      expect(model.sourceNotice?.trailing).toBe("를 2026-08-21 확인하였습니다.");
+      expect(model.sourceNotice?.caution).toBe("방문 전 확인이 필요합니다.");
+    }
+  });
+
+  it("drops the link when there is no verified date to show", () => {
+    const model = buildPoolDetailModel(
+      pool({ free_swim_source_type: "unknown", free_swim_confidence: "needs_check" }),
+    );
+
+    expect(model.sourceNotice).toEqual({
+      lead: "시간표 정보를 확인하지 못했습니다.",
+      linkLabel: "",
+      trailing: "",
+      caution: "방문 전 확인이 필요합니다.",
+      sourceUrl: null,
+    });
+  });
+
+  it("returns null when the pool has no provenance at all", () => {
+    expect(buildPoolDetailModel(pool()).sourceNotice).toBeNull();
+  });
+});
+describe("buildPoolDetailModel notice texts from the database", () => {
+  const dbTexts = {
+    verified: "우리가 {date}에 직접 확인한 시간표입니다.",
+    linkLabel: "우리가",
+    unverified: "아직 확인하지 못한 시간표입니다.",
+    caution: "가기 전에 전화로 확인해 주세요.",
+  };
+
+  it("renders the sentence stored in the database instead of the bundled default", () => {
     const model = buildPoolDetailModel(
       pool({
         free_swim_source: "https://example.go.kr/pool",
@@ -119,30 +203,50 @@ describe("buildPoolDetailModel source notice", () => {
         free_swim_verified_at: "2026-09-02",
         free_swim_confidence: "high",
       }),
+      dbTexts,
     );
 
     expect(model.sourceNotice).toEqual({
-      label: "지자체 공식 페이지 · 2026-09-02 확인",
+      lead: "",
+      linkLabel: "우리가",
+      trailing: " 2026-09-02에 직접 확인한 시간표입니다.",
+      caution: null,
       sourceUrl: "https://example.go.kr/pool",
-      needsCheck: false,
     });
   });
 
-  it("marks unverified data so the user is told to call the facility", () => {
+  it("uses the database caution and unverified sentences too", () => {
     const model = buildPoolDetailModel(
-      pool({
-        free_swim_source: "https://www.helloswim.kr/pool/1",
-        free_swim_source_type: "aggregator",
-        free_swim_verified_at: "2026-08-20",
-        free_swim_confidence: "needs_check",
-      }),
+      pool({ free_swim_source_type: "unknown", free_swim_confidence: "needs_check" }),
+      dbTexts,
     );
 
-    expect(model.sourceNotice?.needsCheck).toBe(true);
-    expect(model.sourceNotice?.label).toBe("수영장 정보 사이트 · 이용 전 시설 문의 필요");
+    expect(model.sourceNotice).toEqual({
+      lead: "아직 확인하지 못한 시간표입니다.",
+      linkLabel: "",
+      trailing: "",
+      caution: "가기 전에 전화로 확인해 주세요.",
+      sourceUrl: null,
+    });
   });
 
-  it("returns null when the pool has no provenance at all", () => {
-    expect(buildPoolDetailModel(pool()).sourceNotice).toBeNull();
+  it("falls back to a plain sentence when the edited text lost the link phrase", () => {
+    const model = buildPoolDetailModel(
+      pool({
+        free_swim_source: "https://example.go.kr/pool",
+        free_swim_source_type: "official_gov",
+        free_swim_verified_at: "2026-09-02",
+        free_swim_confidence: "high",
+      }),
+      { ...dbTexts, verified: "{date} 확인 완료." },
+    );
+
+    expect(model.sourceNotice).toEqual({
+      lead: "2026-09-02 확인 완료.",
+      linkLabel: "",
+      trailing: "",
+      caution: null,
+      sourceUrl: null,
+    });
   });
 });
