@@ -1,5 +1,6 @@
 import type { Pool } from "../pool";
 import { DEFAULT_POOL_NOTICE_TEXTS, type PoolNoticeTexts } from "../appText";
+import { fillTemplate } from "./richText";
 import {
   daysLabel,
   depthText,
@@ -18,22 +19,16 @@ export type PoolDetailModel = {
   images: string[];
   // 자유수영 시간을 언제 확인했는지 그대로 보여준다.
   // 한 문장으로 읽히게 쪼갠다: linkLabel(링크가 되는 부분) + trailing(나머지 문장).
-  // 문장은 DB(app_texts)에서 오고, 링크가 걸리는 부분만 lead/linkLabel/trailing 으로 쪼개 둔다.
+  // 문장은 DB(app_texts)에서 온 통 텍스트다. 링크는 텍스트 안에 마크다운으로 들어 있다.
   // caution 은 별도 줄로 렌더한다. 확인 사실과 주의 안내가 한 문단으로 붙어 읽히면 안 된다.
-  sourceNotice: {
-    lead: string;
-    linkLabel: string;
-    trailing: string;
-    caution: string | null;
-    sourceUrl: string | null;
-  } | null;
+  sourceNotice: { text: string; caution: string | null } | null;
 };
 
 // 공식 운영 주체가 직접 올리는 페이지에서, 신뢰도 높게 확인한 값만 경고 없이 보여준다.
 const HOMEPAGE_SOURCE_TYPES = new Set(["official_gov", "official_pub", "operator_site"]);
 const CONFIDENT_LEVELS = new Set(["medium", "high"]);
 
-// 근거 표시 문구를 만든다. 문장 자체는 DB(app_texts)에서 받은 texts 를 쓴다.
+// 근거 표시 문구를 만든다. 문장은 DB(app_texts)에서 온 통 텍스트고, 링크는 그 안에 마크다운으로 적혀 있다.
 // 앱이 정하는 것은 두 가지뿐이다. 어떤 문장을 쓸지(확인 날짜 유무), 주의 문장을 붙일지.
 // 내부 출처 분류명(블로그, 정보 사이트 등)은 노출하지 않는다. 데이터 신뢰만 떨어뜨린다.
 function buildSourceNotice(
@@ -51,29 +46,16 @@ function buildSourceNotice(
     confidence !== null &&
     HOMEPAGE_SOURCE_TYPES.has(type) &&
     CONFIDENT_LEVELS.has(confidence);
-  const caution = confirmed ? null : texts.caution;
 
   // 확인한 날짜가 없으면 확인했다고 쓸 수 없다. 근거 링크도 걸지 않는다.
-  if (!verifiedAt) {
-    return { lead: texts.unverified, linkLabel: "", trailing: "", caution, sourceUrl: null };
-  }
-
-  const sentence = texts.verified.replace("{date}", verifiedAt);
-  const sourceUrl = pool.free_swim_source ?? null;
-  const label = texts.linkLabel;
-  const at = label ? sentence.indexOf(label) : -1;
-
-  // 문구를 DB에서 고치다 링크 문구가 사라질 수 있다. 그때는 링크 없이 문장만 보여준다.
-  if (!sourceUrl || at === -1) {
-    return { lead: sentence, linkLabel: "", trailing: "", caution, sourceUrl: null };
-  }
+  const template = verifiedAt ? texts.verified : texts.unverified;
 
   return {
-    lead: sentence.slice(0, at),
-    linkLabel: label,
-    trailing: sentence.slice(at + label.length),
-    caution,
-    sourceUrl,
+    text: fillTemplate(template, {
+      date: verifiedAt,
+      source: verifiedAt ? (pool.free_swim_source ?? null) : null,
+    }),
+    caution: confirmed ? null : texts.caution,
   };
 }
 

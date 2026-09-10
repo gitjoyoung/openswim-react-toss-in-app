@@ -10,6 +10,7 @@ export type Facilities = {
   lane_length_m?: number;
   depth_min?: number;
   depth_max?: number;
+  notes?: string[];
 };
 
 // 수심 표시 문자열 (min==max면 "1.2m", 다르면 "1.2~1.4m")

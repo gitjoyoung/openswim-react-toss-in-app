@@ -10,7 +10,11 @@ import freeImg from "../assets/free.webp";
 import { useNearbySearch } from "../hooks/useNearbySearch";
 import { usePoolMap } from "../hooks/usePoolMap";
 
-type Props = { pools: Pool[]; onSelect: (p: Pool) => void };
+type Props = {
+  pools: Pool[];
+  onSelect: (p: Pool) => void;
+  onSearchFocusChange?: (focused: boolean) => void;
+};
 
 const OPEN = "#3182f6";
 const CLOSED = "#f04452";
@@ -41,7 +45,7 @@ function pinDataUri(fill: string) {
   return "data:image/svg+xml;base64," + btoa(svg);
 }
 
-export default function NearbyScreen({ pools, onSelect }: Props) {
+export default function NearbyScreen({ pools, onSelect, onSearchFocusChange }: Props) {
   const boxRef = useRef<HTMLDivElement>(null);
   const { q, camera, suggestions, visiblePools, setQuery, submitSearch, clearForLocation, markCameraHandled } =
     useNearbySearch(pools);
@@ -120,7 +124,13 @@ export default function NearbyScreen({ pools, onSelect }: Props) {
         }}
       >
         <div style={{ flex: 1, minWidth: 0, pointerEvents: "auto" }}>
-          <SearchBox value={q} onChange={setQuery} onSubmit={submitSearch} suggestions={suggestions} />
+          <SearchBox
+            value={q}
+            onChange={setQuery}
+            onSubmit={submitSearch}
+            suggestions={suggestions}
+            onFocusChange={onSearchFocusChange}
+          />
         </div>
         <button
           type="button"

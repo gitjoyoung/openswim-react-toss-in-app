@@ -1,4 +1,5 @@
 import { Device } from "@apps-in-toss/web-framework";
+import type { LatLng } from "./geo";
 
 // 지도 앱 딥링크는 API 키·콘솔 등록이 필요 없다. 앱 미설치 시 웹으로 폴백.
 const APP = "openswim"; // 네이버 딥링크는 appname(우리 appName) 필수
@@ -24,18 +25,26 @@ async function open(scheme: string, web: string) {
   await openExternal(web);
 }
 
-export function openKakaoMap(name: string, lat: number, lng: number) {
+export function openKakaoMap(name: string, lat: number, lng: number, origin?: LatLng) {
   const n = encodeURIComponent(name);
+  const start = encodeURIComponent("현재 위치");
   return open(
-    `kakaomap://route?ep=${lat},${lng}&by=FOOT`,
-    `https://map.kakao.com/link/to/${n},${lat},${lng}`,
+    origin
+      ? `kakaomap://route?sp=${origin.lat},${origin.lng}&ep=${lat},${lng}&by=FOOT`
+      : `kakaomap://route?ep=${lat},${lng}&by=FOOT`,
+    origin
+      ? `https://map.kakao.com/link/from/${start},${origin.lat},${origin.lng}/to/${n},${lat},${lng}`
+      : `https://map.kakao.com/link/to/${n},${lat},${lng}`,
   );
 }
 
-export function openNaverMap(name: string, lat: number, lng: number) {
+export function openNaverMap(name: string, lat: number, lng: number, origin?: LatLng) {
   const n = encodeURIComponent(name);
+  const start = origin
+    ? `slat=${origin.lat}&slng=${origin.lng}&sname=${encodeURIComponent("현재 위치")}&`
+    : "";
   return open(
-    `nmap://route/walk?dlat=${lat}&dlng=${lng}&dname=${n}&appname=${APP}`,
+    `nmap://route/walk?${start}dlat=${lat}&dlng=${lng}&dname=${n}&appname=${APP}`,
     `https://map.naver.com/p/search/${n}`,
   );
 }

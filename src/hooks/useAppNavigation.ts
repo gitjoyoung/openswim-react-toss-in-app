@@ -29,13 +29,18 @@ export function useAppNavigation(deps: AppNavigationDeps = defaultDeps) {
   // 상세가 열려 있으면 상세만 닫고, 첫 화면이면 미니앱을 종료한다.
   // (출시 체크리스트: "최초 화면에서 뒤로가기를 누르면 미니앱이 종료돼요")
   useEffect(() => {
-    return deps.addBackEventListener(() => {
-      if (selectedRef.current) {
-        setSelected(null);
-        return;
-      }
-      deps.closeApp();
-    });
+    try {
+      return deps.addBackEventListener(() => {
+        if (selectedRef.current) {
+          setSelected(null);
+          return;
+        }
+        deps.closeApp();
+      });
+    } catch {
+      // 일반 브라우저 preview에는 토스 네이티브 back-event 브리지가 없다.
+      return () => {};
+    }
   }, [deps]);
 
   // 탭 이동 시 항상 상단부터. (상세는 모달이라 밑 화면 스크롤은 그대로 유지)

@@ -18,6 +18,9 @@ function poolSearchText(p: Pool): string {
 export function matchPool(p: Pool, query: string): boolean {
   const tokens = searchTokens(query);
   if (!tokens.length) return true;
+  if (tokens.length === 1 && /(?:구|군|시)$/.test(tokens[0])) {
+    return p.gu.toLowerCase() === tokens[0];
+  }
   const hay = poolSearchText(p);
   return tokens.every((t) => hay.includes(t));
 }
@@ -72,4 +75,17 @@ export function matchRegion(r: Region, query: string): boolean {
   const s = query.trim();
   if (!s) return true;
   return r.gu.includes(s) || shortSido(r.sido).includes(s) || regionLabel(r).includes(s);
+}
+
+// 완성된 지역명이 있으면 정확 일치만, 아직 입력 중이면 부분 일치 후보를 반환한다.
+export function findRegionMatches(regions: Region[], query: string): Region[] {
+  const s = query.trim();
+  if (!s) return [];
+  const exact = regions.filter(
+    (region) =>
+      region.gu === s ||
+      shortSido(region.sido) === s ||
+      regionLabel(region) === s,
+  );
+  return exact.length ? exact : regions.filter((region) => matchRegion(region, s));
 }

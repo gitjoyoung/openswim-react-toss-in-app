@@ -8,6 +8,7 @@ import { usePoolDetailActions } from "../hooks/usePoolDetailActions";
 import PoolMap from "../components/PoolMap";
 import BannerAd from "../components/BannerAd";
 import CopyAddressButton from "../components/CopyAddressButton";
+import RichText from "../components/RichText";
 import GearSection from "../components/GearSection";
 import { Section, Divider, Pill, Caption } from "../design/primitives";
 import FavStar from "../components/FavStar";
@@ -230,29 +231,18 @@ export default function PoolDetail({
           <Caption>시설 문의</Caption>
         )}
 
-        {/* 언제 확인했는지 한 문장으로 밝히고, 확실하지 않은 값에만 방문 전 확인을 덧붙인다. */}
+        {/* 문구는 DB(app_texts)에 통으로 들어 있다. 링크도 그 문장 안의 마크다운으로 처리한다.
+            확인 사실과 방문 전 확인 안내는 서로 다른 줄로 나간다. */}
         {model.sourceNotice && (
           <div style={{ marginTop: space.md }}>
             <Caption>
-              {model.sourceNotice.lead}
-              {model.sourceNotice.linkLabel &&
-                (model.sourceNotice.sourceUrl ? (
-                  <a
-                    href={model.sourceNotice.sourceUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ color: brand.main, fontWeight: 600, textDecoration: "underline" }}
-                  >
-                    {model.sourceNotice.linkLabel}
-                  </a>
-                ) : (
-                  model.sourceNotice.linkLabel
-                ))}
-              {model.sourceNotice.trailing}
+              <RichText text={model.sourceNotice.text} />
             </Caption>
             {model.sourceNotice.caution && (
               <div style={{ marginTop: 2 }}>
-                <Caption>{model.sourceNotice.caution}</Caption>
+                <Caption>
+                  <RichText text={model.sourceNotice.caution} />
+                </Caption>
               </div>
             )}
           </div>

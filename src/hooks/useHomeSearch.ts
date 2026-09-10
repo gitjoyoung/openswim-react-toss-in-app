@@ -14,8 +14,8 @@ import {
 import {
   buildPoolSearchIndex,
   distinctRegions,
+  findRegionMatches,
   findPoolSuggestions,
-  matchRegion,
   regionLabel,
   type Region,
 } from "../lib/search";
@@ -60,11 +60,11 @@ export function useHomeSearch(pools: Pool[], location: LatLng | null = null) {
         setQ("");
         return;
       }
-      const matchingRegion = regions.find((item) => matchRegion(item, query));
-      if (matchingRegion) {
-        setRegion(matchingRegion);
+      const matchingRegions = findRegionMatches(regions, query);
+      if (matchingRegions.length === 1) {
+        setRegion(matchingRegions[0]);
         setAppliedText("");
-        setQ(regionLabel(matchingRegion));
+        setQ(regionLabel(matchingRegions[0]));
       } else {
         setRegion(null);
         setAppliedText(query);
@@ -87,8 +87,7 @@ export function useHomeSearch(pools: Pool[], location: LatLng | null = null) {
         setSuggestions([]);
         return;
       }
-      const regionSuggestions: Suggestion[] = regions
-        .filter((item) => matchRegion(item, query))
+      const regionSuggestions: Suggestion[] = findRegionMatches(regions, query)
         .slice(0, 8)
         .map((item) => {
           const label = regionLabel(item);

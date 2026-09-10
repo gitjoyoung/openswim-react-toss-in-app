@@ -18,12 +18,15 @@ export default function SearchBox({
   onSubmit,
   placeholder = "지역이나 수영장 이름으로 검색",
   suggestions,
+  onFocusChange,
 }: {
   value: string;
   onChange: (v: string) => void; // 라이브: 추천/입력 표시용 (목록·지도는 안 바뀜)
   onSubmit?: (text: string) => void; // 확정: 엔터/키보드 '이동' → 목록·지도 반영
   placeholder?: string;
   suggestions: Suggestion[];
+  // 모바일 키보드가 뜰 때 탭바 같은 플로팅 UI를 숨길 수 있게 부모에 포커스만 알린다.
+  onFocusChange?: (focused: boolean) => void;
 }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState(value); // 화면에 즉시 반영되는 로컬 값
@@ -85,7 +88,10 @@ export default function SearchBox({
             onChange(e.currentTarget.value); // 조합 확정된 최종 글자로 추천 갱신
           }}
           placeholder={placeholder}
-          onFocus={() => setOpen(true)}
+          onFocus={() => {
+            setOpen(true);
+            onFocusChange?.(true);
+          }}
           // 엔터/키보드 '이동' → 확정(목록·지도 반영). 조합 중엔 무시.
           onKeyDown={(e) => {
             if (e.key === "Enter" && !composingRef.current) {
@@ -94,7 +100,10 @@ export default function SearchBox({
             }
           }}
           // 항목 클릭(onMouseDown)이 먼저 처리되도록 blur 닫기를 살짝 지연
-          onBlur={() => setTimeout(() => setOpen(false), 120)}
+          onBlur={() => {
+            onFocusChange?.(false);
+            setTimeout(() => setOpen(false), 120);
+          }}
           style={{
             flex: 1,
             minWidth: 0,

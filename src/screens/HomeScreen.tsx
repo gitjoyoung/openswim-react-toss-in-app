@@ -9,7 +9,7 @@ import { space, color, radius, brand } from "../design/tokens";
 import type { PoolFilterKey } from "../lib/pools";
 import { useHomeLocation } from "../hooks/useHomeLocation";
 import { useHomeSearch } from "../hooks/useHomeSearch";
-import logo from "../assets/logo.webp"; // 우리가 누끼 뜬 투명 로고 (번들). 매니페스트 앱 아이콘과는 별개.
+import logo from "../assets/swim-logo.png";
 
 type Props = {
   pools: Pool[];
@@ -17,6 +17,9 @@ type Props = {
   favs: string[];
   onToggleFav: (id: string) => void;
   onSelect: (pool: Pool) => void;
+  // 상세 시트가 열려 있는 동안처럼, 홈이 가려질 때는 false로 내려온다.
+  showAd?: boolean;
+  onSearchFocusChange?: (focused: boolean) => void;
 };
 
 // 가용성 필터 — 앱이 '오늘 자유수영'이라 기본은 '오늘'. 토/일은 주말 미리 계획, 전체는 브라우징.
@@ -28,7 +31,7 @@ const DAY_FILTERS: { key: PoolFilterKey; label: string; accent?: string }[] = [
   { key: "now", label: "지금", accent: "#f5a623" },
 ];
 
-export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect }: Props) {
+export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect, showAd = true, onSearchFocusChange }: Props) {
   const homeLocation = useHomeLocation();
   const homeSearch = useHomeSearch(pools, homeLocation.location);
   const suggestions = homeSearch.suggestions.map((suggestion) => ({
@@ -74,12 +77,12 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
       <Top
         title={
           <div style={{ display: "flex", alignItems: "center", gap: space.sm }}>
-            <img src={logo} alt="오늘 수영" style={{ height: 34, display: "block", flexShrink: 0 }} />
+            <img src={logo} alt="오늘 수영" style={{ height: 38, display: "block", flexShrink: 0 }} />
             <Top.TitleParagraph size={28}>오늘 자유수영</Top.TitleParagraph>
           </div>
         }
         subtitleBottom={
-          <Top.SubtitleParagraph size={15}>자유수영 오늘은 어디서 할까?</Top.SubtitleParagraph>
+          <Top.SubtitleParagraph size={15}>오늘 자유수영이 가능한 수영장을 한눈에!</Top.SubtitleParagraph>
         }
       />
 
@@ -93,6 +96,7 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
               homeSearch.submitSearch(text);
             }}
             suggestions={suggestions}
+            onFocusChange={onSearchFocusChange}
           />
         </div>
         <button
@@ -136,8 +140,8 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
         ))}
       </div>
 
-      {/* 배너는 화면 상단(리스트 위)에만. 로딩 중에는 띄우지 않는다 (일시 화면 노출 금지 규칙). */}
-      {!loading && <BannerAd />}
+      {/* 배너는 화면 상단(필터 칩 아래, 리스트 위)에만. 로딩 중에는 띄우지 않는다 (일시 화면 노출 금지 규칙). */}
+      {!loading && showAd && <BannerAd />}
 
       {loading ? (
         <Loading />

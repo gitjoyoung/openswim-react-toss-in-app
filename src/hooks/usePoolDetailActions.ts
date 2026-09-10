@@ -1,16 +1,21 @@
 import { useCallback } from "react";
 import type { Pool } from "../pool";
+import { getMyLocationSilent } from "../lib/geo";
 import { openExternal, openKakaoMap, openNaverMap } from "../lib/mapLinks";
 
 export function usePoolDetailActions(pool: Pool) {
-  const openKakaoRoute = useCallback(() => {
-    if (pool.lat != null && pool.lng != null)
-      openKakaoMap(pool.name, pool.lat, pool.lng);
+  const openKakaoRoute = useCallback(async () => {
+    if (pool.lat != null && pool.lng != null) {
+      const origin = await getMyLocationSilent();
+      await openKakaoMap(pool.name, pool.lat, pool.lng, origin ?? undefined);
+    }
   }, [pool.lat, pool.lng, pool.name]);
 
-  const openNaverRoute = useCallback(() => {
-    if (pool.lat != null && pool.lng != null)
-      openNaverMap(pool.name, pool.lat, pool.lng);
+  const openNaverRoute = useCallback(async () => {
+    if (pool.lat != null && pool.lng != null) {
+      const origin = await getMyLocationSilent();
+      await openNaverMap(pool.name, pool.lat, pool.lng, origin ?? undefined);
+    }
   }, [pool.lat, pool.lng, pool.name]);
 
   const openHomepage = useCallback(

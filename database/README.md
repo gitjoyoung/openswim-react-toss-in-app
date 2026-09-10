@@ -46,10 +46,21 @@ Neon으로 옮기기 전 Supabase에서 쓰던 로컬 설정(`config.toml`)과 S
 
 | key | 쓰이는 곳 |
 | --- | --- |
-| `pool_notice_verified` | 첫 줄. `{date}`는 `pools.free_swim_verified_at` 값으로 치환된다 |
-| `pool_notice_link_label` | 첫 줄 안에서 근거 페이지 링크가 걸리는 부분 |
-| `pool_notice_unverified` | 확인 날짜가 없는 수영장의 첫 줄 |
-| `pool_notice_caution` | 공식 페이지에서 확인하지 못한 수영장의 둘째 줄 |
+| `pool_notice_verified` | 첫 줄. 확인 날짜가 있는 수영장 |
+| `pool_notice_unverified` | 첫 줄. 확인 날짜가 없는 수영장 |
+| `pool_notice_caution` | 둘째 줄. 공식 페이지에서 확인하지 못한 수영장 |
+
+문장 안에서 쓸 수 있는 것:
+
+| 표기 | 뜻 |
+| --- | --- |
+| `{date}` | `pools.free_swim_verified_at` |
+| `{source}` | `pools.free_swim_source` |
+| `[글자](주소)` | 링크. 주소 자리에 `{source}` 를 쓴다 |
+
+```
+[해당 수영장 정보]({source})를 {date} 확인하였습니다.
+```
 
 ```sql
 update public.app_texts set value = '...', updated_at = now() where key = 'pool_notice_caution';
@@ -57,7 +68,8 @@ update public.app_texts set value = '...', updated_at = now() where key = 'pool_
 
 주의할 점:
 
-- `pool_notice_verified` 문장 안에 `pool_notice_link_label` 문자열이 그대로 있어야 링크가 걸린다. 없으면 링크 없이 문장만 나간다.
+- 근거 URL 이 없는 수영장은 `{source}` 가 빈 문자열이 되고 링크 없이 글자만 나간다. `http(s)` 가 아닌 주소는 링크로 만들지 않는다.
+- 마크다운은 인라인 링크만 처리한다. 볼드·리스트는 그냥 글자로 나온다.
 - 어떤 문장을 쓸지(확인 날짜 유무)와 주의 문장을 붙일지는 `pools`의 `free_swim_*` 값이 정한다. 문구만 여기서 관리한다.
 - 행을 지우거나 비워도 앱은 번들에 박힌 기본 문구(`src/appText.ts`)로 폴백한다. 화면이 비지는 않는다.
 - 문구를 바꿔도 **이미 앱을 켜 둔 사용자는 다음 실행부터** 바뀜 문구를 본다. 조회를 앱 시작 시 한 번만 하고 캐시하기 때문이다.

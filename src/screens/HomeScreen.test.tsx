@@ -8,6 +8,10 @@ const geo = vi.hoisted(() => ({
   getMyLocationSilent: vi.fn(),
 }));
 
+vi.mock("../components/BannerAd", () => ({
+  default: () => <div data-testid="home-banner">home-banner</div>,
+}));
+
 vi.mock("../lib/geo", async (importOriginal) => {
   const actual = await importOriginal<typeof import("../lib/geo")>();
   return {
@@ -67,6 +71,13 @@ describe("HomeScreen", () => {
 
     expect(screen.getByRole("textbox", { name: "" })).toBeInTheDocument();
     expect(screen.getByText("역삼청소년수련관 수영장")).toBeInTheDocument();
+    expect(screen.getByText("오늘 자유수영이 가능한 수영장을 한눈에!")).toBeInTheDocument();
+  });
+
+  it("renders the home logo slightly larger", () => {
+    renderHome();
+
+    expect(screen.getByRole("img", { name: "오늘 수영" })).toHaveStyle({ height: "38px" });
   });
 
   it("offers a pool by its address without applying the search before submit", async () => {
@@ -186,5 +197,17 @@ describe("HomeScreen", () => {
     });
 
     expect(geo.getMyLocationSilent).toHaveBeenCalledTimes(1);
+  });
+
+  it("drops the home banner while the detail sheet covers the screen", () => {
+    const { rerender, queryByTestId } = render(
+      <HomeScreen pools={[samplePool]} loading={false} favs={[]} onToggleFav={vi.fn()} onSelect={vi.fn()} />,
+    );
+    expect(queryByTestId("home-banner")).not.toBeNull();
+
+    rerender(
+      <HomeScreen pools={[samplePool]} loading={false} favs={[]} onToggleFav={vi.fn()} onSelect={vi.fn()} showAd={false} />,
+    );
+    expect(queryByTestId("home-banner")).toBeNull();
   });
 });

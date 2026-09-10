@@ -32,7 +32,7 @@ export const space = { xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24 } as const;
 export const radius = { sm: 8, md: 14, lg: 20, pill: 999 } as const;
 
 // 레이아웃
-export const APP_MAX_WIDTH = 480;
+export const APP_MAX_WIDTH = 640;
 
 // 하단 고정 요소의 바닥 여백. TDS BottomCTA가 쓰는 공식과 동일하게 맞춘다.
 // 토스 웹뷰는 세이프에어리어를 --toss-safe-area-bottom 으로 내려주고(env()가 0인 기기 대비),

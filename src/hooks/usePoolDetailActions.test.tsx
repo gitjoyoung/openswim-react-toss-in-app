@@ -8,12 +8,14 @@ const maps = vi.hoisted(() => ({
   naver: vi.fn(),
   external: vi.fn(),
 }));
+const geo = vi.hoisted(() => ({ silent: vi.fn() }));
 
 vi.mock("../lib/mapLinks", () => ({
   openKakaoMap: maps.kakao,
   openNaverMap: maps.naver,
   openExternal: maps.external,
 }));
+vi.mock("../lib/geo", () => ({ getMyLocationSilent: geo.silent }));
 
 function pool(overrides: Partial<Pool> = {}): Pool {
   return {
@@ -38,16 +40,25 @@ function pool(overrides: Partial<Pool> = {}): Pool {
 }
 
 describe("usePoolDetailActions", () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+    geo.silent.mockResolvedValue({ lat: 37.45, lng: 126.9 });
+  });
 
-  it("opens both walking routes with the selected pool coordinates", () => {
+  it("opens both walking routes with an already-authorized current location", async () => {
     const { result } = renderHook(() => usePoolDetailActions(pool()));
 
-    result.current.openKakaoRoute();
-    result.current.openNaverRoute();
+    await result.current.openKakaoRoute();
+    await result.current.openNaverRoute();
 
-    expect(maps.kakao).toHaveBeenCalledWith("테스트 수영장", 37.5, 127);
-    expect(maps.naver).toHaveBeenCalledWith("테스트 수영장", 37.5, 127);
+    expect(maps.kakao).toHaveBeenCalledWith("테스트 수영장", 37.5, 127, {
+      lat: 37.45,
+      lng: 126.9,
+    });
+    expect(maps.naver).toHaveBeenCalledWith("테스트 수영장", 37.5, 127, {
+      lat: 37.45,
+      lng: 126.9,
+    });
   });
 
   it("prevents browser navigation and opens the homepage through the external bridge", () => {

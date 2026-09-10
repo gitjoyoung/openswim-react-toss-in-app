@@ -23,6 +23,8 @@ function App() {
   const { pools, loading, loadError, retry } = usePools();
   const { tab, selected, openPoolDetail, closeDetail, changeTab } = useAppNavigation();
   const [favs, setFavs] = useState<string[]>(loadFavs);
+  // 검색 키보드가 열린 동안은 웹뷰가 플로팅 탭바를 함께 끌어올리므로 탭바만 숨긴다.
+  const [searchFocused, setSearchFocused] = useState(false);
 
   useDetailScrollLock(selected !== null);
 
@@ -95,16 +97,30 @@ function App() {
               favs={favs}
               onToggleFav={toggleFav}
               onSelect={openPoolDetail}
+              // 상세 시트가 덮고 있는 동안에는 홈 배너를 내린다.
+              // 안 내리면 (1) 가려진 광고가 계속 노출로 잡히고 (2) 상세 배너와 겹쳐
+              // '동일 화면 동일 포맷 2개' / '광고 은닉·겹침'에 걸린다.
+              showAd={!selected}
+              onSearchFocusChange={setSearchFocused}
             />
           )}
-          {tab === "nearby" && <NearbyScreen pools={pools} onSelect={openPoolDetail} />}
+          {tab === "nearby" && (
+            <NearbyScreen pools={pools} onSelect={openPoolDetail} onSearchFocusChange={setSearchFocused} />
+          )}
           {tab === "fav" && (
             <FavoritesScreen pools={pools} favs={favs} onToggleFav={toggleFav} onSelect={openPoolDetail} />
           )}
         </>
       )}
       </Suspense>
-      <TabBar tab={tab} onChange={changeTab} />
+      <TabBar
+        tab={tab}
+        onChange={(nextTab) => {
+          setSearchFocused(false);
+          changeTab(nextTab);
+        }}
+        searchFocused={searchFocused}
+      />
       </Screen>
 
       {/* 상세는 페이지 교체가 아니라 위로 올라오는 모달 — 밑 화면(홈/지도)은 그대로 유지 */}
@@ -137,7 +153,6 @@ function App() {
                 pool={selected}
                 isFav={favs.includes(selected.id)}
                 onToggleFav={() => toggleFav(selected.id)}
-                onClose={closeDetail}
               />
             </Suspense>
           </div>
@@ -147,8 +162,17 @@ function App() {
   );
 }
 
-function TabBar({ tab, onChange }: { tab: Tab; onChange: (t: Tab) => void }) {
-  const hidden = useHideOnScroll();
+function TabBar({
+  tab,
+  onChange,
+  searchFocused,
+}: {
+  tab: Tab;
+  onChange: (t: Tab) => void;
+  searchFocused: boolean;
+}) {
+  // 아래로 드래그했을 때 또는 검색 키보드가 열린 동안 숨긴다.
+  const hidden = useHideOnScroll() || searchFocused;
   const tabImg = (src: string) => (
     <img src={src} alt="" style={{ width: 26, height: 26, objectFit: "contain", display: "block" }} />
   );

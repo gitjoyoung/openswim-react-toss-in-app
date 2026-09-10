@@ -36124,8 +36124,16 @@
     "images": [],
     "prices": [
       {
-        "label": "1일권",
-        "amount": 8000
+        "label": "청소년",
+        "amount": 6000
+      },
+      {
+        "label": "회원",
+        "amount": 9000
+      },
+      {
+        "label": "비회원",
+        "amount": 11000
       }
     ],
     "subway": null,

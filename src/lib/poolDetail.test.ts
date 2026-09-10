@@ -109,9 +109,8 @@ describe("buildPoolDetailModel", () => {
 function buildPool(overrides: Partial<Pool>) {
   return buildPoolDetailModel(pool(overrides));
 }
-
 describe("buildPoolDetailModel source notice", () => {
-  it("states only when we checked, in the app's own voice", () => {
+  it("states only when we checked, with the source page linked inside the sentence", () => {
     const model = buildPoolDetailModel(
       pool({
         free_swim_source: "https://example.go.kr/pool",
@@ -122,15 +121,12 @@ describe("buildPoolDetailModel source notice", () => {
     );
 
     expect(model.sourceNotice).toEqual({
-      lead: "",
-      linkLabel: "해당 수영장 정보",
-      trailing: "를 2026-09-02 확인하였습니다.",
+      text: "[해당 수영장 정보](https://example.go.kr/pool)를 2026-09-02 확인하였습니다.",
       caution: null,
-      sourceUrl: "https://example.go.kr/pool",
     });
   });
 
-  it("adds one visit-check sentence when the source is not an official page", () => {
+  it("adds one visit-check line when the source is not an official page", () => {
     const model = buildPoolDetailModel(
       pool({
         free_swim_source: "https://blog.naver.com/example/1",
@@ -141,11 +137,13 @@ describe("buildPoolDetailModel source notice", () => {
     );
 
     // 확인 사실과 주의 안내는 별도 줄로 나가야 한다.
-    expect(model.sourceNotice?.trailing).toBe("를 2026-08-21 확인하였습니다.");
+    expect(model.sourceNotice?.text).toBe(
+      "[해당 수영장 정보](https://blog.naver.com/example/1)를 2026-08-21 확인하였습니다.",
+    );
     expect(model.sourceNotice?.caution).toBe("방문 전 확인이 필요합니다.");
   });
 
-  it("uses the same sentence for an official page we could not fully trust", () => {
+  it("uses the same line for an official page we could not fully trust", () => {
     const notChecked = buildPoolDetailModel(
       pool({
         free_swim_source: "https://example.or.kr/pool",
@@ -164,22 +162,32 @@ describe("buildPoolDetailModel source notice", () => {
     );
 
     for (const model of [notChecked, lowConfidence]) {
-      expect(model.sourceNotice?.trailing).toBe("를 2026-08-21 확인하였습니다.");
       expect(model.sourceNotice?.caution).toBe("방문 전 확인이 필요합니다.");
     }
   });
 
-  it("drops the link when there is no verified date to show", () => {
+  // 근거 URL 이 없으면 {source} 가 비고, 파서가 링크 없이 글자만 남긴다.
+  it("leaves an empty link target when the pool has no source url", () => {
+    const model = buildPoolDetailModel(
+      pool({
+        free_swim_source: null,
+        free_swim_source_type: "official_gov",
+        free_swim_verified_at: "2026-09-02",
+        free_swim_confidence: "medium",
+      }),
+    );
+
+    expect(model.sourceNotice?.text).toBe("[해당 수영장 정보]()를 2026-09-02 확인하였습니다.");
+  });
+
+  it("switches to the unverified sentence when there is no date to show", () => {
     const model = buildPoolDetailModel(
       pool({ free_swim_source_type: "unknown", free_swim_confidence: "needs_check" }),
     );
 
     expect(model.sourceNotice).toEqual({
-      lead: "시간표 정보를 확인하지 못했습니다.",
-      linkLabel: "",
-      trailing: "",
+      text: "시간표 정보를 확인하지 못했습니다.",
       caution: "방문 전 확인이 필요합니다.",
-      sourceUrl: null,
     });
   });
 
@@ -187,10 +195,10 @@ describe("buildPoolDetailModel source notice", () => {
     expect(buildPoolDetailModel(pool()).sourceNotice).toBeNull();
   });
 });
+
 describe("buildPoolDetailModel notice texts from the database", () => {
   const dbTexts = {
-    verified: "우리가 {date}에 직접 확인한 시간표입니다.",
-    linkLabel: "우리가",
+    verified: "우리가 [{date}에 직접 확인]({source})한 시간표입니다.",
     unverified: "아직 확인하지 못한 시간표입니다.",
     caution: "가기 전에 전화로 확인해 주세요.",
   };
@@ -207,11 +215,8 @@ describe("buildPoolDetailModel notice texts from the database", () => {
     );
 
     expect(model.sourceNotice).toEqual({
-      lead: "",
-      linkLabel: "우리가",
-      trailing: " 2026-09-02에 직접 확인한 시간표입니다.",
+      text: "우리가 [2026-09-02에 직접 확인](https://example.go.kr/pool)한 시간표입니다.",
       caution: null,
-      sourceUrl: "https://example.go.kr/pool",
     });
   });
 
@@ -222,15 +227,12 @@ describe("buildPoolDetailModel notice texts from the database", () => {
     );
 
     expect(model.sourceNotice).toEqual({
-      lead: "아직 확인하지 못한 시간표입니다.",
-      linkLabel: "",
-      trailing: "",
+      text: "아직 확인하지 못한 시간표입니다.",
       caution: "가기 전에 전화로 확인해 주세요.",
-      sourceUrl: null,
     });
   });
 
-  it("falls back to a plain sentence when the edited text lost the link phrase", () => {
+  it("keeps working when the edited text has no link at all", () => {
     const model = buildPoolDetailModel(
       pool({
         free_swim_source: "https://example.go.kr/pool",
@@ -241,12 +243,6 @@ describe("buildPoolDetailModel notice texts from the database", () => {
       { ...dbTexts, verified: "{date} 확인 완료." },
     );
 
-    expect(model.sourceNotice).toEqual({
-      lead: "2026-09-02 확인 완료.",
-      linkLabel: "",
-      trailing: "",
-      caution: null,
-      sourceUrl: null,
-    });
+    expect(model.sourceNotice?.text).toBe("2026-09-02 확인 완료.");
   });
 });

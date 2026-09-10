@@ -4,10 +4,10 @@ import type { Pool } from "../pool";
 import {
   buildPoolSearchIndex,
   distinctRegions,
+  findRegionMatches,
   findPoolSuggestions,
   inRegion,
   matchPool,
-  matchRegion,
   regionLabel,
   type Region,
 } from "../lib/search";
@@ -33,12 +33,12 @@ export function useNearbySearch(pools: Pool[]) {
         setCamera("default");
         return;
       }
-      const matchingRegion = regions.find((item) => matchRegion(item, query));
+      const matchingRegions = findRegionMatches(regions, query);
       setCamera("fit");
-      if (matchingRegion) {
-        setRegion(matchingRegion);
+      if (matchingRegions.length === 1) {
+        setRegion(matchingRegions[0]);
         setAppliedText("");
-        setQ(regionLabel(matchingRegion));
+        setQ(regionLabel(matchingRegions[0]));
       } else {
         setRegion(null);
         setAppliedText(query);
@@ -64,8 +64,7 @@ export function useNearbySearch(pools: Pool[]) {
   const suggestions = useMemo<Suggestion[]>(() => {
     const query = q.trim();
     if (!query) return [];
-    const regionSuggestions = regions
-      .filter((item) => matchRegion(item, query))
+    const regionSuggestions = findRegionMatches(regions, query)
       .slice(0, 8)
       .map((item) => {
         const label = regionLabel(item);

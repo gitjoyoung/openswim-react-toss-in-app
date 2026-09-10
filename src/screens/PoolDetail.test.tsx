@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { Pool } from "../pool";
 import PoolDetail from "./PoolDetail";
@@ -8,6 +8,8 @@ const maps = vi.hoisted(() => ({
   naver: vi.fn(),
   external: vi.fn(),
 }));
+const geo = vi.hoisted(() => ({ silent: vi.fn() }));
+const clip = vi.hoisted(() => ({ setText: vi.fn() }));
 
 vi.mock("@toss/tds-mobile", () => {
   const Top = ({
@@ -30,6 +32,26 @@ vi.mock("@toss/tds-mobile", () => {
   );
   return {
     Top,
+    List: ({ children }: { children: React.ReactNode }) => <ul>{children}</ul>,
+    ListRow: ({
+      left,
+      contents,
+      right,
+      onClick,
+    }: {
+      left?: React.ReactNode;
+      contents?: React.ReactNode;
+      right?: React.ReactNode;
+      onClick?: () => void;
+    }) => (
+      <li>
+        <button onClick={onClick}>
+          {left}
+          {contents}
+          {right}
+        </button>
+      </li>
+    ),
     Button: ({
       children,
       ...props
@@ -50,11 +72,17 @@ vi.mock("../components/PoolMap", () => ({
 vi.mock("../components/BannerAd", () => ({
   default: () => <div data-testid="detail-banner">detail-banner</div>,
 }));
+// 제휴 구좌는 DB에서 비동기로 읽어온다. 여기서는 배치 순서만 본다.
+vi.mock("../components/GearSection", () => ({
+  default: () => <div data-testid="gear-section">수영용품</div>,
+}));
 vi.mock("../lib/mapLinks", () => ({
   openKakaoMap: maps.kakao,
   openNaverMap: maps.naver,
   openExternal: maps.external,
 }));
+vi.mock("../lib/geo", () => ({ getMyLocationSilent: geo.silent }));
+vi.mock("@apps-in-toss/web-framework", () => ({ Clipboard: { setText: clip.setText } }));
 
 function pool(overrides: Partial<Pool> = {}): Pool {
   return {
@@ -79,15 +107,39 @@ function pool(overrides: Partial<Pool> = {}): Pool {
 }
 
 describe("PoolDetail", () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+    geo.silent.mockResolvedValue({ lat: 37.45, lng: 126.9 });
+    clip.setText.mockResolvedValue(undefined);
+  });
 
-  it("keeps the detail banner above the location preview and preserves section order", () => {
+  it("copies the address through the Toss clipboard bridge", async () => {
+    render(
+      <PoolDetail pool={pool()} isFav={false} onToggleFav={vi.fn()} />,
+    );
+
+    fireEvent.click(screen.getByLabelText("주소 복사"));
+
+    await waitFor(() =>
+      expect(clip.setText).toHaveBeenCalledWith("서울 금천구 테스트로 1"),
+    );
+    await waitFor(() => expect(screen.getByLabelText("주소 복사됨")).toBeInTheDocument());
+  });
+
+  it("hides the copy button when the pool has no address", () => {
+    render(
+      <PoolDetail pool={pool({ address: null })} isFav={false} onToggleFav={vi.fn()} />,
+    );
+
+    expect(screen.queryByLabelText("주소 복사")).toBeNull();
+  });
+
+  it("keeps the detail banner between the timetable and the fee section, away from tap targets", () => {
     const { container } = render(
       <PoolDetail
         pool={pool()}
         isFav={false}
         onToggleFav={vi.fn()}
-        onClose={vi.fn()}
       />,
     );
 
@@ -99,11 +151,16 @@ describe("PoolDetail", () => {
     expect(screen.getAllByText("요금")[0]).toBeInTheDocument();
     expect(screen.getByText("시설")).toBeInTheDocument();
     const text = container.textContent ?? "";
-    expect(text.indexOf("detail-banner")).toBeLessThan(text.indexOf("위치"));
+    // 광고는 주소 복사 버튼·길찾기 버튼과 떨어뜨려 시간표 아래(요금 위)에 둔다.
+    expect(text.indexOf("시간표")).toBeLessThan(text.indexOf("detail-banner"));
+    expect(text.indexOf("detail-banner")).toBeLessThan(text.indexOf("요금"));
     expect(text.indexOf("위치")).toBeLessThan(text.indexOf("정보"));
     expect(text.indexOf("정보")).toBeLessThan(text.indexOf("시간표"));
     expect(text.indexOf("시간표")).toBeLessThan(text.indexOf("요금"));
     expect(text.indexOf("요금")).toBeLessThan(text.indexOf("시설"));
+    // 제휴 구좌는 맨 아래 부가 정보로만. 광고와 붙여 두지 않는다.
+    expect(text.indexOf("시설")).toBeLessThan(text.indexOf("수영용품"));
+    expect(text.indexOf("detail-banner")).toBeLessThan(text.indexOf("수영용품"));
   });
 
   it("hides optional sections but retains established empty-state copy", () => {
@@ -121,7 +178,6 @@ describe("PoolDetail", () => {
         })}
         isFav={false}
         onToggleFav={vi.fn()}
-        onClose={vi.fn()}
       />,
     );
 
@@ -134,19 +190,34 @@ describe("PoolDetail", () => {
     ).toBeInTheDocument();
   });
 
-  it("invokes close, favorite, external homepage, and map route actions", () => {
+  it("keeps a long weekday label on one widened badge", () => {
+    render(
+      <PoolDetail
+        pool={pool({
+          free_swim: [1, 2, 4, 5].map((day) => ({
+            day,
+            sessions: [{ start: "09:00", end: "10:00" }],
+          })),
+        })}
+        isFav={false}
+        onToggleFav={vi.fn()}
+      />,
+    );
+
+    const label = screen.getByText("월, 화, 목, 금");
+    expect(label.parentElement).toHaveStyle({ minWidth: "92px" });
+  });
+
+  it("invokes favorite, external homepage, and map route actions", async () => {
     const onToggleFav = vi.fn();
-    const onClose = vi.fn();
     render(
       <PoolDetail
         pool={pool()}
         isFav={false}
         onToggleFav={onToggleFav}
-        onClose={onClose}
       />,
     );
 
-    fireEvent.click(screen.getByRole("button", { name: "뒤로" }));
     fireEvent.click(screen.getByRole("button", { name: "즐겨찾기" }));
     fireEvent.click(screen.getByRole("button", { name: "카카오맵 길찾기" }));
     fireEvent.click(screen.getByRole("button", { name: "네이버 지도" }));
@@ -154,10 +225,17 @@ describe("PoolDetail", () => {
       screen.getByRole("link", { name: /https:\/\/pool\.example\.com/ }),
     );
 
-    expect(onClose).toHaveBeenCalledOnce();
     expect(onToggleFav).toHaveBeenCalledOnce();
-    expect(maps.kakao).toHaveBeenCalledWith("테스트 수영장", 37.5, 127);
-    expect(maps.naver).toHaveBeenCalledWith("테스트 수영장", 37.5, 127);
+    await waitFor(() => {
+      expect(maps.kakao).toHaveBeenCalledWith("테스트 수영장", 37.5, 127, {
+        lat: 37.45,
+        lng: 126.9,
+      });
+      expect(maps.naver).toHaveBeenCalledWith("테스트 수영장", 37.5, 127, {
+        lat: 37.45,
+        lng: 126.9,
+      });
+    });
     expect(maps.external).toHaveBeenCalledWith("https://pool.example.com");
   });
 });

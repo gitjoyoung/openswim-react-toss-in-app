@@ -3,25 +3,24 @@
 // 값(확인 날짜·근거 링크·경고 여부)은 pools 의 free_swim_* 컬럼이 정하고, 여기서는 문장 표현만 온다.
 // 조회 방식은 pools·gear_items 와 같다. Neon Data API 를 쓰고, 실패하면 아래 기본 문구로 폴백한다.
 // 문구가 안 나오는 것보다 예전 문구가 나오는 편이 낫다.
+// 문장 안에서 쓸 수 있는 치환자는 두 개다.
+//   {date}   확인 날짜 (pools.free_swim_verified_at)
+//   {source} 근거 페이지 주소 (pools.free_swim_source)
+// 링크는 마크다운으로 적는다: [보일 글자]({source})
 export type PoolNoticeTexts = {
-  // {date} 는 확인 날짜로 치환된다.
   verified: string;
-  // verified 문장 안에서 근거 페이지 링크가 걸리는 부분.
-  linkLabel: string;
   unverified: string;
   caution: string;
 };
 
 export const DEFAULT_POOL_NOTICE_TEXTS: PoolNoticeTexts = {
-  verified: "해당 수영장 정보를 {date} 확인하였습니다.",
-  linkLabel: "해당 수영장 정보",
+  verified: "[해당 수영장 정보]({source})를 {date} 확인하였습니다.",
   unverified: "시간표 정보를 확인하지 못했습니다.",
   caution: "방문 전 확인이 필요합니다.",
 };
 
 const TEXT_KEYS: Record<keyof PoolNoticeTexts, string> = {
   verified: "pool_notice_verified",
-  linkLabel: "pool_notice_link_label",
   unverified: "pool_notice_unverified",
   caution: "pool_notice_caution",
 };
@@ -46,7 +45,6 @@ export function toPoolNoticeTexts(payload: unknown): PoolNoticeTexts {
 
   return {
     verified: byKey.get(TEXT_KEYS.verified) ?? DEFAULT_POOL_NOTICE_TEXTS.verified,
-    linkLabel: byKey.get(TEXT_KEYS.linkLabel) ?? DEFAULT_POOL_NOTICE_TEXTS.linkLabel,
     unverified: byKey.get(TEXT_KEYS.unverified) ?? DEFAULT_POOL_NOTICE_TEXTS.unverified,
     caution: byKey.get(TEXT_KEYS.caution) ?? DEFAULT_POOL_NOTICE_TEXTS.caution,
   };

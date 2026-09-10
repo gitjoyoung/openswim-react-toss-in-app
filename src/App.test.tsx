@@ -5,13 +5,14 @@ import App from "./App";
 
 const fetchPools = vi.hoisted(() => vi.fn());
 const migrateFromPreviousOrigin = vi.hoisted(() => vi.fn());
+const addBackEventListener = vi.hoisted(() => vi.fn(() => () => {}));
 
 vi.mock("./pool", () => ({ fetchPools }));
 
 vi.mock("./lib/storageMigration", () => ({ migrateFromPreviousOrigin }));
 
 vi.mock("@apps-in-toss/web-framework", () => ({
-  graniteEvent: { addEventListener: vi.fn(() => () => {}) },
+  graniteEvent: { addEventListener: addBackEventListener },
   Screen: { close: vi.fn() },
 }));
 
@@ -33,6 +34,21 @@ describe("App", () => {
     fetchPools.mockReset();
     migrateFromPreviousOrigin.mockReset();
     migrateFromPreviousOrigin.mockResolvedValue(null);
+    addBackEventListener.mockReset();
+    addBackEventListener.mockReturnValue(() => {});
+  });
+
+  it("renders in a regular browser when the Toss back-event bridge is unavailable", async () => {
+    fetchPools.mockResolvedValue([samplePool]);
+    addBackEventListener.mockImplementation(() => {
+      throw new Error("apps-in-toss 웹뷰 환경이 아니에요.");
+    });
+
+    render(<App />);
+
+    await act(async () => {});
+
+    expect(screen.getByTestId("pool-count")).toHaveTextContent("1");
   });
 
   it("loads pools and renders the home screen", async () => {
