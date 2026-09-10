@@ -8,6 +8,7 @@ import { usePoolDetailActions } from "../hooks/usePoolDetailActions";
 import PoolMap from "../components/PoolMap";
 import BannerAd from "../components/BannerAd";
 import CopyAddressButton from "../components/CopyAddressButton";
+import AccessNotice from "../components/AccessNotice";
 import RichText from "../components/RichText";
 import GearSection from "../components/GearSection";
 import { Section, Divider, Pill, Caption } from "../design/primitives";
@@ -58,6 +59,9 @@ export default function PoolDetail({
           </Top.SubtitleParagraph>
         }
       />
+
+      {/* 이용 대상 제한은 화면 맨 위에 둔다. 시설 섹션(맨 아래)에서는 헛걸음을 막지 못한다. */}
+      <AccessNotice pool={pool} />
 
       {pool.lat != null && pool.lng != null && (
         <>

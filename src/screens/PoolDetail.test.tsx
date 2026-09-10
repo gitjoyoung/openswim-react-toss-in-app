@@ -239,3 +239,30 @@ describe("PoolDetail", () => {
     expect(maps.external).toHaveBeenCalledWith("https://pool.example.com");
   });
 });
+
+describe("PoolDetail access notice", () => {
+  // 이 정보를 놓치면 헛걸음한다. 시설 섹션(맨 아래)이 아니라 이름 바로 아래여야 한다.
+  it("puts the access notice above the location section", () => {
+    const { container } = render(
+      <PoolDetail
+        pool={pool({
+          access_label: "여성 전용",
+          access_note: "남성은 이용할 수 없습니다.",
+        })}
+        isFav={false}
+        onToggleFav={vi.fn()}
+      />,
+    );
+
+    const text = container.textContent ?? "";
+    expect(text.indexOf("여성 전용")).toBeGreaterThan(-1);
+    expect(text.indexOf("여성 전용")).toBeLessThan(text.indexOf("위치"));
+    expect(text.indexOf("여성 전용")).toBeLessThan(text.indexOf("시설"));
+    expect(screen.getByText("남성은 이용할 수 없습니다.")).toBeInTheDocument();
+  });
+
+  it("shows nothing when the pool has no restriction", () => {
+    render(<PoolDetail pool={pool()} isFav={false} onToggleFav={vi.fn()} />);
+    expect(screen.queryByText("여성 전용")).toBeNull();
+  });
+});

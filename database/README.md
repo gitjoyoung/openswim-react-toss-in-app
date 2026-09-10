@@ -77,6 +77,35 @@ update public.app_texts set value = '...', updated_at = now() where key = 'pool_
 새 테이블을 만든 직후에는 `notify pgrst, 'reload schema'`를 해도 PostgREST 캐시 전파에 몇 분 걸릴 수 있다.
 실제로 2026-09-09 적용 직후 일부 요청이 `PGRST205`로 404를 낸 뒤 몇 분 뒤에 정상화됐다. 바로 404가 나와도 재시도해 본다.
 
+## 수영장 이용 제한 표시 (`pools.access_label` / `access_note`)
+
+여성 전용, 어린이 입장 불가, 일부 시간 회원 전용처럼 **이용 대상 제한**을 알린다.
+목록 카드에서는 이름 옆 배지로, 상세에서는 수영장 이름 바로 아래 줄로 나간다.
+시설 섹션은 화면 끝이라 헛걸음을 막기에 늦어서 위로 뺐다.
+
+```sql
+update public.pools
+   set access_label = '여성 전용',
+       access_note  = '남성은 이용할 수 없습니다.'
+ where id = '...';
+```
+
+- `access_label` 은 **배지에 들어가므로 짧게** 쓴다. 길면 목록 카드 한 줄이 깨진다.
+- `access_note` 는 상세에서 배지 옆에 붙는 한 줄 설명이다. 비워도 된다.
+- 둘 다 자유 텍스트다. 분류를 코드에 두지 않았으므로 **새 유형이 생겨도 배포가 필요 없다.**
+- 확인되지 않은 수영장은 비워 둔다. 값이 없으면 화면에 아무것도 안 나온다. 틀린 배지보다 없는 게 낫다.
+- 제한을 지우려면 `set access_label = null` 로 되돌린다.
+
+## 컬럼을 추가한 뒤 앱에 안 나올 때
+
+`select=*` 로 조회하면 컬럼을 추가하고 `notify pgrst, 'reload schema'` 를 보내도
+PostgREST 응답에 새 컬럼이 한동안 나오지 않는다. 2026-09-10 `access_label` 추가 때
+명시 컬럼 조회(`select=name,access_label`)는 즉시 200이 나왔는데,
+`select=*` 는 2분 넘게 예전 컬럼 목록만 돌려줬다. HTTP 캐시 헤더는 없었다.
+
+그래서 앱(`src/pool.ts`)은 `select=*` 대신 컬럼을 나열해 요청한다.
+**새 컬럼을 화면에 쓰려면 `POOL_COLUMNS` 에도 추가해야 한다.**
+
 ## 데이터 동기화 스크립트
 
 - `scripts/sync-pools-to-neon.mjs` — `src/data/pools.json` → `public.pools` upsert

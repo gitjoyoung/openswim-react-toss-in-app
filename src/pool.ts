@@ -13,6 +13,10 @@ export type Pool = {
   subway: string | null;
   price_free_swim: number | null;
   price_note: string | null;
+  // 이용 대상 제한. access_label 은 배지용 짧은 문구, access_note 는 한 줄 설명.
+  // 분류를 코드에 두지 않고 DB 자유 텍스트로 둔다. 새 유형이 생겨도 배포가 필요 없다.
+  access_label?: string | null;
+  access_note?: string | null;
   prices: Json;
   facilities: Json;
   free_swim: Json;
@@ -27,6 +31,32 @@ export type Pool = {
 // VITE_* 값은 앱 번들에 포함되므로 공개 URL만 넣는다. DB 연결 문자열·관리 API 키는 넣지 않는다.
 const neonDataApiUrl = import.meta.env.VITE_NEON_DATA_API_URL?.replace(/\/$/, "");
 const neonAuthUrl = import.meta.env.VITE_NEON_AUTH_URL?.replace(/\/$/, "");
+
+// 앱이 실제로 쓰는 컬럼만 받는다. 새 컬럼을 화면에 쓰려면 여기에도 추가해야 한다.
+const POOL_COLUMNS = [
+  "id",
+  "name",
+  "sido",
+  "gu",
+  "address",
+  "lat",
+  "lng",
+  "phone",
+  "homepage_url",
+  "subway",
+  "price_free_swim",
+  "price_note",
+  "prices",
+  "facilities",
+  "free_swim",
+  "images",
+  "free_swim_source",
+  "free_swim_source_type",
+  "free_swim_verified_at",
+  "free_swim_confidence",
+  "access_label",
+  "access_note",
+].join(",");
 
 let poolsPromise: Promise<Pool[]> | null = null;
 
@@ -66,7 +96,11 @@ async function fetchRemotePools(): Promise<Pool[]> {
   if (!token) throw new Error("Neon anonymous token response is invalid");
 
   const requestUrl = new URL(`${neonDataApiUrl}/pools`);
-  requestUrl.searchParams.set("select", "*");
+  // select=* 를 쓰지 않는다. PostgREST 가 * 를 펼칠 때 쓰는 스키마 캐시는
+  // 컬럼을 추가한 뒤 notify pgrst 를 보내도 한동안 갱신되지 않는 경우가 있다.
+  // (2026-09-10 access_label 추가 때 실측: 명시 컬럼 조회는 즉시 되는데 * 에는 몇 분 넘게 안 나왔다.)
+  // 컬럼을 나열해 두면 그 문제를 안 겪고, 응답 크기도 필요한 만큼만 받는다.
+  requestUrl.searchParams.set("select", POOL_COLUMNS);
   requestUrl.searchParams.set("order", "name.asc");
 
   const poolsResponse = await fetch(requestUrl, {
