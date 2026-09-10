@@ -1,0 +1,27 @@
+{
+ "auditedAt": "2026-09-10T07:27:16.945Z",
+ "total": 785,
+ "issueCount": 2,
+ "byRule": {
+  "좌표없음": [
+   {
+    "rule": "좌표없음",
+    "id": "035af4a8-aed9-4d2e-ab03-a2ebcf8e1994",
+    "name": "용인시청소년수련원 수영장",
+    "sido": "경기도",
+    "gu": "용인시",
+    "detail": ""
+   }
+  ],
+  "요금 과다": [
+   {
+    "rule": "요금 과다",
+    "id": "7bd66e73-797c-4586-86fd-9a5a2fbdacf8",
+    "name": "우성스포츠센터(Woosung Sports Center)",
+    "sido": "서울특별시",
+    "gu": "강남구",
+    "detail": "30000원 — 월권/오타 의심"
+   }
+  ]
+ }
+}

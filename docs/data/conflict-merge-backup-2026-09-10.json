@@ -1,0 +1,370 @@
+[
+ {
+  "group": "고령",
+  "keepBefore": {
+   "id": "c7461f2e-9b16-49b2-9f80-033ed7e20cd1",
+   "name": "고령군국민체육센터",
+   "sido": "경상북도",
+   "gu": "고령군",
+   "address": "경상북도 고령군 대가야읍 왕릉로 30",
+   "lat": 35.7235371,
+   "lng": 128.2629812,
+   "phone": "054-950-7170",
+   "homepage_url": "https://www.goryeong.go.kr/art/",
+   "subway": null,
+   "price_free_swim": 4000,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "1일권",
+     "amount": 4000
+    }
+   ],
+   "facilities": {},
+   "free_swim": [
+    {
+     "day": 1,
+     "sessions": [
+      {
+       "end": "09:30",
+       "start": "08:00"
+      },
+      {
+       "end": "14:00",
+       "start": "12:30"
+      },
+      {
+       "end": "17:00",
+       "start": "16:00"
+      },
+      {
+       "end": "19:00",
+       "start": "18:00"
+      }
+     ]
+    },
+    {
+     "day": 2,
+     "sessions": [
+      {
+       "end": "09:30",
+       "start": "08:00"
+      },
+      {
+       "end": "14:00",
+       "start": "12:30"
+      },
+      {
+       "end": "17:00",
+       "start": "16:00"
+      },
+      {
+       "end": "19:00",
+       "start": "18:00"
+      }
+     ]
+    },
+    {
+     "day": 3,
+     "sessions": [
+      {
+       "end": "09:30",
+       "start": "08:00"
+      },
+      {
+       "end": "14:00",
+       "start": "12:30"
+      },
+      {
+       "end": "17:00",
+       "start": "16:00"
+      },
+      {
+       "end": "19:00",
+       "start": "18:00"
+      }
+     ]
+    },
+    {
+     "day": 4,
+     "sessions": [
+      {
+       "end": "09:30",
+       "start": "08:00"
+      },
+      {
+       "end": "14:00",
+       "start": "12:30"
+      },
+      {
+       "end": "17:00",
+       "start": "16:00"
+      },
+      {
+       "end": "19:00",
+       "start": "18:00"
+      }
+     ]
+    },
+    {
+     "day": 5,
+     "sessions": [
+      {
+       "end": "09:30",
+       "start": "08:00"
+      },
+      {
+       "end": "14:00",
+       "start": "12:30"
+      },
+      {
+       "end": "17:00",
+       "start": "16:00"
+      },
+      {
+       "end": "19:00",
+       "start": "18:00"
+      }
+     ]
+    },
+    {
+     "day": 6,
+     "sessions": [
+      {
+       "end": "17:00",
+       "start": "09:00"
+      }
+     ]
+    }
+   ],
+   "images": [],
+   "updated_at": "2026-08-21T07:49:58.445Z",
+   "free_swim_source": "https://www.goryeong.go.kr/art/contents.do?IDX=106",
+   "free_swim_source_type": "official_gov",
+   "free_swim_verified_at": "2026-08-20T15:00:00.000Z",
+   "free_swim_confidence": "medium",
+   "free_swim_note": null,
+   "access_label": null,
+   "access_note": null
+  },
+  "dropped": [
+   {
+    "id": "380f970f-cace-4518-b9cd-acf2ca4c4969",
+    "name": "대가야문화누리"
+   }
+  ]
+ },
+ {
+  "group": "합천",
+  "keepBefore": {
+   "id": "7eda1f96-5171-42fa-a0c7-e24bfda54f5d",
+   "name": "합천실내수영장",
+   "sido": "경상남도",
+   "gu": "합천군",
+   "address": "경상남도 합천군 합천읍 장수로 1",
+   "lat": 35.5621405,
+   "lng": 128.1520975,
+   "phone": "055-930-8630",
+   "homepage_url": "https://www.hfmc.or.kr/content/185",
+   "subway": null,
+   "price_free_swim": 2500,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "성인",
+     "amount": 2500
+    },
+    {
+     "label": "어린이",
+     "amount": 1500
+    },
+    {
+     "label": "청소년",
+     "amount": 2000
+    }
+   ],
+   "facilities": {},
+   "free_swim": [
+    {
+     "day": 2,
+     "sessions": [
+      {
+       "end": "21:00",
+       "start": "06:00"
+      }
+     ]
+    },
+    {
+     "day": 3,
+     "sessions": [
+      {
+       "end": "21:00",
+       "start": "06:00"
+      }
+     ]
+    },
+    {
+     "day": 4,
+     "sessions": [
+      {
+       "end": "21:00",
+       "start": "06:00"
+      }
+     ]
+    },
+    {
+     "day": 5,
+     "sessions": [
+      {
+       "end": "21:00",
+       "start": "06:00"
+      }
+     ]
+    },
+    {
+     "day": 7,
+     "sessions": [
+      {
+       "end": "16:30",
+       "start": "06:00"
+      }
+     ]
+    }
+   ],
+   "images": [],
+   "updated_at": "2026-09-01T15:33:47.662Z",
+   "free_swim_source": "https://oneul-swim.vercel.app/pool/kspo-D2507F0FCAC45E848F70761E88D8CDA7",
+   "free_swim_source_type": "aggregator",
+   "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+   "free_swim_confidence": "low",
+   "free_swim_note": "공식 출처 아님(애그리게이터/블로그)",
+   "access_label": null,
+   "access_note": null
+  },
+  "dropped": [
+   {
+    "id": "6172454d-24a5-448b-b79b-22b829554961",
+    "name": "합천체육관 실내수영장"
+   }
+  ]
+ },
+ {
+  "group": "여주",
+  "keepBefore": {
+   "id": "a2ba4543-5b80-4ed0-af04-53e7b220d1a0",
+   "name": "여주국민체육센터",
+   "sido": "경기도",
+   "gu": "여주시",
+   "address": "경기 여주시 신륵로 14",
+   "lat": 37.300265,
+   "lng": 127.651196,
+   "phone": "031-880-4053",
+   "homepage_url": "https://yeojuuc.or.kr/reservation/yjsc/sportsCenter/",
+   "subway": null,
+   "price_free_swim": 4000,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "1일권",
+     "amount": 4000
+    }
+   ],
+   "facilities": {},
+   "free_swim": [
+    {
+     "day": 0,
+     "sessions": [
+      {
+       "end": "12:00",
+       "start": "06:00"
+      },
+      {
+       "end": "16:00",
+       "start": "13:00"
+      }
+     ]
+    },
+    {
+     "day": 1,
+     "sessions": [
+      {
+       "end": "12:00",
+       "start": "06:00"
+      },
+      {
+       "end": "21:00",
+       "start": "13:00"
+      }
+     ]
+    },
+    {
+     "day": 2,
+     "sessions": [
+      {
+       "end": "12:00",
+       "start": "06:00"
+      },
+      {
+       "end": "21:00",
+       "start": "13:00"
+      }
+     ]
+    },
+    {
+     "day": 3,
+     "sessions": [
+      {
+       "end": "12:00",
+       "start": "06:00"
+      },
+      {
+       "end": "21:00",
+       "start": "13:00"
+      }
+     ]
+    },
+    {
+     "day": 4,
+     "sessions": [
+      {
+       "end": "12:00",
+       "start": "06:00"
+      },
+      {
+       "end": "21:00",
+       "start": "13:00"
+      }
+     ]
+    },
+    {
+     "day": 5,
+     "sessions": [
+      {
+       "end": "12:00",
+       "start": "06:00"
+      },
+      {
+       "end": "21:00",
+       "start": "13:00"
+      }
+     ]
+    }
+   ],
+   "images": [],
+   "updated_at": "2026-08-21T07:49:58.445Z",
+   "free_swim_source": "https://yeojuuc.or.kr/reservation/yjsc/sportsCenter/",
+   "free_swim_source_type": "official_pub",
+   "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+   "free_swim_confidence": "needs_check",
+   "free_swim_note": "공식 페이지의 자유수영 시간과 DB 값이 다름, 재확인 필요",
+   "access_label": null,
+   "access_note": null
+  },
+  "dropped": [
+   {
+    "id": "b33ac2dd-3b55-4db7-ab1b-f872d0f8d0e8",
+    "name": "국민체육센터 수영장"
+   }
+  ]
+ }
+]

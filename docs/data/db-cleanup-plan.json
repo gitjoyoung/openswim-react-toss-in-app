@@ -1,0 +1,195 @@
+{
+ "plannedAt": "2026-09-10T02:46:02.147Z",
+ "before": 804,
+ "after": 802,
+ "plans": {
+  "phone": [],
+  "gu": [],
+  "address": [],
+  "fieldFix": [
+   {
+    "id": "56cb423f-a204-472a-bb89-b61879cc8d34",
+    "name": "삼양반다비체육센터",
+    "set": {
+     "sido": "제주특별자치도",
+     "gu": "제주시",
+     "address": "제주특별자치도 제주시 원당북로 47 (삼양일동)",
+     "phone": "064-756-7330",
+     "homepage_url": "http://samyangbandabi.kr"
+    },
+    "why": "제주시 삼양동 시설인데 주소·시도·구가 강일구민체육센터(서울 강동구) 값으로 잘못 들어가 있었다. 좌표(33.53,126.60)는 원래 맞았다.",
+    "before": {
+     "sido": "제주특별자치도",
+     "gu": "제주시",
+     "address": "제주특별자치도 제주시 원당북로 47 (삼양일동)",
+     "phone": "064-756-7330",
+     "homepage_url": "http://samyangbandabi.kr"
+    }
+   }
+  ],
+  "merge": [
+   {
+    "keepId": "af0e9d6e-3e76-4b8e-a640-7fe988723038",
+    "keepName": "올림픽스포츠센터수영장",
+    "reasons": [
+     "전화일치",
+     "도로명일치",
+     "좌표21m",
+     "이름포함"
+    ],
+    "why": "같은 도로명 주소, 좌표 21m",
+    "fill": {
+     "subway": "마두역"
+    },
+    "drop": [
+     {
+      "id": "9852de69-aea7-4df6-a1a2-83bdb4e79ac9",
+      "name": "일산올림픽스포츠센터",
+      "address": "경기도 고양시 일산동구 중앙로 1182",
+      "freeSwimSlots": 27,
+      "price": 6000
+     }
+    ]
+   },
+   {
+    "keepId": "41ce4013-6278-4ae6-a839-cf99064ac589",
+    "keepName": "용인YMCA스포츠센터",
+    "reasons": [
+     "도로명일치",
+     "좌표86m"
+    ],
+    "why": "같은 도로명 주소, 좌표 86m",
+    "fill": {
+     "subway": "야탑역"
+    },
+    "drop": [
+     {
+      "id": "b3ed3e64-ceb5-4d5d-bb8d-b0ee635e2350",
+      "name": "용인시 평생학습관 스포츠센터",
+      "address": "경기도 용인시 수지구 문정로7번길 15",
+      "freeSwimSlots": 18,
+      "price": 4000
+     }
+    ]
+   }
+  ],
+  "del": [],
+  "scheduleConflict": [
+   {
+    "keepName": "성남종합스포츠센터 수영장",
+    "keepSlots": 12,
+    "reasons": [
+     "전화일치",
+     "도로명일치",
+     "좌표32m",
+     "이름일치",
+     "이름포함",
+     "좌표110m"
+    ],
+    "conflict": [
+     {
+      "name": "성남종합스포츠센터",
+      "slots": 25,
+      "address": "경기도 성남시 중원구 제일로 60"
+     },
+     {
+      "name": "성남종합운동장",
+      "slots": 26,
+      "address": "경기 성남시 중원구 제일로 60"
+     }
+    ]
+   },
+   {
+    "keepName": "고령군국민체육센터",
+    "keepSlots": 21,
+    "reasons": [
+     "도로명일치",
+     "좌표41m"
+    ],
+    "conflict": [
+     {
+      "name": "대가야문화누리",
+      "slots": 6,
+      "address": "경북 고령군 대가야읍 왕릉로 30"
+     }
+    ]
+   },
+   {
+    "keepName": "합천실내수영장",
+    "keepSlots": 5,
+    "reasons": [
+     "전화일치",
+     "도로명일치"
+    ],
+    "conflict": [
+     {
+      "name": "합천체육관 실내수영장",
+      "slots": 19,
+      "address": "경남 합천군 합천읍 장수로 1"
+     }
+    ]
+   },
+   {
+    "keepName": "국민체육센터 수영장",
+    "keepSlots": 6,
+    "reasons": [
+     "전화일치",
+     "도로명일치",
+     "좌표15m"
+    ],
+    "conflict": [
+     {
+      "name": "여주국민체육센터",
+      "slots": 12,
+      "address": "경기 여주시 신륵로 14"
+     }
+    ]
+   },
+   {
+    "keepName": "청소년문화센터 수영장",
+    "keepSlots": 5,
+    "reasons": [
+     "도로명일치"
+    ],
+    "conflict": [
+     {
+      "name": "새천년수영장",
+      "slots": 23,
+      "address": "경기 수원시 팔달구 권광로 293"
+     }
+    ]
+   },
+   {
+    "keepName": "한들문화센터 수영장",
+    "keepSlots": 7,
+    "reasons": [
+     "전화일치",
+     "도로명일치",
+     "좌표83m"
+    ],
+    "conflict": [
+     {
+      "name": "천안시설관리공단(한들문화센터)",
+      "slots": 14,
+      "address": "충청남도 천안시 서북구 음봉로 861-50"
+     }
+    ]
+   },
+   {
+    "keepName": "파주 운정행복센터 수영장",
+    "keepSlots": 12,
+    "reasons": [
+     "도로명일치",
+     "좌표44m"
+    ],
+    "conflict": [
+     {
+      "name": "코오롱스포렉스 운정행복점",
+      "slots": 6,
+      "address": "경기도 파주시 와석순환로 415"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+[
+ {"slug":"goryeong-daegaya","name":"고령군국민체육센터 / 대가야문화누리","urls":["https://www.goryeong.go.kr/art/contents.do?IDX=106","https://www.goryeong.go.kr/art/"]},
+ {"slug":"seongnam-jonghap","name":"성남종합스포츠센터 계열","urls":["https://spo.isdc.co.kr/sns_programGuide.do","https://www.hi-sports.or.kr"]},
+ {"slug":"suwon-syf","name":"수원 청소년문화센터 수영장 / 새천년수영장","urls":["http://www.syf.or.kr"]},
+ {"slug":"yeoju-gukmin","name":"여주국민체육센터","urls":["https://gym.yeojuuc.or.kr/","https://yeojuuc.or.kr/reservation/yjsc/sportsCenter/"]},
+ {"slug":"cheonan-handeul","name":"한들문화센터 수영장","urls":["https://www.cauc.or.kr/_swim/main.asp?no=3"]},
+ {"slug":"paju-unjeong-happy","name":"운정행복센터 수영장","urls":["http://paju4.sporex.com/haengbog/main.asp","https://www.pajust.or.kr"]},
+ {"slug":"hapcheon-indoor","name":"합천실내수영장","urls":["https://www.hfmc.or.kr/content/185"]}
+]

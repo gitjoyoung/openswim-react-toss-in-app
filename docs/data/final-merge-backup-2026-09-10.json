@@ -1,0 +1,351 @@
+[
+ {
+  "group": "수원 새천년",
+  "keepBefore": {
+   "id": "8995f5d2-a9aa-4e68-abcc-95461df6d203",
+   "name": "새천년수영장",
+   "sido": "경기도",
+   "gu": "수원시",
+   "address": "경기 수원시 팔달구 권광로 293",
+   "lat": 37.2739149,
+   "lng": 127.0348803,
+   "phone": null,
+   "homepage_url": null,
+   "subway": null,
+   "price_free_swim": 5000,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "1일권",
+     "amount": 5000
+    }
+   ],
+   "facilities": {},
+   "free_swim": [
+    {
+     "day": 1,
+     "sessions": [
+      {
+       "end": "08:30",
+       "start": "06:30"
+      },
+      {
+       "end": "12:30",
+       "start": "10:30"
+      },
+      {
+       "end": "16:30",
+       "start": "14:30"
+      },
+      {
+       "end": "20:30",
+       "start": "18:30"
+      }
+     ]
+    },
+    {
+     "day": 2,
+     "sessions": [
+      {
+       "end": "08:30",
+       "start": "06:30"
+      },
+      {
+       "end": "12:30",
+       "start": "10:30"
+      },
+      {
+       "end": "16:30",
+       "start": "14:30"
+      },
+      {
+       "end": "20:30",
+       "start": "18:30"
+      }
+     ]
+    },
+    {
+     "day": 3,
+     "sessions": [
+      {
+       "end": "08:30",
+       "start": "06:30"
+      },
+      {
+       "end": "12:30",
+       "start": "10:30"
+      },
+      {
+       "end": "16:30",
+       "start": "14:30"
+      },
+      {
+       "end": "20:30",
+       "start": "18:30"
+      }
+     ]
+    },
+    {
+     "day": 4,
+     "sessions": [
+      {
+       "end": "08:30",
+       "start": "06:30"
+      },
+      {
+       "end": "12:30",
+       "start": "10:30"
+      },
+      {
+       "end": "16:30",
+       "start": "14:30"
+      },
+      {
+       "end": "20:30",
+       "start": "18:30"
+      }
+     ]
+    },
+    {
+     "day": 5,
+     "sessions": [
+      {
+       "end": "08:30",
+       "start": "06:30"
+      },
+      {
+       "end": "12:30",
+       "start": "10:30"
+      },
+      {
+       "end": "16:30",
+       "start": "14:30"
+      },
+      {
+       "end": "20:30",
+       "start": "18:30"
+      }
+     ]
+    },
+    {
+     "day": 6,
+     "sessions": [
+      {
+       "end": "11:30",
+       "start": "09:30"
+      },
+      {
+       "end": "14:30",
+       "start": "12:30"
+      },
+      {
+       "end": "17:30",
+       "start": "15:30"
+      }
+     ]
+    }
+   ],
+   "images": [],
+   "updated_at": "2026-08-21T07:49:58.445Z",
+   "free_swim_source": "https://swimmingis.com/detail/53",
+   "free_swim_source_type": "aggregator",
+   "free_swim_verified_at": "2026-08-20T15:00:00.000Z",
+   "free_swim_confidence": "low",
+   "free_swim_note": "공식 출처 아님(애그리게이터/블로그)",
+   "access_label": null,
+   "access_note": null
+  },
+  "dropped": [
+   {
+    "id": "fd6d2643-c317-4541-8256-78a5333e031b",
+    "name": "청소년문화센터 수영장"
+   }
+  ],
+  "reason": "수원시청소년청년재단 공식 안내문(이미지)에서 확인. 재단 홈페이지 하단에 '수원청소년문화센터 / 새천년수영장(031-218-0450)'으로 병기되어 같은 시설임이 확인된다. 시설의 실사용 명칭인 '새천년수영장'을 남긴다."
+ },
+ {
+  "group": "성남종합운동장",
+  "keepBefore": {
+   "id": "d0b07d36-9755-497f-92e1-3bff890b4386",
+   "name": "성남종합운동장",
+   "sido": "경기도",
+   "gu": "성남시",
+   "address": "경기 성남시 중원구 제일로 60",
+   "lat": 37.4326203,
+   "lng": 127.1380203,
+   "phone": "031-725-3100",
+   "homepage_url": null,
+   "subway": null,
+   "price_free_swim": 3600,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "1일권",
+     "amount": 3600
+    }
+   ],
+   "facilities": {},
+   "free_swim": [
+    {
+     "day": 0,
+     "sessions": [
+      {
+       "end": "10:50",
+       "start": "09:00"
+      },
+      {
+       "end": "14:50",
+       "start": "13:00"
+      },
+      {
+       "end": "17:50",
+       "start": "16:00"
+      }
+     ]
+    },
+    {
+     "day": 1,
+     "sessions": [
+      {
+       "end": "07:50",
+       "start": "06:00"
+      },
+      {
+       "end": "10:50",
+       "start": "09:00"
+      },
+      {
+       "end": "13:50",
+       "start": "12:00"
+      },
+      {
+       "end": "20:50",
+       "start": "19:00"
+      }
+     ]
+    },
+    {
+     "day": 2,
+     "sessions": [
+      {
+       "end": "07:50",
+       "start": "06:00"
+      },
+      {
+       "end": "10:50",
+       "start": "09:00"
+      },
+      {
+       "end": "13:50",
+       "start": "12:00"
+      },
+      {
+       "end": "20:50",
+       "start": "19:00"
+      }
+     ]
+    },
+    {
+     "day": 3,
+     "sessions": [
+      {
+       "end": "07:50",
+       "start": "06:00"
+      },
+      {
+       "end": "10:50",
+       "start": "09:00"
+      },
+      {
+       "end": "13:50",
+       "start": "12:00"
+      },
+      {
+       "end": "20:50",
+       "start": "19:00"
+      }
+     ]
+    },
+    {
+     "day": 4,
+     "sessions": [
+      {
+       "end": "07:50",
+       "start": "06:00"
+      },
+      {
+       "end": "10:50",
+       "start": "09:00"
+      },
+      {
+       "end": "13:50",
+       "start": "12:00"
+      },
+      {
+       "end": "20:50",
+       "start": "19:00"
+      }
+     ]
+    },
+    {
+     "day": 5,
+     "sessions": [
+      {
+       "end": "07:50",
+       "start": "06:00"
+      },
+      {
+       "end": "10:50",
+       "start": "09:00"
+      },
+      {
+       "end": "13:50",
+       "start": "12:00"
+      },
+      {
+       "end": "20:50",
+       "start": "19:00"
+      }
+     ]
+    },
+    {
+     "day": 6,
+     "sessions": [
+      {
+       "end": "10:50",
+       "start": "09:00"
+      },
+      {
+       "end": "14:50",
+       "start": "13:00"
+      },
+      {
+       "end": "17:50",
+       "start": "16:00"
+      }
+     ]
+    }
+   ],
+   "images": [],
+   "updated_at": "2026-08-21T07:49:58.445Z",
+   "free_swim_source": "https://25m.kr/swim/pool/gyeonggi-seongnam-kMhRqZ",
+   "free_swim_source_type": "aggregator",
+   "free_swim_verified_at": "2026-08-20T15:00:00.000Z",
+   "free_swim_confidence": "low",
+   "free_swim_note": "공식 출처 아님(애그리게이터/블로그)",
+   "access_label": null,
+   "access_note": null
+  },
+  "dropped": [
+   {
+    "id": "dbf5d9a8-8454-4270-b965-0754e67c5a42",
+    "name": "성남종합스포츠센터"
+   },
+   {
+    "id": "d68d1a36-1799-45b6-abd7-fe461df36505",
+    "name": "성남종합스포츠센터 수영장"
+   }
+  ],
+  "reason": "세 행 모두 경기도 성남시 중원구 제일로 60 동일 주소. 성남도시개발공사가 운영하는 '성남종합운동장' 이 공식 센터명이다. 자유수영 시간은 공식 프로그램안내의 월 자유수영 시간대를 따른다."
+ }
+]

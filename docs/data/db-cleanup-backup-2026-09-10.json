@@ -1,0 +1,5088 @@
+[
+ {
+  "id": "9852de69-aea7-4df6-a1a2-83bdb4e79ac9",
+  "name": "일산올림픽스포츠센터",
+  "sido": "경기도",
+  "gu": "고양시",
+  "address": "경기도 고양시 일산동구 중앙로 1182",
+  "lat": 37.6526112183526,
+  "lng": 126.778116148539,
+  "phone": "031-900-1780",
+  "homepage_url": "https://www.ksponco.or.kr/sports/ilsansports",
+  "subway": "마두역",
+  "price_free_swim": 6000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "비회원",
+    "amount": 6000
+   },
+   {
+    "label": "회원",
+    "amount": 4500
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "depth_max": 1.5,
+   "depth_min": 1,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "14:50",
+      "start": "14:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "14:50",
+      "start": "14:00"
+     },
+     {
+      "end": "15:50",
+      "start": "15:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "14:50",
+      "start": "14:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "14:50",
+      "start": "14:00"
+     },
+     {
+      "end": "15:50",
+      "start": "15:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "16:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-10T02:43:52.585Z",
+  "free_swim_source": "https://www.ksponco.or.kr/sports/ilsansports",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": "공식 페이지에서 일부 확인",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "b3ed3e64-ceb5-4d5d-bb8d-b0ee635e2350",
+  "name": "용인시 평생학습관 스포츠센터",
+  "sido": "경기도",
+  "gu": "용인시",
+  "address": "경기도 용인시 수지구 문정로7번길 15",
+  "lat": 37.3205247736357,
+  "lng": 127.095498971611,
+  "phone": "031-896-2761",
+  "homepage_url": "https://lll.yongin.go.kr/yongin/index.do",
+  "subway": "야탑역",
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 4000
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "depth_max": 1.35,
+   "depth_min": 1.25,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "10:50",
+      "start": "09:00"
+     },
+     {
+      "end": "13:50",
+      "start": "12:00"
+     },
+     {
+      "end": "16:50",
+      "start": "15:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-10T02:43:52.585Z",
+  "free_swim_source": "https://lll.yongin.go.kr/yongin/index.do",
+  "free_swim_source_type": "official_gov",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "96ff8aa7-188e-4566-9c3d-a6dd308a2de4",
+  "name": "수원체육문화센터",
+  "sido": "경기도",
+  "gu": "수원시",
+  "address": "경기도 수원시 영통구 영통로 383",
+  "lat": 37.2582711,
+  "lng": 127.0680025,
+  "phone": "(031) 273-3030",
+  "homepage_url": "https://swywca.sscc3030.or.kr/html/main/main.php",
+  "subway": "영통역",
+  "price_free_swim": 5500,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "비회원",
+    "amount": 5500
+   },
+   {
+    "label": "회원",
+    "amount": 4500
+   }
+  ],
+  "facilities": {
+   "lanes": 8,
+   "depth_max": 1.4,
+   "depth_min": 1.2,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "17:50",
+      "start": "12:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://swywca.sscc3030.or.kr/html/main/main.php",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": "브라우저 렌더링 공식 페이지에서 일부 확인 (line 121)",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "f5da7f87-ec6b-44a9-a135-799942b4ec66",
+  "name": "수원체육문화체육센터",
+  "sido": "경기도",
+  "gu": "수원시",
+  "address": "경기 수원시 영통구 영통로 383",
+  "lat": 37.2582711,
+  "lng": 127.0680025,
+  "phone": "(031) 273-3030",
+  "homepage_url": "https://swywca.sscc3030.or.kr/html/main/main.php",
+  "subway": null,
+  "price_free_swim": 5500,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 5500
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "17:50",
+      "start": "12:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "07d7999e-b346-4d58-804c-9281391f2cd3",
+  "name": "인천도원수영장",
+  "sido": "인천광역시",
+  "gu": "중구",
+  "address": "인천광역시 제물포구 샛골로41번길 22",
+  "lat": 37.4656557,
+  "lng": 126.6394882,
+  "phone": "(032) 887-7430",
+  "homepage_url": "https://www.icsports.or.kr/fmcs/21",
+  "subway": "도원역",
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 4000
+   }
+  ],
+  "facilities": {
+   "lanes": 8,
+   "depth_max": 2,
+   "depth_min": 1.4,
+   "lane_length_m": 50
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "07:50",
+      "start": "06:00"
+     },
+     {
+      "end": "12:00",
+      "start": "09:00"
+     },
+     {
+      "end": "16:50",
+      "start": "14:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "07:50",
+      "start": "06:00"
+     },
+     {
+      "end": "12:00",
+      "start": "09:00"
+     },
+     {
+      "end": "16:50",
+      "start": "14:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "07:50",
+      "start": "06:00"
+     },
+     {
+      "end": "12:00",
+      "start": "09:00"
+     },
+     {
+      "end": "16:50",
+      "start": "14:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "07:50",
+      "start": "06:00"
+     },
+     {
+      "end": "12:00",
+      "start": "09:00"
+     },
+     {
+      "end": "16:50",
+      "start": "14:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "07:50",
+      "start": "06:00"
+     },
+     {
+      "end": "12:00",
+      "start": "09:00"
+     },
+     {
+      "end": "16:50",
+      "start": "14:00"
+     }
+    ]
+   }
+  ],
+  "images": [
+   "https://static.0rigin.space/pools/07d7999e-b346-4d58-804c-9281391f2cd3.webp"
+  ],
+  "updated_at": "2026-09-01T15:31:44.380Z",
+  "free_swim_source": "https://www.icsports.or.kr/fmcs/21",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": "공식 페이지에서 일부 확인",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "6b92b3c8-5b34-4414-bb48-1eadabfc507a",
+  "name": "화도문화체육센터",
+  "sido": "경기도",
+  "gu": "남양주시",
+  "address": "경기 남양주시 화도읍 수레로 1259",
+  "lat": 37.6498415,
+  "lng": 127.3010219,
+  "phone": "(031) 560-1431",
+  "homepage_url": "https://www.ncuc.or.kr/hd/470",
+  "subway": null,
+  "price_free_swim": 4600,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 4600
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "19:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "19:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "19:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "19:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "19:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "10:50",
+      "start": "09:00"
+     },
+     {
+      "end": "13:50",
+      "start": "12:00"
+     },
+     {
+      "end": "16:50",
+      "start": "15:00"
+     },
+     {
+      "end": "19:50",
+      "start": "19:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "9d74ddd9-c533-42b2-9f66-d3aedd8fa455",
+  "name": "남원국민체육센터",
+  "sido": "전북특별자치도",
+  "gu": "남원시",
+  "address": "전라북도 남원시 용성로 49",
+  "lat": 35.4098839,
+  "lng": 127.3819704,
+  "phone": "063-635-9333",
+  "homepage_url": "https://lib.jbe.go.kr/necc/",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:30",
+      "start": "06:00"
+     },
+     {
+      "end": "18:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:30",
+      "start": "06:00"
+     },
+     {
+      "end": "18:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:30",
+      "start": "06:00"
+     },
+     {
+      "end": "18:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:30",
+      "start": "06:00"
+     },
+     {
+      "end": "18:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:30",
+      "start": "06:00"
+     },
+     {
+      "end": "18:00",
+      "start": "13:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://lib.jbe.go.kr/necc/html.do?menu_idx=204",
+  "free_swim_source_type": "official_gov",
+  "free_swim_verified_at": "2026-08-20T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "94eacd02-0275-47a1-82be-b8b3e6173730",
+  "name": "시립노원청소년센터",
+  "sido": "서울특별시",
+  "gu": "노원구",
+  "address": "서울특별시 노원구 덕릉로70길 99",
+  "lat": 37.6400855,
+  "lng": 127.0589842,
+  "phone": "02-3391-4141",
+  "homepage_url": "http://youthcenter.or.kr/",
+  "subway": "중계역",
+  "price_free_swim": 4730,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 4730
+   }
+  ],
+  "facilities": {
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "12:50",
+      "start": "12:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "12:50",
+      "start": "12:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "12:50",
+      "start": "12:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "12:50",
+      "start": "12:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "12:50",
+      "start": "12:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-01T15:29:35.635Z",
+  "free_swim_source": "http://youthcenter.or.kr/",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": "공식 페이지에서 일부 확인",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "c919166c-03dc-4a67-b5c9-9fceecc06682",
+  "name": "동탄복합문화센터",
+  "sido": "경기도",
+  "gu": "화성시",
+  "address": "경기 화성시 노작로 158",
+  "lat": 37.2000798,
+  "lng": 127.0774226,
+  "phone": "031-8015-8171",
+  "homepage_url": "https://www.hcf.or.kr/hdmc/121",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "12:50",
+      "start": "10:00"
+     },
+     {
+      "end": "16:50",
+      "start": "14:00"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "12:50",
+      "start": "10:00"
+     },
+     {
+      "end": "16:50",
+      "start": "14:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "13:50",
+      "start": "10:00"
+     },
+     {
+      "end": "17:50",
+      "start": "15:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-01T15:25:12.371Z",
+  "free_swim_source": "https://www.hcf.or.kr/hdmc/121",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": "공식 페이지에서 일부 확인",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "d91e5f87-a245-4067-bb7e-2139861fd1e3",
+  "name": "야탑유스센터",
+  "sido": "경기도",
+  "gu": "성남시",
+  "address": "경기 성남시 분당구 벌말로30번길 35",
+  "lat": 37.410132,
+  "lng": 127.14167,
+  "phone": "1522-2573",
+  "homepage_url": "https://www.snyouth.or.kr/fmcs/158",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:30"
+     },
+     {
+      "end": "10:30",
+      "start": "09:00"
+     },
+     {
+      "end": "12:30",
+      "start": "11:00"
+     },
+     {
+      "end": "15:00",
+      "start": "13:30"
+     },
+     {
+      "end": "17:00",
+      "start": "15:30"
+     },
+     {
+      "end": "19:30",
+      "start": "18:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://www.snyouth.or.kr/fmcs/158",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": "공식 페이지에서 일부 확인",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "69e47942-6c1a-4710-ab0a-b1b1b5456ae3",
+  "name": "판교유스센터",
+  "sido": "경기도",
+  "gu": "성남시",
+  "address": "경기 성남시 분당구 판교공원로4길 27",
+  "lat": 37.391795,
+  "lng": 127.091191,
+  "phone": "031-729-9700",
+  "homepage_url": "https://snyouth.or.kr",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://www.helloswim.kr/pool/1216",
+  "free_swim_source_type": "aggregator",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": "공식 출처 아님(애그리게이터/블로그)",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "58679074-0038-4792-9340-3f830511584b",
+  "name": "인천광역시 여성가족재단 (여성문화회관)",
+  "sido": "인천광역시",
+  "gu": "부평구",
+  "address": "인천광역시 부평구 길주로 539",
+  "lat": 37.50807348,
+  "lng": 126.72231727,
+  "phone": "032-511-3141",
+  "homepage_url": "https://www.ifwf.or.kr/incheon/index.do",
+  "subway": "부평구청역",
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "depth_max": 1.1,
+   "depth_min": 1.1,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "09:50",
+      "start": "09:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:20",
+      "start": "17:30"
+     },
+     {
+      "end": "20:50",
+      "start": "20:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-01T15:31:44.380Z",
+  "free_swim_source": "https://www.ifwf.or.kr/incheon/index.do",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": "공식 페이지에서 일부 확인",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "9c4cfc48-893d-474c-81d5-bef11e839fd7",
+  "name": "잠실 제1수영장(Jamsil Swimming Pool)",
+  "sido": "서울특별시",
+  "gu": "송파구",
+  "address": "서울 송파구 올림픽로 25",
+  "lat": 37.5164777,
+  "lng": 127.0729983,
+  "phone": "02-2240-8751",
+  "homepage_url": "https://stadium.seoul.go.kr/lecture/now",
+  "subway": null,
+  "price_free_swim": 5200,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 5200
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "09:00"
+     },
+     {
+      "end": "17:00",
+      "start": "13:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "fff64dc7-c398-42d8-a6a1-4adba61728a5",
+  "name": "회현체육센터",
+  "sido": "서울특별시",
+  "gu": "중구",
+  "address": "서울특별시 중구 퇴계로12길 78",
+  "lat": 37.5562087,
+  "lng": 126.9815817,
+  "phone": "02-2280-8430",
+  "homepage_url": "https://www.e-junggu.or.kr/fmcs/203",
+  "subway": "회현역",
+  "price_free_swim": 6000,
+  "price_note": "일일 1회 기준: 성인 6,000원, 어린이 5,000원",
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 5000
+   },
+   {
+    "label": "1일권",
+    "amount": 6000
+   }
+  ],
+  "facilities": {
+   "lanes": 5,
+   "depth_max": 1.3,
+   "depth_min": 1.3,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "12:50",
+      "start": "09:30"
+     },
+     {
+      "end": "17:20",
+      "start": "14:00"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "21:50",
+      "start": "21:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "19:50",
+      "start": "14:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://www.e-junggu.or.kr/fmcs/203",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "medium",
+  "free_swim_note": "공식 페이지에서 일부 확인",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "a275b264-6d50-40a7-9088-9adc872e9856",
+  "name": "시흥시국민체육센터",
+  "sido": "경기도",
+  "gu": "시흥시",
+  "address": "경기도 시흥시 하중로 226",
+  "lat": 37.3914933,
+  "lng": 126.8052888,
+  "phone": "031-8084-0110",
+  "homepage_url": "https://www.shsi.or.kr/PageLink.do?link=forward:/PageContent.do&tempParam1=&menuNo=030000&subMenuNo=030300&thirdMenuNo=030301",
+  "subway": "시흥시청역",
+  "price_free_swim": 3600,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3600
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "depth_max": 1.2,
+   "depth_min": 1.2,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     }
+    ]
+   }
+  ],
+  "images": [
+   "https://static.0rigin.space/pools/a275b264-6d50-40a7-9088-9adc872e9856.webp",
+   "https://static.0rigin.space/pools/a275b264-6d50-40a7-9088-9adc872e9856-1.webp"
+  ],
+  "updated_at": "2026-09-01T18:14:38.960Z",
+  "free_swim_source": "https://www.shsi.or.kr/PageLink.do?link=forward:/PageContent.do&tempParam1=&menuNo=030000&subMenuNo=030300&thirdMenuNo=030301",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "공식 페이지의 자유수영 시간과 DB 값이 다름, 재확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "170ff9c5-7c4e-4f78-9a5b-61119dc7614d",
+  "name": "버드내노인복지회관",
+  "sido": "경기도",
+  "gu": "수원시",
+  "address": "경기도 수원시 권선구 권선로564번길 36",
+  "lat": 37.2611286,
+  "lng": 127.0120758,
+  "phone": "(031) 898-6544",
+  "homepage_url": "http://www.budnae.or.kr/",
+  "subway": "매교역",
+  "price_free_swim": null,
+  "price_note": null,
+  "prices": [],
+  "facilities": {
+   "lanes": 5,
+   "depth_max": 1.4,
+   "depth_min": 1.2,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "http://www.budnae.or.kr/",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "b7fb654e-f084-43df-9e88-42b32645057c",
+  "name": "함안체육관실내수영장",
+  "sido": "경상남도",
+  "gu": "함안군",
+  "address": "경남 함안군 가야읍 함안대로 619-4",
+  "lat": 35.2805558,
+  "lng": 128.3976962,
+  "phone": "055-584-2124",
+  "homepage_url": "https://www.halc.co.kr/sub.html?code=01_01&Radd=01_01",
+  "subway": null,
+  "price_free_swim": 3300,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3300
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "07:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "07:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "07:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "07:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "07:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "17:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 7,
+    "sessions": [
+     {
+      "end": "17:00",
+      "start": "06:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-01T15:33:47.662Z",
+  "free_swim_source": "https://www.halc.co.kr/sub.html?code=01_01&Radd=01_01",
+  "free_swim_source_type": "operator_site",
+  "free_swim_verified_at": "2026-08-20T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "08a801f5-2b25-402e-a4c8-5308a83477d8",
+  "name": "홍천군국민체육센터",
+  "sido": "강원특별자치도",
+  "gu": "홍천군",
+  "address": "강원 홍천군 홍천읍 태학여내길 31",
+  "lat": 37.709103,
+  "lng": 127.9061764,
+  "phone": "033-436-7330",
+  "homepage_url": "http://sports.gangwon.kr/",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-01T15:33:47.662Z",
+  "free_swim_source": "http://sports.gangwon.kr/content/swim_free",
+  "free_swim_source_type": "operator_site",
+  "free_swim_verified_at": "2026-08-20T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "9f473761-bf20-4f8a-bdac-c2f1d3322eec",
+  "name": "백석체육센터",
+  "sido": "경기도",
+  "gu": "고양시",
+  "address": "경기 고양시 일산동구 경의로 84",
+  "lat": 37.6411606,
+  "lng": 126.7952913,
+  "phone": "(031) 909-9900",
+  "homepage_url": "https://gbc.gys.or.kr:446/",
+  "subway": null,
+  "price_free_swim": 5500,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 5500
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://gbc.gys.or.kr:446/",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "5d2257d5-f2cd-4c25-b668-d860df84ef78",
+  "name": "고양어울림누리체육센터",
+  "sido": "경기도",
+  "gu": "고양시",
+  "address": "경기도 고양시 덕양구 어울림로 33",
+  "lat": 37.6488817,
+  "lng": 126.8335111,
+  "phone": "(031) 960-0300",
+  "homepage_url": "https://spart.gys.or.kr/",
+  "subway": "원당역",
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "비회원",
+    "amount": 4000
+   },
+   {
+    "label": "회원",
+    "amount": 3000
+   }
+  ],
+  "facilities": {
+   "lanes": 10,
+   "depth_max": 1.4,
+   "depth_min": 1.2,
+   "lane_length_m": 50
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://spart.gys.or.kr/",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "302680e7-b945-4a63-ac84-af4f23defcda",
+  "name": "고양체육관",
+  "sido": "경기도",
+  "gu": "고양시",
+  "address": "경기도 고양시 일산서구 중앙로 1601",
+  "lat": 37.6757812,
+  "lng": 126.742595,
+  "phone": "(031) 930-1000",
+  "homepage_url": "https://gym.gys.or.kr:447/",
+  "subway": null,
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "비회원",
+    "amount": 4000
+   },
+   {
+    "label": "회원",
+    "amount": 3000
+   }
+  ],
+  "facilities": {
+   "lanes": 10,
+   "depth_max": 1.2,
+   "depth_min": 1.2,
+   "lane_length_m": 50
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "09:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://gym.gys.or.kr:447/",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "9d6ae918-5557-4167-9660-117556a01774",
+  "name": "시흥능곡어울림센터",
+  "sido": "경기도",
+  "gu": "시흥시",
+  "address": "경기 시흥시 능곡로 140",
+  "lat": 37.3663813,
+  "lng": 126.8159891,
+  "phone": "(031) 488-6950",
+  "homepage_url": "https://sportsapp.shsi.or.kr/rent/guide/index/2001/SIHEUNG07",
+  "subway": null,
+  "price_free_swim": 3600,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3600
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:00",
+      "start": "06:00"
+     },
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     },
+     {
+      "end": "21:30",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "15:00",
+      "start": "13:00"
+     },
+     {
+      "end": "18:00",
+      "start": "16:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "64bf0a3f-e0e1-43e0-b1f1-2b365db35ad2",
+  "name": "도봉동실내스포츠센터",
+  "sido": "서울특별시",
+  "gu": "도봉구",
+  "address": "서울특별시 도봉구 마들로 805",
+  "lat": 37.6813861,
+  "lng": 127.0502911,
+  "phone": "02-901-5170",
+  "homepage_url": "https://www.dobongsiseol.or.kr/index_msport.html",
+  "subway": "도봉역",
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "평일",
+    "amount": 4000
+   },
+   {
+    "label": "주말",
+    "amount": 5200
+   }
+  ],
+  "facilities": {
+   "lanes": 5,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "09:50",
+      "start": "09:00"
+     },
+     {
+      "end": "10:50",
+      "start": "10:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "15:50",
+      "start": "15:00"
+     },
+     {
+      "end": "16:50",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "06:50",
+      "start": "06:00"
+     },
+     {
+      "end": "07:50",
+      "start": "07:00"
+     },
+     {
+      "end": "09:50",
+      "start": "09:00"
+     },
+     {
+      "end": "10:50",
+      "start": "10:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "15:50",
+      "start": "15:00"
+     },
+     {
+      "end": "16:50",
+      "start": "16:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-01T15:25:12.371Z",
+  "free_swim_source": "https://www.dobongsiseol.or.kr/index_msport.html",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "공식 페이지 자유수영 시간과 DB 값이 다름 (line 407)",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "f4aad639-fa56-4a80-ad8a-54ed42643653",
+  "name": "사직실내수영장",
+  "sido": "부산광역시",
+  "gu": "동래구",
+  "address": "부산 동래구 종합운동장로 29",
+  "lat": 35.19277099,
+  "lng": 129.06341166,
+  "phone": "051-500-2356",
+  "homepage_url": "https://www.busan.go.kr/sports",
+  "subway": "종합운동장역(3호선) 9번 출구",
+  "price_free_swim": 3000,
+  "price_note": "성인 기준 평일 일일입장 요금 (주말 및 공휴일 3,900원)",
+  "prices": [
+   {
+    "label": "성인(평일)",
+    "amount": 3000
+   },
+   {
+    "label": "청소년(평일)",
+    "amount": 2500
+   },
+   {
+    "label": "어린이(평일)",
+    "amount": 2000
+   },
+   {
+    "label": "성인(주말)",
+    "amount": 3900
+   }
+  ],
+  "facilities": {
+   "lanes": 10,
+   "lane_length_m": 50
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "12:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "17:00",
+      "start": "13:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-01T15:27:29.400Z",
+  "free_swim_source": "https://www.busan.go.kr/sports",
+  "free_swim_source_type": "official_gov",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "1040b376-686c-4090-9ad1-b682baa23d7b",
+  "name": "선부다목적체육관",
+  "sido": "경기도",
+  "gu": "안산시",
+  "address": "경기 안산시 단원구 선부로 96",
+  "lat": 37.3407658,
+  "lng": 126.8054079,
+  "phone": "031-8085-7470",
+  "homepage_url": "https://www.ansanuc.net/homenew/12384/20350/bbsDetail.do",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "20:50",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "20:50",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "20:50",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "20:50",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "20:50",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "16:50",
+      "start": "13:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "1d8aa4d3-0819-47fc-86de-cc0c1553be08",
+  "name": "안산올림픽기념관수영장",
+  "sido": "경기도",
+  "gu": "안산시",
+  "address": "경기도 안산시 단원구 적금로 202",
+  "lat": 37.3260457,
+  "lng": 126.8274178,
+  "phone": "031-481-4980",
+  "homepage_url": "http://www.ansanuc.net/home/10054/40045/contents.do",
+  "subway": "고잔역",
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   },
+   {
+    "label": "1일권",
+    "amount": 4500
+   }
+  ],
+  "facilities": {
+   "lanes": 10,
+   "depth_max": 2,
+   "depth_min": 2,
+   "lane_length_m": 50
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "20:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "20:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "20:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "20:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "20:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "16:50",
+      "start": "06:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "http://www.ansanuc.net/home/10054/40045/contents.do",
+  "free_swim_source_type": "operator_site",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "cbbba6aa-d5a3-448e-bf37-17b80b381d27",
+  "name": "호수공원실내수영장",
+  "sido": "경기도",
+  "gu": "안산시",
+  "address": "경기 안산시 상록구 광덕대로 70",
+  "lat": 37.3002907,
+  "lng": 126.829336,
+  "phone": "031-8085-7485",
+  "homepage_url": "https://www.ansanuc.net/homenew/12384/20350/bbsDetail.do",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "07:00"
+     },
+     {
+      "end": "11:50",
+      "start": "10:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "07:00"
+     },
+     {
+      "end": "11:50",
+      "start": "10:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "07:00"
+     },
+     {
+      "end": "11:50",
+      "start": "10:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "07:00"
+     },
+     {
+      "end": "11:50",
+      "start": "10:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "07:00"
+     },
+     {
+      "end": "11:50",
+      "start": "10:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "17:50",
+      "start": "16:00"
+     },
+     {
+      "end": "20:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:50",
+      "start": "06:00"
+     },
+     {
+      "end": "16:50",
+      "start": "13:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "75fb36d8-5ae0-49ad-a00d-41105d8bd001",
+  "name": "여주시노인복지관",
+  "sido": "경기도",
+  "gu": "여주시",
+  "address": "경기 여주시 여흥로160번길 27",
+  "lat": 37.293911,
+  "lng": 127.640503,
+  "phone": "031-881-0050",
+  "homepage_url": "http://www.yjsilver.or.kr/page/view.php/6sub1",
+  "subway": null,
+  "price_free_swim": 3500,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3500
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "10:50",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "10:50",
+      "start": "06:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "b40323cc-6d8d-4eb9-805b-ca544152f859",
+  "name": "용산청소년센터",
+  "sido": "서울특별시",
+  "gu": "용산구",
+  "address": "서울특별시 용산구 이촌로71길 24",
+  "lat": 37.5212623,
+  "lng": 126.9732464,
+  "phone": "02-749-0102",
+  "homepage_url": "https://yongsanyouth.or.kr/mber/home/ythCtrHome.do",
+  "subway": "이촌역",
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "평일",
+    "amount": 4000
+   },
+   {
+    "label": "1일권",
+    "amount": 4400
+   }
+  ],
+  "facilities": {
+   "lanes": 5,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "09:50",
+      "start": "08:00"
+     },
+     {
+      "end": "11:50",
+      "start": "10:00"
+     },
+     {
+      "end": "14:50",
+      "start": "13:00"
+     },
+     {
+      "end": "16:50",
+      "start": "15:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://yongsanyouth.or.kr/mber/home/ythCtrHome.do",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "027dfe05-d821-4036-89fa-deb09746d217",
+  "name": "유앤아이센터",
+  "sido": "경기도",
+  "gu": "화성시",
+  "address": "경기 화성시 태안로 145",
+  "lat": 37.2031615,
+  "lng": 127.0333407,
+  "phone": null,
+  "homepage_url": "https://yeyak.hsuco.or.kr",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "16:50",
+      "start": "10:00"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "20:50",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "20:50",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "20:50",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "20:50",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "20:50",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "17:50",
+      "start": "06:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://oneul-swim.vercel.app/pool/kspo-83D69F1BC082C0B8EF6FE0A52EB1A2DB",
+  "free_swim_source_type": "aggregator",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": "공식 출처 아님(애그리게이터/블로그)",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "c48a01b9-79f8-40bd-84b4-b395e64523c2",
+  "name": "의정부시청소년회관 실내수영장",
+  "sido": "경기도",
+  "gu": "의정부시",
+  "address": "경기도 의정부시 의정로 27",
+  "lat": 37.7351202,
+  "lng": 127.0340886,
+  "phone": "031-828-9532",
+  "homepage_url": "https://www.uiyouth.or.kr/training/main/main.ui",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "depth_max": 1.3,
+   "depth_min": 1.2,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "07:50",
+      "start": "06:00"
+     },
+     {
+      "end": "16:50",
+      "start": "16:00"
+     },
+     {
+      "end": "17:50",
+      "start": "17:00"
+     },
+     {
+      "end": "20:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "18:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "07:50",
+      "start": "06:00"
+     },
+     {
+      "end": "16:50",
+      "start": "16:00"
+     },
+     {
+      "end": "17:50",
+      "start": "17:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://www.uiyouth.or.kr/training/main/main.ui",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "8597b9bd-b302-4048-adea-a3adb190b523",
+  "name": "구리시청소년수련관",
+  "sido": "경기도",
+  "gu": "구리시",
+  "address": "경기도 구리시 건원대로34번길 32-10",
+  "lat": 37.6037984,
+  "lng": 127.1418065,
+  "phone": "(031) 553-7101",
+  "homepage_url": "https://www.guriyouth.go.kr/youth/63",
+  "subway": "구리역",
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 4000
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "depth_max": 1.3,
+   "depth_min": 1.2,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "10:20",
+      "start": "09:00"
+     },
+     {
+      "end": "11:50",
+      "start": "10:30"
+     },
+     {
+      "end": "15:20",
+      "start": "14:00"
+     },
+     {
+      "end": "16:50",
+      "start": "15:30"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": null,
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "출처 기록 없음",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "7e2c5f50-5e08-4923-962c-ff0cc8e01bd5",
+  "name": "서울장애인종합복지관 수중재활센터",
+  "sido": "서울특별시",
+  "gu": "강동구",
+  "address": "서울특별시 강동구 고덕로 201",
+  "lat": 37.5555414,
+  "lng": 127.1483522,
+  "phone": "02-440-5700",
+  "homepage_url": "http://seoulcbid.or.kr/",
+  "subway": "고덕역",
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 4000
+   }
+  ],
+  "facilities": {
+   "lanes": 5,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "06:50",
+      "start": "06:00"
+     },
+     {
+      "end": "07:50",
+      "start": "07:00"
+     },
+     {
+      "end": "19:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "06:50",
+      "start": "06:00"
+     },
+     {
+      "end": "07:50",
+      "start": "07:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "06:50",
+      "start": "06:00"
+     },
+     {
+      "end": "07:50",
+      "start": "07:00"
+     },
+     {
+      "end": "19:50",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "06:50",
+      "start": "06:00"
+     },
+     {
+      "end": "07:50",
+      "start": "07:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": null,
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "출처 기록 없음",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "c72ff817-f9d4-400e-bff6-11cda27e4fc4",
+  "name": "용산문화체육센터",
+  "sido": "서울특별시",
+  "gu": "용산구",
+  "address": "서울특별시 용산구 백범로 350",
+  "lat": 37.5372398,
+  "lng": 126.9677057,
+  "phone": "02-707-2492",
+  "homepage_url": "https://yssports.yong-san.or.kr/www/127",
+  "subway": "효창공원앞역",
+  "price_free_swim": 3000,
+  "price_note": "1일 1회 기준: 성인 3,000원, 청소년 2,500원, 어린이 2,000원; 평일 08:00은 월정기권 회원만 이용 가능; 일요일은 2·4주 운영",
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {
+   "lanes": 4,
+   "depth_max": 1.4,
+   "depth_min": 0.9,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "10:50",
+      "start": "10:00"
+     },
+     {
+      "end": "11:50",
+      "start": "11:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "14:50",
+      "start": "14:00"
+     },
+     {
+      "end": "15:50",
+      "start": "15:00"
+     },
+     {
+      "end": "16:50",
+      "start": "16:00"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "15:50",
+      "start": "15:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "15:50",
+      "start": "15:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "12:50",
+      "start": "12:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "15:50",
+      "start": "15:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     },
+     {
+      "end": "09:50",
+      "start": "09:00"
+     },
+     {
+      "end": "10:50",
+      "start": "10:00"
+     },
+     {
+      "end": "11:50",
+      "start": "11:00"
+     },
+     {
+      "end": "13:50",
+      "start": "13:00"
+     },
+     {
+      "end": "14:50",
+      "start": "14:00"
+     },
+     {
+      "end": "16:50",
+      "start": "16:00"
+     },
+     {
+      "end": "17:50",
+      "start": "17:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": null,
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "출처 기록 없음",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "064c9051-13f1-4ca0-822a-377af1df9ab8",
+  "name": "장안구민회관 푸르내 수영장",
+  "sido": "경기도",
+  "gu": "수원시",
+  "address": "경기도 수원시 장안구 송원로 101",
+  "lat": 37.303569,
+  "lng": 127.009953,
+  "phone": "031-240-3028",
+  "homepage_url": "https://www.suwonudc.co.kr/jacc/mainPage.do",
+  "subway": "화서역",
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 4000
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "depth_max": 1.4,
+   "depth_min": 1.4,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "13:00",
+      "start": "10:00"
+     },
+     {
+      "end": "16:30",
+      "start": "13:30"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "18:50",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:30",
+      "start": "09:00"
+     },
+     {
+      "end": "14:30",
+      "start": "12:00"
+     },
+     {
+      "end": "17:00",
+      "start": "15:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": null,
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "출처 기록 없음",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "f0319d76-c172-4184-9f39-546ab90871ef",
+  "name": "화성시 그린환경센터 주민편익시설",
+  "sido": "경기도",
+  "gu": "화성시",
+  "address": "경기도 화성시 효행구 봉담읍 하가등안길 100",
+  "lat": 37.151565,
+  "lng": 126.93793,
+  "phone": "031-227-7676",
+  "homepage_url": "https://www.hsgreencci.or.kr/",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {
+   "lanes": 5,
+   "depth_max": 1.3,
+   "depth_min": 1.2,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "13:00",
+      "start": "09:00"
+     },
+     {
+      "end": "18:00",
+      "start": "14:00"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "11:00",
+      "start": "06:00"
+     },
+     {
+      "end": "16:00",
+      "start": "14:00"
+     },
+     {
+      "end": "21:00",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "11:00",
+      "start": "06:00"
+     },
+     {
+      "end": "16:00",
+      "start": "14:00"
+     },
+     {
+      "end": "21:00",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "11:00",
+      "start": "06:00"
+     },
+     {
+      "end": "16:00",
+      "start": "14:00"
+     },
+     {
+      "end": "21:00",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "11:00",
+      "start": "06:00"
+     },
+     {
+      "end": "16:00",
+      "start": "14:00"
+     },
+     {
+      "end": "21:00",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "11:00",
+      "start": "06:00"
+     },
+     {
+      "end": "16:00",
+      "start": "14:00"
+     },
+     {
+      "end": "21:00",
+      "start": "19:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "13:00",
+      "start": "06:00"
+     },
+     {
+      "end": "18:00",
+      "start": "14:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": null,
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "출처 기록 없음",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "00fb99ad-2f1d-4045-9775-93f46b493666",
+  "name": "시립구로청소년수련관(Guro Youth Center)",
+  "sido": "서울특별시",
+  "gu": "구로구",
+  "address": "서울 구로구 구로동로 141",
+  "lat": 37.491301,
+  "lng": 126.8833119,
+  "phone": "02-838-1318",
+  "homepage_url": "http://www.guro1318.org/",
+  "subway": null,
+  "price_free_swim": null,
+  "price_note": null,
+  "prices": [],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "08:50",
+      "start": "08:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-09-01T18:23:52.296Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "a6272795-215b-4fb6-a2c8-9e37fc06dd20",
+  "name": "동구국민체육센터",
+  "sido": "부산광역시",
+  "gu": "동구",
+  "address": "부산광역시 동구 구청로 8",
+  "lat": 35.128933,
+  "lng": 129.0447515,
+  "phone": null,
+  "homepage_url": null,
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 3000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "11:00",
+      "start": "09:00"
+     },
+     {
+      "end": "14:00",
+      "start": "12:00"
+     },
+     {
+      "end": "17:00",
+      "start": "15:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://25m.kr/swim/pool/busan-dong-sTPgPR",
+  "free_swim_source_type": "aggregator",
+  "free_swim_verified_at": "2026-08-20T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": "공식 출처 아님(애그리게이터/블로그)",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "335e9c84-0d76-4c20-a5bd-0cbf761d5a6c",
+  "name": "남원종합스포츠타운",
+  "sido": "전북특별자치도",
+  "gu": "남원시",
+  "address": "전북특별자치도 남원시 충정로 341",
+  "lat": 35.43055568,
+  "lng": 127.40357277,
+  "phone": "063-620-5620",
+  "homepage_url": null,
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": "일반인 비회원 일일입장 기준",
+  "prices": [
+   {
+    "label": "일반 성인 (일일)",
+    "amount": 3000
+   },
+   {
+    "label": "청소년/군인 (일일)",
+    "amount": 2000
+   },
+   {
+    "label": "어린이/경로 (일일)",
+    "amount": 1500
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "17:00",
+      "start": "06:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": null,
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "출처 기록 없음",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "7706fa40-db6c-4b58-a6e5-0b83ae85af21",
+  "name": "목포실내체육관",
+  "sido": "전라남도",
+  "gu": "목포시",
+  "address": "전라남도 목포시 대양로 286",
+  "lat": 34.8248605,
+  "lng": 126.4071714,
+  "phone": "061-270-8371",
+  "homepage_url": null,
+  "subway": null,
+  "price_free_swim": 2500,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 2500
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "09:00"
+     },
+     {
+      "end": "18:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "18:00",
+      "start": "13:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "829184bb-00f6-46e1-b9df-8892471797ad",
+  "name": "화순군민종합문화센터",
+  "sido": "전라남도",
+  "gu": "화순군",
+  "address": "전라남도 화순군 화순읍 광덕로 231",
+  "lat": 35.0655909,
+  "lng": 126.9918173,
+  "phone": "061-379-3951",
+  "homepage_url": null,
+  "subway": null,
+  "price_free_swim": 4000,
+  "price_note": null,
+  "prices": [
+   {
+    "label": "1일권",
+    "amount": 4000
+   }
+  ],
+  "facilities": {},
+  "free_swim": [
+   {
+    "day": 0,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "09:00"
+     },
+     {
+      "end": "17:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "21:00",
+      "start": "13:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "12:00",
+      "start": "06:00"
+     },
+     {
+      "end": "17:00",
+      "start": "13:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": "2026-08-02T15:00:00.000Z",
+  "free_swim_confidence": "low",
+  "free_swim_note": null,
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "8b70444b-c8e6-40fc-99e9-a0bf693c27e7",
+  "name": "태백장성국민체육센터",
+  "sido": "전라남도",
+  "gu": "장성군",
+  "address": "장성1길 175 1층, 2층",
+  "lat": 37.1009322,
+  "lng": 129.0083562,
+  "phone": "061-390-7634",
+  "homepage_url": null,
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": "일반 성인 요금",
+  "prices": [
+   {
+    "label": "성인 (일일)",
+    "amount": 3000
+   },
+   {
+    "label": "청소년/군인 (일일)",
+    "amount": 2000
+   },
+   {
+    "label": "어린이/경로 (일일)",
+    "amount": 1500
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "17:00",
+      "start": "09:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": null,
+  "free_swim_source_type": "unknown",
+  "free_swim_verified_at": null,
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "출처 기록 없음",
+  "access_label": null,
+  "access_note": null
+ },
+ {
+  "id": "0f5e764a-27f7-4a9e-b356-7b1143ac7ea6",
+  "name": "강진국민체육센터 전기차충전소",
+  "sido": "전라남도",
+  "gu": "강진군",
+  "address": "전라남도 강진군 군동면 종합운동장길 60",
+  "lat": 34.64527238,
+  "lng": 126.78130671,
+  "phone": "061-433-7333",
+  "homepage_url": "https://sportsclub.sports.or.kr/club/jeonnam-gangjin/fpod0100c",
+  "subway": null,
+  "price_free_swim": 3000,
+  "price_note": "성인 일일권",
+  "prices": [
+   {
+    "label": "성인 (일일)",
+    "amount": 3000
+   },
+   {
+    "label": "청소년/군인 (일일)",
+    "amount": 2000
+   },
+   {
+    "label": "어린이/경로 (일일)",
+    "amount": 1500
+   }
+  ],
+  "facilities": {
+   "lanes": 6,
+   "lane_length_m": 25
+  },
+  "free_swim": [
+   {
+    "day": 1,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 2,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 3,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 4,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 5,
+    "sessions": [
+     {
+      "end": "21:00",
+      "start": "06:00"
+     }
+    ]
+   },
+   {
+    "day": 6,
+    "sessions": [
+     {
+      "end": "17:00",
+      "start": "09:00"
+     }
+    ]
+   }
+  ],
+  "images": [],
+  "updated_at": "2026-08-21T07:49:58.445Z",
+  "free_swim_source": "https://sportsclub.sports.or.kr/club/jeonnam-gangjin/fpod0100c",
+  "free_swim_source_type": "official_pub",
+  "free_swim_verified_at": "2026-09-01T15:00:00.000Z",
+  "free_swim_confidence": "needs_check",
+  "free_swim_note": "브라우저 렌더링으로도 자유수영 시간표 못 찾음, 전화 확인 필요",
+  "access_label": null,
+  "access_note": null
+ }
+]
