@@ -6,6 +6,7 @@ import favIcon from "./assets/icons/fav.webp";
 import { loadFavs, saveFavs } from "./lib/favorites";
 import { migrateFromPreviousOrigin } from "./lib/storageMigration";
 import { usePools } from "./hooks/usePools";
+import { useHolidays } from "./hooks/useHolidays";
 import { useAppNavigation, type Tab } from "./hooks/useAppNavigation";
 import { useDetailScrollLock } from "./hooks/useDetailScrollLock";
 import { useHideOnScroll } from "./hooks/useHideOnScroll";
@@ -21,6 +22,9 @@ const PoolDetail = lazy(() => import("./screens/PoolDetail"));
 
 function App() {
   const { pools, loading, loadError, retry } = usePools();
+  // 공휴일 표는 DB에서 받는다. 임시공휴일이 지정되면 배포 없이 반영돼야 한다.
+  // 값 자체는 모듈 캐시에 들어가고, 이 훅은 도착 시 화면을 다시 그리는 역할만 한다.
+  useHolidays();
   const { tab, selected, openPoolDetail, closeDetail, changeTab } = useAppNavigation();
   const [favs, setFavs] = useState<string[]>(loadFavs);
   // 검색 키보드가 열린 동안은 웹뷰가 플로팅 탭바를 함께 끌어올리므로 탭바만 숨긴다.
