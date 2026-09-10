@@ -1,11 +1,11 @@
 {
   "checkedAt": "2026-08-03",
-  "totalPools": 831,
+  "totalPools": 779,
   "auditedUpdates": 558,
-  "withSchedule": 798,
+  "withSchedule": 746,
   "withoutVerifiedScheduleCount": 33,
-  "withPrice": 799,
-  "withoutVerifiedPriceCount": 32,
+  "withPrice": 749,
+  "withoutVerifiedPriceCount": 30,
   "note": "미확인 항목에는 자유수영 미운영·회원 전용 가능 시설이 포함됩니다. 시설 영업시간은 자유수영 시간으로 간주하지 않았습니다.",
   "withoutVerifiedSchedule": [
     {
@@ -333,13 +333,6 @@
       "address": "서울시 마포구 월드컵북로 494"
     },
     {
-      "id": "170ff9c5-7c4e-4f78-9a5b-61119dc7614d",
-      "name": "버드내노인복지회관",
-      "sido": "경기도",
-      "gu": "수원시",
-      "address": "경기도 수원시 권선구 권선로564번길 36"
-    },
-    {
       "id": "1cd8f45b-09ec-4250-a0b6-3feb5775d4b1",
       "name": "서귀포홍리실내수영장",
       "sido": "제주특별자치도",
@@ -387,13 +380,6 @@
       "sido": "서울특별시",
       "gu": "구로구",
       "address": "서울특별시 구로구 구로동로 141"
-    },
-    {
-      "id": "00fb99ad-2f1d-4045-9775-93f46b493666",
-      "name": "시립구로청소년수련관(Guro Youth Center)",
-      "sido": "서울특별시",
-      "gu": "구로구",
-      "address": "서울 구로구 구로동로 141"
     },
     {
       "id": "03034656-d969-448f-9ea6-f50b53d2d036",

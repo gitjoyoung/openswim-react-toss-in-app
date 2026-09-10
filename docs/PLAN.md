@@ -3,7 +3,7 @@
 > 전국 수영장의 **자유수영 시간·정보**를 찾는 앱인토스 미니앱.
 > 로그인 없이 시작, 위치 기반 정렬, 즐겨찾기(로컬 저장).
 
-> **현재 기준 (2026-08):** 런타임 백엔드는 **Neon(Postgres + Neon Data API/Auth)** 단일 기준이다. 프론트는 `VITE_NEON_DATA_API_URL`과 `VITE_NEON_AUTH_URL`로 익명 토큰을 발급받아 `GET /pools`를 조회하고(`src/pool.ts`), 원격 조회 실패 시 `src/data/pools.json`으로 폴백한다. 데이터 원본은 전국 수영장 JSON이며 운영 동기화는 `scripts/sync-pools-to-neon.mjs`가 담당한다. `supabase/`는 Neon 이전 전의 보관용 이력이며 런타임·배포·데이터 운영에 사용하지 않는다.
+> **현재 기준 (2026-09):** 런타임 백엔드는 **Neon(Postgres + Neon Data API/Auth)** 단일 기준이다. 프론트는 `VITE_NEON_DATA_API_URL`과 `VITE_NEON_AUTH_URL`로 익명 토큰을 발급받아 `GET /pools`를 조회하고(`src/pool.ts`), 원격 조회 실패 시 `src/data/pools.json`으로 폴백한다. 데이터 원본은 전국 수영장 JSON이며 운영 동기화는 `scripts/sync-pools-to-neon.mjs`가 담당한다. Neon 스키마 변경은 `database/migrations/`에 둔다. `database/legacy-supabase/`는 Neon 이전 전의 보관용 이력이며 런타임·배포·데이터 운영에 사용하지 않는다.
 
 ---
 
@@ -55,9 +55,18 @@
 수집·표시 항목:
 - **자유수영 시간표** (요일별 시간대) — 핵심
 - **요금** (1회 이용료 / 자유수영가)
-- **위치·전화·링크** (주소, 전화번호, 홈페이지, 길찾기)
+- **위치·전화·링크** (주소, 전화번호, 홈페이지, 길찾기, 주소 복사)
 - **시설 정보** (레인 수, 수심, 샤워·주차 등)
 - ⭐ 즐겨찾기 토글
+- **쇼핑** (토스쇼핑 쉐어링크 수영용품, 맨 아래)
+
+섹션 순서: 히어로 → 이름·주소 → 시간표 → **배너 광고** → 요금 → 시설 → 쇼핑
+
+- 화면 안에 **자체 뒤로가기 버튼을 두지 않는다.** 토스 네비게이션 바 뒤로가기와
+  동시에 보이면 검수 위반이다. 닫기는 `backEvent`·탭바로 처리한다.
+- 상세가 열리면 홈 배너 광고를 언마운트한다 (`showAd={!selected}`).
+
+자세한 제약은 `docs/skills/apps-in-toss-rules.md`.
 
 ---
 
@@ -93,6 +102,20 @@
 - **RLS**: `pools`는 익명(anon) **읽기 전용** 정책만. 쓰기는 없음(운영자가 대시보드/CLI로 입력).
 - 인덱스: `sido, gu`, `name`. 근처 검색은 앱에서 위·경도 기반으로 계산한다.
 
+### `gear_items` (쇼핑)
+
+토스쇼핑 쉐어링크. **URL만 넣고** `pnpm gear:sync`가 OG 제목·이미지를 채운다.
+
+```sql
+insert into public.gear_items (url, note, sort_order)
+values ('https://toss.im/_m/새링크', '메모', 4);
+```
+
+- 정렬: `created_at desc, sort_order asc` (최신 등록순). 앱·폴백 동일.
+- 앱 조회는 `src/gear.ts`, 실패 시 `src/data/gear.generated.json` 폴백.
+- 스키마: `database/migrations/20260905000000_gear_items.sql`.
+- 스키마를 바꾸면 Neon Data API 캐시를 갱신한다: `notify pgrst, 'reload schema';`
+
 ### 즐겨찾기 (서버 아님)
 - `localStorage["fav_pool_ids"] = ["uuid", ...]`
 - 즐겨찾기 탭/토글은 이 배열만 조작 → 로그인 불필요.
@@ -107,12 +130,14 @@
 | 프레임워크 | 앱인토스 web-framework 3.x + React 18 + Vite 6 | `package.json` 기준 |
 | UI | TDS Mobile (`@toss/tds-mobile`) | 미니앱 심사 필수 |
 | 위치 | `useGeolocation` 훅 + `geolocation` 권한 | 앱인토스 제공 |
+| 광고 | `TossAds.attachBanner` (`variant: "card"`) | 인앱 광고(IAA) |
+| 클립보드 | `Clipboard.setText` + `clipboard/write` 권한 | 상세 주소 복사 |
 | 지도 | 카카오맵 JS SDK 임베드 | WebView 표준 Web API 허용 |
 | 백엔드 | Neon (Postgres + Neon Data API/Auth, REST `fetch`) | 무배포 데이터 수정 |
 | 라우팅 | 하단 탭 상태 (탭 3개뿐 → 라우터 대신 `useState` 탭 스위칭) | ponytail: 라우터 불필요 |
 
 **설정 변경 필요**
-- `apps-in-toss.config.ts` → `permissions: [{ name: "geolocation", access: "access" }]` 반영 완료, `brand.icon` 지정
+- `apps-in-toss.config.ts` → `permissions`: `geolocation/access`, `clipboard/write` 반영 완료, `brand.icon` 지정
 - Neon Data API/Auth URL → 환경변수(`import.meta.env.VITE_NEON_*`), 익명 토큰은 `VITE_NEON_AUTH_URL`에서 발급
 
 ---
@@ -146,7 +171,14 @@
 
 **M4 — 마감**
 11. 전국 수영장 데이터 채우기 — 진행 중
-12. 아이콘·브랜딩, 심사 점검(TDS 준수), 배포(`ait build && ait deploy`)
+12. 아이콘·브랜딩, 심사 점검(TDS 준수), 배포
+
+**M5 — 수익화** (2026-09)
+13. 인앱 배너 광고 2자리 연결 (홈/상세)
+14. 토스쇼핑 쉐어링크 쇼핑 섹션 (Neon `gear_items` 기반 자동 최신화)
+
+> 배포는 `pnpm build`로 `.ait`를 만든 뒤 콘솔 MCP 또는 콘솔에서 직접 업로드한다.
+> `ait deploy` CLI는 저장된 API 키 권한 문제(`4031`)로 현재 쓸 수 없다.
 
 ### 자유수영 시간표 확보 현황
 
@@ -168,6 +200,22 @@
 | 자유수영 시간표가 자주 바뀜 | 정보 신뢰도 | `updated_at` 노출 + 상세에 "홈페이지 확인" 링크 |
 | 수동 데이터 수집 공수 | 출시 지연 | MVP는 인기 구 위주 소수부터, 점진 확대 |
 | localStorage 초기화 | 즐겨찾기 유실 | MVP 허용, 필요 시 로그인+서버 |
+
+---
+
+## 8.5 수익화 (2026-09 추가)
+
+| 수단 | 위치 | 구현 |
+|------|------|------|
+| 인앱 배너 광고 (IAA) | 홈 필터 칩 아래 / 상세 시간표 아래 | `src/components/BannerAd.tsx`, 광고 그룹 ID는 자리별로 분리 |
+| 토스쇼핑 쉐어링크 | 상세 맨 아래 쇼핑 섹션 | `src/components/GearSection.tsx`, Neon `public.gear_items` |
+
+- 광고 그룹: 홈 `VITE_TOSS_AD_GROUP_ID`, 상세 `VITE_TOSS_AD_GROUP_ID_DETAIL`.
+- 쇼핑 상품은 DB에 **URL만** 넣고 `pnpm gear:sync`가 OG 제목·이미지를 채운다.
+  가격은 자주 바뀌므로 앱에 넣지 않는다. 최신 등록순 정렬.
+- 공정위 고지 문구(`GEAR_DISCLOSURE`)를 상품 목록 바로 위에 유지한다.
+- 광고 배치 금지 사항(오클릭·중복 노출·가려진 광고)은
+  `docs/skills/apps-in-toss-rules.md` 2절 참고.
 
 ---
 

@@ -1,0 +1,39 @@
+{
+ "generated_at": "2026-09-10T00:39:56.069Z",
+ "note": "자유수영은 운영하나 신뢰할 시간표를 못 찾은 건. 전화 확인 경로 필요.",
+ "count": 4,
+ "pools": [
+  {
+   "id": "63ab6d6f-42f9-4f22-acb8-bec8860527f1",
+   "name": "공주학생수영장",
+   "sido": "충청남도",
+   "gu": "공주시",
+   "reason": "2026-08 보수 후 재개장했으나 재개장 이후 시간표 미공개",
+   "category": "schedule_not_found"
+  },
+  {
+   "id": "1f2b97f3-da00-4a33-96d7-8830857a4f81",
+   "name": "군위국민체육센터",
+   "sido": "경상북도",
+   "gu": "군위군",
+   "reason": "2023 대구 편입 후 개별 시설 안내 페이지 없음",
+   "category": "schedule_not_found"
+  },
+  {
+   "id": "1cd8f45b-09ec-4250-a0b6-3feb5775d4b1",
+   "name": "서귀포홍리실내수영장",
+   "sido": "제주특별자치도",
+   "gu": "서귀포시",
+   "reason": "사설 강습원, 자유수영 정책이 수시 변경되어 현행 시간표 불명",
+   "category": "schedule_not_found"
+  },
+  {
+   "id": "eb52eed7-a9db-4a86-96b2-24b7ecf53577",
+   "name": "여수우리스포츠센터",
+   "sido": "전라남도",
+   "gu": "여수시",
+   "reason": "일일권 7,000원은 확인되나 운영시간 출처가 서로 모순",
+   "category": "schedule_not_found"
+  }
+ ]
+}

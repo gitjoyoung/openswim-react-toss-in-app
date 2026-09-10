@@ -1,0 +1,125 @@
+[
+ {
+  "slug": "gumi-seonsan",
+  "name": "구미시선산청소년수련관 수영장",
+  "poolId": "473d979e-9c76-4a5a-85fa-1c98677940b6",
+  "urls": [
+   "https://www.gumissyouth.org/pages/sub.htm?nav_code=ssy1562206152",
+   "https://www.gumissyouth.org/"
+  ]
+ },
+ {
+  "slug": "suncheon-munhwa",
+  "name": "순천문화건강센터 수영장",
+  "poolId": "c3ecd7f7-05c9-41a1-9e37-dc3ac977e78a",
+  "urls": [
+   "https://www.suncheon.go.kr/yeyak/edu/swim/0001/"
+  ]
+ },
+ {
+  "slug": "busan-arpina",
+  "name": "부산도시공사 아르피나 수영장",
+  "poolId": "a85d9044-ec19-4165-958d-9feb0aaba3be",
+  "urls": [
+   "https://www.arpina.co.kr/sports/swimming"
+  ]
+ },
+ {
+  "slug": "magok-leports",
+  "name": "마곡레포츠센터 수영장",
+  "poolId": "8a4528fc-353e-4eb3-9b60-a719a2237102",
+  "urls": [
+   "https://sport.gssi.or.kr/page/prgGuide/05/",
+   "https://sport.gssi.or.kr/page/sisul/05/"
+  ]
+ },
+ {
+  "slug": "namyangju-ecoland",
+  "name": "에코랜드수영장",
+  "poolId": "61a9a535-09fb-4fe4-abf6-020ccf285d66",
+  "urls": [
+   "https://www.ncuc.or.kr/eco/645"
+  ]
+ },
+ {
+  "slug": "siheung-youth",
+  "name": "시흥시청소년수련관 수영장",
+  "poolId": "c009f242-ada4-4ad9-9aaa-e8211f1b18eb",
+  "urls": [
+   "https://program.shyouth.or.kr/fmcs/81?action=read&action-value=07231d4426a48ead74be91d068cb5b12",
+   "https://program.shyouth.or.kr/fmcs/81"
+  ]
+ },
+ {
+  "slug": "hanam-gamil",
+  "name": "감일복합커뮤니티센터 수영장",
+  "poolId": "820d00a2-5ee4-44af-a675-e76ef847820e",
+  "urls": [
+   "https://www.huic.co.kr/www/contents.do?key=136",
+   "https://www.huic.co.kr/www/contents.do?key=135"
+  ]
+ },
+ {
+  "slug": "incheon-geomdan",
+  "name": "검단복지회관 수영장",
+  "poolId": "ef47212b-2776-4c59-b72b-de328c28941f",
+  "urls": [
+   "https://www.issi.or.kr/sub/contents/default_page.asp?mNo=MD040060020"
+  ]
+ },
+ {
+  "slug": "seoul-seodaemun",
+  "name": "서대문청소년센터 수영장",
+  "poolId": "f103a66c-dea7-433e-9366-f5f56d913bf3",
+  "urls": [
+   "https://www.fun1318.or.kr/2021/edu/sport_view_new.php?gn2=156&gn3=398&page=1",
+   "https://www.fun1318.or.kr"
+  ]
+ },
+ {
+  "slug": "sejong-jochiwon",
+  "name": "조치원수영장(조치원복합커뮤니티센터)",
+  "poolId": "06603ba3-d2ae-4642-95ae-b239dc52a0b1",
+  "urls": [
+   "https://www.sjfmc.or.kr/jcw/sub03_01.do",
+   "https://www.sjfmc.or.kr/jcw.do",
+   "https://www.sjfmc.or.kr/jcw/sub02_02.do"
+  ]
+ },
+ {
+  "slug": "yangsan-jungang",
+  "name": "양산중앙국민체육센터",
+  "poolId": "9193eb0b-272b-44c3-97b5-98c6525de1dd",
+  "urls": [
+   "https://www.yssisul.or.kr/stms/ks/charge",
+   "https://www.yssisul.or.kr/stms/ks/freeSwim",
+   "https://www.yssisul.or.kr/stms/ks"
+  ]
+ },
+ {
+  "slug": "yangsan-cheonseongsan",
+  "name": "천성산국민체육센터",
+  "poolId": "75f5d9b7-0ab0-462e-a063-d1e9bbe3dfc7",
+  "urls": [
+   "https://www.yssisul.or.kr/stms/yscheonsungsan/charge",
+   "https://www.yssisul.or.kr/stms/yscheonsungsan/freeswim",
+   "https://www.yssisul.or.kr/stms/yscheonsungsan"
+  ]
+ },
+ {
+  "slug": "paju-unjeong-sports",
+  "name": "운정스포츠센터",
+  "poolId": "11a2d78c-400e-41ac-ae17-074139779a31",
+  "urls": [
+   "https://paju3.sporex.com/sport/swimming.html"
+  ]
+ },
+ {
+  "slug": "sejong-simin",
+  "name": "세종시민스포츠센터",
+  "poolId": "298c60f2-063a-4fee-b495-c9a4ff80097c",
+  "urls": [
+   "https://www.sejong.go.kr/recycle/sub05_0601.do"
+  ]
+ }
+]

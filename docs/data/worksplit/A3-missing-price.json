@@ -1,0 +1,398 @@
+{
+ "generated_at": "2026-09-10T00:39:44.909Z",
+ "count": 32,
+ "pools": [
+  {
+   "id": "3b967e53-1254-470d-ac2b-1098592b75c4",
+   "name": "ATB압구정점",
+   "sido": "서울특별시",
+   "gu": "강남구",
+   "homepage_url": "https://atbabgujung.modoo.at/",
+   "phone": "02-1600-1980",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "b005263f-dcdc-4483-875d-d352c40907e4",
+   "name": "뉴그린수영장",
+   "sido": "대전광역시",
+   "gu": "서구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "2295eaa9-bf58-4cfa-9782-76ee753c37e9",
+   "name": "대전학생교육문화원",
+   "sido": "대전광역시",
+   "gu": "중구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "4494f272-0852-4214-a9e7-7628b89b6e5c",
+   "name": "동의과학대학교스포츠센터",
+   "sido": "부산광역시",
+   "gu": "부산진구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "2560e09f-a89a-49d1-807a-51bb3ca21767",
+   "name": "동부여성발전센터",
+   "sido": "서울특별시",
+   "gu": "광진구",
+   "homepage_url": "https://dongbu.seoulwomanup.or.kr/dongbu/common/cntnts/selectContents.do?cntnts_id=G0600020",
+   "phone": "02-460-2300",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "e41867fa-ea6c-464d-a85b-81f7c87b8971",
+   "name": "마포푸르메스포츠센터",
+   "sido": "서울특별시",
+   "gu": "서울시",
+   "homepage_url": "http://www.purmesports.or.kr/",
+   "phone": "02-6070-9270",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "월이용료(성인)",
+     "amount": 66000
+    },
+    {
+     "label": "월이용료(아동, 미취학~36개월 이상)",
+     "amount": 52000
+    }
+   ]
+  },
+  {
+   "id": "fc1c6999-be34-4c9a-8a02-3ae77f125710",
+   "name": "스윔핏노원태릉입구역점",
+   "sido": "서울특별시",
+   "gu": "노원구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "adee362b-6c89-4cf0-83b5-cfc189b2d83c",
+   "name": "시립구로청소년센터",
+   "sido": "서울특별시",
+   "gu": "구로구",
+   "homepage_url": "http://www.guro1318.org/",
+   "phone": "02-838-1318",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "8b237b8b-538a-4f31-8f70-92b4a625dfa4",
+   "name": "신영지웰스포츠센터",
+   "sido": "인천광역시",
+   "gu": "남동구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "170ff9c5-7c4e-4f78-9a5b-61119dc7614d",
+   "name": "버드내노인복지회관",
+   "sido": "경기도",
+   "gu": "수원시",
+   "homepage_url": "http://www.budnae.or.kr/",
+   "phone": "(031) 898-6544",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "00fb99ad-2f1d-4045-9775-93f46b493666",
+   "name": "시립구로청소년수련관(Guro Youth Center)",
+   "sido": "서울특별시",
+   "gu": "구로구",
+   "homepage_url": "http://www.guro1318.org/",
+   "phone": "02-838-1318",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "50587fac-8b34-4572-9ad5-2d9e8fb757d9",
+   "name": "고강BK스포츠센터",
+   "sido": "경기도",
+   "gu": "부천시",
+   "homepage_url": "https://blog.naver.com/gogangbk",
+   "phone": "032-218-7654",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "1개월권",
+     "amount": 80000
+    }
+   ]
+  },
+  {
+   "id": "4c65d5e8-87d8-4bc8-9918-53f9a9ba976b",
+   "name": "공도우미린더퍼스트아파트커뮤니티센터",
+   "sido": "경기도",
+   "gu": "안성시",
+   "homepage_url": "https://wmlagf.aptner.com/v2/page/menu/10911",
+   "phone": "031-692-3161",
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "63ab6d6f-42f9-4f22-acb8-bec8860527f1",
+   "name": "공주학생수영장",
+   "sido": "충청남도",
+   "gu": "공주시",
+   "homepage_url": null,
+   "phone": "041-857-2185",
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "a5edf71c-1838-49b3-a2f0-f519aea80248",
+   "name": "관악청소년회관 수영장(Gwanak Youth Center)",
+   "sido": "서울특별시",
+   "gu": "관악구",
+   "homepage_url": "https://booking.gwanakgongdan.or.kr/booking/1580",
+   "phone": "02-870-7650",
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "bda2ed67-265e-4915-b79d-6654fca70d1c",
+   "name": "광주체고수영장",
+   "sido": "광주광역시",
+   "gu": "북구",
+   "homepage_url": "https://gwangju-p.gen.hs.kr:453/xboard/board.php?tbnum=45",
+   "phone": "062-520-7261",
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "1dabe9d7-d9f3-41d2-8caa-4df04de7cfd0",
+   "name": "도농애시앙스포츠센터",
+   "sido": "경기도",
+   "gu": "남양주시",
+   "homepage_url": "http://donong.aesiang.co.kr",
+   "phone": "031-569-5380",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "10회권(회원)",
+     "amount": 120000
+    },
+    {
+     "label": "10회권(비회원)",
+     "amount": 140000
+    },
+    {
+     "label": "월정기권",
+     "amount": 120000
+    }
+   ]
+  },
+  {
+   "id": "1f054da2-a479-473d-a576-ae474c6ddb64",
+   "name": "동서대학교글로벌스포츠센터",
+   "sido": "부산광역시",
+   "gu": "사상구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "03034656-d969-448f-9ea6-f50b53d2d036",
+   "name": "시립문래청소년센터",
+   "sido": "서울특별시",
+   "gu": "영등포구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "1cd8f45b-09ec-4250-a0b6-3feb5775d4b1",
+   "name": "서귀포홍리실내수영장",
+   "sido": "제주특별자치도",
+   "gu": "서귀포시",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "2de1461d-3d63-48f5-8cea-8b078c1db9b9",
+   "name": "서부재활체육센터",
+   "sido": "서울특별시",
+   "gu": "은평구",
+   "homepage_url": "https://www.sbsports.or.kr/",
+   "phone": "02-388-6622",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": [
+    {
+     "label": "정기권(18:00) 평일 - 성인",
+     "amount": 92000
+    },
+    {
+     "label": "정기권(08:00) 평일 - 성인",
+     "amount": 106000
+    },
+    {
+     "label": "정기권(12:00) 평일·토 - 성인",
+     "amount": 121000
+    }
+   ]
+  },
+  {
+   "id": "92c5704b-8b1b-4841-bc8e-77dedea57052",
+   "name": "서산학생수영장",
+   "sido": "충청남도",
+   "gu": "서산시",
+   "homepage_url": "https://swim.cnssed.go.kr/",
+   "phone": "041-660-0345",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "9b5dae43-c4ca-49bb-9ea7-b47049816016",
+   "name": "외도실내수영장",
+   "sido": "제주특별자치도",
+   "gu": "제주시",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "1c5daa2e-01e0-415b-a5be-ced510897f2e",
+   "name": "스윔핏성수점",
+   "sido": "서울특별시",
+   "gu": "성동구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "858fed69-a0f3-4d85-ab5b-10e6cad924f3",
+   "name": "스포타임(SPORTIME)",
+   "sido": "서울특별시",
+   "gu": "서초구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "bf48a9ec-a3c8-4a90-ae78-4c7f085eb891",
+   "name": "시립은평청소년센터",
+   "sido": "서울특별시",
+   "gu": "은평구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "b0482c0d-86b5-4ccf-b724-211aaf52a54f",
+   "name": "용곡C&C수영장",
+   "sido": "충청남도",
+   "gu": "천안시",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "ed366801-d917-4a70-8541-cd22e647bb9f",
+   "name": "울산대학교아산스포츠센터",
+   "sido": "울산광역시",
+   "gu": "남구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "cc7468fe-c256-4cda-bac3-c82fae93ceec",
+   "name": "패밀리스포츠센터",
+   "sido": "경기도",
+   "gu": "성남시",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "c4d5dc6b-cc55-45ab-a112-28c94f316fc1",
+   "name": "코리아스포츠",
+   "sido": "울산광역시",
+   "gu": "북구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "ce31e236-5b3a-4c9a-bd33-bae852fe65e7",
+   "name": "태화기독교사회복지관(Taiwha Christian Social Welfare Institution)",
+   "sido": "서울특별시",
+   "gu": "강남구",
+   "homepage_url": null,
+   "phone": null,
+   "has_free_swim": false,
+   "price_note": null,
+   "prices": []
+  },
+  {
+   "id": "eb6c2921-76cf-4833-a17f-aaf6e7f6ce8a",
+   "name": "포이스포츠센터(Poi Sports Center)",
+   "sido": "서울특별시",
+   "gu": "강남구",
+   "homepage_url": "https://poi-kyeongseo.com/",
+   "phone": "1544-4656",
+   "has_free_swim": true,
+   "price_note": null,
+   "prices": []
+  }
+ ]
+}

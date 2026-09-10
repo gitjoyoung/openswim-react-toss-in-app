@@ -1,0 +1,36 @@
+{"name":"평택시립수영장","verdict":"duplicate","reason":"소사벌레포츠타운 수영장과 동일 시설(평남로 616)","collected_at":"2026-09-10"}
+{"name":"중원유스센터","verdict":"duplicate","reason":"중원청소년수련관의 현행 명칭(둔촌대로 332)","collected_at":"2026-09-10"}
+{"name":"포항실내수영장","verdict":"duplicate","reason":"포항수영장과 도로명·전화 일치","collected_at":"2026-09-10"}
+{"name":"영동국민체육건강센터","verdict":"duplicate","reason":"DB의 영동국민건강체육센터와 동일(반곡동길 22)","collected_at":"2026-09-10"}
+{"name":"아산실내수영장(방축수영장)","verdict":"skip","reason":"2021년 안전진단 D등급 폐쇄, 2031년 준공 목표 재건축 중(아산시청 공약관리 문서)","collected_at":"2026-09-10"}
+{"name":"중계구민체육센터","verdict":"skip","reason":"재건축으로 2024년 말 운영 종료, 2025-09 신축 착공","collected_at":"2026-09-10"}
+{"name":"잠실 자연형 물놀이장","verdict":"skip","reason":"하절기(6~8월) 한정 야외 물놀이장, 연중 자유수영 시설 아님","collected_at":"2026-09-10"}
+{"name":"팔달노인복지관","verdict":"skip","reason":"복지관 회원가입(5,000원) 후 월단위 등록만 가능, 당일권 없음","collected_at":"2026-09-10"}
+{"name":"서호노인복지관","verdict":"skip","reason":"복지관 회원가입 후 월단위 등록 구조, 당일권 없음","collected_at":"2026-09-10"}
+{"name":"신현문화체육복합센터","verdict":"skip","reason":"인천 서구가 아니라 경기 광주시 신현동 시설로 확인. 광주시 스포츠통합센터 체육시설 목록에 없어 수영장 보유 여부 미확인","collected_at":"2026-09-10"}
+{"name":"이천 장애인체육종합훈련원","verdict":"pending","reason":"대한장애인체육회 선수촌 시설. 일반인 당일 이용 가능 여부를 공식 출처로 확인 못함","collected_at":"2026-09-10"}
+{"name":"양지수영장","verdict":"pending","reason":"자유수영 13:00-15:50 평일 확인되나 3개월 분기 등록제만 공개, 당일권 요금 공식 미확인","collected_at":"2026-09-10"}
+{"name":"고촌도담수영장","verdict":"pending","reason":"공식 페이지상 자유수영은 월회원 추첨제만 존재, 일일권 항목 없음","collected_at":"2026-09-10"}
+{"name":"구로남 체육센터","verdict":"pending","reason":"구로남초 내 민간 위탁 시설, 공식 홈페이지 없음. 2026-02부터 보수공사 휴장(지역언론)","collected_at":"2026-09-10"}
+{"name":"세종국민체육센터","verdict":"pending","reason":"공식 출처로 동일 명칭 시설 확인 불가. 세종시설공단 조치원·보람·장애인형 시설과 혼동 가능성","collected_at":"2026-09-10"}
+{"name":"도두봉실내수영장","verdict":"pending","reason":"제주시 공공체육시설 목록에 없는 사설 시설. 출처가 시설 인스타그램뿐이고 비회원 당일 이용 가능 여부 불명확","collected_at":"2026-09-10"}
+{"name":"울산대공원 아쿠아시스","verdict":"pending","reason":"파도풀·슬라이드 갖춘 워터파크형. '자유수영' 용어 미사용, 비수기엔 토·일·공휴일만 운영. 수록 대상인지 판단 필요","collected_at":"2026-09-10"}
+{"name":"구미시선산청소년수련관 수영장","verdict":"register","new_id":"473d979e-9c76-4a5a-85fa-1c98677940b6","collected_at":"2026-09-10"}
+{"name":"순천문화건강센터 수영장","verdict":"register","new_id":"c3ecd7f7-05c9-41a1-9e37-dc3ac977e78a","collected_at":"2026-09-10"}
+{"name":"부산도시공사 아르피나 수영장","verdict":"register","new_id":"a85d9044-ec19-4165-958d-9feb0aaba3be","collected_at":"2026-09-10"}
+{"name":"마곡레포츠센터 수영장","verdict":"register","new_id":"8a4528fc-353e-4eb3-9b60-a719a2237102","collected_at":"2026-09-10"}
+{"name":"에코랜드수영장","verdict":"register","new_id":"61a9a535-09fb-4fe4-abf6-020ccf285d66","collected_at":"2026-09-10"}
+{"name":"시흥시청소년수련관 수영장","verdict":"register","new_id":"c009f242-ada4-4ad9-9aaa-e8211f1b18eb","collected_at":"2026-09-10"}
+{"name":"감일복합커뮤니티센터 수영장","verdict":"register","new_id":"820d00a2-5ee4-44af-a675-e76ef847820e","collected_at":"2026-09-10"}
+{"name":"검단복지회관 수영장","verdict":"register","new_id":"ef47212b-2776-4c59-b72b-de328c28941f","collected_at":"2026-09-10"}
+{"name":"서대문청소년센터 수영장","verdict":"register","new_id":"f103a66c-dea7-433e-9366-f5f56d913bf3","collected_at":"2026-09-10"}
+{"name":"조치원수영장(조치원복합커뮤니티센터)","verdict":"register","new_id":"06603ba3-d2ae-4642-95ae-b239dc52a0b1","collected_at":"2026-09-10"}
+{"name":"양산중앙국민체육센터","verdict":"register","new_id":"9193eb0b-272b-44c3-97b5-98c6525de1dd","collected_at":"2026-09-10"}
+{"name":"천성산국민체육센터","verdict":"register","new_id":"75f5d9b7-0ab0-462e-a063-d1e9bbe3dfc7","collected_at":"2026-09-10"}
+{"name":"운정스포츠센터","verdict":"register","new_id":"11a2d78c-400e-41ac-ae17-074139779a31","collected_at":"2026-09-10"}
+{"name":"세종시민스포츠센터","verdict":"register","new_id":"298c60f2-063a-4fee-b495-c9a4ff80097c","collected_at":"2026-09-10"}
+{"name":"울산대공원 아쿠아시스","verdict":"skip","reason":"워터파크형 시설(파도풀·슬라이드). 사용자 판단으로 수록 대상 제외","collected_at":"2026-09-10"}
+{"name":"양산중앙국민체육센터","verdict":"fix","id":"9193eb0b-272b-44c3-97b5-98c6525de1dd","fields":["price_free_swim","price_note","free_swim_source","free_swim_note"],"reason":"요금 미확인 상태였으나 공식 요금 페이지(/charge)의 이미지 표에서 확인","collected_at":"2026-09-10"}
+{"name":"천성산국민체육센터","verdict":"fix","id":"75f5d9b7-0ab0-462e-a063-d1e9bbe3dfc7","fields":["price_free_swim","price_note","free_swim_source","free_swim_note"],"reason":"요금 미확인 상태였으나 공식 요금 페이지(/charge) 표에서 확인","collected_at":"2026-09-10"}
+{"name":"시흥시청소년수련관 수영장","verdict":"fix","id":"c009f242-ada4-4ad9-9aaa-e8211f1b18eb","fields":["free_swim","free_swim_source","free_swim_confidence","free_swim_note"],"reason":"평일 1부는 회원 전용임이 공식 레인배정표에 명시. 일일입장 이용자에게는 잘못된 정보였음","collected_at":"2026-09-10"}
+{"name":"감일복합커뮤니티센터 수영장","verdict":"fix","id":"820d00a2-5ee4-44af-a675-e76ef847820e","fields":["free_swim_source","free_swim_note"],"reason":"시간 값은 정확했으나 출처 URL이 이용안내 페이지(key=135)로 잘못 기록되어 있었음. 실제 시간표는 프로그램안내(key=136)에 있음","collected_at":"2026-09-10"}

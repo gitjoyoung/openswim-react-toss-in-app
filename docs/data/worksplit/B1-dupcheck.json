@@ -1,0 +1,344 @@
+{
+ "generated_at": "2026-09-10T00:47:48.972Z",
+ "candidates": [
+  {
+   "label": "구미시선산청소년수련관",
+   "bucket": "confirmed",
+   "addr": "경북 구미시 선산읍 단계동길 270",
+   "phone": "054-482-9780",
+   "lat": 36.2590028243211,
+   "lng": 128.29038847271042,
+   "homepage": "https://www.gumissyouth.org/",
+   "hits": []
+  },
+  {
+   "label": "순천문화건강센터 수영장",
+   "bucket": "confirmed",
+   "addr": "전남 순천시 환선로 133",
+   "phone": "061-749-8503",
+   "lat": 34.96801220681887,
+   "lng": 127.48676610715701,
+   "homepage": "https://www.suncheon.go.kr/yeyak/edu/swim/0001/",
+   "hits": []
+  },
+  {
+   "label": "부산도시공사 아르피나(수영장)",
+   "bucket": "confirmed",
+   "addr": "부산광역시 해운대구 해운대해변로 35, 부산유스호스텔아르피나 (우동)",
+   "phone": "051-740-3292",
+   "lat": 35.164969733440174,
+   "lng": 129.13801661089732,
+   "homepage": "https://www.bmc.busan.kr/bmc/receipt/view.do?idx=24&mId=0605070000",
+   "hits": []
+  },
+  {
+   "label": "마곡레포츠센터 수영장",
+   "bucket": "confirmed",
+   "addr": "서울 강서구 양천로 251",
+   "phone": "02-3663-7171",
+   "lat": 37.5731555,
+   "lng": 126.8321488,
+   "homepage": "https://sport.gssi.or.kr/page/sisul/05/",
+   "hits": []
+  },
+  {
+   "label": "양지수영장",
+   "bucket": "confirmed",
+   "addr": "경기도 용인시 처인구 양지면 향교로11번길 3",
+   "phone": "031-339-8700",
+   "lat": 37.2366640455859,
+   "lng": 127.285827357183,
+   "homepage": "https://www.cheoingu.go.kr",
+   "hits": []
+  },
+  {
+   "label": "에코랜드수영장",
+   "bucket": "confirmed",
+   "addr": "경기도 남양주시 별내면 청학로8번길 39",
+   "phone": "031-560-1321",
+   "lat": 37.7035406639051,
+   "lng": 127.127500424115,
+   "homepage": "https://www.ncuc.or.kr/eco/620",
+   "hits": []
+  },
+  {
+   "label": "고촌도담수영장",
+   "bucket": "confirmed",
+   "addr": "경기도 김포시 고촌읍 신곡로 106",
+   "phone": "031-984-0902",
+   "lat": 37.608463181152,
+   "lng": 126.767868141677,
+   "homepage": "https://yeyak.guc.or.kr/fmcs/166",
+   "hits": []
+  },
+  {
+   "label": "시흥시청소년수련관",
+   "bucket": "confirmed",
+   "addr": "경기도 시흥시 은행로 179",
+   "phone": "031-315-1890",
+   "lat": 37.446043274504,
+   "lng": 126.796906467407,
+   "homepage": "https://www.ww.shyouth.or.kr/shcs/main/view",
+   "hits": []
+  },
+  {
+   "label": "평택시립수영장",
+   "bucket": "confirmed",
+   "addr": "경기 평택시 평남로 616",
+   "phone": "031-8024-5100",
+   "lat": 36.9875654252857,
+   "lng": 127.106511030299,
+   "homepage": "https://www.pyeongtaek.go.kr",
+   "hits": [
+    {
+     "db": "소사벌레포츠타운 수영장",
+     "gu": "평택시",
+     "addr": "경기도 평택시 평남로 616",
+     "reasons": [
+      "좌표195m",
+      "도로명일치"
+     ],
+     "has_fs": true
+    }
+   ]
+  },
+  {
+   "label": "중원유스센터",
+   "bucket": "confirmed",
+   "addr": "경기도 성남시 중원구 둔촌대로 332",
+   "phone": "031-729-9300",
+   "lat": 37.4299249279906,
+   "lng": 127.154975637417,
+   "homepage": "https://www.snyouth.or.kr/fmcs/57",
+   "hits": [
+    {
+     "db": "중원청소년수련관",
+     "gu": "성남시",
+     "addr": "경기도 성남시 중원구 둔촌대로 332",
+     "reasons": [
+      "좌표286m",
+      "도로명일치"
+     ],
+     "has_fs": true
+    }
+   ]
+  },
+  {
+   "label": "운정스포츠센터",
+   "bucket": "confirmed",
+   "addr": "경기도 파주시 가람로150번길 41-34",
+   "phone": "031-8071-8200",
+   "lat": 37.7371393177548,
+   "lng": 126.767695439868,
+   "homepage": "https://www.paju.go.kr/www/intropaju/intropaju_05/intropaju_05_13/intropaju_05_13_03.jsp",
+   "hits": []
+  },
+  {
+   "label": "감일복합커뮤니티센터",
+   "bucket": "confirmed",
+   "addr": "경기도 하남시 감일순환로 171 (감이동)",
+   "phone": "031-690-9000",
+   "lat": 37.5085381,
+   "lng": 127.1596047,
+   "homepage": "https://hanamsport.or.kr/wwwroot/gi/program/",
+   "hits": []
+  },
+  {
+   "label": "서대문청소년센터",
+   "bucket": "confirmed",
+   "error": "소스 레코드 못 찾음"
+  },
+  {
+   "label": "구로남 체육센터",
+   "bucket": "confirmed",
+   "addr": "",
+   "phone": "",
+   "lat": 37.4845619,
+   "lng": 126.890313,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "검단복지회관",
+   "bucket": "confirmed",
+   "addr": "인천 서구 완정로92번길 18",
+   "phone": "561-4115",
+   "lat": 37.600709065041904,
+   "lng": 126.66550442940562,
+   "homepage": "https://yeyak.issi.or.kr/reservation/swim/swimming.asp?mNo=MA030030000",
+   "hits": []
+  },
+  {
+   "label": "세종국민체육센터",
+   "bucket": "confirmed",
+   "addr": "",
+   "phone": "",
+   "lat": 36.6002939235191,
+   "lng": 127.304897624967,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "세종시시민스포츠센터",
+   "bucket": "confirmed",
+   "addr": "",
+   "phone": "",
+   "lat": 36.6708595,
+   "lng": 127.3002898,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "조치원복합커뮤니티센터 수영장",
+   "bucket": "confirmed",
+   "addr": "",
+   "phone": "",
+   "lat": 36.5956017,
+   "lng": 127.28811070000002,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "영동국민체육센터",
+   "bucket": "confirmed",
+   "addr": "",
+   "phone": "",
+   "lat": 36.198141,
+   "lng": 127.797704,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "아산실내수영장",
+   "bucket": "confirmed",
+   "addr": "",
+   "phone": "",
+   "lat": 36.77854200000131,
+   "lng": 126.984550000002,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "포항실내수영장",
+   "bucket": "confirmed",
+   "addr": "경상북도 포항시 남구 희망대로 810 (대도동)",
+   "phone": "054-280-9530",
+   "lat": 36.00744352891694,
+   "lng": 129.3614965123621,
+   "homepage": "https://www.phsisul.org/sisul_15/main.do",
+   "hits": [
+    {
+     "db": "포항수영장",
+     "gu": "포항시",
+     "addr": "경상북도 포항시 남구 희망대로 810",
+     "reasons": [
+      "좌표255m",
+      "전화일치",
+      "도로명일치"
+     ],
+     "has_fs": true
+    }
+   ]
+  },
+  {
+   "label": "양산국민체육센터",
+   "bucket": "confirmed",
+   "addr": "경상남도 양산시 물금읍 청룡로 33",
+   "phone": "055-379-8640",
+   "lat": 35.3265250431725,
+   "lng": 128.995071029348,
+   "homepage": "http://www.yssisul.or.kr/",
+   "hits": []
+  },
+  {
+   "label": "천성산국민체육센터",
+   "bucket": "confirmed",
+   "addr": "경상남도 양산시 상북면 삼계동길 25",
+   "phone": "055-379-8420",
+   "lat": 35.4186845781386,
+   "lng": 129.066123850778,
+   "homepage": "http://www.yssisul.or.kr",
+   "hits": []
+  },
+  {
+   "label": "도두봉실내수영장",
+   "bucket": "confirmed",
+   "addr": "",
+   "phone": "",
+   "lat": 33.50624399999975,
+   "lng": 126.46985389999983,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "울산대공원아쿠아시스",
+   "bucket": "confirmed",
+   "addr": "",
+   "phone": "",
+   "lat": 35.53076479864657,
+   "lng": 129.29401310019222,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "팔달노인복지관",
+   "bucket": "scope_check",
+   "addr": "경기도 수원시 팔달구 수원천로 343",
+   "phone": "031-248-3800",
+   "lat": 37.2839498638234,
+   "lng": 127.017381565324,
+   "homepage": "https://www.pdsenior.or.kr",
+   "hits": []
+  },
+  {
+   "label": "서호노인복지관",
+   "bucket": "scope_check",
+   "addr": "경기도 수원시 권선구 구운로4번길 34",
+   "phone": "031-291-0901",
+   "lat": 37.278495564425,
+   "lng": 126.976191954091,
+   "homepage": "https://www.seoho.or.kr",
+   "hits": []
+  },
+  {
+   "label": "이천 장애인체육종합훈련원",
+   "bucket": "scope_check",
+   "addr": "경기 이천시 신둔면 지석리 57-38",
+   "phone": "070-7422-2000",
+   "lat": 37.3291141679406,
+   "lng": 127.434061873833,
+   "homepage": "https://www.icheon.go.kr",
+   "hits": []
+  },
+  {
+   "label": "잠실 자연형 물놀이장",
+   "bucket": "scope_check",
+   "addr": "서울 송파구 한가람로 65",
+   "phone": "02-3431-8475",
+   "lat": 37.5176288,
+   "lng": 127.0867373,
+   "homepage": "https://hangang.seoul.go.kr/www/facility/map.tab?srchCd=9014",
+   "hits": []
+  },
+  {
+   "label": "신현문화체육복합센터",
+   "bucket": "scope_check",
+   "addr": "",
+   "phone": "",
+   "lat": 37.36533213527629,
+   "lng": 127.158419515913,
+   "homepage": "",
+   "hits": []
+  },
+  {
+   "label": "중계구민체육센터",
+   "bucket": "scope_check",
+   "addr": "",
+   "phone": "",
+   "lat": 37.6481320999998,
+   "lng": 127.070725000005,
+   "homepage": "",
+   "hits": []
+  }
+ ]
+}
