@@ -2,7 +2,7 @@
 
 # 🏊 오늘 자유수영 (Openswim)
 
-**공공 수영장 자유수영 시간을 한눈에** — 오늘 어디서 수영할지 지역·내 위치 기반으로 찾는 [AppsInToss](https://apps-in-toss.toss.im/) 미니앱
+**오늘 자유수영이 가능한 공공 수영장을 한눈에** — 오늘 어디서 수영할지 지역과 내 위치를 바탕으로 찾는 [AppsInToss](https://apps-in-toss.toss.im/) 미니앱
 
 </div>
 
@@ -29,7 +29,7 @@
 |------|------|
 | 프론트 | React 18 · TypeScript · Vite |
 | 플랫폼 | AppsInToss `@apps-in-toss/web-framework` 3.x (AIT) · TDS `@toss/tds-mobile` |
-| 데이터 | Neon Postgres + Neon Data API/Auth(REST, 익명 토큰) 우선 조회 + 번들 JSON(`src/data/pools.json`) 장애 폴백 |
+| 데이터 | Neon Postgres + Neon Data API/Auth(REST, 익명 토큰) 단일 원본. 폴백 없음 |
 | 지도 | Kakao Maps JS SDK |
 
 ## 시작하기
@@ -50,9 +50,11 @@ pnpm run dev
 pnpm run build
 ```
 
-> 원격 조회가 실패하면(네트워크 문제, Neon 장애 등) 앱은 자동으로 번들된 `src/data/pools.json`을 사용합니다. 데이터 갱신 스크립트는 `scripts/`에 있고, 최신 데이터를 Neon에 반영하려면 `scripts/sync-pools-to-neon.mjs`(환경변수 `NEON_DATABASE_URL` 필요)를 사용합니다. `.manus/neon-migration/`은 초기 이관용 보조 스크립트입니다.
+> 수영장 데이터는 **Neon 서버가 유일한 원본**입니다. 원격 조회가 실패하면 번들 데이터로 대체하지 않고 "정보를 불러오지 못했어요 + 다시 시도" 화면을 보입니다. 예전에는 `src/data/pools.json` 폴백이 있었으나 2026-09-10 에 폐기했습니다 — 폴백은 빌드 시점에 고정되어 반드시 낡는데, 사용자에겐 최신 데이터와 구분이 안 돼서 휴장한 수영장을 "오늘 열림"으로 보여주는 오답을 조용히 냅니다. `.manus/neon-migration/`은 초기 이관용 보조 스크립트입니다.
 
 > 카카오맵은 사용 도메인을 카카오 콘솔 `[플랫폼 > Web]` 에 등록해야 표시됩니다. (`localhost:5173`, 배포 도메인 등)
+> 그래서 `vite.config.ts`에서 dev/preview 서버를 `localhost:5173`으로 고정(`strictPort: true`)해 뒀습니다.
+> 포트를 바꿔 띄우면 지도만 조용히 안 나오므로, 다른 포트로 띄우지 마세요. 5173이 이미 쓰이는 중이면 서버가 시작되지 않고 바로 실패합니다.
 
 ## 프로젝트 구조
 
@@ -62,38 +64,48 @@ src/
   components/  SearchBox · PoolList · PoolMap · FavStar …
   lib/         pools(운영·공휴일 상태) · search(지역 검색) · geo · holidays …
   design/      tokens · primitives (토스풍 디자인 시스템)
-  data/        pools.json (번들 폴백 데이터)
-scripts/       데이터 수집·정규화·감사·Neon 동기화
-supabase/      과거 Supabase 스키마 이력 (런타임 미사용, Neon 이관 전 기록; 상세: supabase/README.md)
+  data/        gear.generated.json 등 정적 보조 데이터 (수영장 데이터는 Neon 에만 있다)
+scripts/       근거 수집·검증 및 라이브 DB 감사·정리
+evidence/      시설별 근거 번들 (원본 HTML·줄번호 텍스트·스크린샷·OCR)
+database/      Neon 스키마 마이그레이션 (database/migrations). Neon 이관 전 Supabase 이력은 database/legacy-supabase 에 보관 (상세: database/README.md)
 docs/          앱인토스·TDS 참고 문서, 데이터 감사 리포트, preview 이미지
 ```
 
 ## 데이터 관리
 
-수영장 데이터는 `src/data/pools.json` 이 원본이고, 이걸 Neon 으로 밀어서 서비스한다.
+수영장 데이터의 원본은 **Neon 의 `public.pools` 테이블 하나뿐**이다. 수영장 중간 JSON 원본은 없애서,
+조사한 값을 근거와 함께 DB 에 직접 넣는 방식으로 바꿨다.
+
+조사 · 등록 절차는 `.claude/skills/korean-pool-research/SKILL.md` 가 기준이다. 요약하면:
 
 ```bash
-# 1) 자동 수집 (공개 수영장 정보 서비스에서 빈 칸 보강)
-node scripts/enrich-free-swim-from-helloswim.mjs --refresh --write
-node scripts/enrich-free-swim-from-oneul.mjs --refresh --write
-node scripts/enrich-free-swim-from-swimmingis.mjs --refresh --write
-
-# 2) 수동 조사 결과 반영 (조사한 JSON 배치 파일을 검증해서 병합)
-node scripts/apply-researched-free-swim.mjs <batch.json> [...] --write
-
-# 3) 정규화 (문자열 요일 → 숫자, 겹치는 세션 병합)
-node scripts/normalize-free-swim-days.mjs --write
-node scripts/merge-free-swim-sessions.mjs --write
-
-# 4) 감사 (docs/data/*.json 으로 리포트 생성)
-node scripts/audit-pools-data.mjs
-node scripts/audit-pools-quality.mjs
-node scripts/report-pool-data-coverage.mjs
-
-# 5) Neon 반영 (.env 의 NEON_DATABASE_URL 필요)
 set -a; source .env; set +a
-node scripts/sync-pools-to-neon.mjs
+
+# 1) 근거 수집 — 원본 HTML + 줄번호 텍스트 + manifest(해시·TLS 상태)
+pnpm evidence:collect
+
+# 2) 근거 대조 — DB 에 쓰려는 시각이 저장된 근거 어딘가에 실제로 있는지
+pnpm evidence:coverage
+#    본문에 없는 값만 그 요소를 크롭해 스크린샷 + OCR (JS 렌더링·이미지 시간표)
+node scripts/ocr-timetable-images.mjs
+node scripts/ocr-evidence-screenshots.mjs
+
+# 3) 게이트 — provenance·번들 구성·근거 대조를 검사. 위반 시 exit 1
+pnpm evidence:verify
+
+# 4) 신규 등록 (INSERT 전용, 중복 방어선 포함)
+node scripts/insert-new-pools.mjs           # dry-run
+node scripts/insert-new-pools.mjs --write
+
+# 5) 라이브 DB 감사·정리
+node scripts/audit-db-integrity.mjs         # 좌표·주소·요금·연락처 정합성
+node scripts/scan-duplicates-live.mjs       # 중복 후보 스캔
+node scripts/classify-duplicates.mjs        # 병합 / 판단필요 / 오탐 분류
+node scripts/cleanup-db.mjs                 # dry-run 후 --write
 ```
+
+확인된 "서로 다른 시설" 조합은 `docs/data/pool-duplicate-whitelist.json` 에 사유와 함께 넣어두면
+중복 스캔이 다시 잡지 않는다. 시설관리공단 대표번호를 공유해서 엮이는 경우가 대부분이다.
 
 `free_swim` 스키마는 `day` 가 `0=일 … 6=토`, `7=공휴일` 이고, 각 요일은 `sessions: [{ start, end }]` 를 갖는다. 세션이 빈 배열이면 “그날 휴무” 를 뜻한다.
 

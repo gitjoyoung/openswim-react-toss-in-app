@@ -1,3 +1,4 @@
+import { openExternal } from "../lib/mapLinks";
 import { parseRichText } from "../lib/richText";
 import { brand } from "../design/tokens";
 
@@ -13,7 +14,15 @@ export default function RichText({ text }: { text: string }) {
             href={segment.href}
             target="_blank"
             rel="noreferrer"
-            style={{ color: brand.main, fontWeight: 600, textDecoration: "underline" }}
+            onClick={(event) => {
+              event.preventDefault();
+              void openExternal(segment.href);
+            }}
+            style={{
+              color: brand.main,
+              fontWeight: 600,
+              textDecoration: "underline",
+            }}
           >
             {segment.text}
           </a>

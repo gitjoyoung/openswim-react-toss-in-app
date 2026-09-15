@@ -1,5 +1,5 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
-import { openKakaoMap, openNaverMap } from "./mapLinks";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { openExternal, openKakaoMap, openNaverMap } from "./mapLinks";
 
 const device = vi.hoisted(() => ({ openURL: vi.fn() }));
 
@@ -11,6 +11,29 @@ describe("map links", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     device.openURL.mockResolvedValue(undefined);
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it("opens a web URL through the Toss bridge", async () => {
+    await openExternal("https://example.com/pool");
+
+    expect(device.openURL).toHaveBeenCalledWith("https://example.com/pool");
+  });
+
+  it("falls back to a new browser tab when the Toss bridge is unavailable", async () => {
+    device.openURL.mockRejectedValueOnce(new Error("bridge unavailable"));
+    const browserOpen = vi.spyOn(window, "open").mockImplementation(() => null);
+
+    await openExternal("https://example.com/pool");
+
+    expect(browserOpen).toHaveBeenCalledWith(
+      "https://example.com/pool",
+      "_blank",
+      "noopener",
+    );
   });
 
   it("includes the known current location in both walking route schemes", async () => {

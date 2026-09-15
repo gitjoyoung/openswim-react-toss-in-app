@@ -1,10 +1,11 @@
 import { Top, Loader } from "@toss/tds-mobile";
 import type { Pool } from "../pool";
 import PoolList from "../components/PoolList";
+import PoolListSkeleton from "../components/PoolListSkeleton";
 import SearchBox from "../components/SearchBox";
 import CrosshairIcon from "../components/CrosshairIcon";
 import BannerAd from "../components/BannerAd";
-import { Chip, EmptyState, Loading } from "../design/primitives";
+import { Chip, EmptyState } from "../design/primitives";
 import { space, color, radius, brand } from "../design/tokens";
 import type { PoolFilterKey } from "../lib/pools";
 import { useHomeLocation } from "../hooks/useHomeLocation";
@@ -31,7 +32,15 @@ const DAY_FILTERS: { key: PoolFilterKey; label: string; accent?: string }[] = [
   { key: "now", label: "지금", accent: "#f5a623" },
 ];
 
-export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect, showAd = true, onSearchFocusChange }: Props) {
+export default function HomeScreen({
+  pools,
+  loading,
+  favs,
+  onToggleFav,
+  onSelect,
+  showAd = true,
+  onSearchFocusChange,
+}: Props) {
   const homeLocation = useHomeLocation();
   const homeSearch = useHomeSearch(pools, homeLocation.location);
   const suggestions = homeSearch.suggestions.map((suggestion) => ({
@@ -77,16 +86,28 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
       <Top
         title={
           <div style={{ display: "flex", alignItems: "center", gap: space.sm }}>
-            <img src={logo} alt="오늘 수영" style={{ height: 38, display: "block", flexShrink: 0 }} />
+            <img
+              src={logo}
+              alt="오늘 수영"
+              style={{ height: 38, display: "block", flexShrink: 0 }}
+            />
             <Top.TitleParagraph size={28}>오늘 자유수영</Top.TitleParagraph>
           </div>
         }
         subtitleBottom={
-          <Top.SubtitleParagraph size={15}>오늘 자유수영이 가능한 수영장을 한눈에!</Top.SubtitleParagraph>
+          <Top.SubtitleParagraph size={15}>
+            오늘 자유수영이 가능한 수영장을 한눈에!
+          </Top.SubtitleParagraph>
         }
       />
 
-      <div style={{ display: "flex", gap: space.sm, padding: `0 ${space.xl}px ${space.md}px` }}>
+      <div
+        style={{
+          display: "flex",
+          gap: space.sm,
+          padding: `0 ${space.xl}px ${space.md}px`,
+        }}
+      >
         <div style={{ flex: 1, minWidth: 0 }}>
           <SearchBox
             value={homeSearch.q}
@@ -102,7 +123,11 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
         <button
           onClick={() => void toggleLocate()}
           disabled={homeLocation.locating}
-          aria-label={homeLocation.location ? "가까운 순 정렬 끄기" : "내 위치로 가까운 순"}
+          aria-label={
+            homeLocation.location
+              ? "가까운 순 정렬 끄기"
+              : "내 위치로 가까운 순"
+          }
           style={{
             flexShrink: 0,
             width: 52,
@@ -134,7 +159,12 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
         }}
       >
         {DAY_FILTERS.map((f) => (
-          <Chip key={f.key} active={f.key === homeSearch.filter} onClick={() => homeSearch.setFilter(f.key)} accent={f.accent}>
+          <Chip
+            key={f.key}
+            active={f.key === homeSearch.filter}
+            onClick={() => homeSearch.setFilter(f.key)}
+            accent={f.accent}
+          >
             {f.label}
           </Chip>
         ))}
@@ -144,7 +174,8 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
       {!loading && showAd && <BannerAd />}
 
       {loading ? (
-        <Loading />
+        // 가운데 로더 대신 목록 골격을 깐다. 도착 시 레이아웃이 튀지 않는다.
+        <PoolListSkeleton />
       ) : homeSearch.filteredPools.length ? (
         <PoolList
           pools={homeSearch.filteredPools}
@@ -157,7 +188,11 @@ export default function HomeScreen({ pools, loading, favs, onToggleFav, onSelect
       ) : (
         <EmptyState
           emoji="🔍"
-          text={homeSearch.q.trim() ? `'${homeSearch.q.trim()}' 검색 결과가 없어요.` : "조건에 맞는 수영장이 없어요."}
+          text={
+            homeSearch.q.trim()
+              ? `'${homeSearch.q.trim()}' 검색 결과가 없어요.`
+              : "조건에 맞는 수영장이 없어요."
+          }
         />
       )}
     </>

@@ -10,10 +10,22 @@ import { useHolidays } from "./hooks/useHolidays";
 import { useAppNavigation, type Tab } from "./hooks/useAppNavigation";
 import { useDetailScrollLock } from "./hooks/useDetailScrollLock";
 import { useHideOnScroll } from "./hooks/useHideOnScroll";
-import { Screen, APP_MAX_WIDTH, EmptyState, Loading } from "./design/primitives";
-import { brand, color, radius, SAFE_BOTTOM, TAB_BAR_HEIGHT, TAB_BAR_SIDE_MARGIN } from "./design/tokens";
+import {
+  Screen,
+  APP_MAX_WIDTH,
+  EmptyState,
+  Loading,
+} from "./design/primitives";
+import PoolListSkeleton from "./components/PoolListSkeleton";
+import {
+  brand,
+  color,
+  radius,
+  SAFE_BOTTOM,
+  TAB_BAR_HEIGHT,
+  TAB_BAR_SIDE_MARGIN,
+} from "./design/tokens";
 import HomeScreen from "./screens/HomeScreen"; // 첫 화면이라 즉시 로드
-
 
 // 나머지 화면은 코드 스플릿(초기 번들 축소). 카카오맵 쓰는 내주변이 특히 무거움.
 const NearbyScreen = lazy(() => import("./screens/NearbyScreen"));
@@ -25,7 +37,8 @@ function App() {
   // 공휴일 표는 DB에서 받는다. 임시공휴일이 지정되면 배포 없이 반영돼야 한다.
   // 값 자체는 모듈 캐시에 들어가고, 이 훅은 도착 시 화면을 다시 그리는 역할만 한다.
   useHolidays();
-  const { tab, selected, openPoolDetail, closeDetail, changeTab } = useAppNavigation();
+  const { tab, selected, openPoolDetail, closeDetail, changeTab } =
+    useAppNavigation();
   const [favs, setFavs] = useState<string[]>(loadFavs);
   // 검색 키보드가 열린 동안은 웹뷰가 플로팅 탭바를 함께 끌어올리므로 탭바만 숨긴다.
   const [searchFocused, setSearchFocused] = useState(false);
@@ -49,13 +62,17 @@ function App() {
       e.preventDefault();
     };
     const events = ["gesturestart", "gesturechange", "gestureend"];
-    events.forEach((n) => document.addEventListener(n, block, { passive: false }));
+    events.forEach((n) =>
+      document.addEventListener(n, block, { passive: false }),
+    );
     return () => events.forEach((n) => document.removeEventListener(n, block));
   }, []);
 
   function toggleFav(id: string) {
     setFavs((prev) => {
-      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
+      const next = prev.includes(id)
+        ? prev.filter((x) => x !== id)
+        : [...prev, id];
       saveFavs(next);
       return next;
     });
@@ -65,66 +82,78 @@ function App() {
   return (
     <>
       <Screen>
-      {/* lazy 화면 로딩 중 폴백. 탭바는 밖에 둬서 항상 노출. */}
-      <Suspense fallback={<Loading />}>
-      {loadError && !pools.length ? (
-        <EmptyState
-          emoji="⚠️"
-          text={
-            <>
-              정보를 불러오지 못했어요.
-              <br />
-              <button
-                onClick={retry}
-                style={{
-                  marginTop: 14,
-                  padding: "8px 18px",
-                  border: "none",
-                  borderRadius: 10,
-                  background: brand.main,
-                  color: "#fff",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                }}
-              >
-                다시 시도
-              </button>
-            </>
-          }
-        />
-      ) : (
-        <>
-          {tab === "home" && (
-            <HomeScreen
-              pools={pools}
-              loading={loading}
-              favs={favs}
-              onToggleFav={toggleFav}
-              onSelect={openPoolDetail}
-              // 상세 시트가 덮고 있는 동안에는 홈 배너를 내린다.
-              // 안 내리면 (1) 가려진 광고가 계속 노출로 잡히고 (2) 상세 배너와 겹쳐
-              // '동일 화면 동일 포맷 2개' / '광고 은닉·겹침'에 걸린다.
-              showAd={!selected}
-              onSearchFocusChange={setSearchFocused}
+        {/* lazy 화면 로딩 중 폴백. 탭바는 밖에 둬서 항상 노출. */}
+        {/* 목록 화면(즐겨찾기)은 같은 골격의 스켈레톤, 지도(내 주변)는 로더를 보인다.
+          홈은 lazy 가 아니라 여기 안 걸리고 HomeScreen 안에서 직접 스켈레톤을 그린다. */}
+        <Suspense fallback={tab === "fav" ? <PoolListSkeleton /> : <Loading />}>
+          {loadError && !pools.length ? (
+            <EmptyState
+              emoji="⚠️"
+              text={
+                <>
+                  정보를 불러오지 못했어요.
+                  <br />
+                  <button
+                    onClick={retry}
+                    style={{
+                      marginTop: 14,
+                      padding: "8px 18px",
+                      border: "none",
+                      borderRadius: 10,
+                      background: brand.main,
+                      color: "#fff",
+                      fontWeight: 700,
+                      cursor: "pointer",
+                    }}
+                  >
+                    다시 시도
+                  </button>
+                </>
+              }
             />
+          ) : (
+            <>
+              {tab === "home" && (
+                <HomeScreen
+                  pools={pools}
+                  loading={loading}
+                  favs={favs}
+                  onToggleFav={toggleFav}
+                  onSelect={openPoolDetail}
+                  // 상세 시트가 덮고 있는 동안에는 홈 배너를 내린다.
+                  // 안 내리면 (1) 가려진 광고가 계속 노출로 잡히고 (2) 상세 배너와 겹쳐
+                  // '동일 화면 동일 포맷 2개' / '광고 은닉·겹침'에 걸린다.
+                  showAd={!selected}
+                  onSearchFocusChange={setSearchFocused}
+                />
+              )}
+              {tab === "nearby" && (
+                <NearbyScreen
+                  pools={pools}
+                  onSelect={openPoolDetail}
+                  onSearchFocusChange={setSearchFocused}
+                />
+              )}
+              {tab === "fav" && (
+                <FavoritesScreen
+                  pools={pools}
+                  favs={favs}
+                  onToggleFav={toggleFav}
+                  onSelect={openPoolDetail}
+                  loading={loading}
+                />
+              )}
+            </>
           )}
-          {tab === "nearby" && (
-            <NearbyScreen pools={pools} onSelect={openPoolDetail} onSearchFocusChange={setSearchFocused} />
-          )}
-          {tab === "fav" && (
-            <FavoritesScreen pools={pools} favs={favs} onToggleFav={toggleFav} onSelect={openPoolDetail} />
-          )}
-        </>
-      )}
-      </Suspense>
-      <TabBar
-        tab={tab}
-        onChange={(nextTab) => {
-          setSearchFocused(false);
-          changeTab(nextTab);
-        }}
-        searchFocused={searchFocused}
-      />
+        </Suspense>
+        <TabBar
+          tab={tab}
+          onChange={(nextTab) => {
+            setSearchFocused(false);
+            changeTab(nextTab);
+          }}
+          searchFocused={searchFocused}
+        />
       </Screen>
 
       {/* 상세는 페이지 교체가 아니라 위로 올라오는 모달 — 밑 화면(홈/지도)은 그대로 유지 */}
@@ -178,7 +207,11 @@ function TabBar({
   // 아래로 드래그했을 때 또는 검색 키보드가 열린 동안 숨긴다.
   const hidden = useHideOnScroll() || searchFocused;
   const tabImg = (src: string) => (
-    <img src={src} alt="" style={{ width: 26, height: 26, objectFit: "contain", display: "block" }} />
+    <img
+      src={src}
+      alt=""
+      style={{ width: 26, height: 26, objectFit: "contain", display: "block" }}
+    />
   );
   const items: { key: Tab; label: string; icon: ReactNode }[] = [
     { key: "home", label: "홈", icon: tabImg(homeIcon) },
@@ -197,7 +230,8 @@ function TabBar({
         // 숨길 땐 아래로 밀어낸다. 세이프에어리어까지 포함해 완전히 화면 밖으로.
         transform: `translateX(-50%) translateY(${hidden ? `calc(${TAB_BAR_HEIGHT}px + ${SAFE_BOTTOM})` : "0px"})`,
         opacity: hidden ? 0 : 1,
-        transition: "transform 0.25s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.2s ease",
+        transition:
+          "transform 0.25s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.2s ease",
         pointerEvents: hidden ? "none" : "auto",
         display: "flex",
         width: `calc(100% - ${TAB_BAR_SIDE_MARGIN * 2}px)`, // 좌우 여백은 남긴다 (꽉 채우면 토스 기본 탭과 형태가 겹침)

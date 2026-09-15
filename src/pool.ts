@@ -1,4 +1,10 @@
-export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];
+export type Json =
+  | string
+  | number
+  | boolean
+  | null
+  | { [key: string]: Json | undefined }
+  | Json[];
 
 export type Pool = {
   id: string;
@@ -29,7 +35,10 @@ export type Pool = {
 };
 
 // VITE_* 값은 앱 번들에 포함되므로 공개 URL만 넣는다. DB 연결 문자열·관리 API 키는 넣지 않는다.
-const neonDataApiUrl = import.meta.env.VITE_NEON_DATA_API_URL?.replace(/\/$/, "");
+const neonDataApiUrl = import.meta.env.VITE_NEON_DATA_API_URL?.replace(
+  /\/$/,
+  "",
+);
 const neonAuthUrl = import.meta.env.VITE_NEON_AUTH_URL?.replace(/\/$/, "");
 
 // 앱이 실제로 쓰는 컬럼만 받는다. 새 컬럼을 화면에 쓰려면 여기에도 추가해야 한다.
@@ -83,7 +92,9 @@ async function fetchRemotePools(): Promise<Pool[]> {
     credentials: "omit",
   });
   if (!tokenResponse.ok) {
-    throw new Error(`Neon anonymous token request failed: ${tokenResponse.status}`);
+    throw new Error(
+      `Neon anonymous token request failed: ${tokenResponse.status}`,
+    );
   }
 
   const tokenPayload: unknown = await tokenResponse.json();
@@ -116,22 +127,18 @@ async function fetchRemotePools(): Promise<Pool[]> {
   return payload;
 }
 
-async function fetchBundledPools(): Promise<Pool[]> {
-  const mod = await import("./data/pools.json");
-  return mod.default as Pool[];
-}
-
-async function loadPools(): Promise<Pool[]> {
-  try {
-    return await fetchRemotePools();
-  } catch (error) {
-    console.warn("Neon pools request failed; using bundled fallback data.", error);
-    return fetchBundledPools();
-  }
-}
-
-// 원격 Neon 데이터를 우선 사용하고, 통신 장애 때만 번들 JSON으로 폴백한다.
+// Neon 서버 데이터만 신뢰한다. 번들 JSON 폴백은 폐기했다(2026-09-10).
+//
+// 폐기 이유: 폴백은 빌드 시점에 고정되므로 시간이 지나면 반드시 낡는다.
+// 그런데 사용자에게는 최신 데이터와 똑같아 보이기 때문에, 휴장한 수영장을
+// "오늘 열림"으로 보여주는 종류의 오답을 조용히 낸다.
+// 답을 틀리느니 못 불러왔다고 밝히고 다시 시도하게 하는 편이 낫다.
 export function fetchPools(): Promise<Pool[]> {
-  poolsPromise ??= loadPools();
+  // 실패한 promise 를 캐시에 남기면 "다시 시도" 가 같은 거부 결과를 다시 돌려준다.
+  // 폴백이 있을 땐 이 경로가 사실상 안 쓰여 드러나지 않았다.
+  poolsPromise ??= fetchRemotePools().catch((error: unknown) => {
+    poolsPromise = null;
+    throw error;
+  });
   return poolsPromise;
 }

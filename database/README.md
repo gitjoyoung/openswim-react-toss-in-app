@@ -121,5 +121,6 @@ PostgREST 응답에 새 컬럼이 한동안 나오지 않는다. 2026-09-10 `acc
 
 ## 데이터 동기화 스크립트
 
-- `scripts/sync-pools-to-neon.mjs` — `src/data/pools.json` → `public.pools` upsert
+- `scripts/insert-new-pools.mjs` — 신규 시설을 `public.pools` 에 INSERT (중복 방어선 포함, 트랜잭션)
+- `scripts/cleanup-db.mjs` — 중복 병합·형식 정규화 (dry-run 후 `--write`)
 - `scripts/sync-gear.mjs` — `public.gear_items`의 쉐어링크 URL을 따라가 상품명·이미지를 채우고 폴백 JSON을 갱신

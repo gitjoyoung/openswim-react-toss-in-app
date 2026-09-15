@@ -11,7 +11,11 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "gear:sync": "node scripts/sync-gear.mjs",
+    "evidence:collect": "node scripts/collect-evidence-v2.mjs",
+    "evidence:verify": "node scripts/verify-evidence-bundle.mjs",
+    "evidence:coverage": "node scripts/verify-evidence-coverage.mjs"
   },
   "dependencies": {
     "@apps-in-toss/web-framework": "^3.1.1",

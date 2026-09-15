@@ -22,12 +22,17 @@ For each relevant page, preserve a dated evidence bundle before extracting facts
 
 ```text
 evidence/pools/{poolId}/{YYYY-MM-DD}/
-  manifest.json       # URL, final URL, fetchedAt, status, content hash
-  page.html           # raw or rendered DOM
-  page-text.txt       # normalized text with stable line numbers
-  screenshot-full.png # rendered full-page evidence, especially tables/images
-  assets/             # official attachments and candidate photos
+  manifest.json          # URL, final URL, fetchedAt, status, sha256, tlsVerified, ocr verdict
+  html/NN.html           # raw or rendered DOM, one file per page
+  page-text.txt          # normalized text with stable line numbers
+  screenshot/NN.png      # rendered page evidence
+  screenshot/crop-NN.png # the region that actually contains the fact
+  screenshot/*.txt       # OCR text of each screenshot, produced locally
+  assets/                # official attachments and candidate photos
 ```
+
+This layout is enforced by `scripts/verify-evidence-bundle.mjs`, which exits non-zero on a
+violation. Do not hand-wave a missing artifact; either produce it or record why it is absent.
 
 Read evidence in this order: `facts.md`/`page-text.txt`, then screenshot, then HTML and assets. If a later interpretation is challenged, re-parse the saved evidence before revisiting the live site. Keep old dated bundles; never overwrite the prior capture.
 
@@ -114,6 +119,97 @@ Use `high` for a current official page that states the fact directly, `medium` f
 - Missing or conflicting facts remain explicitly marked instead of being guessed.
 
 Only after these checks should the normalized facts and WebP image URLs be written to Neon/R2. When the source changes, save a new dated evidence bundle and compare it with the previous capture before changing production data.
+
+## 7-bis. Find the fact first, then capture it. Never the reverse.
+
+**Do not screenshot a page and then check whether the fact is in it.** Locate the fact in the
+saved text first; only then capture the element that holds it. If the fact cannot be located,
+there is nothing to capture, and that absence is itself the finding
+(`public_source_not_found` / `needs_phone_confirmation`).
+
+Capturing first wastes work and, worse, produces artifacts that look like evidence but are
+not. A run that did it backwards took 39 screenshots for 14 facilities; only 3 facilities
+actually needed one, and the mismatch report raised false alarms on two facilities whose
+evidence had been complete in the saved text the whole time.
+
+### Evidence has a priority order
+
+1. **Saved page text / raw HTML** (`page-text.txt`, `html/NN.html`). This is the primary
+   evidence and it is already hash-pinned in the manifest. If the value is here, the record
+   is supported. No screenshot is required.
+2. **Screenshot + OCR** — required only when the saved text does not contain the value. In
+   practice this means a JS-rendered page whose fetched HTML holds no timetable.
+3. **Image OCR** (`scripts/ocr-timetable-images.mjs`) — when the timetable exists only as a
+   published image. Here the image is the source, and OCR is extraction, not verification.
+
+Measured on the 14 facilities registered 2026-09-10: 10 were fully supported by saved text
+alone; 3 (Yangsan Jungang, Cheonseongsan, Unjeong) had zero coverage in saved text and were
+supported only by a screenshot; 1 (Siheung) was supported by neither because its timetable is
+published as a notice image, which is case 3.
+
+### When a screenshot is needed, crop the element
+
+OCR collapses on tall full-page shots. Same URL, same session (Unjeong, `paju3.sporex.com`):
+
+| shot | size | OCR chars | time values detected |
+|---|---|---|---|
+| full page | 1425 x 7961 | 8,164 | **0** |
+| cropped table | 1036 x 490 | 714 | **18** |
+
+Across 22 shots: at or under 2,500px tall, average 6.4 time values detected; over 2,500px,
+average 0.4, with 9 of 13 yielding none. Screenshot the element you already located in step 1,
+name it `crop-NN.png`, and OCR it with `tesseract -l kor+eng` next to the image.
+
+### The check runs against all evidence, not just screenshots
+
+`scripts/verify-evidence-coverage.mjs` takes every time value stored in `free_swim` and looks
+for it across saved text, screenshot OCR, and image OCR together, then records
+`manifest.evidenceCoverage` with `근거완비` / `일부누락` / `근거없음` and which source carried it.
+Checking screenshots alone reports false failures on records whose evidence is in the text.
+
+A `근거없음` or `일부누락` verdict means go back to the source. **It is not permission to change
+the stored value.**
+
+### Enforced rules
+
+`scripts/verify-evidence-bundle.mjs` fails the run on any of these:
+
+| id | rule |
+|---|---|
+| A1 | a facility with free-swim times must have `free_swim_confidence` |
+| A2/A3 | `high`/`medium` confidence requires `free_swim_source` and `free_swim_verified_at` |
+| A4 | a facility with no free-swim times must state why in `free_swim_note` |
+| B1-B3 | bundle must contain `manifest.json`, `page-text.txt`, `html/` |
+| B6/B7 | stored HTML must exist and match the sha256 recorded in the manifest |
+| B8 | every page must record `tlsVerified` |
+| C1 | evidence coverage must have been computed |
+| C2/C3 | if saved text carries none of the values, a screenshot and its OCR text are required |
+| C5/C6 | every stored time value must appear in at least one saved evidence artifact |
+| D1 | a facility written to the database must have an evidence bundle |
+
+Run it before and after any database write:
+
+```
+set -a; source .env; set +a
+node scripts/collect-evidence-v2.mjs         # html + text + manifest, TLS state recorded
+node scripts/verify-evidence-coverage.mjs    # which values are already supported by saved text
+#   ... only for values still uncovered: screenshot that element, then OCR it
+node scripts/verify-evidence-coverage.mjs    # re-check
+node scripts/verify-evidence-bundle.mjs      # gate, exits 1 on violation
+```
+
+### TLS is recorded, never silently bypassed
+
+Many Korean public-facility sites serve an incomplete certificate chain
+(`UNABLE_TO_VERIFY_LEAF_SIGNATURE`) or a hostname outside the certificate's altnames. The
+collector retries once without verification and records `tlsVerified: false` plus the error
+code in the manifest. Never drop the flag to make a bundle look clean.
+
+### Verify the target URL before treating a fetch failure as an absent schedule
+
+A `404`, a 292-byte frame stub, or a certificate error means the target URL was wrong or the
+transport failed, not that the facility publishes no schedule. Aggregator directories carry
+stale `website` values; confirm the official URL first.
 
 ## 8. Minimize AI tokens with an exception queue
 

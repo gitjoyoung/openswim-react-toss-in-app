@@ -3,7 +3,7 @@
 > 전국 수영장의 **자유수영 시간·정보**를 찾는 앱인토스 미니앱.
 > 로그인 없이 시작, 위치 기반 정렬, 즐겨찾기(로컬 저장).
 
-> **현재 기준 (2026-09):** 런타임 백엔드는 **Neon(Postgres + Neon Data API/Auth)** 단일 기준이다. 프론트는 `VITE_NEON_DATA_API_URL`과 `VITE_NEON_AUTH_URL`로 익명 토큰을 발급받아 `GET /pools`를 조회하고(`src/pool.ts`), 원격 조회 실패 시 `src/data/pools.json`으로 폴백한다. 데이터 원본은 전국 수영장 JSON이며 운영 동기화는 `scripts/sync-pools-to-neon.mjs`가 담당한다. Neon 스키마 변경은 `database/migrations/`에 둔다. `database/legacy-supabase/`는 Neon 이전 전의 보관용 이력이며 런타임·배포·데이터 운영에 사용하지 않는다.
+> **현재 기준 (2026-09):** 런타임 백엔드는 **Neon(Postgres + Neon Data API/Auth)** 단일 기준이다. 프론트는 `VITE_NEON_DATA_API_URL`과 `VITE_NEON_AUTH_URL`로 익명 토큰을 발급받아 `GET /pools`를 조회하고(`src/pool.ts`), 원격 조회에 실패하면 폴백 없이 오류 화면을 띄운다(번들 JSON 폴백은 2026-09-10 폐기). 데이터 원본은 Neon `public.pools` 테이블 하나뿐이며, 중간 JSON 원본과 동기화 스크립트는 두지 않는다. Neon 스키마 변경은 `database/migrations/`에 둔다. `database/legacy-supabase/`는 Neon 이전 전의 보관용 이력이며 런타임·배포·데이터 운영에 사용하지 않는다.
 
 ---
 
@@ -144,9 +144,9 @@ values ('https://toss.im/_m/새링크', '메모', 4);
 
 ## 6. 데이터 수집·운영
 
-- 전국 수영장 데이터는 `src/data/pools.json`을 기준으로 관리한다.
+- 전국 수영장 데이터는 Neon `public.pools` 를 기준으로 관리한다. 중간 JSON 원본은 두지 않는다.
 - 소스: 각 구민체육센터/수영장 홈페이지의 자유수영 시간표·요금.
-- 입력: `src/data/pools.json` 직접 편집 또는 `scripts/enrich-free-swim-from-*.mjs` 자동 수집 → `scripts/sync-pools-to-neon.mjs`로 Neon에 upsert.
+- 입력: 공식 출처에서 근거를 수집(`pnpm evidence:collect`)하고 근거 대조(`pnpm evidence:coverage`)·게이트(`pnpm evidence:verify`)를 통과한 값만 `scripts/insert-new-pools.mjs`(신규) 또는 대상 행을 명시한 수정 스크립트로 Neon 에 직접 쓴다.
 - 시간표는 시즌마다 바뀌므로 `updated_at`으로 갱신일 표기.
 
 ---
@@ -188,7 +188,7 @@ values ('https://toss.im/_m/새링크', '메모', 4);
 - **자유수영 미운영 확정**: 강습 전용·회원 전용·휴장·선수 전용 시설. 더 찾을 필요가 없다.
 - **시간표 확보 실패**: 공식 안내가 이미지/PDF이거나 온라인 자료 자체가 없는 경우. 전화 확인이 필요하다.
 
-앞으로 시간표를 추가할 때는 `scripts/apply-researched-free-swim.mjs` 로 검증·병합하고, 정규화·감사를 거친 뒤 Neon 에 반영한다 (README “데이터 관리” 참고).
+앞으로 시간표를 추가할 때는 `.claude/skills/korean-pool-research/SKILL.md` 절차를 따른다. 근거를 먼저 찾고, 근거 대조와 게이트를 통과한 값만 Neon 에 직접 쓴다 (README “데이터 관리” 참고).
 
 ---
 
