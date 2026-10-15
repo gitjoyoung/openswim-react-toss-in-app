@@ -1,6 +1,6 @@
 ---
 name: "korean-pool-research"
-description: "Use when researching Korean swimming pools, public free-swim schedules, fees, official facility photos, operating hours, restrictions, holidays, or updating Openswim pool data."
+description: "Use when researching Korean swimming pools, public free-swim schedules, fees, official facility photos, operating hours, restrictions, holidays, monthly operating-plan image OCR, or updating Openswim pool data."
 ---
 
 # Korean pool research
@@ -287,3 +287,43 @@ Plain `fetch` returns menu markup only for many municipal and operator sites; th
 When extracting the times that belong to a 자유수영 heading, read well past the heading line. A window of 8 lines cut off the later day rows of a weekday/weekend table and produced false "mismatch" verdicts against data that was actually correct down to the day. Use at least 5 lines before and 20 after, and compare per day, not as a flat set of time strings.
 
 **A mismatch reported by an automated comparison is a signal to read the source, not permission to overwrite the data.** Overwriting on an unread mismatch turns correct records into wrong ones.
+
+## 11. Monthly operating plans and dated holiday exceptions
+
+Keep two evidence tracks separate: official national holiday dates in `public.holidays`, and each facility's actual free-swim availability. A substitute holiday is a calendar fact, not evidence that every pool closes. During each facility investigation, check its official notice board for the applicable month's `월간계획`, `월간일정`, `운영계획`, `휴관일`, `자유수영 일정`, and `대체공휴일` notices, including revised notices. Do not stop at the permanent weekly timetable.
+
+### Browser discovery and image OCR
+
+1. Confirm facility identity by address/phone. Open the official monthly notice in one browser tab and reuse it. Use `snapshot(page, { interactive: true })`, then a full snapshot when needed. Record the notice URL, publication/revision date, title, and intended year/month. An upload date alone does not establish the plan's applicable month.
+2. Identify the actual plan image/attachment from the snapshot. Preserve the notice's HTML/text in the existing dated evidence bundle, with URL, fetchedAt, status and hash. For JS-only content preserve the rendered notice text too; an HTML stub is not the monthly plan. Do not guess image URLs or treat a missing text timetable as missing data when an image is present.
+3. Prefer downloading the browser-discovered original image with authenticated `fetch(imageUrl)` and saving its bytes. When the original cannot be obtained (canvas, viewer, expiring URL), screenshot only the observed plan element using its current ref. Explicitly record `browser-crop`. Include the full title/year/month, weekday headings, legend, footnotes, and amendments; if these are separate elements capture each separately with source refs. Never OCR a tall full-page website screenshot or shrink a high-resolution original. Inspect the image once and note concrete observations in text.
+4. Run the local OCR companion below on each original/crop. It saves immutable image bytes and SHA-256, line-numbered layout text, the OCR engine's native text (`*.raw.txt`), raw TSV, word bounding boxes/confidence, and a `pending_review` packet under the existing bundle. PSM 6 and 11 are both retained, including closure-only notices without any times. The command's `--month` is only the investigation target; `applicabilityMonth` remains null until reviewed. OCR is extraction, not verification. Use native text alongside layout text because joining TSV words can fragment Korean syllables; retain raw text rather than silently correcting it. Do not publish these notice images as facility photos.
+
+```bash
+node scripts/ocr-monthly-plan.mjs \
+  --bundle evidence/pools/<poolId>/<capture-date> \
+  --image <browser-downloaded-original-or-crop> \
+  --month <YYYY-MM> \
+  --source-page <official-notice-url-already-in-manifest> \
+  --mode original \
+  --image-url <browser-observed-image-url>
+# Use --mode browser-crop for a locator screenshot; --image-url is optional.
+```
+
+The bundle must already have an identified `poolId` and a successful capture of `source-page`. This tool performs no network/DB writes, date inference, or approval. `manifest.monthlyPlans[]` links to `ocr/.../review.json`. Original images go into `assets/`; browser crops into `screenshot/`. All passes retain coordinates in the input image's pixels. Test the tool with `node --test scripts/ocr-monthly-plan.test.mjs`.
+
+### Date-by-date review, not flat text matching
+
+- Verify the named facility, exact year/month and validity period. For calendar grids, use the image and OCR boxes to check the date number, weekday column, event text and color/symbol legend in the **same cell**. OCR line order is not a reliable date-cell relationship. Read the title/legend plus focused date-cell crops; if tiny text fails, enlarge/crop just the affected cell and OCR again, keeping its relation to the full original. Preserve both the original coordinate frame and each crop's bounds.
+- Distinguish facility-wide closure, pool closure, lesson cancellation, member-only access and public free-swim availability. `강습 휴강` does not mean `자유수영 휴무`; `정상 운영` without explicit free-swim applicability does not establish free-swim hours. Preserve registration/audience conditions.
+- Inspect both the actual holiday and its substitute date. Never infer the next weekday's closure, apply a colored cell to its neighbor, treat an unmarked cell as confirmed operating, or copy a one-month exception into permanent `free_swim day=7` data.
+- For each reviewed candidate record `poolId`, exact `date`, applicable month/period, `kind` (`closed`, `sessions`, or `unknown`), verified sessions only, source notice URL, image hash/file, OCR file/line refs, date-cell bounds, faithful quote, applicability scope, reviewer/check time, and `status`. Keep facility/month/legend/cell/free-swim-scope review flags explicit. `review.json.dateExceptions` is a review handoff, not an app or database schema.
+- Missing month/year, unclear cell/legend, contradictory notices or unclear free-swim scope stay `pending` with a concrete reason (`공개 자료 없음` / `전화 확인 필요` as appropriate). Even high OCR confidence never authorizes a DB update. A revised notice must be archived with its applicability and correction evidence before superseding an earlier notice; never overwrite the old evidence.
+
+### Admission and expiry boundary
+
+Audit each dated exception against the full image, national holiday table and weekly schedule; a matching time string somewhere in OCR is insufficient. The existing `verify-evidence-coverage.mjs` checks time presence only and **does not validate calendar dates, cells, scope or monthly exceptions**. Monthly review must be completed separately before seeking production-write approval.
+
+The intended application priority is a **verified facility-specific date exception → applicable regular closure/holiday rules → weekly schedule**, with unknown holiday availability remaining unknown, not falling back to guessed weekday hours. Apply a plan only within its confirmed validity period; absent next-month evidence remains unknown for monthly exceptions. Explicit special openings may override a regular closure only when the official notice says so.
+
+The current app reads weekly `free_swim` and national `holidays`; it has no admitted date-exception storage/reader yet. Until that path is implemented and verified, keep reviewed monthly exceptions in the evidence handoff and report them as **not reflected in the app**. Do not claim collection/OCR is app activation, and do not change a weekly schedule to simulate a one-day exception.
